@@ -32,7 +32,7 @@ Team Roles
 
 1.  **Victor akinla** - Lead Programmer & Data Modeler\
 2.  **Terrance Perry** - Documentation Lead & Client Liaison
-3.  **Sebastian Perez** - Testing Lead & Project Manager
+3.  **Sebastian Perez** - Testing Lead & Project Manager :cyclone:	
 
 Technologies
 ------------
