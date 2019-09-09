@@ -37,6 +37,6 @@ Team Roles
 Technologies
 ------------
 
-*Angular 
-*javaScript 
-*JSON
+* Angular 
+* javaScript 
+* JSON
