@@ -20,9 +20,9 @@ Repo Location
 Progress Tracking Tools
 -----------------------
 
-Trello
+Jira
 
-Other Communitcation Tools
+Other Communication Tools
 --------------------------
 
 Discord
