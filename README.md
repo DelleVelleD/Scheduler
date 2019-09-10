@@ -1,40 +1,30 @@
-Faculty Scheduler
-=================
+# ThunderCats - Faculty Scheduler Backend
+Faculty Scheduler backend
 
-Description
------------
+# Description
+The application allows instructors to provide a set of scheduling preferences to
+a semi-automated system, which populates a semester schedule based on instructor
+request and moderator approval. The scheduler is presented to the instructor.
+We are working on the backend part of the application. Which includes the
+automation of the scheduler, receiving input/output forms and resolving scheduling
+conflicts
 
-This application is designed to help Georgia Gwinnett College faculty
-members to efficiently register for courses. Besides a tool for the
-benefit of professors, Scheduler is an information collector system that
-requires an administrator(s). These individuals will be responsible for
-operations of aggregation, modification and removal of courses and/or
-sections, additionally, in case of tribulations, they will be the ones
-who decide which is the best way to accommodate schedules
+# Repo Location
+[ThunderCats](https://github.com/GGC-SD/ThunderCats/)
 
-Repo Location
--------------
-
-[Scheduler](https://github.com/GGC-SD/Scheduler-ThunderCats)
-
-Progress Tracking Tools
------------------------
-
+# Progress Tracking Tools
 Trello
+[Trello](https://trello.com/b/MuJa8Xa5/thundercats)
 
-Other Communitcation Tools
---------------------------
-
+# Other Communication Tools
 Discord
 
-Team Roles
-----------
+# Team Roles
+1. **Joel Garcia** - team manager & ux/ui design :guitar: :wrench: :goat:
+2. **Anthony Morariu** - data modeler & client liason :kissing_smiling_eyes: :heart: :computer:
+3. **Mark Levengood** - lead programmer & documentation lead :clap: :statue_of_liberty: :movie_camera:
+4. **Daniel Toal** - Testing lead :unamused: :hocho: :bug:
 
-1.  **Victor akinla** - Lead Programmer & Data Modeler\
-2.  **Terrance Perry** - Documentation Lead & Client Liaison
-3.  **Sebastian Perez** - Testing Lead & Project Manager
-
-Technologies
-------------
-
-..*Angular ..*javaScript ..\*JSON
+# Installation Instructions: 
+Must have node js, and google chrome (or browser that can display html)
+Download files
