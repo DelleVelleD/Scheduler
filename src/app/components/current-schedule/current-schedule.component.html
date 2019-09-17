@@ -1,0 +1,68 @@
+<body style="background-color:#ffff;">
+
+<div class ="row">
+  <div class="column left">
+      <h3 id = "tablename">Current Assigned Course List for Dr. Anca Doloc Mihu</h3>
+      <div style="height:500px; overflow-y: scroll; overflow-x:scroll">
+          <table>
+              <tr>
+                  <th>CRN</th>
+                  <th>DEPT</th>
+                  <th>Course #</th>
+                  <th>Title</th>
+                  <th>Section #</th>
+                  <th>Days and Time</th>
+                  <th>Classroom</th>
+              </tr>
+              <tr>
+                  <td>20458</td>
+                  <td>ITEC</td>
+                  <td>3860</td>
+                  <td>Software Development I</td>
+                  <td>01</td>
+                  <td>MW<br>1530 - 1715</td>
+                  <td>A1520</td>
+              </tr>
+              <tr>
+                  <td>21708</td>
+                  <td>ITEC</td>
+                  <td>3860</td>
+                  <td>Software Development I</td>
+                  <td>02</td>
+                  <td>TR<br>1830 - 2015</td>
+                  <td>B2100</td>
+              </tr>
+              <tr>
+                  <td>21718</td>
+                  <td>ITEC</td>
+                  <td>4550</td>
+                  <td>Mobile Application Development</td>
+                  <td>02</td>
+                  <td>MW<br>1400 - 1515</td>
+                  <td>C1130</td>
+              </tr>
+          </table>
+      </div>
+  </div>
+
+  <div class="column right">
+      <p></p>
+      <p></p>
+      <p></p>
+      <h1> </h1>
+      <h1> </h1>
+      <h1> </h1>
+      <button (click)="navigate2()">Calendar View</button>
+      <button onclick="myFunction()">Request Schedule Change</button>
+      <button (click)="navigate()">Home Page</button>
+      <h2 id = "heady">Request Schedule Change Form</h2>
+      <form id = "subby">
+          <p>Please enter the courses you would like to drop and/or add and the reasoning behind your suggestions.</p>
+          <br>
+          <textarea rows = "15" cols = "100" name = "description">
+          </textarea><br>
+          <input type="submit" value="Submit" onclick="myFunction2()">
+      </form>
+  </div>
+</div>
+</body>

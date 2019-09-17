@@ -1,0 +1,94 @@
+table{
+    font-family: arial, sans-serif;
+    font-size: 12px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 3px solid #000000;
+    text-align: left;
+    padding: 9px;
+}
+
+tr:nth-child(even) {
+    background-color: #00704a;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Style the top navigation bar */
+.topnav{
+    overflow:hidden;
+    background-color: #000000;
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    float: right;
+    display: block;
+    color: #00704a;
+    text-align: center;
+    padding: 28px 16px;
+    text-decoration: none;
+    font-size: 26px;
+    font-family: "Lucida Console", Monaco, monospace;
+  }
+  
+  .topnav h1 {
+    float: left;
+    display: block;
+    color: #00704a;
+    text-align: center;
+    padding: 0px 8px;
+    text-decoration: none;
+    font-family: "Lucida Console", Monaco, monospace;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #00704a;
+    color: black;
+  }
+
+  #tablename {
+    font-family: "Lucida Console", Monaco, monospace;
+  }
+
+ 
+  .column {
+      float: left;
+      padding: 10px;
+  }
+
+  .column.left{
+    width: 50%
+  }
+
+  .column.right{
+      width:50%
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width:600px) {
+      .column.left, .column.right {
+          width: 100%
+      }
+  }
+
+  #textboxid {
+        height:200px;
+        font-size:14pt;
+    }
+#subby, #heady{
+    display: none
+}
