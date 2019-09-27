@@ -1,8 +1,8 @@
 [
  {
    "CRN": 22272,
-   "CRSE #": "4220",
-   "TITLE": "Advanced Data Analytics",
+   "CRSENO": "4220",
+   "TITLE": "JSON FILE Advanced Data Analytics",
    "SECT #": 1,
    "DAYS": "MW",
    "START": 1530,
@@ -15,7 +15,7 @@
  },
  {
    "CRN": 22166,
-   "CRSE #": "4260",
+   "CRSENO": "4260",
    "TITLE": "Software Testing and QA",
    "SECT #": 3,
    "DAYS": "F",
@@ -29,7 +29,7 @@
  },
  {
    "CRN": 20421,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing-Hybrid",
    "SECT #": 24,
    "DAYS": "MW",
@@ -43,7 +43,7 @@
  },
  {
    "CRN": 20425,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing-Hybrid",
    "SECT #": 30,
    "DAYS": "T",
@@ -57,7 +57,7 @@
  },
  {
    "CRN": 20736,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro. to Computing-Hybrid",
    "SECT #": 50,
    "DAYS": "S",
@@ -71,7 +71,7 @@
  },
  {
    "CRN": 20429,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 37,
    "DAYS": "MW",
@@ -85,7 +85,7 @@
  },
  {
    "CRN": 20414,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing-Hybrid",
    "SECT #": 13,
    "DAYS": "TR",
@@ -99,7 +99,7 @@
  },
  {
    "CRN": 20740,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 55,
    "DAYS": "MW",
@@ -113,7 +113,7 @@
  },
  {
    "CRN": 21703,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 82,
    "DAYS": "TR",
@@ -127,7 +127,7 @@
  },
  {
    "CRN": 21702,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 81,
    "DAYS": "MW",
@@ -141,7 +141,7 @@
  },
  {
    "CRN": 22164,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 2,
    "DAYS": "MWF",
@@ -155,7 +155,7 @@
  },
  {
    "CRN": 20410,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 6,
    "DAYS": "MW",
@@ -169,7 +169,7 @@
  },
  {
    "CRN": 20423,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 28,
    "DAYS": "TR",
@@ -183,7 +183,7 @@
  },
  {
    "CRN": 20430,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 43,
    "DAYS": "TR",
@@ -197,7 +197,7 @@
  },
  {
    "CRN": 20411,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing-Hybrid",
    "SECT #": 8,
    "DAYS": "M",
@@ -211,7 +211,7 @@
  },
  {
    "CRN": 20432,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro. to Computing-Hybrid",
    "SECT #": 45,
    "DAYS": "TR",
@@ -225,7 +225,7 @@
  },
  {
    "CRN": 20417,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 19,
    "DAYS": "MWF",
@@ -239,7 +239,7 @@
  },
  {
    "CRN": 20418,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 20,
    "DAYS": "MWF",
@@ -253,7 +253,7 @@
  },
  {
    "CRN": 20426,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 33,
    "DAYS": "MWF",
@@ -267,7 +267,7 @@
  },
  {
    "CRN": 20427,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 34,
    "DAYS": "MWF",
@@ -281,7 +281,7 @@
  },
  {
    "CRN": 20412,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing-Hybrid",
    "SECT #": 11,
    "DAYS": "TR",
@@ -295,7 +295,7 @@
  },
  {
    "CRN": 20413,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing-Hybrid",
    "SECT #": 12,
    "DAYS": "TR",
@@ -309,7 +309,7 @@
  },
  {
    "CRN": 20433,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro. to Computing-Hybrid",
    "SECT #": 46,
    "DAYS": "TR",
@@ -323,7 +323,7 @@
  },
  {
    "CRN": 20733,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 15,
    "DAYS": "T",
@@ -337,7 +337,7 @@
  },
  {
    "CRN": 20734,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing-Hybrid",
    "SECT #": 23,
    "DAYS": "F",
@@ -351,7 +351,7 @@
  },
  {
    "CRN": 20406,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 1,
    "DAYS": "MWF",
@@ -365,7 +365,7 @@
  },
  {
    "CRN": 20422,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 27,
    "DAYS": "TR",
@@ -379,7 +379,7 @@
  },
  {
    "CRN": 21178,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 73,
    "DAYS": "MWF",
@@ -393,7 +393,7 @@
  },
  {
    "CRN": 21179,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 78,
    "DAYS": "MWF",
@@ -407,7 +407,7 @@
  },
  {
    "CRN": 20419,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 21,
    "DAYS": "W",
@@ -421,7 +421,7 @@
  },
  {
    "CRN": 22165,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 7,
    "DAYS": "TR",
@@ -435,7 +435,7 @@
  },
  {
    "CRN": 21177,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 72,
    "DAYS": "TR",
@@ -449,7 +449,7 @@
  },
  {
    "CRN": 21174,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 68,
    "DAYS": "MWF",
@@ -463,7 +463,7 @@
  },
  {
    "CRN": 21701,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 79,
    "DAYS": "MWF",
@@ -477,7 +477,7 @@
  },
  {
    "CRN": 21399,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 63,
    "DAYS": "M",
@@ -491,7 +491,7 @@
  },
  {
    "CRN": 20735,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing-Hybrid",
    "SECT #": 25,
    "DAYS": "W",
@@ -505,7 +505,7 @@
  },
  {
    "CRN": 20741,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 62,
    "DAYS": "TR",
@@ -519,7 +519,7 @@
  },
  {
    "CRN": 20739,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 54,
    "DAYS": "MWF",
@@ -533,7 +533,7 @@
  },
  {
    "CRN": 20415,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 16,
    "DAYS": "MWF",
@@ -547,7 +547,7 @@
  },
  {
    "CRN": 20409,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 5,
    "DAYS": "MW",
@@ -561,7 +561,7 @@
  },
  {
    "CRN": 20420,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 22,
    "DAYS": "MW",
@@ -575,7 +575,7 @@
  },
  {
    "CRN": 21116,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 14,
    "DAYS": "TR",
@@ -589,7 +589,7 @@
  },
  {
    "CRN": 21704,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 83,
    "DAYS": "TR",
@@ -603,7 +603,7 @@
  },
  {
    "CRN": 21176,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 70,
    "DAYS": "MW",
@@ -617,7 +617,7 @@
  },
  {
    "CRN": 20407,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 3,
    "DAYS": "MWF",
@@ -631,7 +631,7 @@
  },
  {
    "CRN": 20408,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 4,
    "DAYS": "MWF",
@@ -645,7 +645,7 @@
  },
  {
    "CRN": 20416,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 17,
    "DAYS": "MWF",
@@ -659,7 +659,7 @@
  },
  {
    "CRN": 21397,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 51,
    "DAYS": "MWF",
@@ -673,7 +673,7 @@
  },
  {
    "CRN": 20431,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 44,
    "DAYS": "TR",
@@ -687,7 +687,7 @@
  },
  {
    "CRN": 20424,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing-Hybrid",
    "SECT #": 29,
    "DAYS": "TR",
@@ -701,7 +701,7 @@
  },
  {
    "CRN": 20737,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 52,
    "DAYS": "MWF",
@@ -715,7 +715,7 @@
  },
  {
    "CRN": 20428,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 36,
    "DAYS": "MWF",
@@ -729,7 +729,7 @@
  },
  {
    "CRN": 21395,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 26,
    "DAYS": "MWF",
@@ -743,7 +743,7 @@
  },
  {
    "CRN": 21398,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 60,
    "DAYS": "MW",
@@ -757,7 +757,7 @@
  },
  {
    "CRN": 20738,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 53,
    "DAYS": "MWF",
@@ -771,7 +771,7 @@
  },
  {
    "CRN": 20852,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 35,
    "DAYS": "MWF",
@@ -785,7 +785,7 @@
  },
  {
    "CRN": 20853,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 59,
    "DAYS": "MWF",
@@ -799,7 +799,7 @@
  },
  {
    "CRN": 21017,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 66,
    "DAYS": "MWF",
@@ -813,7 +813,7 @@
  },
  {
    "CRN": 21175,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 69,
    "DAYS": "MWF",
@@ -827,7 +827,7 @@
  },
  {
    "CRN": 21396,
-   "CRSE #": "1001",
+   "CRSENO": "1001",
    "TITLE": "Intro to Computing",
    "SECT #": 42,
    "DAYS": "MWF",
@@ -841,7 +841,7 @@
  },
  {
    "CRN": 20854,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media",
    "SECT #": 23,
    "DAYS": "F",
@@ -855,7 +855,7 @@
  },
  {
    "CRN": 20749,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media",
    "SECT #": 27,
    "DAYS": "TR",
@@ -869,7 +869,7 @@
  },
  {
    "CRN": 20750,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media",
    "SECT #": 28,
    "DAYS": "TR",
@@ -883,7 +883,7 @@
  },
  {
    "CRN": 21813,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media-Hybrid",
    "SECT #": 39,
    "DAYS": "TR",
@@ -897,7 +897,7 @@
  },
  {
    "CRN": 20743,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media",
    "SECT #": 18,
    "DAYS": "MWF",
@@ -911,7 +911,7 @@
  },
  {
    "CRN": 20435,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media",
    "SECT #": 2,
    "DAYS": "MWF",
@@ -925,7 +925,7 @@
  },
  {
    "CRN": 20436,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media",
    "SECT #": 3,
    "DAYS": "MWF",
@@ -939,7 +939,7 @@
  },
  {
    "CRN": 20751,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media",
    "SECT #": 31,
    "DAYS": "T",
@@ -953,7 +953,7 @@
  },
  {
    "CRN": 21998,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media",
    "SECT #": 9,
    "DAYS": "R",
@@ -967,7 +967,7 @@
  },
  {
    "CRN": 20434,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media",
    "SECT #": 1,
    "DAYS": "MWF",
@@ -981,7 +981,7 @@
  },
  {
    "CRN": 20441,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media-Hybrid",
    "SECT #": 8,
    "DAYS": "M",
@@ -995,7 +995,7 @@
  },
  {
    "CRN": 20746,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media",
    "SECT #": 22,
    "DAYS": "MW",
@@ -1009,7 +1009,7 @@
  },
  {
    "CRN": 21012,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media",
    "SECT #": 33,
    "DAYS": "MW",
@@ -1023,7 +1023,7 @@
  },
  {
    "CRN": 20856,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media-Hybrid",
    "SECT #": 29,
    "DAYS": "S",
@@ -1037,7 +1037,7 @@
  },
  {
    "CRN": 21064,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media-Hybrid",
    "SECT #": 37,
    "DAYS": "S",
@@ -1051,7 +1051,7 @@
  },
  {
    "CRN": 20444,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media-Hybrid",
    "SECT #": 13,
    "DAYS": "TR",
@@ -1065,7 +1065,7 @@
  },
  {
    "CRN": 20742,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media",
    "SECT #": 16,
    "DAYS": "R",
@@ -1079,7 +1079,7 @@
  },
  {
    "CRN": 20445,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media",
    "SECT #": 15,
    "DAYS": "T",
@@ -1093,7 +1093,7 @@
  },
  {
    "CRN": 20747,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media-Hybrid",
    "SECT #": 25,
    "DAYS": "W",
@@ -1107,7 +1107,7 @@
  },
  {
    "CRN": 20440,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media-Hybrid",
    "SECT #": 7,
    "DAYS": "F",
@@ -1121,7 +1121,7 @@
  },
  {
    "CRN": 20857,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media-Hybrid",
    "SECT #": 30,
    "DAYS": "TR",
@@ -1135,7 +1135,7 @@
  },
  {
    "CRN": 20437,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media",
    "SECT #": 4,
    "DAYS": "MWF",
@@ -1149,7 +1149,7 @@
  },
  {
    "CRN": 20442,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media",
    "SECT #": 11,
    "DAYS": "TR",
@@ -1163,7 +1163,7 @@
  },
  {
    "CRN": 20438,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media",
    "SECT #": 5,
    "DAYS": "MW",
@@ -1177,7 +1177,7 @@
  },
  {
    "CRN": 20439,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media",
    "SECT #": 6,
    "DAYS": "MW",
@@ -1191,7 +1191,7 @@
  },
  {
    "CRN": 20745,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media",
    "SECT #": 20,
    "DAYS": "MWF",
@@ -1205,7 +1205,7 @@
  },
  {
    "CRN": 20855,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media",
    "SECT #": 24,
    "DAYS": "M",
@@ -1219,7 +1219,7 @@
  },
  {
    "CRN": 21812,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media-Hybrid",
    "SECT #": 38,
    "DAYS": "W",
@@ -1233,7 +1233,7 @@
  },
  {
    "CRN": 20443,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media",
    "SECT #": 12,
    "DAYS": "TR",
@@ -1247,7 +1247,7 @@
  },
  {
    "CRN": 20744,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media",
    "SECT #": 19,
    "DAYS": "MWF",
@@ -1261,7 +1261,7 @@
  },
  {
    "CRN": 20748,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media",
    "SECT #": 26,
    "DAYS": "TR",
@@ -1275,7 +1275,7 @@
  },
  {
    "CRN": 21400,
-   "CRSE #": "2110",
+   "CRSENO": "2110",
    "TITLE": "Digital Media-Hybrid",
    "SECT #": 10,
    "DAYS": "TR",
@@ -1289,7 +1289,7 @@
  },
  {
    "CRN": 22014,
-   "CRSE #": "2110H",
+   "CRSENO": "2110H",
    "TITLE": "Digital Media-Hybrid Honors",
    "SECT #": 1,
    "DAYS": "TR",
@@ -1303,7 +1303,7 @@
  },
  {
    "CRN": 22015,
-   "CRSE #": "2110H",
+   "CRSENO": "2110H",
    "TITLE": "Digital Media-Hybrid Honors",
    "SECT #": 2,
    "DAYS": "TR",
@@ -1317,7 +1317,7 @@
  },
  {
    "CRN": 20446,
-   "CRSE #": "2120",
+   "CRSENO": "2120",
    "TITLE": "Intro to Programming",
    "SECT #": 1,
    "DAYS": "MWF",
@@ -1331,7 +1331,7 @@
  },
  {
    "CRN": 21402,
-   "CRSE #": "2120",
+   "CRSENO": "2120",
    "TITLE": "Intro to Programming",
    "SECT #": 15,
    "DAYS": "MWF",
@@ -1345,7 +1345,7 @@
  },
  {
    "CRN": 22001,
-   "CRSE #": "2120",
+   "CRSENO": "2120",
    "TITLE": "Intro to Programming",
    "SECT #": 12,
    "DAYS": "MWF",
@@ -1359,7 +1359,7 @@
  },
  {
    "CRN": 21065,
-   "CRSE #": "2120",
+   "CRSENO": "2120",
    "TITLE": "Intro to Programming",
    "SECT #": 8,
    "DAYS": "TR",
@@ -1373,7 +1373,7 @@
  },
  {
    "CRN": 21066,
-   "CRSE #": "2120",
+   "CRSENO": "2120",
    "TITLE": "Intro to Programming",
    "SECT #": 9,
    "DAYS": "TR",
@@ -1387,7 +1387,7 @@
  },
  {
    "CRN": 21999,
-   "CRSE #": "2120",
+   "CRSENO": "2120",
    "TITLE": "Intro to Programming",
    "SECT #": 5,
    "DAYS": "TR",
@@ -1401,7 +1401,7 @@
  },
  {
    "CRN": 20448,
-   "CRSE #": "2120",
+   "CRSENO": "2120",
    "TITLE": "Intro to Programming",
    "SECT #": 3,
    "DAYS": "MW",
@@ -1415,7 +1415,7 @@
  },
  {
    "CRN": 20449,
-   "CRSE #": "2120",
+   "CRSENO": "2120",
    "TITLE": "Intro to Programming",
    "SECT #": 4,
    "DAYS": "MW",
@@ -1429,7 +1429,7 @@
  },
  {
    "CRN": 21067,
-   "CRSE #": "2120",
+   "CRSENO": "2120",
    "TITLE": "Intro to Programming",
    "SECT #": 10,
    "DAYS": "MW",
@@ -1443,7 +1443,7 @@
  },
  {
    "CRN": 21011,
-   "CRSE #": "2120",
+   "CRSENO": "2120",
    "TITLE": "Intro to Programming",
    "SECT #": 7,
    "DAYS": "TR",
@@ -1457,7 +1457,7 @@
  },
  {
    "CRN": 21330,
-   "CRSE #": "2120",
+   "CRSENO": "2120",
    "TITLE": "Intro to Programming",
    "SECT #": 11,
    "DAYS": "TR",
@@ -1471,7 +1471,7 @@
  },
  {
    "CRN": 22000,
-   "CRSE #": "2120",
+   "CRSENO": "2120",
    "TITLE": "Intro to Programming",
    "SECT #": 6,
    "DAYS": "MW",
@@ -1485,7 +1485,7 @@
  },
  {
    "CRN": 20447,
-   "CRSE #": "2120",
+   "CRSENO": "2120",
    "TITLE": "Intro to Programming",
    "SECT #": 2,
    "DAYS": "TR",
@@ -1499,7 +1499,7 @@
  },
  {
    "CRN": 21401,
-   "CRSE #": "2120",
+   "CRSENO": "2120",
    "TITLE": "Intro to Programming",
    "SECT #": 13,
    "DAYS": "TR",
@@ -1513,7 +1513,7 @@
  },
  {
    "CRN": 20861,
-   "CRSE #": "2130",
+   "CRSENO": "2130",
    "TITLE": "Web Technologies",
    "SECT #": 6,
    "DAYS": "T",
@@ -1527,7 +1527,7 @@
  },
  {
    "CRN": 20862,
-   "CRSE #": "2130",
+   "CRSENO": "2130",
    "TITLE": "Web Technologies",
    "SECT #": 7,
    "DAYS": "MWF",
@@ -1541,7 +1541,7 @@
  },
  {
    "CRN": 20860,
-   "CRSE #": "2130",
+   "CRSENO": "2130",
    "TITLE": "Web Technologies",
    "SECT #": 4,
    "DAYS": "MWF",
@@ -1555,7 +1555,7 @@
  },
  {
    "CRN": 20863,
-   "CRSE #": "2130",
+   "CRSENO": "2130",
    "TITLE": "Web Technologies",
    "SECT #": 10,
    "DAYS": "TR",
@@ -1569,7 +1569,7 @@
  },
  {
    "CRN": 21181,
-   "CRSE #": "2140",
+   "CRSENO": "2140",
    "TITLE": "Programming Fundamentals",
    "SECT #": 2,
    "DAYS": "MW",
@@ -1583,7 +1583,7 @@
  },
  {
    "CRN": 22003,
-   "CRSE #": "2140",
+   "CRSENO": "2140",
    "TITLE": "Programming Fundamentals",
    "SECT #": 12,
    "DAYS": "MW",
@@ -1597,7 +1597,7 @@
  },
  {
    "CRN": 21180,
-   "CRSE #": "2140",
+   "CRSENO": "2140",
    "TITLE": "Programming Fundamentals",
    "SECT #": 1,
    "DAYS": "MWF",
@@ -1611,7 +1611,7 @@
  },
  {
    "CRN": 21187,
-   "CRSE #": "2140",
+   "CRSENO": "2140",
    "TITLE": "Programming Fundamentals",
    "SECT #": 8,
    "DAYS": "MW",
@@ -1625,7 +1625,7 @@
  },
  {
    "CRN": 21186,
-   "CRSE #": "2140",
+   "CRSENO": "2140",
    "TITLE": "Programming Fundamentals",
    "SECT #": 7,
    "DAYS": "MWF",
@@ -1639,7 +1639,7 @@
  },
  {
    "CRN": 22002,
-   "CRSE #": "2140",
+   "CRSENO": "2140",
    "TITLE": "Programming Fundamentals",
    "SECT #": 9,
    "DAYS": "MWF",
@@ -1653,7 +1653,7 @@
  },
  {
    "CRN": 21404,
-   "CRSE #": "2140",
+   "CRSENO": "2140",
    "TITLE": "Programming Fundamentals",
    "SECT #": 11,
    "DAYS": "TR",
@@ -1667,7 +1667,7 @@
  },
  {
    "CRN": 21185,
-   "CRSE #": "2140",
+   "CRSENO": "2140",
    "TITLE": "Programming Fundamentals",
    "SECT #": 6,
    "DAYS": "TR",
@@ -1681,7 +1681,7 @@
  },
  {
    "CRN": 21183,
-   "CRSE #": "2140",
+   "CRSENO": "2140",
    "TITLE": "Programming Fundamentals",
    "SECT #": 4,
    "DAYS": "TR",
@@ -1695,7 +1695,7 @@
  },
  {
    "CRN": 21184,
-   "CRSE #": "2140",
+   "CRSENO": "2140",
    "TITLE": "Programming Fundamentals",
    "SECT #": 5,
    "DAYS": "TR",
@@ -1709,7 +1709,7 @@
  },
  {
    "CRN": 21403,
-   "CRSE #": "2140",
+   "CRSENO": "2140",
    "TITLE": "Programming Fundamentals",
    "SECT #": 10,
    "DAYS": "TR",
@@ -1723,7 +1723,7 @@
  },
  {
    "CRN": 21182,
-   "CRSE #": "2140",
+   "CRSENO": "2140",
    "TITLE": "Programming Fundamentals",
    "SECT #": 3,
    "DAYS": "TR",
@@ -1737,7 +1737,7 @@
  },
  {
    "CRN": 20858,
-   "CRSE #": "2150",
+   "CRSENO": "2150",
    "TITLE": "Intermediate Programming",
    "SECT #": 4,
    "DAYS": "TR",
@@ -1751,7 +1751,7 @@
  },
  {
    "CRN": 21188,
-   "CRSE #": "2150",
+   "CRSENO": "2150",
    "TITLE": "Intermediate Programming",
    "SECT #": 6,
    "DAYS": "TR",
@@ -1765,7 +1765,7 @@
  },
  {
    "CRN": 20450,
-   "CRSE #": "2150",
+   "CRSENO": "2150",
    "TITLE": "Intermediate Programming",
    "SECT #": 2,
    "DAYS": "MWF",
@@ -1779,7 +1779,7 @@
  },
  {
    "CRN": 21405,
-   "CRSE #": "2150",
+   "CRSENO": "2150",
    "TITLE": "Intermediate Programming",
    "SECT #": 7,
    "DAYS": "S",
@@ -1793,7 +1793,7 @@
  },
  {
    "CRN": 20752,
-   "CRSE #": "2150",
+   "CRSENO": "2150",
    "TITLE": "Intermediate Programming",
    "SECT #": 1,
    "DAYS": "TR",
@@ -1807,7 +1807,7 @@
  },
  {
    "CRN": 20451,
-   "CRSE #": "2150",
+   "CRSENO": "2150",
    "TITLE": "Intermediate Programming",
    "SECT #": 3,
    "DAYS": "TR",
@@ -1821,7 +1821,7 @@
  },
  {
    "CRN": 21103,
-   "CRSE #": "2150",
+   "CRSENO": "2150",
    "TITLE": "Intermediate Programming",
    "SECT #": 5,
    "DAYS": "MWF",
@@ -1835,7 +1835,7 @@
  },
  {
    "CRN": 21189,
-   "CRSE #": "2201",
+   "CRSENO": "2201",
    "TITLE": "Introduction to Info Systems",
    "SECT #": 7,
    "DAYS": "M",
@@ -1849,7 +1849,7 @@
  },
  {
    "CRN": 20753,
-   "CRSE #": "2201",
+   "CRSENO": "2201",
    "TITLE": "Introduction to Info Systems",
    "SECT #": 2,
    "DAYS": "TR",
@@ -1863,7 +1863,7 @@
  },
  {
    "CRN": 20754,
-   "CRSE #": "2201",
+   "CRSENO": "2201",
    "TITLE": "Introduction to Info Systems",
    "SECT #": 3,
    "DAYS": "TR",
@@ -1877,7 +1877,7 @@
  },
  {
    "CRN": 20864,
-   "CRSE #": "2201",
+   "CRSENO": "2201",
    "TITLE": "Introduction to Info Systems",
    "SECT #": 4,
    "DAYS": "TR",
@@ -1891,7 +1891,7 @@
  },
  {
    "CRN": 20859,
-   "CRSE #": "2201",
+   "CRSENO": "2201",
    "TITLE": "Introduction to Info Systems",
    "SECT #": 1,
    "DAYS": "MW",
@@ -1905,7 +1905,7 @@
  },
  {
    "CRN": 21106,
-   "CRSE #": "2201",
+   "CRSENO": "2201",
    "TITLE": "Introduction to Info Systems",
    "SECT #": 6,
    "DAYS": "F",
@@ -1919,7 +1919,7 @@
  },
  {
    "CRN": 21705,
-   "CRSE #": "2201",
+   "CRSENO": "2201",
    "TITLE": "Introduction to Info Systems",
    "SECT #": 8,
    "DAYS": "MW",
@@ -1933,7 +1933,7 @@
  },
  {
    "CRN": 21019,
-   "CRSE #": "2500",
+   "CRSENO": "2500",
    "TITLE": "Intro to Undergrad Research",
    "SECT #": 1,
    "DAYS": "F",
@@ -1947,7 +1947,7 @@
  },
  {
    "CRN": 22007,
-   "CRSE #": "3100",
+   "CRSENO": "3100",
    "TITLE": "Introduction to Networks",
    "SECT #": 6,
    "DAYS": "TR",
@@ -1961,7 +1961,7 @@
  },
  {
    "CRN": 20755,
-   "CRSE #": "3100",
+   "CRSENO": "3100",
    "TITLE": "Introduction to Networks",
    "SECT #": 2,
    "DAYS": "MWF",
@@ -1975,7 +1975,7 @@
  },
  {
    "CRN": 20865,
-   "CRSE #": "3100",
+   "CRSENO": "3100",
    "TITLE": "Introduction to Networks",
    "SECT #": 3,
    "DAYS": "TR",
@@ -1989,7 +1989,7 @@
  },
  {
    "CRN": 21406,
-   "CRSE #": "3100",
+   "CRSENO": "3100",
    "TITLE": "Introduction to Networks",
    "SECT #": 4,
    "DAYS": "MW",
@@ -2003,7 +2003,7 @@
  },
  {
    "CRN": 20452,
-   "CRSE #": "3100",
+   "CRSENO": "3100",
    "TITLE": "Introduction to Networks",
    "SECT #": 1,
    "DAYS": "R",
@@ -2017,7 +2017,7 @@
  },
  {
    "CRN": 21407,
-   "CRSE #": "3100",
+   "CRSENO": "3100",
    "TITLE": "Introduction to Networks",
    "SECT #": 5,
    "DAYS": "S",
@@ -2031,7 +2031,7 @@
  },
  {
    "CRN": 21408,
-   "CRSE #": "3150",
+   "CRSENO": "3150",
    "TITLE": "Advanced Programming",
    "SECT #": 3,
    "DAYS": "MW",
@@ -2045,7 +2045,7 @@
  },
  {
    "CRN": 20454,
-   "CRSE #": "3150",
+   "CRSENO": "3150",
    "TITLE": "Advanced Programming",
    "SECT #": 1,
    "DAYS": "TR",
@@ -2059,7 +2059,7 @@
  },
  {
    "CRN": 20756,
-   "CRSE #": "3150",
+   "CRSENO": "3150",
    "TITLE": "Advanced Programming",
    "SECT #": 2,
    "DAYS": "T",
@@ -2073,7 +2073,7 @@
  },
  {
    "CRN": 22004,
-   "CRSE #": "3200",
+   "CRSENO": "3200",
    "TITLE": "Intro to Databases",
    "SECT #": 6,
    "DAYS": "MW",
@@ -2087,7 +2087,7 @@
  },
  {
    "CRN": 20453,
-   "CRSE #": "3200",
+   "CRSENO": "3200",
    "TITLE": "Intro to Databases",
    "SECT #": 1,
    "DAYS": "MW",
@@ -2101,7 +2101,7 @@
  },
  {
    "CRN": 20866,
-   "CRSE #": "3200",
+   "CRSENO": "3200",
    "TITLE": "Intro to Databases",
    "SECT #": 3,
    "DAYS": "MW",
@@ -2115,7 +2115,7 @@
  },
  {
    "CRN": 21410,
-   "CRSE #": "3200",
+   "CRSENO": "3200",
    "TITLE": "Intro to Databases",
    "SECT #": 5,
    "DAYS": "M",
@@ -2129,7 +2129,7 @@
  },
  {
    "CRN": 20757,
-   "CRSE #": "3200",
+   "CRSENO": "3200",
    "TITLE": "Intro to Databases",
    "SECT #": 2,
    "DAYS": "TR",
@@ -2143,7 +2143,7 @@
  },
  {
    "CRN": 21409,
-   "CRSE #": "3200",
+   "CRSENO": "3200",
    "TITLE": "Intro to Databases",
    "SECT #": 4,
    "DAYS": "TR",
@@ -2157,7 +2157,7 @@
  },
  {
    "CRN": 20455,
-   "CRSE #": "3300",
+   "CRSENO": "3300",
    "TITLE": "Information Security",
    "SECT #": 1,
    "DAYS": "MW",
@@ -2171,7 +2171,7 @@
  },
  {
    "CRN": 21797,
-   "CRSE #": "3300",
+   "CRSENO": "3300",
    "TITLE": "Information Security",
    "SECT #": 4,
    "DAYS": "MW",
@@ -2185,7 +2185,7 @@
  },
  {
    "CRN": 21411,
-   "CRSE #": "3300",
+   "CRSENO": "3300",
    "TITLE": "Information Security",
    "SECT #": 2,
    "DAYS": "TR",
@@ -2199,7 +2199,7 @@
  },
  {
    "CRN": 20456,
-   "CRSE #": "3350",
+   "CRSENO": "3350",
    "TITLE": "Digital Commerce",
    "SECT #": 1,
    "DAYS": "TR",
@@ -2213,7 +2213,7 @@
  },
  {
    "CRN": 21412,
-   "CRSE #": "3350",
+   "CRSENO": "3350",
    "TITLE": "Digital Commerce",
    "SECT #": 3,
    "DAYS": "MW",
@@ -2227,7 +2227,7 @@
  },
  {
    "CRN": 22005,
-   "CRSE #": "3350",
+   "CRSENO": "3350",
    "TITLE": "Digital Commerce",
    "SECT #": 2,
    "DAYS": "W",
@@ -2241,7 +2241,7 @@
  },
  {
    "CRN": 21413,
-   "CRSE #": "3450",
+   "CRSENO": "3450",
    "TITLE": "Comp Graphics and Multimedia",
    "SECT #": 1,
    "DAYS": "TR",
@@ -2255,7 +2255,7 @@
  },
  {
    "CRN": 21706,
-   "CRSE #": "3450",
+   "CRSENO": "3450",
    "TITLE": "Comp Graphics and Multimedia",
    "SECT #": 2,
    "DAYS": "TR",
@@ -2269,7 +2269,7 @@
  },
  {
    "CRN": 20758,
-   "CRSE #": "3600",
+   "CRSENO": "3600",
    "TITLE": "Operating Systems",
    "SECT #": 1,
    "DAYS": "MW",
@@ -2283,7 +2283,7 @@
  },
  {
    "CRN": 21707,
-   "CRSE #": "3600",
+   "CRSENO": "3600",
    "TITLE": "Operating Systems",
    "SECT #": 2,
    "DAYS": "T",
@@ -2297,7 +2297,7 @@
  },
  {
    "CRN": 20867,
-   "CRSE #": "3700",
+   "CRSENO": "3700",
    "TITLE": "Systems Analysis and Design",
    "SECT #": 2,
    "DAYS": "MW",
@@ -2311,7 +2311,7 @@
  },
  {
    "CRN": 20457,
-   "CRSE #": "3700",
+   "CRSENO": "3700",
    "TITLE": "Systems Analysis and Design",
    "SECT #": 1,
    "DAYS": "TR",
@@ -2325,7 +2325,7 @@
  },
  {
    "CRN": 21414,
-   "CRSE #": "3700",
+   "CRSENO": "3700",
    "TITLE": "Systems Analysis and Design",
    "SECT #": 3,
    "DAYS": "TR",
@@ -2339,7 +2339,7 @@
  },
  {
    "CRN": 21540,
-   "CRSE #": "3700",
+   "CRSENO": "3700",
    "TITLE": "Systems Analysis/Design",
    "SECT #": 4,
    "DAYS": "M",
@@ -2353,7 +2353,7 @@
  },
  {
    "CRN": 20458,
-   "CRSE #": "3860",
+   "CRSENO": "3860",
    "TITLE": "Software Development I",
    "SECT #": 1,
    "DAYS": "MW",
@@ -2367,7 +2367,7 @@
  },
  {
    "CRN": 21708,
-   "CRSE #": "3860",
+   "CRSENO": "3860",
    "TITLE": "Software Development I",
    "SECT #": 2,
    "DAYS": "TR",
@@ -2381,7 +2381,7 @@
  },
  {
    "CRN": 20459,
-   "CRSE #": "3870",
+   "CRSENO": "3870",
    "TITLE": "Software Development II",
    "SECT #": 1,
    "DAYS": "M",
@@ -2395,7 +2395,7 @@
  },
  {
    "CRN": 21709,
-   "CRSE #": "3870",
+   "CRSENO": "3870",
    "TITLE": "Software Development II",
    "SECT #": 2,
    "DAYS": "MW",
@@ -2409,7 +2409,7 @@
  },
  {
    "CRN": 20460,
-   "CRSE #": "3900",
+   "CRSENO": "3900",
    "TITLE": "Professional Pract & Ethics",
    "SECT #": 1,
    "DAYS": "MWF",
@@ -2423,7 +2423,7 @@
  },
  {
    "CRN": 20868,
-   "CRSE #": "3900",
+   "CRSENO": "3900",
    "TITLE": "Professional Pract & Ethics",
    "SECT #": 3,
    "DAYS": "MWF",
@@ -2437,7 +2437,7 @@
  },
  {
    "CRN": 20759,
-   "CRSE #": "3900",
+   "CRSENO": "3900",
    "TITLE": "Professional Pract & Ethics",
    "SECT #": 2,
    "DAYS": "TR",
@@ -2451,7 +2451,7 @@
  },
  {
    "CRN": 21415,
-   "CRSE #": "3900",
+   "CRSENO": "3900",
    "TITLE": "Professional Pract & Ethics",
    "SECT #": 4,
    "DAYS": "S",
@@ -2465,7 +2465,7 @@
  },
  {
    "CRN": 21710,
-   "CRSE #": "4100",
+   "CRSENO": "4100",
    "TITLE": "Advanced Networks",
    "SECT #": 1,
    "DAYS": "S",
@@ -2479,7 +2479,7 @@
  },
  {
    "CRN": 21711,
-   "CRSE #": "4110",
+   "CRSENO": "4110",
    "TITLE": "Digital Media Capstone Project",
    "SECT #": 1,
    "DAYS": "M",
@@ -2493,7 +2493,7 @@
  },
  {
    "CRN": 22020,
-   "CRSE #": "4130",
+   "CRSENO": "4130",
    "TITLE": "Human Computer Interaction",
    "SECT #": 1,
    "DAYS": "W",
@@ -2507,7 +2507,7 @@
  },
  {
    "CRN": 21416,
-   "CRSE #": "4150",
+   "CRSENO": "4150",
    "TITLE": "Enterprise Process Integration",
    "SECT #": 1,
    "DAYS": "R",
@@ -2521,7 +2521,7 @@
  },
  {
    "CRN": 20461,
-   "CRSE #": "4200",
+   "CRSENO": "4200",
    "TITLE": "Advanced Databases",
    "SECT #": 1,
    "DAYS": "MWF",
@@ -2535,7 +2535,7 @@
  },
  {
    "CRN": 21712,
-   "CRSE #": "4200",
+   "CRSENO": "4200",
    "TITLE": "Advanced Databases",
    "SECT #": 2,
    "DAYS": "S",
@@ -2549,7 +2549,7 @@
  },
  {
    "CRN": 21190,
-   "CRSE #": "4210",
+   "CRSENO": "4210",
    "TITLE": "Information Analytics",
    "SECT #": 1,
    "DAYS": "T",
@@ -2563,7 +2563,7 @@
  },
  {
    "CRN": 21713,
-   "CRSE #": "4260",
+   "CRSENO": "4260",
    "TITLE": "Software Testing and QA",
    "SECT #": 2,
    "DAYS": "W",
@@ -2577,7 +2577,7 @@
  },
  {
    "CRN": 20818,
-   "CRSE #": "4260",
+   "CRSENO": "4260",
    "TITLE": "Software Testing and QA",
    "SECT #": 1,
    "DAYS": "MW",
@@ -2591,7 +2591,7 @@
  },
  {
    "CRN": 21714,
-   "CRSE #": "4320",
+   "CRSENO": "4320",
    "TITLE": "Internet Security",
    "SECT #": 1,
    "DAYS": "W",
@@ -2605,7 +2605,7 @@
  },
  {
    "CRN": 21558,
-   "CRSE #": "4330",
+   "CRSENO": "4330",
    "TITLE": "System Administration",
    "SECT #": 1,
    "DAYS": "MWF",
@@ -2619,7 +2619,7 @@
  },
  {
    "CRN": 21715,
-   "CRSE #": "4330",
+   "CRSENO": "4330",
    "TITLE": "System Administration",
    "SECT #": 2,
    "DAYS": "R",
@@ -2633,7 +2633,7 @@
  },
  {
    "CRN": 21825,
-   "CRSE #": "4400",
+   "CRSENO": "4400",
    "TITLE": "Special Topics in Infor. Tech.",
    "SECT #": 3,
    "DAYS": "F",
@@ -2647,7 +2647,7 @@
  },
  {
    "CRN": 21349,
-   "CRSE #": "4400",
+   "CRSENO": "4400",
    "TITLE": "Sp Topics in Info Tech",
    "SECT #": 1,
    "DAYS": "W",
@@ -2661,7 +2661,7 @@
  },
  {
    "CRN": 21821,
-   "CRSE #": "4400",
+   "CRSENO": "4400",
    "TITLE": "Special Topics in Infor. Tech.",
    "SECT #": 2,
    "DAYS": "TR",
@@ -2675,7 +2675,7 @@
  },
  {
    "CRN": 22044,
-   "CRSE #": "4400",
+   "CRSENO": "4400",
    "TITLE": "Special Topics in Infor. Tech.",
    "SECT #": 4,
    "DAYS": "M",
@@ -2689,7 +2689,7 @@
  },
  {
    "CRN": 22045,
-   "CRSE #": "4400",
+   "CRSENO": "4400",
    "TITLE": "Special Topics in Infor. Tech.",
    "SECT #": 5,
    "DAYS": "TR",
@@ -2703,7 +2703,7 @@
  },
  {
    "CRN": 21716,
-   "CRSE #": "4450",
+   "CRSENO": "4450",
    "TITLE": "Web Development",
    "SECT #": 1,
    "DAYS": "MWF",
@@ -2717,7 +2717,7 @@
  },
  {
    "CRN": 21717,
-   "CRSE #": "4450",
+   "CRSENO": "4450",
    "TITLE": "Web Development",
    "SECT #": 2,
    "DAYS": "T",
@@ -2731,7 +2731,7 @@
  },
  {
    "CRN": 20518,
-   "CRSE #": "4500",
+   "CRSENO": "4500",
    "TITLE": "Undergraduate Research Project",
    "SECT #": 1,
    "DAYS": "S",
@@ -2745,7 +2745,7 @@
  },
  {
    "CRN": 21718,
-   "CRSE #": "4550",
+   "CRSENO": "4550",
    "TITLE": "Mobile Application Development",
    "SECT #": 2,
    "DAYS": "MW",
@@ -2759,7 +2759,7 @@
  },
  {
    "CRN": 21327,
-   "CRSE #": "4550",
+   "CRSENO": "4550",
    "TITLE": "Mobile Application Development",
    "SECT #": 1,
    "DAYS": "TR",
@@ -2773,7 +2773,7 @@
  },
  {
    "CRN": 20993,
-   "CRSE #": "4650",
+   "CRSENO": "4650",
    "TITLE": "Game Development",
    "SECT #": 1,
    "DAYS": "F",
@@ -2787,7 +2787,7 @@
  },
  {
    "CRN": 21870,
-   "CRSE #": "4700",
+   "CRSENO": "4700",
    "TITLE": "Artificial Intelligence",
    "SECT #": 1,
    "DAYS": "TR",
@@ -2801,7 +2801,7 @@
  },
  {
    "CRN": 21088,
-   "CRSE #": "4750",
+   "CRSENO": "4750",
    "TITLE": "Enterprise Arch Design-Hybrid",
    "SECT #": 1,
    "DAYS": "TR",
@@ -2815,7 +2815,7 @@
  },
  {
    "CRN": 21784,
-   "CRSE #": "4800",
+   "CRSENO": "4800",
    "TITLE": "Internship in Service Learning",
    "SECT #": 3,
    "DAYS": "TR",
@@ -2829,7 +2829,7 @@
  },
  {
    "CRN": 21555,
-   "CRSE #": "4800",
+   "CRSENO": "4800",
    "TITLE": "Internship in Service Learning",
    "SECT #": 1,
    "DAYS": "TR",
@@ -2843,7 +2843,7 @@
  },
  {
    "CRN": 21779,
-   "CRSE #": "4800",
+   "CRSENO": "4800",
    "TITLE": "Internship in Service Learning",
    "SECT #": 2,
    "DAYS": "MW",
@@ -2857,7 +2857,7 @@
  },
  {
    "CRN": 21810,
-   "CRSE #": "4800",
+   "CRSENO": "4800",
    "TITLE": "Internship in Service Learning",
    "SECT #": 4,
    "DAYS": "R",
@@ -2871,7 +2871,7 @@
  },
  {
    "CRN": 20760,
-   "CRSE #": "4810",
+   "CRSENO": "4810",
    "TITLE": "Info Technology Project I",
    "SECT #": 1,
    "DAYS": "F",
@@ -2885,7 +2885,7 @@
  },
  {
    "CRN": 21778,
-   "CRSE #": "4860",
+   "CRSENO": "4860",
    "TITLE": "Software Development Project",
    "SECT #": 3,
    "DAYS": "T",
@@ -2899,7 +2899,7 @@
  },
  {
    "CRN": 22022,
-   "CRSE #": "4860",
+   "CRSENO": "4860",
    "TITLE": "Software Development Project",
    "SECT #": 4,
    "DAYS": "R",
@@ -2913,7 +2913,7 @@
  },
  {
    "CRN": 20462,
-   "CRSE #": "4860",
+   "CRSENO": "4860",
    "TITLE": "Software Development Project",
    "SECT #": 1,
    "DAYS": "MW",
@@ -2927,7 +2927,7 @@
  },
  {
    "CRN": 20463,
-   "CRSE #": "4900",
+   "CRSENO": "4900",
    "TITLE": "Info Technology Internship",
    "SECT #": 1,
    "DAYS": "F",

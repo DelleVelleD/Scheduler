@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 import { Router, Routes, RouterModule } from '@angular/router/';
+
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { SearchResultsComponent } from './components/search-results/search-results.component';
 import { ScheduleConflictsComponent } from './components/schedule-conflicts/schedule-conflicts.component';
@@ -20,6 +20,7 @@ import { CurrentScheduleComponent } from './components/current-schedule/current-
 import { HomepageFacultyComponent } from './components/homepage-faculty/homepage-faculty.component';
 
 import { CourselistService } from './courselist.service';
+import { CoursesPipe } from './components/full-courselist/courses.pipe';
 
 const routes: Routes = [
   { path: 'main-page', component: MainPageComponent,
@@ -54,7 +55,8 @@ const routes: Routes = [
     CoursesOfferedComponent,
     CoursesUpcomingComponent,
     CurrentScheduleComponent,
-    HomepageFacultyComponent
+    HomepageFacultyComponent,
+    CoursesPipe
   ],
   imports: [
     BrowserModule,
