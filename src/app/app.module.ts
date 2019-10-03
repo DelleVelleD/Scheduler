@@ -18,6 +18,7 @@ import { CoursesOfferedComponent } from './components/courses-offered/courses-of
 import { CoursesUpcomingComponent } from './components/courses-upcoming/courses-upcoming.component';
 import { CurrentScheduleComponent } from './components/current-schedule/current-schedule.component';
 import { HomepageFacultyComponent } from './components/homepage-faculty/homepage-faculty.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 import { CourselistService } from './courselist.service';
 import { CoursesPipe } from './components/full-courselist/courses.pipe';
@@ -28,7 +29,9 @@ const routes: Routes = [
       { path: 'schedule-conflicts', component:ScheduleConflictsComponent },
       { path: 'system-errors', component:SystemErrorsComponent },
       { path: 'faculty-issues', component:FacultyIssuesComponent },
-      { path: 'full-courselist', component:FullCourselistComponent }
+      { path: 'full-courselist', component:FullCourselistComponent },
+      { path: "calendar", component: CalendarComponent }
+      
     ]
     },
   { path: 'homepage-faculty', component:HomepageFacultyComponent },

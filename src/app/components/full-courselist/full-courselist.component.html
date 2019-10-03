@@ -13,13 +13,13 @@
 <span>
     <h1></h1>
     <h1></h1>
-    <h3 id="tablename">Courses Offered This Semester (Spring 2019)</h3>
+    <h3 id="tablename">Courses Offered This Semester</h3>
 </span>
 
-<input type="text" id="myInput" onkeyup="myFunction3()" placeholder="Search for course title.."
-    title="Type in a course title">
+<!-- <input type="text" id="myInput" onkeyup="myFunction3()" placeholder="Search for course title.."
+    title="Type in a course title"> -->
 
-<div style="height:500px; overflow-y: scroll; overflow-x:scroll">
+<!-- <div style="height:500px; overflow-y: scroll; overflow-x:scroll">
     <table id="myTable" *ngIf='courses && courses.length'>
         <tr>
             <th>CRN</th>
@@ -42,12 +42,15 @@
             <td>{{course.FIRSTNAME}} {{course.LASTNAME}}</td>
         </tr>
     </table>
+</div> -->
+
+<div style="height:500px; width: 420px;overflow-y: scroll;">
+
+    <div class="shipping-item" id="myTable" *ngFor="let course of courseList | async |courses" (click)="navigateCalendar() ">
+
+             <span>{{ course.CRSENO }}</span>
+            <span>{{ course.TITLE }}</span>
+
+
+    </div>
 </div>
-
-<div class="shipping-item" *ngFor="let course of courseList | async |courses">
-
-        <span>{{ course.CRSENO }}</span>
-        <span>{{ course.TITLE }}</span>
-        
-      </div>
-

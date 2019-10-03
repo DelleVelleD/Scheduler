@@ -52,24 +52,26 @@
 
 .navbar {
 	float:right;
-	padding: 5px 5px;
-  background-color: #02754E;
+  padding: 5px 5px;
+  border-radius: 2px;
+  background-color: #ffff;
   
 }
 
 .navbar a {
-    color: #00704a;
+    color: #02754E;
     text-align: center;
     padding: 5px 5px;
     text-decoration: none;
-    background-color: silver;
-		border-style: inset;
-		border-radius: 1px;
+    background-color: #EEEEEE;
+    border-style: solid;
+    border-color: #ffff;
+		border-radius: 2px;
   }
 	/* Change color on hover */
 .navbar a:hover {
-    background-color: #00704a;
-    color: black;
+    background-color: #02754E;
+    color: white;
  }
 
  .searchbar a {
@@ -92,13 +94,12 @@
 
 .shipping-item {
   width: 100%;
-  min-width: 400px;
-  max-width: 450px;
+  min-width: 350px;
+  max-width: 400px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 16px 32px;
   margin-bottom: 8px;
-  border-radius: 2px;
   background-color: #EEEEEE;
 }
