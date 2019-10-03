@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import{CourselistService} from '../../courselist.service';
+import{CourselistService} from '../../../courselist.service';
 
 @Component({
-  selector: 'app-full-courselist',
-  templateUrl: './full-courselist.component.html',
-  styleUrls: ['./full-courselist.component.css']
+  selector: 'app-courses',
+  templateUrl: './courses.component.html',
+  styleUrls: ['./courses.component.css']
 })
-export class FullCourselistComponent implements OnInit {
-  courseList;
+export class CoursesComponent implements OnInit {
 
+  courseList;
   constructor(
     
     private router: Router,
@@ -30,7 +30,7 @@ export class FullCourselistComponent implements OnInit {
     this.router.navigate([""]);
   }
   navigateCalendar() {
-    this.router.navigate(["main-page/calendar"]);
+    this.router.navigate(["../../main-page/calendar"]);
   }
 
 

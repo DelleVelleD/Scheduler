@@ -10,7 +10,6 @@ import { SearchResultsComponent } from './components/search-results/search-resul
 import { ScheduleConflictsComponent } from './components/schedule-conflicts/schedule-conflicts.component';
 import { SystemErrorsComponent } from './components/system-errors/system-errors.component';
 import { FacultyIssuesComponent } from './components/faculty-issues/faculty-issues.component';
-import { FullCourselistComponent } from './components/full-courselist/full-courselist.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 
 import { CalendarComponent } from './components/calendar/calendar.component';
@@ -21,27 +20,30 @@ import { HomepageFacultyComponent } from './components/homepage-faculty/homepage
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 import { CourselistService } from './courselist.service';
-import { CoursesPipe } from './components/full-courselist/courses.pipe';
+import { CoursesPipe } from './components/full-courselist/courses/courses.pipe';
+import { CoursesComponent } from './components/full-courselist/courses/courses.component';
+import { CoursesModule } from './components/full-courselist/courses.module';
 
 const routes: Routes = [
-  { path: 'main-page', component: MainPageComponent,
+  {
+    path: 'main-page', component: MainPageComponent,
     children: [
-      { path: 'schedule-conflicts', component:ScheduleConflictsComponent },
-      { path: 'system-errors', component:SystemErrorsComponent },
-      { path: 'faculty-issues', component:FacultyIssuesComponent },
-      { path: 'full-courselist', component:FullCourselistComponent },
+      { path: 'schedule-conflicts', component: ScheduleConflictsComponent },
+      { path: 'system-errors', component: SystemErrorsComponent },
+      { path: 'faculty-issues', component: FacultyIssuesComponent },
+      { path: 'full-courselist/courses', component: CoursesComponent },
       { path: "calendar", component: CalendarComponent }
-      
+
     ]
-    },
-  { path: 'homepage-faculty', component:HomepageFacultyComponent },
-  { path: 'login-page', component:LoginPageComponent },
+  },
+  { path: 'homepage-faculty', component: HomepageFacultyComponent },
+  { path: 'login-page', component: LoginPageComponent },
   { path: "current-schedule", component: CurrentScheduleComponent },
-  { path: "courses-upcoming", component: CoursesUpcomingComponent},
-  { path: "courses-offered", component: CoursesOfferedComponent},
+  { path: "courses-upcoming", component: CoursesUpcomingComponent },
+  { path: "courses-offered", component: CoursesOfferedComponent },
   { path: "calendar", component: CalendarComponent },
-  { path: '#', redirectTo: 'homepage-faculty', pathMatch: 'full'},
-  { path: '', redirectTo: 'login-page', pathMatch: 'full'}
+  { path: '#', redirectTo: 'homepage-faculty', pathMatch: 'full' },
+  { path: '', redirectTo: 'login-page', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -52,21 +54,24 @@ const routes: Routes = [
     ScheduleConflictsComponent,
     SystemErrorsComponent,
     FacultyIssuesComponent,
-    FullCourselistComponent,
+    CoursesComponent,
     LoginPageComponent,
     CalendarComponent,
     CoursesOfferedComponent,
     CoursesUpcomingComponent,
     CurrentScheduleComponent,
     HomepageFacultyComponent,
-    CoursesPipe
+    CoursesPipe,
+    CoursesComponent
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     RouterModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    CoursesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
