@@ -44,12 +44,17 @@
     </table>
 </div> -->
 
+<div class="shipping-item">
+    <span><b>Course No</b></span>
+    <span><b>Title</b></span>
+   
+</div>
 <div style="height:500px; width: 420px;overflow-y: scroll;">
 
-    <div class="shipping-item" id="myTable" *ngFor="let course of courseList | async |courses" (click)="navigateCalendar() ">
+    <div class="shipping-item" *ngFor="let course of courseList | async |courses" (click)="navigateCalendar() ">
 
-             <span>{{ course.CRSENO }}</span>
-            <span>{{ course.TITLE }}</span>
+        <span>{{ course.CRSENO }}</span>
+        <span>{{ course.TITLE }}</span>
 
 
     </div>

@@ -1,3 +1,22 @@
-<p>
-  course-sections works!
-</p>
+<span>
+    <h1></h1>
+    <h1></h1>
+    <h3 id="tablename">Courses Offered This Semester</h3>
+</span>
+
+
+<div class="shipping-item">
+    <span><b>Course No</b></span>
+    <span><b>Title</b></span>
+    <span><b>Section No</b></span>
+</div>
+
+<div class="shipping-item" *ngFor="let course of courseList | async |courseSections">
+
+    <span>{{ course.CRSENO }}</span>
+    <span>{{ course.TITLE }}</span>
+    <span>{{ course.SECTNO }}</span>
+
+
+
+</div>

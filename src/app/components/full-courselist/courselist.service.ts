@@ -29,7 +29,7 @@ export class CourselistService {
     }
 
     getCourseList() {
-      return this.http.get('/assets/spring2019.json');
+      return this.http.get('../assets/spring2019.json');
     }
 
 }

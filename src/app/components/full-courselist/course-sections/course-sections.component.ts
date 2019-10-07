@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import{CourselistService} from '../courselist.service';
 
 @Component({
   selector: 'app-course-sections',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseSectionsComponent implements OnInit {
 
-  constructor() { }
+  courseList;
+  constructor(
+    
+    private router: Router,
+    private courselistService: CourselistService
+    
+    ) { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+      this.courseList = this.courselistService.getCourseList();
+    }
 
 }

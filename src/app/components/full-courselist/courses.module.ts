@@ -6,14 +6,16 @@ import { CourseSectionsComponent } from './course-sections/course-sections.compo
 // import { CoursesComponent } from './courses/courses.component';
 
 import { CoursesRoutingModule } from './courses-routing.module';
-// import { CourselistService } from '../../courselist.service';
+
+
 
 @NgModule({
-  declarations: [CourseSectionsComponent],
+  declarations: [
+    ],
   imports: [
     CommonModule,
     CoursesRoutingModule
-    // CourselistService,
+  
     // CoursesComponent
   ]
 })
