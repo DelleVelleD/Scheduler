@@ -13,6 +13,7 @@ export class CoursesComponent implements OnInit {
 
   // courses: Course[];
   courseList;
+
   constructor(
     
     private router: Router,
@@ -32,8 +33,11 @@ export class CoursesComponent implements OnInit {
   navigate() {
     this.router.navigate([""]);
   }
-  navigateCalendar() {
-    this.router.navigate(["../main-page/full-courselist/course-sections"]);
+  navigateCalendar(course) {
+    this.router.navigate(['../main-page/full-courselist/course-sections', course.CRSENO]);
+
+    console.log('Course is', course.CRSENO);
+
   }
 
   // onSelect(course: Course): void {

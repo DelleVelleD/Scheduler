@@ -44,6 +44,11 @@
     </table>
 </div> -->
 
+
+
+<div>
+   
+</div>
 <div class="shipping-item">
     <span><b>Course No</b></span>
     <span><b>Title</b></span>
@@ -51,11 +56,16 @@
 </div>
 <div style="height:500px; width: 420px;overflow-y: scroll;">
 
-    <div class="shipping-item" *ngFor="let course of courseList | async |courses" (click)="navigateCalendar() ">
+    <div class="shipping-item" *ngFor="let course of courseList | async |courses" 
+    (click)="navigateCalendar(course) ">
+    <!-- [class.selected]="course.CRSENO === selectedCRSENO">
+    <a [routerLink]="['/course', course.CRSENO]"> -->
+        
 
         <span>{{ course.CRSENO }}</span>
-        <span>{{ course.TITLE }}</span>
+        {{ course.TITLE }}
 
 
     </div>
 </div>
+

@@ -7,7 +7,7 @@ import { CourseSectionsComponent } from './course-sections/course-sections.compo
 const coursesRoutes: Routes = [
   { path: 'courses', component: CoursesComponent },
   { path: 'course-sections', component: CourseSectionsComponent },
-  { path: 'course/:id', component: CourseSectionsComponent }
+  { path: 'course/:CRSENO ', component: CourseSectionsComponent }
 
 
 

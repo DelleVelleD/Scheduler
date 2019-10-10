@@ -5,13 +5,15 @@
 </span>
 
 
+<div><br /> Hola {{courseNO}}</div>
+
 <div class="shipping-item">
     <span><b>Course No</b></span>
     <span><b>Title</b></span>
     <span><b>Section No</b></span>
 </div>
 
-<div class="shipping-item" *ngFor="let course of courseList | async |courseSections">
+<div class="shipping-item" *ngFor="let course of courseList | async |courseSections:courseNO ">
 
     <span>{{ course.CRSENO }}</span>
     <span>{{ course.TITLE }}</span>
@@ -20,3 +22,14 @@
 
 
 </div>
+<!-- <div *ngIf="course.CRSENO==courseNO">
+    <div class="shipping-item" *ngFor="let course of courseList | async ">
+
+        <span>{{ course.CRSENO }}</span>
+        <span>{{ course.TITLE }}</span>
+        <span>{{ course.SECTNO }}</span>
+
+
+
+    </div>
+</div> -->

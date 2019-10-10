@@ -7,11 +7,19 @@ import * as _ from 'lodash';
 })
 export class CourseSectionsPipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
-    if(value!== undefined && value!== null){
-      return _.uniqBy(value, 'CRSENO');
+  
+ 
+  
+  transform(courseList: any, courseNO: any): any {
+    if(courseList!== undefined && courseList!== null){
+    
+      return courseList.filter(function(course){
+      return course.CRSENO.toLowerCase().includes(courseNO);
+    })
   }
-  return value;
+  
+  console.log('Course Section is', courseNO);
+  return courseList;
   }
 
 

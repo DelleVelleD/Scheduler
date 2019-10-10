@@ -1,10 +1,16 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { Router, Routes, RouterModule } from '@angular/router/';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
+import { Router } from '@angular/router';
+
+
+import { HttpClientModule } from '@angular/common/http';
+import { Routes, RouterModule } from '@angular/router/';
+
+import { AppComponent } from './app.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { ScheduleConflictsComponent } from './components/schedule-conflicts/schedule-conflicts.component';
 import { FacultyIssuesComponent } from './components/faculty-issues/faculty-issues.component';
@@ -38,6 +44,7 @@ const routes: Routes = [
       { path: 'faculty-issues', component: FacultyIssuesComponent },
       { path: 'full-courselist/courses', component: CoursesComponent },
       { path: 'full-courselist/course-sections', component: CourseSectionsComponent },
+      { path: 'full-courselist/course-sections/:CRSENO', component: CourseSectionsComponent },
       { path: "calendar", component: CalendarComponent }
 
     ]
@@ -56,12 +63,13 @@ const routes: Routes = [
 
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     CoursesModule,
     HttpClientModule,
     RouterModule,    
     RouterModule.forRoot(routes)
-    // AppRoutingModule
+    //  AppRoutingModule,
     
   ],
   declarations: [
@@ -87,6 +95,8 @@ const routes: Routes = [
 })
 export class AppModule {
 
-  constructor(private courselistService: CourselistService) { }
+  constructor(router: Router) {}
+
+
 
 }
