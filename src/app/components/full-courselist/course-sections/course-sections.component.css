@@ -1,3 +1,10 @@
+.leftcolum{
+    float:left;
+}
+.rightcolumn{
+    margin-left: auto;
+float:right;
+}
 .topnav{
     overflow:hidden;
     background-color: #000000;
@@ -95,15 +102,24 @@
     position:relative;
     }
     
+    .column {
+        float: left;
+        padding: 1px;
+      
+      }
+      .left {
+        width: 41%;
+      }
+      
+      .right {
+        width: 55%;
+      }
     .calendar {
     margin: 0 auto;
     max-height: 1200px;
     max-width: 1200px;
     min-width: 500px;
-    margin-left: auto;
-    position: fixed;
-    top: 340px;
-    right: 150px;
+   
     box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.2) ,0px 3px 7px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     }
