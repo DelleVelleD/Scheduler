@@ -49,12 +49,12 @@
 <div>
    
 </div>
-<div class="shipping-item">
+<div class="shipping-item" style="width: 500px">
     <span><b>Course No</b></span>
     <span><b>Title</b></span>
    
 </div>
-<div style="height:500px; width: 420px;overflow-y: scroll;">
+<div style="height:500px; width: 500px;overflow-y: scroll;">
 
     <div class="shipping-item" *ngFor="let course of courseList | async |courses" 
     (click)="navigateCalendar(course) ">
@@ -63,7 +63,7 @@
         
 
         <span>{{ course.CRSENO }}</span>
-        {{ course.TITLE }}
+        <span>{{ course.TITLE }}</span>
 
 
     </div>

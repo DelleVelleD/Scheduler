@@ -14,7 +14,7 @@ export class CourseSectionsPipe implements PipeTransform {
     if(courseList!== undefined && courseList!== null){
     
       return courseList.filter(function(course){
-      return course.CRSENO.toLowerCase().includes(courseNO);
+      return course.CRSENO.includes(courseNO);
     })
   }
   
