@@ -45,6 +45,7 @@ const routes: Routes = [
       { path: 'full-courselist/courses', component: CoursesComponent },
       { path: 'full-courselist/course-sections', component: CourseSectionsComponent },
       { path: 'full-courselist/course-sections/:CRSENO', component: CourseSectionsComponent },
+      {path: 'full-courselist/course-sections/:DAYS', component: CourseSectionsComponent },
       { path: "calendar", component: CalendarComponent }
 
     ]

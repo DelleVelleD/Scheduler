@@ -36,7 +36,7 @@ export class CoursesComponent implements OnInit {
   navigateCalendar(course) {
     this.router.navigate(['../main-page/full-courselist/course-sections', course.CRSENO]);
 
-    console.log('Course is', course);
+    // console.log('Course is', course);
 
   }
 

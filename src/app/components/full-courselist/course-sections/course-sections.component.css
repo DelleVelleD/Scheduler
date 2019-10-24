@@ -271,6 +271,11 @@ float:right;
     color: transparent;
     display: inline-block;
     }
+
+    .if{
+      background-color: aqua;
+      visibility: visible;
+    }
  
     .event {
     background: #00B4FC;
@@ -278,13 +283,13 @@ float:right;
     border-radius: 2px;
     text-align: left;
     font-size: 0.875rem;
-    /* z-index: 2; */
     padding: 0.2rem;
     overflow-x: hidden;
     overflow-y: auto;
     height: 40px;    
-    transition: all 0.1s;
+    /* transition: all 0.1s; */
     cursor: pointer;
+ 
     }
     
     .event:hover {
@@ -294,7 +299,13 @@ float:right;
     
     .event.double {
     height: 200%;
+  display: none;
     }
+
+    .event.if {
+      height: 200%;
+      display: block;
+      }
     
     .event ul li { 
         float:left;

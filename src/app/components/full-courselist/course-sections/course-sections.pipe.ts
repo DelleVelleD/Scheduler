@@ -18,7 +18,7 @@ export class CourseSectionsPipe implements PipeTransform {
     })
   }
   
-  console.log('Course Section is', courseNO);
+  // console.log('Course Section is', courseNO);
   return courseList;
   }
 
