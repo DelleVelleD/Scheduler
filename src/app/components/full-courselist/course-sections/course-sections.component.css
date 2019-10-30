@@ -272,11 +272,16 @@ float:right;
     display: inline-block;
     }
 
-    .if{
-      background-color: aqua;
-      visibility: visible;
-    }
  
+ .for{
+  text-align: left;
+  height: 40px; 
+  overflow-x: hidden;
+  overflow-y: auto;
+ }
+ .for.double{
+  height: 200%;
+ }
     .event {
     background: #00B4FC;
     color: white;
@@ -289,6 +294,7 @@ float:right;
     height: 40px;    
     /* transition: all 0.1s; */
     cursor: pointer;
+   
  
     }
     

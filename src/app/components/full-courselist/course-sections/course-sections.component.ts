@@ -84,5 +84,79 @@ verifySaturday(course) {
       return true;
   
 }
+verifyEightAM(course){
+  if(course.START==800 || course.START==830)
+    return true;
 
+}
+verifyNineAM(course){
+  if(course.START==900 || course.START==930)
+    return true;
+
+}
+verifyTenAM(course){
+  if(course.START==1000 || course.START==1030)
+    return true;
+
+}
+verifyElevenAM(course){
+  if(course.START==1100 || course.START==1130)
+    return true;
+
+}
+verifyTwelveAM(course){
+  if(course.START==1200 || course.START==1230)
+    return true;
+
+}
+verifyOnePM(course){
+  if(course.START==1300 || course.START==1330)
+    return true;
+
+}
+verifyTwoPM(course){
+  if(course.START==1400 || course.START==1430)
+    return true;
+
+}
+verifyThreePM(course){
+  if(course.START==1500 || course.START==1530)
+    return true;
+
+}
+verifyFourPM(course){
+  if(course.START==1600 || course.START==1630)
+    return true;
+
+}
+verifyFivePM(course){
+  if(course.START==1700 || course.START==1730)
+    return true;
+
+}
+verifySixPM(course){
+  if(course.START==1800 || course.START==1830)
+    return true;
+
+}
+verifySevenPM(course){
+  if(course.START==1900 || course.START==1930)
+    return true;
+
+}
+verifyEightPM(course){
+  if(course.START==2000 || course.START==2030)
+    return true;
+
+}
+verifyNinePM(course){
+  if(course.START==2100 || course.START==2130)
+    return true;
+
+}
+verifyTenPM(course){
+  if(course.START==2200 || course.START==2230)
+    return true;
+
+}
 }
