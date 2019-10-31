@@ -33,6 +33,7 @@ import { CourseSectionsComponent } from './components/full-courselist/course-sec
 
 import { AppRoutingModule } from './app-routing.module';
 import { CoursesModule } from './components/full-courselist/courses.module';
+import { UploadSheetComponent } from './components/upload-sheet/upload-sheet.component';
 
 
 
@@ -45,8 +46,9 @@ const routes: Routes = [
       { path: 'full-courselist/courses', component: CoursesComponent },
       { path: 'full-courselist/course-sections', component: CourseSectionsComponent },
       { path: 'full-courselist/course-sections/:CRSENO', component: CourseSectionsComponent },
-      {path: 'full-courselist/course-sections/:DAYS', component: CourseSectionsComponent },
-      { path: "calendar", component: CalendarComponent }
+      { path: 'full-courselist/course-sections/:DAYS', component: CourseSectionsComponent },
+      { path: "calendar", component: CalendarComponent },
+      { path: "upload-sheet", component: UploadSheetComponent }
 
     ]
   },
@@ -87,7 +89,8 @@ const routes: Routes = [
     CurrentScheduleComponent,
     HomepageFacultyComponent,
     CoursesPipe,
-    CourseSectionsPipe
+    CourseSectionsPipe,
+    UploadSheetComponent
 
   ],
 
