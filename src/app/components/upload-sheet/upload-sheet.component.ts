@@ -10,11 +10,12 @@ import * as XLSX from 'xlsx';
 export class UploadSheetComponent implements OnInit {
 
   willDownload = false;
+  // private httpClient: HttpClient;
 
-  constructor(
-    private http: HttpClient
+  constructor(private http: HttpClient) { 
 
-  ) { }
+    // this.httpClient = http;
+  }
 
   ngOnInit() {
   }
@@ -47,12 +48,30 @@ export class UploadSheetComponent implements OnInit {
       const el = document.querySelector("#download");
       el.setAttribute("href", `data:text/json;charset=utf-8,${encodeURIComponent(data)}`);
       el.setAttribute("download", 'newSemester.json');
-//       this.http.post('./assets',el).subscribe(res =>{
-// console.log(res);
-
-//       });
-
     }, 1000)
   }
 
+  // public async uploadFile( file: File ) : Promise<UploadResult> {
+
+	// 	var result = await this.httpClient
+	// 		.post<ApiUploadResult>(
+	// 			"./api/upload.cfm",
+	// 			file, // Send the File Blob as the POST body.
+	// 			{
+	// 				// NOTE: Because we are posting a Blob (File is a specialized Blob
+	// 				// object) as the POST body, we have to include the Content-Type
+	// 				// header. If we don't, the server will try to parse the body as
+	// 				// plain text.
+	// 				headers: {
+	// 					"Content-Type": file.type
+	// 				},
+	// 				params: {
+	// 					clientFilename: file.name,
+	// 					mimeType: file.type
+	// 				}
+	// 			}
+	// 		)
+	// 		.toPromise()
+	// 	;
+  //     }
 }

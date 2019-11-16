@@ -94,7 +94,7 @@ const routes: Routes = [
 
   ],
 
-  providers: [],
+  providers: [CourselistService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
