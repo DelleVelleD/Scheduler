@@ -6,18 +6,18 @@
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <div style="text-align:center">
       <img width=100% alt="GGC Banner" src="/assets/banner.png">
     </div>
 </head>
 <body background-color="white" >
 
-  
+
 <app-root></app-root>
 
   <div class="footer">
-    <br/><p><small>Developed by ...</small></p>
+    <br/><p><small>footer...</small></p>
   </div>
 
 <!---->
@@ -35,7 +35,7 @@
         content.style.display = "block";
       }
     });
-  } 
+  }
     function myFunction() {
         var x = document.getElementById("heady");
         x.style.display = "block";
@@ -49,40 +49,6 @@
         var y = document.getElementById("subby");
         y.style.display = "none";
     }
-
-      function myFunction3() {
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("myInput");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        for (i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[3];
-          if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-              tr[i].style.display = "";
-            } else {
-              tr[i].style.display = "none";
-            }
-          }
-        }
-      }
-     
-      function myFunction123() {
-  alert("Page is loaded");
-  // document.getElementsByClassName("event double").style.background=" #ffff";
-}
-
-function myFunctionS() {
-  var x = document.getElementById("blueSquare");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-      
 
   </script>
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import{CourselistService} from '../courselist.service';
+import { CourselistService} from '../courselist.service';
 
 @Component({
   selector: 'app-courses',
@@ -16,14 +16,14 @@ export class CoursesComponent implements OnInit {
   courseList;
 
   constructor(
-    
+
     private router: Router,
     private courselistService: CourselistService
-    
     ) { }
 
     ngOnInit() {
-      this.courseList = this.courselistService.getCourseList();
+       this.courseList = this.courselistService.getCourseList();
+      //  this.courseList = this.courselistService.getCourseListMongo();
     }
 
     addToCourselist(course) {
@@ -37,7 +37,7 @@ export class CoursesComponent implements OnInit {
   navigateCalendar(course) {
     this.router.navigate(['../main-page/full-courselist/course-sections', course.CRSENO]);
 
-    // console.log('Course is', course);
+    //  console.log('Course is', course);
 
   }
 

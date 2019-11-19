@@ -51,27 +51,5 @@ export class UploadSheetComponent implements OnInit {
     }, 1000)
   }
 
-  // public async uploadFile( file: File ) : Promise<UploadResult> {
-
-	// 	var result = await this.httpClient
-	// 		.post<ApiUploadResult>(
-	// 			"./api/upload.cfm",
-	// 			file, // Send the File Blob as the POST body.
-	// 			{
-	// 				// NOTE: Because we are posting a Blob (File is a specialized Blob
-	// 				// object) as the POST body, we have to include the Content-Type
-	// 				// header. If we don't, the server will try to parse the body as
-	// 				// plain text.
-	// 				headers: {
-	// 					"Content-Type": file.type
-	// 				},
-	// 				params: {
-	// 					clientFilename: file.name,
-	// 					mimeType: file.type
-	// 				}
-	// 			}
-	// 		)
-	// 		.toPromise()
-	// 	;
-  //     }
+  
 }
