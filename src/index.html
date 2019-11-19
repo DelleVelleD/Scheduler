@@ -2,13 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>MyApp</title>
+  <title>Faculty Scheduler</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <div style="text-align:center">
+      <img width=100% alt="GGC Banner" src="/assets/banner.png">
+    </div>
 </head>
-<body>
-  <app-root></app-root>
+<body background-color="white" >
+
+
+<app-root></app-root>
+
+  <div class="footer">
+    <br/><p><small>footer...</small></p>
+  </div>
+
+<!---->
+  <script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+    function myFunction() {
+        var x = document.getElementById("heady");
+        x.style.display = "block";
+        var y = document.getElementById("subby");
+        y.style.display = "block";
+    }
+
+    function myFunction2() {
+        var x = document.getElementById("heady");
+        x.style.display = "none";
+        var y = document.getElementById("subby");
+        y.style.display = "none";
+    }
+
+  </script>
+
+
 </body>
 </html>

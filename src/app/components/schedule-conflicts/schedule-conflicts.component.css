@@ -1,0 +1,197 @@
+table{
+    font-family: arial, sans-serif;
+    font-size: 16px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th{
+    border: 3px solid #000000;
+    text-align: left;
+    padding: 10px;
+    background-color: white;
+}
+
+td {
+    border: 3px solid #000000;
+    text-align: left;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: silver;
+}
+
+tr:nth-child(odd) {
+    background-color: #484;
+}
+ 
+  .column {
+      float: left;
+      padding: 10px;
+  }
+
+  .column.left{
+      width: 45%;
+  }
+
+  .column.right{
+      width:50%;
+      float: right;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+
+
+
+
+
+
+
+
+
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width:600px) {
+      .column.left, .column.right {
+          width:100%
+      }
+  }
+
+/* Style the top navigation bar */
+.topnav{
+    overflow:hidden;
+    background-color: #000000;
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    float: right;
+    display: block;
+    color: #00704a;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: silver;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #00704a;
+    color: black;
+  }
+
+  #tablename {
+    font-family: "Lucida Console", Monaco, monospace;
+  }
+
+  #textboxid {
+        height:200px;
+        font-size:14pt;
+    }
+#subby, #heady{
+    display: none
+}
+
+.buttonspace {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.search-classes{
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.acc-section{
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.accordion{
+  background-color: #eee;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+.reportbtn{
+    margin-left:19px;
+	margin-top:19px;
+}
+
+.accordion:hover {
+  background-color: #484;
+}
+
+.content {
+  width: 100%;
+  display: none;
+  overflow: hidden;
+  background-color: silver;
+  font-size: 12px;
+ 
+}
+
+.table a{
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+.content {
+  width: 100%;
+  display: none;
+  overflow: hidden;
+  background-color: silver;
+  font-size: 12px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #484;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
