@@ -33,6 +33,8 @@ import { CourseSectionsComponent } from './components/full-courselist/course-sec
 
 import { AppRoutingModule } from './app-routing.module';
 import { CoursesModule } from './components/full-courselist/courses.module';
+import { RegisterComponent } from './components/register/register.component';
+import { ModelsComponent } from './models/models.component';
 
 
 
@@ -87,7 +89,9 @@ const routes: Routes = [
     CurrentScheduleComponent,
     HomepageFacultyComponent,
     CoursesPipe,
-    CourseSectionsPipe
+    CourseSectionsPipe,
+    RegisterComponent,
+    ModelsComponent
 
   ],
 

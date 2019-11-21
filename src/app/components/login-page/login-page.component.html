@@ -3,7 +3,7 @@
   <form action="/homepage-faculty" method="get" name="login-faculty">
     ID:      <input type="text" name="id" size=20><br/>
     Password:<input type="text" name="pw" size= 20><br/><br/>
-    <a routerLink='/homepage-faculty' oninit >Login</a>
+    <a  (click)="authe(user)" >Login</a>
   </form>
 
 </div>
@@ -12,5 +12,14 @@
   Test purpose area<br/>
   <a routerLink='/homepage-faculty'>Faculty view</a>
     <a routerLink='/main-page'>Administrator view</a>
+
+</div>
+
+<div  *ngFor ="let user of userList|async"
+
+(click)="authe(user)">
+  <span>
+    user: {{user.USERNAME}}
+  </span>
 
 </div>

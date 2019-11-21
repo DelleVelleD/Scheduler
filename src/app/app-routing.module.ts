@@ -6,6 +6,7 @@ import { ScheduleConflictsComponent } from './components/schedule-conflicts/sche
 import { FacultyIssuesComponent } from './components/faculty-issues/faculty-issues.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CoursesComponent }   from './components/full-courselist/courses/courses.component';
+
 const routes: Routes = [
   { path: 'app-root', component: AppComponent },
   { path: 'courses', component: CoursesComponent },
