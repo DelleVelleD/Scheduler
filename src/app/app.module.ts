@@ -34,6 +34,7 @@ import { CourseSectionsComponent } from './components/full-courselist/course-sec
 import { AppRoutingModule } from './app-routing.module';
 import { CoursesModule } from './components/full-courselist/courses.module';
 import { UploadSheetComponent } from './components/upload-sheet/upload-sheet.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 
 
@@ -70,10 +71,10 @@ const routes: Routes = [
     FormsModule,
     CoursesModule,
     HttpClientModule,
-    RouterModule,    
+    RouterModule,
     RouterModule.forRoot(routes)
     //  AppRoutingModule,
-    
+
   ],
   declarations: [
     AppComponent,
@@ -90,7 +91,8 @@ const routes: Routes = [
     HomepageFacultyComponent,
     CoursesPipe,
     CourseSectionsPipe,
-    UploadSheetComponent
+    UploadSheetComponent,
+    PageNotFoundComponent
 
   ],
 

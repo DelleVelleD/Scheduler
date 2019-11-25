@@ -1,5 +1,5 @@
 <div>
-  
+
     <div class="column left">
         <span>
 
@@ -656,12 +656,112 @@
                         </tr>
                         <tr>
                             <td class="headcol">1:00 PM</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyMonday(course) && verifyOnePM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyTuesday(course) && verifyOnePM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyWednesday(course) && verifyOnePM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyThursday(course) && verifyOnePM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyFriday(course) && verifyOnePM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifySaturday(course) && verifyOnePM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            </td>
                         </tr>
                         <tr>
                             <td class="headcol"></td>
@@ -674,12 +774,110 @@
                         </tr>
                         <tr>
                             <td class="headcol">2:00 PM</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyMonday(course) && verifyTwoPM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            </td>
+                            <td>
+
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyTuesday(course) && verifyTwoPM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyWednesday(course) && verifyTwoPM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyThursday(course) && verifyTwoPM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyFriday(course) && verifyTwoPM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifySaturday(course) && verifyTwoPM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
                         </tr>
                         <tr>
                             <td class="headcol"></td>
@@ -692,12 +890,111 @@
                         </tr>
                         <tr>
                             <td class="headcol">3:00 PM</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyMonday(course) && verifyThreePM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyTuesday(course) && verifyThreePM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyWednesday(course) && verifyThreePM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            </td>
+                            <td>
+
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyThursday(course) && verifyThreePM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyFriday(course) && verifyThreePM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifySaturday(course) && verifyThreePM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
                         </tr>
                         <tr>
                             <td class="headcol"></td>
@@ -710,12 +1007,108 @@
                         </tr>
                         <tr>
                             <td class="headcol">4:00 PM</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyMonday(course) && verifyFourPM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyTuesday(course) && verifyFourPM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyWednesday(course) && verifyFourPM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyThursday(course) && verifyFourPM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyFriday(course) && verifyFourPM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifySaturday(course) && verifyFourPM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
                         </tr>
                         <tr>
                             <td class="headcol"></td>
@@ -746,12 +1139,108 @@
                         </tr>
                         <tr>
                             <td class="headcol">6:00 PM</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyMonday(course) && verifySixPM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyTuesday(course) && verifySixPM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyWednesday(course) && verifySixPM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyThursday(course) && verifySixPM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifyFriday(course) && verifySixPM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" *ngIf="verifySaturday(course) && verifySixPM(course) ">
+
+                                        - {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time" {{course.START}}
+                                        <br />
+                                        <br />
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
                         </tr>
                         <tr>
                             <td class="headcol"></td>
