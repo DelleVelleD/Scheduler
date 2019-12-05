@@ -1,70 +1,92 @@
 var express = require('express');
+var exphbs = require('express-handlebars');
+var http = require('http');
 var path = require('path');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+var course = require('./routes/api/course')
 
 
-var mongo = require('mongoose');
 
-var db = mongo.connet("mongodb+srv://dbSebastian:Qq7725230@schedulercluster-mz78t.mongodb.net/test?retryWrites=true&w=majority",
- function (err, response) {
-    if (err) { console.log(err); }
-    else { console.log('Connected to ' + db, ' + ', response); }
+
+ var app = express();
+
+ var port = process.env.PORT || 5000;
+
+
+ var db =require('./config/keys').mongoURI;
+
+ //connection
+ mongoose.connect(db, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 });
 
-var app = express();
+//connection message
+mongoose.connection.once('open', function(){
+console.log('Connection madeeeeeeeeeee');
+// db.collection('spring2019').find({}).toArray(function (err, result) {
+//   console.log(result)
+// });
 
-app.use(bodyParser.json({ limit: '5mb' }));
-app.use(bodyParser.urlencoded({ extended: false }));
+  }).on('error', function(error){
+console.log('Errooor' , error);
+  });
 
-app.use(function (req, res, next) {
+require('./models/Course');
+var CourseModel = mongoose.model('Course');
 
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    next();
+// var routes = require('./routes/api/course');
+CourseModel.find({}).all;
 
-});
+CourseModel.find(function (err, result) {
 
-app.listen(4200, function (){
-  console.log('Example app listening on port 4200')
-})
+  console.log('Hola',result);
+}).all;
 
-var Schema = mongo.Schema;
+/*
+Express server( name of my app=sd1AngularSillyDemo in dist folder )
 
-var UsersSchema = new Schema({
-    CRN: { type: Number },
-    CRSENO: { type: String },
-    TITLE: { type: String},
-    SECTNO: { type: Number},
-    DAYS: { type: String},
-    START: {type: Number},
-    END: { type: Number},
-    ROOM: { type: String},
-    PER: { type: Number},
-    CRDTS: { type: Number},
-    LASTNAME: { type: String},
-    FIRSTNAME: {type: String}
+*/
+ app.use(express.static(__dirname + '/dist/sd1AngularSillyDemo'));
 
- }, { versionKey: false });
-
-var model = mongo.model('spring2019', UsersSchema, "users");
+ app.get('/*', (req, res) =>
+ res.sendFile(path.join(__dirname)));
 
 
-app.get("/api/getUser", function (req, res) {
-    model.find({}, function (err, data) {
-        if (err) {
-            res.send(err);
-        }
-        else {
-            res.send(data);
-         }
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 
-    });
+// app.use('/api', course)
 
-})
+ var server= http.createServer(app);
+
+server.listen(port, () =>  console.log('Runing'));
+
+//  app.listen(4200, function (){
+//   console.log('Example app listening on port '+ port);
+// });
 
 
+//  app.engine('handlebars', exphbs({
+//      defaultLayout: 'main'
+//  }));
+//  app.set('view engine', 'handlebars');
+
+// app.use(function(req, res, next){
+
+// req.name = "Hola Juanchito";
+// next();
+// });
+
+// app.get('/', (req, res) => {
+
+//   res.render('src/main');
+//     });
+
+//     app.get('/about', (req, res)=>{
+//     res.render('index');
+//     });
 
 // app.post("/api/SaveUser", function (req, res) {
   //     var mod = new model(req.body);
@@ -93,18 +115,3 @@ app.get("/api/getUser", function (req, res) {
   //             });
   //     }
   // })
-
-  // app.post("/api/deleteUser",function(req, res){
-  //     model.remove({ _id: req.body.id }, function (err) {
-  //         if (err) {
-  //             res.send(err);
-  //         }
-  //         else {
-  //             res.send({ data: "Record has been deteled..!!" });
-
-  //         }
-  //     });
-
-  // })
-
-
