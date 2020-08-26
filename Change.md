@@ -32,6 +32,7 @@ Team Apple Roles
 
 1.  **Caj Jones** - Lead Programmer & Project Manager
 2.  _**Taisann Kham**_ - UI/UX Design & Documentation Lead :page_facing_up:
+3. **Taylor Williams** - Testing Lead & Client Liason :woman_technologist:
 	
 
 Technologies
