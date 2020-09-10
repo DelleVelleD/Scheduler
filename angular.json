@@ -30,8 +30,7 @@
               "node_modules/jquery/dist/jquery.js",
               "node_modules/popper.js/dist/umd/popper.js",
               "node_modules/bootstrap/dist/js/bootstrap.js"
-            ],
-            "es5BrowserSupport": true
+            ]
           },
           "configurations": {
             "production": {
@@ -137,5 +136,8 @@
       }
     }
   },
-  "defaultProject": "sd1AngularSillyDemo"
+  "defaultProject": "sd1AngularSillyDemo",
+  "cli": {
+    "analytics": "d4afe3f4-b8e3-4972-a00e-a152517a0718"
+  }
 }

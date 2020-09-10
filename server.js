@@ -6,15 +6,9 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var course = require('./routes/api/course')
 
-
-
-
- var app = express();
-
- var port = process.env.PORT || 5000;
-
-
- var db =require('./config/keys').mongoURI;
+var app = express();
+var port = process.env.PORT || 5000;
+var db = require('./config/keys').mongoURI;
 
  //connection
  mongoose.connect(db, {
@@ -23,15 +17,17 @@ var course = require('./routes/api/course')
 });
 
 //connection message
-mongoose.connection.once('open', function(){
-console.log('Connection madeeeeeeeeeee');
-// db.collection('spring2019').find({}).toArray(function (err, result) {
-//   console.log(result)
-// });
-
-  }).on('error', function(error){
-console.log('Errooor' , error);
-  });
+mongoose.connection.once('open', function()
+{
+	console.log('Successfully connected to database.');
+//	db.collection('spring2019').find({}).toArray(function (err, result) 
+//	{
+//		console.log(result)
+//	});
+}).on('error', function(error)
+{
+	console.log('[Database Connection Error]:' , error);
+});
 
 require('./models/Course');
 var CourseModel = mongoose.model('Course');
@@ -61,7 +57,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
  var server= http.createServer(app);
 
-server.listen(port, () =>  console.log('Runing'));
+server.listen(port, () =>  console.log('Running'));
 
 //  app.listen(4200, function (){
 //   console.log('Example app listening on port '+ port);
