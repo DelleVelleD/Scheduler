@@ -12,5 +12,13 @@
   Test purpose area<br/>
   <a routerLink='/homepage-faculty'>Faculty view</a>
     <a routerLink='/main-page'>Administrator view</a>
-
 </div>
+
+<script>
+  //Script is supposed to hide Log Out navbar, but the script does not seem to work
+function hideLogout() {
+  var logout = document.getElementById("logout");
+  logout.style.display = "none";
+}
+hideLogout();
+</script>
