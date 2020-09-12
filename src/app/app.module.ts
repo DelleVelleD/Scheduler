@@ -15,6 +15,7 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { ScheduleConflictsComponent } from './components/schedule-conflicts/schedule-conflicts.component';
 import { FacultyIssuesComponent } from './components/faculty-issues/faculty-issues.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
+import { LoginPageInvalidComponent } from './components/login-page/login-page-invalid.component';
 
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { CoursesOfferedComponent } from './components/courses-offered/courses-offered.component';
@@ -55,6 +56,7 @@ const routes: Routes = [
   },
   { path: 'homepage-faculty', component: HomepageFacultyComponent },
   { path: 'login-page', component: LoginPageComponent },
+  { path: 'login-page-invalid', component: LoginPageInvalidComponent },
   { path: "current-schedule", component: CurrentScheduleComponent },
   { path: "courses-upcoming", component: CoursesUpcomingComponent },
   { path: "courses-offered", component: CoursesOfferedComponent },
@@ -84,6 +86,7 @@ const routes: Routes = [
     CoursesComponent,
     CourseSectionsComponent,
     LoginPageComponent,
+    LoginPageInvalidComponent,
     CalendarComponent,
     CoursesOfferedComponent,
     CoursesUpcomingComponent,

@@ -49,6 +49,9 @@
 	width: max-content;
 }
 
+.invalid_login{
+  color: red;
+}
 
 .navbar {
 	float:right;
