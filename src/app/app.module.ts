@@ -20,6 +20,7 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { CoursesOfferedComponent } from './components/courses-offered/courses-offered.component';
 import { CoursesUpcomingComponent } from './components/courses-upcoming/courses-upcoming.component';
 import { CurrentScheduleComponent } from './components/current-schedule/current-schedule.component';
+import { CurrentScheduleSplitComponent } from './components/current-schedule/current-schedule-split.component';
 import { HomepageFacultyComponent } from './components/homepage-faculty/homepage-faculty.component';
 
 import { CourselistService } from './components/full-courselist/courselist.service';
@@ -56,6 +57,7 @@ const routes: Routes = [
   { path: 'homepage-faculty', component: HomepageFacultyComponent },
   { path: 'login-page', component: LoginPageComponent },
   { path: "current-schedule", component: CurrentScheduleComponent },
+  { path: "current-schedule-split", component: CurrentScheduleSplitComponent },
   { path: "courses-upcoming", component: CoursesUpcomingComponent },
   { path: "courses-offered", component: CoursesOfferedComponent },
   { path: "calendar", component: CalendarComponent },
@@ -88,6 +90,7 @@ const routes: Routes = [
     CoursesOfferedComponent,
     CoursesUpcomingComponent,
     CurrentScheduleComponent,
+    CurrentScheduleSplitComponent,
     HomepageFacultyComponent,
     CoursesPipe,
     CourseSectionsPipe,
