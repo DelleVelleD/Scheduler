@@ -41,6 +41,23 @@
         var y = document.getElementById("subby");
         y.style.display = "block";
     }
+
+    //These lines are for handling opening a conflict in the Admin view
+    var conflicting = document.getElementById("redBlock");
+    var modal = document.getElementById("exampleConflict");
+    var exit = document.getElementsByClassName("close");
+    if(conflicting){
+      conflicting.addEventListener("click", showConflict);
+    }
+    function showConflict(){
+      modal = document.getElementById("exampleConflict");
+      modal.style.display = "block";
+    }
+    window.onclick = function(event) {
+      if(event.target == modal){
+        modal.style.display = "none";
+      }
+    }
   </script>
 
 
