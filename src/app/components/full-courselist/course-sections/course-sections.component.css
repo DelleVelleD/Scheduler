@@ -322,6 +322,18 @@ float:right;
          padding-left: 0;
        
     }
+
+    .event.conflict {
+      background: red;
+      height: 200%;
+      display: block;
+      cursor: pointer;
+      float:left;
+        list-style: none;
+         text-align: left;
+         list-style-position: inside;
+         padding-left: 0;
+    }
     
     button.secondary {
     border: 1px solid rgba(0, 0, 0, 0.1);
