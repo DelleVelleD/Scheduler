@@ -35,6 +35,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { CoursesModule } from './components/full-courselist/courses.module';
 import { UploadSheetComponent } from './components/upload-sheet/upload-sheet.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ViewHoursComponent } from './components/view-hours/view-hours.component';
+import { AvailableHoursComponent } from './components/available-hours/available-hours.component';
 
 
 
@@ -50,7 +52,6 @@ const routes: Routes = [
       { path: 'full-courselist/course-sections/:DAYS', component: CourseSectionsComponent },
       { path: "calendar", component: CalendarComponent },
       { path: "upload-sheet", component: UploadSheetComponent }
-
     ]
   },
   { path: 'homepage-faculty', component: HomepageFacultyComponent },
@@ -59,6 +60,8 @@ const routes: Routes = [
   { path: "courses-upcoming", component: CoursesUpcomingComponent },
   { path: "courses-offered", component: CoursesOfferedComponent },
   { path: "calendar", component: CalendarComponent },
+  { path: "view-hours", component: ViewHoursComponent },
+  { path: "available-hours", component: AvailableHoursComponent },
   { path: '#', redirectTo: 'homepage-faculty', pathMatch: 'full' },
   { path: '', redirectTo: 'login-page', pathMatch: 'full' }
 ];
@@ -91,6 +94,8 @@ const routes: Routes = [
     HomepageFacultyComponent,
     CoursesPipe,
     CourseSectionsPipe,
+    ViewHoursComponent,
+    AvailableHoursComponent,
     UploadSheetComponent,
     PageNotFoundComponent
 

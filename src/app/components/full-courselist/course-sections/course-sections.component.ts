@@ -159,4 +159,15 @@ verifyTenPM(course){
     return true;
 
 }
+
+//conflict() currently doesn't properly look for existing courses with conflicts, it only uses the lastname of the example code for the UI.
+//Change conflict() so it can handle conflicts properly
+//Line 62 - 76's <div> had the block load on the page at the incorrect location because Line 62 - 76 was placed after Line 78's <div>
+conflict(course){
+  //if(course.FIRSTNAME=="Doe") {
+    if(course.CRN==10100){
+    return true;
+  }
+  return false;
+}
 }
