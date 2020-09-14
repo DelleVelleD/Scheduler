@@ -57,9 +57,11 @@ tr:nth-child(odd) {
     font-family: "Lucida Console", Monaco, monospace;
   }
 
- 
+  #buttons {
+    margin-right: 10px;
+  }
+
   .column {
-      float: left;
       padding: 10px;
   }
 
@@ -68,11 +70,12 @@ tr:nth-child(odd) {
   }
 
   .column.right{
-      width:50%
+    width:50%
   }
 
   /* Clear floats after the columns */
   .row:after {
+    float: right;
     content: "";
     display: table;
     clear: both;
