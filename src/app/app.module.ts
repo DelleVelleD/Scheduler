@@ -21,6 +21,8 @@ import { CoursesOfferedComponent } from './components/courses-offered/courses-of
 import { CoursesUpcomingComponent } from './components/courses-upcoming/courses-upcoming.component';
 import { CurrentScheduleComponent } from './components/current-schedule/current-schedule.component';
 import { HomepageFacultyComponent } from './components/homepage-faculty/homepage-faculty.component';
+import { HomepageAdminComponent } from './components/admin/homepage-admin.component';
+import { FacultyComponent } from './components/faculty/faculty.component';
 
 import { CourselistService } from './components/full-courselist/courselist.service';
 
@@ -42,18 +44,24 @@ const routes: Routes = [
   {
     path: 'main-page', component: MainPageComponent,
     children: [
-      { path: 'schedule-conflicts', component: ScheduleConflictsComponent },
+      
       { path: 'faculty-issues', component: FacultyIssuesComponent },
-      { path: 'full-courselist/courses', component: CoursesComponent },
-      { path: 'full-courselist/course-sections', component: CourseSectionsComponent },
+      
+      
       { path: 'full-courselist/course-sections/:CRSENO', component: CourseSectionsComponent },
       { path: 'full-courselist/course-sections/:DAYS', component: CourseSectionsComponent },
-      { path: "calendar", component: CalendarComponent },
-      { path: "upload-sheet", component: UploadSheetComponent }
+      { path: "calendar", component: CalendarComponent }
+      
 
     ]
   },
+  { path: 'schedule-conflicts', component: ScheduleConflictsComponent },
+  { path: "upload-sheet", component: UploadSheetComponent },
+  { path: 'full-courselist/course-sections', component: CourseSectionsComponent },
+  { path: 'full-courselist/courses', component: CoursesComponent },
   { path: 'homepage-faculty', component: HomepageFacultyComponent },
+  { path: 'admin', component: HomepageAdminComponent },
+  { path: 'faculty', component: FacultyComponent },
   { path: 'login-page', component: LoginPageComponent },
   { path: "current-schedule", component: CurrentScheduleComponent },
   { path: "courses-upcoming", component: CoursesUpcomingComponent },
@@ -89,6 +97,8 @@ const routes: Routes = [
     CoursesUpcomingComponent,
     CurrentScheduleComponent,
     HomepageFacultyComponent,
+    HomepageAdminComponent,
+    FacultyComponent,
     CoursesPipe,
     CourseSectionsPipe,
     UploadSheetComponent,
