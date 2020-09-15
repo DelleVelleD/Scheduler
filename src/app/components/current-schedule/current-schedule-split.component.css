@@ -36,6 +36,10 @@
   width:50%;
 }
 
+.row {
+  padding: 10px;
+}
+
 /* CALENDAR */
 
 span.a {
