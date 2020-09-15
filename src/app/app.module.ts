@@ -23,6 +23,8 @@ import { CoursesUpcomingComponent } from './components/courses-upcoming/courses-
 import { CurrentScheduleComponent } from './components/current-schedule/current-schedule.component';
 import { CurrentScheduleSplitComponent } from './components/current-schedule/current-schedule-split.component';
 import { HomepageFacultyComponent } from './components/homepage-faculty/homepage-faculty.component';
+import { HomepageAdminComponent } from './components/admin/homepage-admin.component';
+import { FacultyComponent } from './components/faculty/faculty.component';
 
 import { CourselistService } from './components/full-courselist/courselist.service';
 
@@ -46,17 +48,23 @@ const routes: Routes = [
   {
     path: 'main-page', component: MainPageComponent,
     children: [
-      { path: 'schedule-conflicts', component: ScheduleConflictsComponent },
+      
       { path: 'faculty-issues', component: FacultyIssuesComponent },
-      { path: 'full-courselist/courses', component: CoursesComponent },
-      { path: 'full-courselist/course-sections', component: CourseSectionsComponent },
+      
+      
       { path: 'full-courselist/course-sections/:CRSENO', component: CourseSectionsComponent },
       { path: 'full-courselist/course-sections/:DAYS', component: CourseSectionsComponent },
       { path: "calendar", component: CalendarComponent },
       { path: "upload-sheet", component: UploadSheetComponent }
     ]
   },
+  { path: 'schedule-conflicts', component: ScheduleConflictsComponent },
+  { path: "upload-sheet", component: UploadSheetComponent },
+  { path: 'full-courselist/course-sections', component: CourseSectionsComponent },
+  { path: 'full-courselist/courses', component: CoursesComponent },
   { path: 'homepage-faculty', component: HomepageFacultyComponent },
+  { path: 'admin', component: HomepageAdminComponent },
+  { path: 'faculty', component: FacultyComponent },
   { path: 'login-page', component: LoginPageComponent },
   { path: 'login-page-invalid', component: LoginPageInvalidComponent },
   { path: "current-schedule", component: CurrentScheduleComponent },
@@ -98,6 +106,8 @@ const routes: Routes = [
     CurrentScheduleComponent,
     CurrentScheduleSplitComponent,
     HomepageFacultyComponent,
+    HomepageAdminComponent,
+    FacultyComponent,
     CoursesPipe,
     CourseSectionsPipe,
     ViewHoursComponent,
