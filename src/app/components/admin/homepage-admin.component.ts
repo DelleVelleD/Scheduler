@@ -22,6 +22,14 @@ export class HomepageAdminComponent implements OnInit {
     this.router.navigate(['upload-sheet'])
   }
 
+  navigate4() {
+    this.router.navigate(['view-hours'])
+  }
+
+  navigate5() {
+    this.router.navigate(["courses-offered"])
+  }
+
   ngOnInit() {
   }
 
