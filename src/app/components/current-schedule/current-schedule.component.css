@@ -86,6 +86,9 @@ tr:nth-child(odd) {
     margin-right: 10px;
   }
 
+  .row {
+    padding: 10px;
+  }
 
   .column {
     float: left;
