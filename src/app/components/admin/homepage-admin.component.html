@@ -1,0 +1,32 @@
+<head>
+  <title>Admin Home Page</title>
+</head>
+
+<style>
+  #hello {
+    padding-left: 40%;
+    padding-top: 15%;
+  }
+</style>
+
+<nav id="hello">
+  <ul>
+    <li style="list-style-image: url(../../../assets/manageicon.png);">
+      <button (click)="navigate1()">Manage Course Sections</button>
+      <br/>
+      <h7>Click here to add, remove, or edit course sections.</h7>
+    </li>
+    <br/>
+    <li style="list-style-image: url(../../../assets/conflictsicon.png);">
+      <button (click)="navigate2()">View Conflicts</button>
+      <br/>
+      <h7>Click here to view scheduling conflicts.</h7>
+    </li>
+    <br/>
+    <li style="list-style-image: url(../../../assets/uploadicon.png);">
+      <button (click)="navigate3()">Upload Course Schedule</button>
+      <br/>
+      <h7>Click here to upload the semester course schedule.</h7>
+    </li>
+  </ul>
+</nav>

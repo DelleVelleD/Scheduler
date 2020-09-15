@@ -1,4 +1,18 @@
 [
+  {
+    "CRN": 10100,
+    "CRSENO": "4220",
+    "TITLE": "JSON FILE Advanced Data Analytics",
+    "SECTNO": 1,
+    "DAYS": "M",
+    "START": 800,
+    "END": 1000,
+    "ROOM": "B2100",
+    "PER": 8,
+    "CRDTS": 3,
+    "LAST NAME": "Doe",
+    "FIRST NAME": "John"
+   },
  {
    "CRN": 22272,
    "CRSENO": "4220",

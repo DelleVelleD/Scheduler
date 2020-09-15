@@ -62,7 +62,32 @@
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifyMonday(course) && verifyTime(course) ">
+                                        <div class="event conflict" onclick="showConflict()" id="redBlock"
+                                        *ngIf="verifyMonday(course) && verifyTime(course) && conflict(course)">
+
+                                            - {{ course.TITLE }}
+                                            ROOM: ({{ course.ROOM }})
+                                            Day: {{course.DAYS}}
+                                            Time" {{course.START}}
+                                            <br />
+                                            <br />
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="exampleConflict" class="modal">
+                                    <div class="modal-content">
+                                        <p>Conflicting Professors:</p>
+                                        <p>John Doe</p>
+                                        <p>Jane Doh</p>
+                                    </div>
+                                </div>
+
+                                <div class="for double">
+                                    <div
+                                        *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                        <div class="event if" *ngIf="verifyMonday(course) && verifyTime(course) && !conflict(course)">
 
                                             {{ course.TITLE }}
                                             ROOM: ({{ course.ROOM }})
@@ -74,6 +99,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                             </td>
                             <td>
 

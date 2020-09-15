@@ -1,0 +1,50 @@
+body {
+	border: 1px solid #00704a;
+}
+
+img {
+  width: 100%;
+}
+
+/* Style the top navigation bar */
+.topnav{
+  overflow:hidden;
+  background-color: #000000;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: right;
+  display: block;
+  color: #00704a;
+  text-align: center;
+  padding: 28px 16px;
+  text-decoration: none;
+  font-size: 26px;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+.topnav h1 {
+  float: left;
+  display: block;
+  color: #00704a;
+  text-align: center;
+  padding: 0px 8px;
+  text-decoration: none;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #00704a;
+  color: black;
+}
+
+.buttonspace {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+#welcome {
+  font-family: "Lucida Console", Monaco, monospace;
+}

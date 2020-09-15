@@ -1,0 +1,32 @@
+<head>
+  <title>Faculty Home Page</title>
+</head>
+
+<style>
+  #hello {
+    padding-left: 40%;
+    padding-top: 15%;
+  }
+</style>
+
+<nav id="hello">
+  <ul>
+    <li style="list-style-image: url(../../../assets/manageicon.png);">
+      <button (click)="navigate1()">Apply Preferences for Course Section</button>
+      <br/>
+      <h7>Click here to rank the priority for your chosen course sections.</h7>
+    </li>
+    <br/>
+    <li style="list-style-image: url(../../../assets/conflictsicon.png);">
+      <button (click)="navigate2()">Input available times</button>
+      <br/>
+      <h7>Click here to input the times you are available to teach.</h7>
+    </li>
+    <br/>
+    <li style="list-style-image: url(../../../assets/uploadicon.png);">
+      <button (click)="navigate3()">View List of Courses Offered</button>
+      <br/>
+      <h7>Click here to view the list of offered courses for next semester.</h7>
+    </li>
+  </ul>
+</nav>
