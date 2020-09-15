@@ -1,6 +1,23 @@
 <body style="background-color:#ffff;">
 
 <button (click)="navigate()">Home Page</button>
+
+<div style="height:200px; overflow-y: scroll">
+  <form>
+    <label for="subject">Subject:&nbsp;</label>
+    <input type="text" id="subject" name="subject"><br>
+    <label for="coursenum">Course Number:&nbsp;</label>
+    <input type="text" id="coursenum" name="coursenum"><br>
+    <label for="title">Title:&nbsp;</label>
+    <input type="text" id="title" name="title"><br>
+    <label for="keyword">Keyword:&nbsp;</label>
+    <input type="text" id="keyword" name="keyword"><br>
+    <label for="avtime">Available Time:&nbsp;</label>
+    <input type="time"> to <input type="time"><br>
+    <input type="submit" value="Search">
+  </form>
+</div>
+
 <div class ="row">
     <div class="column" style="height: 650px; overflow-y: auto;">
         <h3>Current Assigned Course List for Dr. Anca Doloc Mihu</h3>
