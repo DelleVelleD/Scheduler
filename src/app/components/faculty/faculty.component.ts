@@ -15,7 +15,7 @@ export class FacultyComponent implements OnInit {
   }
 
   navigate2() {
-    this.router.navigate(["schedule-conflicts"])
+    this.router.navigate(["available-hours"])
   }
 
   navigate3() {
