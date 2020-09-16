@@ -46,12 +46,14 @@ span.a {
   text-align: center;
 }
 .topnav{
-overflow:hidden;
-background-color: #000000;
+  margin-left: 15px;
+  background-color: blue;
+  overflow:hidden;
 }
 
 /* Style the topnav links */
 .topnav a {
+  background: none;
 float: right;
 display: block;
 color: #00704a;
@@ -105,10 +107,9 @@ color: black;
 margin: 0;
 border: 0;
 } */
-
 img {
-width: 100%;
-}
+  width: 100%;
+  }
 
 /* Style the top navigation bar */
 .topnav{
@@ -325,20 +326,21 @@ height: 200%;
 }
 
 button.secondary {
-border: 1px solid rgba(0, 0, 0, 0.1);
-background: white;
-padding: 0.5rem 0.75rem;
-font-size: 14px;
-border-radius: 2px;
-color: rgba(0, 0, 0, 0.5);
-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
-cursor: pointer;
-font-weight: 500;
-}
-
-button.secondary:hover {
-background: #fafafa;
-}
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #EEEEEE;
+  padding: 0.5rem 0.75rem;
+  font-size: 14px;
+  border-radius: 2px;
+  color: #02754E;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-weight: 500;
+  }
+  
+  button.secondary:hover {
+  background: #02754E;
+  color: white;
+  }
 button.secondary:active {
 box-shadow: none;
 }
