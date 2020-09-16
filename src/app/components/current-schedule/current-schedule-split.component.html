@@ -2,7 +2,29 @@
 
   <div class="topnav" style="background-color: white;">
     <button (click)="navigate()" class="secondary">Homepage</button>
+    <form id="selector" action="" method="">
+      <label>Select Semester </label>
+      <select>
+        <option value="spring2019">Spring2019</option>
+        <option value="fall2019">Fall2019</option>
+      </select>
+      <input type="submit" value="Submit" onclick="changeSemester()">
+    </form>
   </div>
+
+  <!--
+  <div class="row">
+  <button (click)="navigate()">Home Page</button>
+  <form id="selector" action="" method="">
+    <label>Select Semester </label>
+    <select>
+      <option value="spring2019">Spring2019</option>
+      <option value="fall2019">Fall2019</option>
+    </select>
+    <input type="submit" value="Submit" onclick="changeSemester()">
+  </form>
+</div>
+-->
 
 <div class="row" style="height:200px; overflow-y: scroll">
   <form>
