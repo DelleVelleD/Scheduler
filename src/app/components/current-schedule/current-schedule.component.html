@@ -2,13 +2,13 @@
 
 <div class="topnav" style="background-color: white;">
   <button (click)="navigate()" class="secondary">Homepage</button>
-  <form id="selector" action="" method="">
-    <label>Select Semester </label>
-    <select>
+  <form id="selector" action="" method="" style="display: inline-block;">
+    <label style=" padding-left: 15px;">Select Semester: </label>
+    <select style=" margin-left: 15px;">
       <option value="spring2019">Spring2019</option>
       <option value="fall2019">Fall2019</option>
     </select>
-    <input type="submit" value="Submit" onclick="changeSemester()">
+    <input type="submit" value="Submit" onclick="changeSemester()" style=" margin-left: 15px;">
   </form>
 </div>
 
