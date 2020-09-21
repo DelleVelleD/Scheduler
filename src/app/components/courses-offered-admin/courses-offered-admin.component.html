@@ -1,5 +1,5 @@
 <style>
-    #myInput {
+  #myInput {
     background-image: url("assets/searchicon.png");
     background-position: 10px 10px;
     background-repeat: no-repeat;
@@ -14,26 +14,24 @@
 <body style="background-color:#a5acb0;">
 
 
-  <span>
-      <h1></h1>
-      <h1></h1>
+    <span>
+        <h1></h1>
+        <h1></h1>
+        <button routerLink="/admin" class="inline" >Homepage</button>
+        <form id="selector" class="inline" action="" method="">
+            <label>Select Semester: </label>
+            <select class="inline">
+                <option value="spring2019">Spring2019</option>
+                <option value="fall2019">Fall2019</option>
+            </select>
+            <input type="submit" value="Submit" class="inline" onclick="changeSemester()">
+        </form>
+        <h3 id = "tablename">Courses Offered This Semester (Spring 2019)</h3>
+    </span>
 
-      <button routerLink="/faculty" class="inline" >Return to Home Page</button>
-      <form id="selector" class="inline" action="" method="">
-        <label>Select Semester: </label>
-        <select class="inline">
-            <option value="spring2019">Spring2019</option>
-            <option value="fall2019">Fall2019</option>
-        </select>
-        <input type="submit" value="Submit" class="inline" onclick="changeSemester()">
-      </form>
-      
-      <h3 id = "tablename">Courses Available for Upcoming Semester (Fall 2019)</h3>
-  </span>
+    <input type="text" id="myInput" onkeyup="myFunction3()" placeholder="Search for course title.." title="Type in a course title">
 
-  <input type="text" id="myInput" onkeyup="myFunction3()" placeholder="Search for course title.." title="Type in a course title">
-
-  <div style="height:500px; overflow-y: scroll; overflow-x:scroll">
+    <div style="height:500px; overflow-y: scroll; overflow-x:scroll">
         <table id ="myTable" *ngIf='courses && courses.length'>
             <tr>
                 <th>CRN</th>
@@ -53,11 +51,9 @@
                 <td>{{course.SECT}}</td>
                 <td>{{course.DAYS}} {{course.START}} - {{course.END}}</td>
                 <td>{{course.CLASSROOM}}</td>
-                <td>TBA</td>
+                <td>{{course.FIRSTNAME}} {{course.LASTNAME}}</td>
             </tr>
         </table>
-  </div>
-
-
+    </div>
 
 </body>
