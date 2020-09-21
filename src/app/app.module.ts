@@ -42,6 +42,10 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { ViewHoursComponent } from './components/view-hours/view-hours.component';
 import { AvailableHoursComponent } from './components/available-hours/available-hours.component';
 
+import { CoursesOfferedAdminComponent } from './components/courses-offered-admin/courses-offered-admin.component';
+import { CoursesUpcomingAdminComponent } from './components/courses-upcoming-admin/courses-upcoming-admin.component';
+
+
 
 
 const routes: Routes = [
@@ -74,6 +78,8 @@ const routes: Routes = [
   { path: "calendar", component: CalendarComponent },
   { path: "view-hours", component: ViewHoursComponent },
   { path: "available-hours", component: AvailableHoursComponent },
+  { path: "courses-upcoming-admin", component: CoursesUpcomingAdminComponent },
+  { path: "courses-offered-admin", component: CoursesOfferedAdminComponent },
   { path: '#', redirectTo: 'homepage-faculty', pathMatch: 'full' },
   { path: '', redirectTo: 'login-page', pathMatch: 'full' }
 ];
@@ -112,6 +118,8 @@ const routes: Routes = [
     CourseSectionsPipe,
     ViewHoursComponent,
     AvailableHoursComponent,
+    CoursesOfferedAdminComponent,
+    CoursesUpcomingAdminComponent,
     UploadSheetComponent,
     PageNotFoundComponent
 
