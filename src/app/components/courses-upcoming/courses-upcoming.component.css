@@ -13,6 +13,7 @@ td, th {
 
 tr:nth-child(even) {
     background-color: #00704a;
+    color:#ffffff;
 }
 
 tr:nth-child(odd) {
@@ -22,7 +23,6 @@ tr:nth-child(odd) {
 /* Style the top navigation bar */
 .topnav{
     overflow:hidden;
-    background-color: #000000;
   }
   
   /* Style the topnav links */
@@ -57,4 +57,7 @@ tr:nth-child(odd) {
     font-family: "Lucida Console", Monaco, monospace;
   }
 
-  
+  .inline {
+    display: inline-block;
+    margin-left: 15px;
+  }

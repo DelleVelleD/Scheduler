@@ -8,17 +8,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <div style="text-align:center">
-      <img width=100% alt="GGC Banner" src="/assets/banner.png">
+      <img width=100%  alt="GGC Banner" src="/assets/banner2.png">
     </div>
 </head>
 <body background-color="white" >
 
-
 <app-root></app-root>
 
+<body style="background-color:#a5acb0;">
   <div class="footer">
-    <br/><p><small>footer.</small></p>
+    <br/><p><small>Release: 0.5</small></p>
   </div>
+</body>
 
 <!---->
   <script>
@@ -43,6 +44,22 @@
         y.style.display = "block";
     }
 
+    //These lines are for handling opening a conflict in the Admin view
+    var conflicting = document.getElementById("redBlock");
+    var modal = document.getElementById("exampleConflict");
+    var exit = document.getElementsByClassName("close");
+    if(conflicting){
+      conflicting.addEventListener("click", showConflict);
+    }
+    function showConflict(){
+      modal = document.getElementById("exampleConflict");
+      modal.style.display = "block";
+    }
+    window.onclick = function(event) {
+      if(event.target == modal){
+        modal.style.display = "none";
+      }
+    }
   </script>
 
 

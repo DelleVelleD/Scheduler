@@ -1,0 +1,53 @@
+table{
+    font-size: 12px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 3px solid #000000;
+    text-align: left;
+    padding: 9px;
+}
+
+.topnav{
+    margin-left: 15px;
+    background-color: blue;
+    overflow:hidden;
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    background: none;
+  float: right;
+  display: block;
+  color: #00704a;
+  text-align: center;
+  padding: 28px 16px;
+  text-decoration: none;
+  font-size: 26px;
+  font-family: "Lucida Console", Monaco, monospace;
+  }
+
+  button.secondary {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #EEEEEE;
+    padding: 0.5rem 0.75rem;
+    font-size: 14px;
+    border-radius: 2px;
+    color: #02754E;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-weight: 500;
+    }
+    
+    button.secondary:hover {
+    background: #02754E;
+    color: white;
+    }
+  button.secondary:active {
+  box-shadow: none;
+  }
+  button.secondary:focus {
+  outline: 0;
+  }

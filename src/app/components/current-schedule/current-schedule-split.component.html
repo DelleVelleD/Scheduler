@@ -1,19 +1,19 @@
 <body style="background-color:#ffff;">
 
-<div class="topnav" style="background-color: white;">
-  <button routerLink="/faculty" class="secondary">Homepage</button>
-  <form id="selector" action="" method="" style="display: inline-block;">
-    <label style=" padding-left: 15px;">Select Semester: </label>
-    <select style=" margin-left: 15px;">
-      <option value="spring2019">Spring2019</option>
-      <option value="fall2019">Fall2019</option>
-    </select>
-    <input type="submit" value="Submit" onclick="changeSemester()" style=" margin-left: 15px;">
-  </form>
-</div>
+  <div class="topnav" style="background-color: white;">
+    <button routerLink="/faculty" class="secondary">Homepage</button>
+    <form id="selector" action="" method="" style=" display: inline-block;">
+      <label style=" padding-left: 15px;">Select Semester: </label>
+      <select style=" margin-left: 15px;">
+        <option value="spring2019">Spring2019</option>
+        <option value="fall2019">Fall2019</option>
+      </select>
+      <input type="submit" value="Submit" onclick="changeSemester()" style=" margin-left: 15px;">
+    </form>
+  </div>
 
-<!--
-<div class="row">
+  <!--
+  <div class="row">
   <button (click)="navigate()">Home Page</button>
   <form id="selector" action="" method="">
     <label>Select Semester </label>
@@ -26,114 +26,76 @@
 </div>
 -->
 
-<div class="row" style="height:250px; overflow-y: scroll; overflow-x:scroll">
-    <table>
-        <tr>
-            <th>CRN</th>
-                  <th>DEPT</th>
-                  <th>Course #</th>
-                  <th>Title</th>
-                  <th>Section #</th>
-                  <th>Days and Time</th>
-                  <th>Classroom</th>
-                  <th>Priority</th>
-        </tr>
-        <tr>
-            <td>20658</td>
-            <td>ITEC</td>
-            <td>3870</td>
-            <td>Software Development II</td>
-            <td>01</td>
-            <td>MW<br>1530 - 1715</td>
-            <td>W3210</td>
-            <td><select>
-                <option>None</option>
-                <option>Low</option>
-                <option>Medium</option>
-                <option>High</option>
-            </select></td>
-        </tr>
-        <tr>
-            <td>20123</td>
-            <td>ITEC</td>
-            <td>4260</td>
-            <td>Software QA & Testing</td>
-            <td>01</td>
-            <td>MW<br>1230 - 1315</td>
-            <td>W2201</td>
-            <td><select>
-                <option>None</option>
-                <option>Low</option>
-                <option>Medium</option>
-                <option>High</option>
-            </select></td>
-        </tr>
-    </table>
+<div class="row" style="height:200px; overflow-y: scroll">
+  <form>
+    <label for="subject">Subject:&nbsp;</label>
+    <input type="text" id="subject" name="subject"><br>
+    <label for="coursenum">Course Number:&nbsp;</label>
+    <input type="text" id="coursenum" name="coursenum"><br>
+    <label for="title">Title:&nbsp;</label>
+    <input type="text" id="title" name="title"><br>
+    <label for="keyword">Keyword:&nbsp;</label>
+    <input type="text" id="keyword" name="keyword"><br>
+    <label for="avtime">Available Time:&nbsp;</label>
+    <input type="time"> to <input type="time"><br>
+    <input type="submit" value="Search">
+  </form>
 </div>
-<div class ="row">
-  <div class="column">
-      <h3 id = "tablename">Current Assigned Course List for Dr. Anca Doloc Mihu</h3>
-      <div style="height:500px; overflow-y: scroll; overflow-x:scroll">
-          <table>
-              <tr>
-                  <th>CRN</th>
-                  <th>DEPT</th>
-                  <th>Course #</th>
-                  <th>Title</th>
-                  <th>Section #</th>
-                  <th>Days and Time</th>
-                  <th>Classroom</th>
-              </tr>
-              <tr>
-                  <td>20458</td>
-                  <td>ITEC</td>
-                  <td>3860</td>
-                  <td>Software Development I</td>
-                  <td>01</td>
-                  <td>MW<br>1530 - 1715</td>
-                  <td>A1520</td>
-              </tr>
-              <tr>
-                  <td>21708</td>
-                  <td>ITEC</td>
-                  <td>3860</td>
-                  <td>Software Development I</td>
-                  <td>02</td>
-                  <td>TR<br>1830 - 2015</td>
-                  <td>B2100</td>
-              </tr>
-              <tr>
-                  <td>21718</td>
-                  <td>ITEC</td>
-                  <td>4550</td>
-                  <td>Mobile Application Development</td>
-                  <td>02</td>
-                  <td>MW<br>1400 - 1515</td>
-                  <td>C1130</td>
-              </tr>
-          </table>
-      </div>
-  </div>
 
-  <!--<div id="buttons">
-      <p></p>
-      <p></p>
-      <p></p>
-      <h1> </h1>
-      <h1> </h1>
-      <h1> </h1>
-      <button (click)="navigate2()">Calendar View</button>
-      <button onclick="myFunction()">Request Schedule Change</button>
-      <button (click)="navigate()">Home Page</button>
-      <h2 id = "heady">Request Schedule Change Form</h2>
-      <form id = "subby">
-          <p>Please enter the courses you would like to drop and/or add and the reasoning behind your suggestions.</p>
-          <br>
-          <textarea rows = "15" cols = "100" name = "description">
-          </textarea><br>
-          <input type="submit" value="Submit" onclick="myFunction2()">
-      </form>
-  </div> -->
+<div class ="row">
+    <div class="column" style="height: 650px; overflow-y: auto;">
+        <h3>Current Assigned Course List for Dr. Anca Doloc Mihu</h3>
+        <table id="courses">
+            <thead>
+                <tr>
+                    <th style="width:5em">CRN</th>
+                    <th style="width:5em">DEPT</th>
+                    <th style="width:6em">Course<br>Number</th>
+                    <th style="width:auto">Title</th>
+                    <th style="width:5em">Section</th>
+                    <th style="width:7em">Days and Time</th>
+                    <th style="width:7em">Classroom</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>20858</td>
+                <td>ITEC</td>
+                <td>2150</td>
+                <td>Intermediate Programming</td>
+                <td>01</td>
+                <td>R<br>10:30 - 11:15</td>
+                <td>C2130</td>
+            </tr>
+            <tr>
+                <td>21408</td>
+                <td>ITEC</td>
+                <td>3150</td>
+                <td>Advanced Programming</td>
+                <td>02</td>
+                <td>S<br>12:00 - 13:15</td>
+                <td>B2100</td>
+            </tr>
+            <tr>
+                <td>21718</td>
+                <td>ITEC</td>
+                <td>4550</td>
+                <td>Mobile Application Development</td>
+                <td>02</td>
+                <td>MW<br>14:00 - 15:15</td>
+                <td>C1130</td>
+            </tr>
+            <tr class="conflict">
+                <td>21719</td>
+                <td>ITEC</td>
+                <td>4550</td>
+                <td>Mobile Application Development<br>Conflict with: Dr. Brannock</td>
+                <td>03</td>
+                <td>MW<br>08:00 - 09:15</td>
+                <td>C1130</td>
+            </tr>
+        </table>
+    </div>
+
   <div class="column" style="overflow-y: auto;">
     <div class="calendar">
 

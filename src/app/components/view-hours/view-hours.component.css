@@ -1,6 +1,26 @@
+table{
+    font-family: arial, sans-serif;
+    font-size: 12px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 3px solid #000000;
+    text-align: left;
+    padding: 9px;
+}
+
+tr:nth-child(even) {
+    background-color: #00704a;
+    color:#ffffff;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
 button.secondary {
-    margin-bottom: 15px;
-    margin-left: 15px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background: #EEEEEE;
     padding: 0.5rem 0.75rem;
@@ -22,3 +42,5 @@ button.secondary {
   button.secondary:focus {
   outline: 0;
   }
+
+  

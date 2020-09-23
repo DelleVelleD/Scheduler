@@ -17,7 +17,15 @@
     <span>
         <h1></h1>
         <h1></h1>
-        <button (click)="navigate()">Return to Home Page</button>
+        <button routerLink="/faculty" class="inline" >Homepage</button>
+        <form id="selector" class="inline" action="" method="">
+            <label>Select Semester: </label>
+            <select class="inline">
+                <option value="spring2019">Spring2019</option>
+                <option value="fall2019">Fall2019</option>
+            </select>
+            <input type="submit" value="Submit" class="inline" onclick="changeSemester()">
+        </form>
         <h3 id = "tablename">Courses Offered This Semester (Spring 2019)</h3>
     </span>
 
