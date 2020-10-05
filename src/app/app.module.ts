@@ -13,16 +13,16 @@ import { Routes, RouterModule } from '@angular/router/';
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { ScheduleConflictsComponent } from './components/schedule-conflicts/schedule-conflicts.component';
-import { FacultyIssuesComponent } from './components/faculty-issues/faculty-issues.component';
+//import { FacultyIssuesComponent } from './components/faculty-issues/faculty-issues.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { LoginPageInvalidComponent } from './components/login-page/login-page-invalid.component';
 
-import { CalendarComponent } from './components/calendar/calendar.component';
+//import { CalendarComponent } from './components/calendar/calendar.component';
 import { CoursesOfferedComponent } from './components/courses-offered/courses-offered.component';
 import { CoursesUpcomingComponent } from './components/courses-upcoming/courses-upcoming.component';
 import { CurrentScheduleComponent } from './components/current-schedule/current-schedule.component';
 import { CurrentScheduleSplitComponent } from './components/current-schedule/current-schedule-split.component';
-import { HomepageFacultyComponent } from './components/homepage-faculty/homepage-faculty.component';
+//import { HomepageFacultyComponent } from './components/homepage-faculty/homepage-faculty.component';
 import { HomepageAdminComponent } from './components/admin/homepage-admin.component';
 import { FacultyComponent } from './components/faculty/faculty.component';
 
@@ -53,12 +53,12 @@ const routes: Routes = [
     path: 'main-page', component: MainPageComponent,
     children: [
       
-      { path: 'faculty-issues', component: FacultyIssuesComponent },
+      //{ path: 'faculty-issues', component: FacultyIssuesComponent }, ARCHIVED
       
       
       { path: 'full-courselist/course-sections/:CRSENO', component: CourseSectionsComponent },
       { path: 'full-courselist/course-sections/:DAYS', component: CourseSectionsComponent },
-      { path: "calendar", component: CalendarComponent },
+      //{ path: "calendar", component: CalendarComponent }, ARCHIVED
       { path: "upload-sheet", component: UploadSheetComponent }
     ]
   },
@@ -66,7 +66,7 @@ const routes: Routes = [
   { path: "upload-sheet", component: UploadSheetComponent },
   { path: 'full-courselist/course-sections', component: CourseSectionsComponent },
   { path: 'full-courselist/courses', component: CoursesComponent },
-  { path: 'homepage-faculty', component: HomepageFacultyComponent },
+  //{ path: 'homepage-faculty', component: HomepageFacultyComponent }, ARCHIVED
   { path: 'admin', component: HomepageAdminComponent },
   { path: 'faculty', component: FacultyComponent },
   { path: 'login-page', component: LoginPageComponent },
@@ -75,12 +75,12 @@ const routes: Routes = [
   { path: "current-schedule-split", component: CurrentScheduleSplitComponent },
   { path: "courses-upcoming", component: CoursesUpcomingComponent },
   { path: "courses-offered", component: CoursesOfferedComponent },
-  { path: "calendar", component: CalendarComponent },
+  //{ path: "calendar", component: CalendarComponent }, ARCHIVED
   { path: "view-hours", component: ViewHoursComponent },
   { path: "available-hours", component: AvailableHoursComponent },
   { path: "courses-upcoming-admin", component: CoursesUpcomingAdminComponent },
   { path: "courses-offered-admin", component: CoursesOfferedAdminComponent },
-  { path: '#', redirectTo: 'homepage-faculty', pathMatch: 'full' },
+  //{ path: '#', redirectTo: 'homepage-faculty', pathMatch: 'full' },
   { path: '', redirectTo: 'login-page', pathMatch: 'full' }
 ];
 
@@ -101,17 +101,17 @@ const routes: Routes = [
     AppComponent,
     MainPageComponent,
     ScheduleConflictsComponent,
-    FacultyIssuesComponent,
+    //FacultyIssuesComponent,
     CoursesComponent,
     CourseSectionsComponent,
     LoginPageComponent,
     LoginPageInvalidComponent,
-    CalendarComponent,
+    //CalendarComponent,
     CoursesOfferedComponent,
     CoursesUpcomingComponent,
     CurrentScheduleComponent,
     CurrentScheduleSplitComponent,
-    HomepageFacultyComponent,
+    //HomepageFacultyComponent,
     HomepageAdminComponent,
     FacultyComponent,
     CoursesPipe,
