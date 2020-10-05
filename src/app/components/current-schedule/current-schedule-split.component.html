@@ -1,6 +1,6 @@
-<body style="background-color:#ffff;">
+<body style="background-color:#a5acb0;">
 
-  <div class="topnav" style="background-color: white;">
+  <div class="topnav" style="background-color:#a5acb0;">
     <button routerLink="/faculty" class="secondary">Homepage</button>
     <form id="selector" action="" method="" style=" display: inline-block;">
       <label style=" padding-left: 15px;">Select Semester: </label>
@@ -26,24 +26,29 @@
 </div>
 -->
 
-<div class="row" style="height:200px; overflow-y: scroll">
-  <form>
-    <label for="subject">Subject:&nbsp;</label>
-    <input type="text" id="subject" name="subject"><br>
-    <label for="coursenum">Course Number:&nbsp;</label>
-    <input type="text" id="coursenum" name="coursenum"><br>
-    <label for="title">Title:&nbsp;</label>
-    <input type="text" id="title" name="title"><br>
-    <label for="keyword">Keyword:&nbsp;</label>
-    <input type="text" id="keyword" name="keyword"><br>
-    <label for="avtime">Available Time:&nbsp;</label>
-    <input type="time"> to <input type="time"><br>
-    <input type="submit" value="Search">
-  </form>
+<!-- <div class="row" style="height:200px; overflow-y: scroll"> -->
+<div class="card-deck" style="padding-top: 5px; padding-left: 15px; padding-right: 15px;">
+  <div class="card w-90" style="background-color:#a5acb0;">
+    <form>
+      <label for="subject">Subject:&nbsp;</label>
+      <input type="text" id="subject" name="subject"><br>
+      <label for="coursenum">Course Number:&nbsp;</label>
+      <input type="text" id="coursenum" name="coursenum"><br>
+      <label for="title">Title:&nbsp;</label>
+      <input type="text" id="title" name="title"><br>
+      <label for="keyword">Keyword:&nbsp;</label>
+      <input type="text" id="keyword" name="keyword"><br>
+      <label for="avtime">Available Time:&nbsp;</label>
+      <input type="time"> to <input type="time"><br>
+      <input type="submit" value="Search">
+    </form>
+  </div>
 </div>
 
-<div class ="row">
-    <div class="column" style="height: 650px; overflow-y: auto;">
+<!-- <div class ="row"> -->
+  <div class="card-deck" style="padding-top: 15px; padding-left: 15px; padding-right: 15px;">
+    <!-- <div class="column" style="height: 650px; overflow-y: auto;"> -->
+      <div class="card mw-40" style="background-color:#a5acb0;">
         <h3>Current Assigned Course List for Dr. Anca Doloc Mihu</h3>
         <table id="courses">
             <thead>
@@ -96,7 +101,8 @@
         </table>
     </div>
 
-  <div class="column" style="overflow-y: auto;">
+  <!-- <div class="column" style="overflow-y: auto;"> -->
+  <div class="card mw-40" style="background-color:#a5acb0;">
     <div class="calendar">
 
         <h1 id="welcome" style="padding-left: 5px;"><b>Calendar</b></h1>
@@ -109,7 +115,7 @@
                 <th>Time</th>
                 <th>Monday</th>
                 <th>Tuesday</th>
-                <th>Wednesday</th>
+                <th style="font-size: 13px;">Wednesday</th>
                 <th>Thursday</th>
                 <th>Friday</th>
                 <th>Saturday</th>
