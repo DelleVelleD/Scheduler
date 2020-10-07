@@ -1,4 +1,4 @@
-<body style="background-color:#a5acb0;">
+<body style="background-color:#a5acb0; height: 100%; width: 100%;">
 
   <div class="topnav" style="background-color:#a5acb0;">
     <button routerLink="/faculty" class="secondary">Homepage</button>
@@ -27,19 +27,33 @@
 -->
 
 <!-- <div class="row" style="height:200px; overflow-y: scroll"> -->
-<div class="card-deck" style="padding-top: 5px; padding-left: 15px; padding-right: 15px;">
+<div class="card-deck" style="padding-top: 5px; padding-left: 15px; padding-right: 15px; overflow-y: auto; max-height: 445px;">
   <div class="card w-90" style="background-color:#a5acb0;">
     <form>
-      <label for="subject">Subject:&nbsp;</label>
-      <input type="text" id="subject" name="subject"><br>
-      <label for="coursenum">Course Number:&nbsp;</label>
-      <input type="text" id="coursenum" name="coursenum"><br>
-      <label for="title">Title:&nbsp;</label>
-      <input type="text" id="title" name="title"><br>
-      <label for="keyword">Keyword:&nbsp;</label>
-      <input type="text" id="keyword" name="keyword"><br>
-      <label for="avtime">Available Time:&nbsp;</label>
-      <input type="time"> to <input type="time"><br>
+      <div class="form-group">
+        <label for="searchSubject">Subject:&nbsp;</label>
+        <input id="searchSubject" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="searchNumber">Course Number:&nbsp;</label>
+        <input id="searchNumber" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="searchTitle">Title:&nbsp;</label>
+        <input id="searchTitle" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="searchKeyword">Keyword:&nbsp;</label>
+        <input id="searchKeyword" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="searchTime">Available Time:&nbsp;</label>
+        <input type="time"> to <input type="time">
+      </div>
+      <div class="form-check">
+        <input id="searchNewClasses" type="checkbox" class="form-check-input">
+        <label class="form-check-label" for="searchNewClasses">Include new classes in search</label>
+      </div>
       <input type="submit" value="Search">
     </form>
   </div>
