@@ -1,24 +1,23 @@
-button.secondary {
-    margin-bottom: 15px;
-    margin-left: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background: #EEEEEE;
-    padding: 0.5rem 0.75rem;
-    font-size: 14px;
-    border-radius: 2px;
-    color: #02754E;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    font-weight: 500;
-    }
-    
-    button.secondary:hover {
-    background: #02754E;
-    color: white;
-    }
-  button.secondary:active {
+button.homepage {
+  margin-bottom: 15px;
+  margin-left: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #EEEEEE;
+  padding: 0.5rem 0.75rem;
+  font-size: 14px;
+  border-radius: 2px;
+  color: #02754E;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-weight: 500;
+}
+button.homepage:hover {
+  background: #02754E;
+  color: white;
+}
+button.homepage:active {
   box-shadow: none;
-  }
-  button.secondary:focus {
+}
+button.homepage:focus {
   outline: 0;
-  }
+}
