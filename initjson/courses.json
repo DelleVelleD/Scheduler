@@ -1,0 +1,49 @@
+[
+    {
+        "CRN": 12345,
+        "courseNum": "3870",
+        "title": "Software Development II",
+        "sectionNum": 3,
+        "days": "TTH",
+        "start": 1530,
+        "end": 1715,
+        "room": "W3210",
+        "credits": 4,
+        "professors": [
+            {
+                "firstName": "Anca", "lastName": "Doloc-Mihu"
+            }
+        ]
+    },
+    {
+        "CRN": 54321,
+        "courseNum": "4260",
+        "title": "Software Testing and QA",
+        "sectionNum": 1,
+        "days": "MW",
+        "start": 1400,
+        "end": 1515,
+        "room": "W2201",
+        "credits": 3,
+        "professors": []
+    },
+    {
+        "CRN": 56789,
+        "courseNum": "3150",
+        "title": "Advanced Programming",
+        "sectionNum": 1,
+        "days": "TTH",
+        "start": 1100,
+        "end": 1215,
+        "room": "W3210",
+        "credits": 3,
+        "professors": [
+            {
+                "firstName": "Jane", "lastName": "Doe"
+            },
+            {
+                "firstName": "John", "lastName": "Doe"
+            }
+        ]
+    }
+]
