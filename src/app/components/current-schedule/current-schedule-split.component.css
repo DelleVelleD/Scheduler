@@ -1,16 +1,16 @@
 /* COURSES */
 
 #courses{
-  font-family: arial, sans-serif;
-  font-size: 12px;
-  border-collapse: collapse;
   width: 100%;
   height: 0;
+  background-color: #a5acb0;;
 }
 
-#courses td, #courses th {
-  border: 3px solid #000000;
+#courses th {
+  display: table-cell;
   text-align: center;
+  vertical-align: middle;
+  font-size: .9rem;
   padding: 9px;
   height: 20px;
 }
@@ -368,4 +368,10 @@ top: -2px;
 
 .icon:hover {
 color: red;
+}
+
+@media screen and (max-width: 700px){
+  #courseList{
+    display: none;
+  }
 }
