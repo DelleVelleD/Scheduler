@@ -66,42 +66,130 @@
                             <td class="headcol">8:00 AM</td>
                             <td>
 
+                                <!-- Start of example conflict -->
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
                                         <div class="event conflict" onclick="showConflict()" id="redBlock"
                                         *ngIf="verifyMonday(course) && verifyTime(course) && conflict(course)">
 
-                                            - {{ course.TITLE }}
+                                        <!--The below blocks of code are failed example conflicts
+                                            <div
+                                        *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                        <div class="event conflict"
+                                        onclick="showDetail(course.TITLE, course.SECTNO, course.ROOM, course.DAYS, course.START,
+                                        course.END, course.CRDTS, course.LASTNAME, course.FIRSTNAME)"
+                                        id="redBlock"
+                                        *ngIf="verifyMonday(course) && verifyTime(course) && conflict(course)"> -->
+                                        <!-- <div
+                                        *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                        <div class="event conflict"
+                                        (click)="showDetailAll(course.TITLE, course.SECTNO, course.ROOM, course.DAYS, course.START,
+                                        course.END, course.CRDTS, course.LASTNAME, course.FIRSTNAME)"
+                                        id="redBlock"
+                                        *ngIf="verifyMonday(course) && verifyTime(course) && conflict(course)"> -->
+                                        <!-- <div
+                                        *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                        <div class="event conflict"
+                                        onclick="showDetail(course.TITLE, course.SECTNO, course.ROOM, course.DAYS, course.START,
+                                        course.END, course.CRDTS, course.LASTNAME, course.FIRSTNAME)"
+                                        id="redBlock"
+                                        *ngIf="verifyMonday(course) && verifyTime(course) && conflict(course)"> -->
+                                        
+
+                                            <!-- The previous info displayed for Course blocks on the calendar
+                                            {{ course.TITLE }}
                                             ROOM: ({{ course.ROOM }})
                                             Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            Time" {{course.START}} -->
+
+                                        <!-- The current info displayed for Course blocks on the calendar.
+                                             Only displays Course title, courseNumber, and sectionNumber.
+                                             Can be clicked to show additional information-->
+                                             {{course.TITLE}} 
+                                             {{course.CRSENO}}-
+                                             {{course.SECTNO}}
+                                            <!-- <br />
+                                            <br /> -->
+
+                                            <!-- Example conflict/placeholder. Need a better conflict UI -->
+                                            <div id="exampleConflict" class="modal">
+                                                <div class="modal-content">
+                                                    <!-- New Conflict example. Doesn't implement multiple professors yet, so has
+                                                    hard coded example professor -->
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}} ; Doh, Jane
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
                                 </div>
-
+                                <!-- Original placement of ExampleConflict's modal/popup when clicked on.
+                                Example conflict/placeholder. Need a better conflict UI
                                 <div id="exampleConflict" class="modal">
                                     <div class="modal-content">
+                                        Original Conflict example
                                         <p>Conflicting Professors:</p>
                                         <p>John Doe</p>
                                         <p>Jane Doh</p>
+
+                                        New Conflict example. Doesn't implement multiple professors yet, so has
+                                        hard coded example professor
+                                        Name: {{ course.TITLE }}
+                                        ROOM: ({{ course.ROOM }})
+                                        Day: {{course.DAYS}}
+                                        Time: {{course.START}}-{{course.END}}
+                                        Credits: {{course.CRDTS}}
+                                        Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}} ; Doh, Jane
                                     </div>
-                                </div>
+                                </div> -->
+                                <!-- End of example conflict -->
 
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifyMonday(course) && verifyTime(course) && !conflict(course)">
+                                        <div class="event if" onclick="showDetail8AM()" *ngIf="verifyMonday(course) && verifyTime(course) && !conflict(course)">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView8AM" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -112,18 +200,36 @@
 
 
                                 <div class="for double">
-
+                                    <!-- TODO Add onclick="detailView" for all *ngFor's-->
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
 
-                                        <div class="event if" *ngIf="verifyTuesday(course) && verifyTime(course)">
+                                        <div class="event if" onclick="showDetail8ATu()" *ngIf="verifyTuesday(course) && verifyTime(course)">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView8ATu" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -133,49 +239,32 @@
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifyWednesday(course) && verifyTime(course) ">
+                                        <div class="event if" onclick="showDetail8AW()" *ngIf="verifyWednesday(course) && verifyTime(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="for double">
-                                    <div
-                                        *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifyThursday(course) && verifyTime(course) ">
-
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </td>
-                            <td>
-                                <div class="for double">
-                                    <div
-                                        *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifyFriday(course) && verifyTime(course) ">
-
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView8AW" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -185,14 +274,103 @@
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifySaturday(course) && verifyTime(course) ">
+                                        <div class="event if" onclick="showDetail8ATh()" *ngIf="verifyThursday(course) && verifyTime(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView8ATh" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </td>
+                            <td>
+                                <div class="for double">
+                                    <div
+                                        *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                        <div class="event if" onclick="showDetail8AF()" *ngIf="verifyFriday(course) && verifyTime(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
+
+                                            <div id="detailView8AF" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="for double">
+                                    <div
+                                        *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                        <div class="event if" onclick="showDetail8AS()" *ngIf="verifySaturday(course) && verifyTime(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
+
+                                            <div id="detailView8AS" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -215,48 +393,32 @@
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifyMonday(course) && verifyNineAM(course) ">
+                                        <div class="event if" onclick="showDetail9AM()" *ngIf="verifyMonday(course) && verifyNineAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            - {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="for double">
-                                    <div
-                                        *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifyTuesday(course) && verifyNineAM(course) ">
-
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="for double">
-                                    <div
-                                        *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifyWednesday(course) && verifyNineAM(course) ">
-
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView9AM" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -266,14 +428,102 @@
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifyThursday(course) && verifyNineAM(course) ">
+                                        <div class="event if" onclick="showDetail9ATu()" *ngIf="verifyTuesday(course) && verifyNineAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView9ATu" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="for double">
+                                    <div
+                                        *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                        <div class="event if" onclick="showDetail9AW()" *ngIf="verifyWednesday(course) && verifyNineAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
+
+                                            <div id="detailView9AW" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="for double">
+                                    <div
+                                        *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                        <div class="event if" onclick="showDetail9ATh()" *ngIf="verifyThursday(course) && verifyNineAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
+
+                                            <div id="detailView9ATh" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -285,14 +535,32 @@
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifyFriday(course) && verifyNineAM(course) ">
+                                        <div class="event if" onclick="showDetail9AF()" *ngIf="verifyFriday(course) && verifyNineAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView9AF" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -304,14 +572,32 @@
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifySaturday(course) && verifyNineAM(course) ">
+                                        <div class="event if" onclick="showDetail9AS()" *ngIf="verifySaturday(course) && verifyNineAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView9AS" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -334,48 +620,32 @@
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifyMonday(course) && verifyTenAM(course) ">
+                                        <div class="event if" onclick="showDetail10AM()" *ngIf="verifyMonday(course) && verifyTenAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            - {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="for double">
-                                    <div
-                                        *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifyTuesday(course) && verifyTenAM(course) ">
-
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="for double">
-                                    <div
-                                        *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifyWednesday(course) && verifyTenAM(course) ">
-
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView10AM" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -385,14 +655,102 @@
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifyThursday(course) && verifyTenAM(course) ">
+                                        <div class="event if" onclick="showDetail10ATu()" *ngIf="verifyTuesday(course) && verifyTenAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView10ATu" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="for double">
+                                    <div
+                                        *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                        <div class="event if" onclick="showDetail10AW()" *ngIf="verifyWednesday(course) && verifyTenAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
+
+                                            <div id="detailView10AW" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="for double">
+                                    <div
+                                        *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                        <div class="event if" onclick="showDetail10ATh()" *ngIf="verifyThursday(course) && verifyTenAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
+
+                                            <div id="detailView10ATh" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -404,14 +762,32 @@
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifyFriday(course) && verifyTenAM(course) ">
+                                        <div class="event if" onclick="showDetail10AF()" *ngIf="verifyFriday(course) && verifyTenAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView10AF" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -423,14 +799,32 @@
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifySaturday(course) && verifyTenAM(course) ">
+                                        <div class="event if" onclick="showDetail10AS()" *ngIf="verifySaturday(course) && verifyTenAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView10AS" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -453,14 +847,32 @@
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifyMonday(course) && verifyElevenAM(course) ">
+                                        <div class="event if" onclick="showDetail11AM()" *ngIf="verifyMonday(course) && verifyElevenAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            - {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView11AM" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -470,14 +882,32 @@
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifyTuesday(course) && verifyElevenAM(course) ">
+                                        <div class="event if" onclick="showDetail11ATu()" *ngIf="verifyTuesday(course) && verifyElevenAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView11ATu" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -487,15 +917,33 @@
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if"
+                                        <div class="event if" onclick="showDetail11AW()"
                                             *ngIf="verifyWednesday(course) && verifyElevenAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView11AW" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -505,14 +953,32 @@
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifyThursday(course) && verifyElevenAM(course) ">
+                                        <div class="event if" onclick="showDetail11ATh()" *ngIf="verifyThursday(course) && verifyElevenAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView11ATh" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -524,14 +990,32 @@
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifyFriday(course) && verifyElevenAM(course) ">
+                                        <div class="event if" onclick="showDetail11AF()" *ngIf="verifyFriday(course) && verifyElevenAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView11AF" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -543,14 +1027,32 @@
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifySaturday(course) && verifyElevenAM(course) ">
+                                        <div class="event if" onclick="showDetail11AS()" *ngIf="verifySaturday(course) && verifyElevenAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView11AS" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -573,14 +1075,32 @@
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifyMonday(course) && verifyTwelveAM(course) ">
+                                        <div class="event if" onclick="showDetail12PM()" *ngIf="verifyMonday(course) && verifyTwelveAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            - {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView12PM" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -590,14 +1110,32 @@
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifyTuesday(course) && verifyTwelveAM(course) ">
+                                        <div class="event if" onclick="showDetail12PTu()" *ngIf="verifyTuesday(course) && verifyTwelveAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView12PTu" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -607,15 +1145,33 @@
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if"
+                                        <div class="event if" onclick="showDetail12PW()"
                                             *ngIf="verifyWednesday(course) && verifyTwelveAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView12PW" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -625,14 +1181,32 @@
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifyThursday(course) && verifyTwelveAM(course) ">
+                                        <div class="event if" onclick="showDetail12PTh()" *ngIf="verifyThursday(course) && verifyTwelveAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView12PTh" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -644,14 +1218,32 @@
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifyFriday(course) && verifyTwelveAM(course) ">
+                                        <div class="event if" onclick="showDetail12PF()" *ngIf="verifyFriday(course) && verifyTwelveAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView12PF" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -663,14 +1255,32 @@
                                 <div class="for double">
                                     <div
                                         *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                        <div class="event if" *ngIf="verifySaturday(course) && verifyTwelveAM(course) ">
+                                        <div class="event if" onclick="showDetail12PS()" *ngIf="verifySaturday(course) && verifyTwelveAM(course) ">
+                                            {{course.TITLE}} 
+                                            {{course.CRSENO}}-
+                                            {{course.SECTNO}}
 
-                                            {{ course.TITLE }}
-                                            ROOM: ({{ course.ROOM }})
-                                            Day: {{course.DAYS}}
-                                            Time" {{course.START}}
-                                            <br />
-                                            <br />
+                                            <div id="detailView12PS" class="modal">
+                                                <div class="modal-content">
+                                                    Name: {{ course.TITLE }}
+                                                    <br>
+                                                    Department: ***Department goes here***
+                                                    <br>
+                                                    Course Number: {{course.CRSENO}}
+                                                    <br>
+                                                    Section: {{course.SECTNO}}
+                                                    <br>
+                                                    Room: ({{ course.ROOM }})
+                                                    <br>
+                                                    Day: {{course.DAYS}}
+                                                    <br>
+                                                    Time: {{course.START}}-{{course.END}}
+                                                    <br>
+                                                    Credits: {{course.CRDTS}}
+                                                    <br>
+                                                    Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -693,14 +1303,32 @@
                               <div class="for double">
                                 <div
                                     *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyMonday(course) && verifyOnePM(course) ">
+                                    <div class="event if" onclick="showDetail1PM()" *ngIf="verifyMonday(course) && verifyOnePM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
 
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
+                                        <div id="detailView1PM" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -711,14 +1339,32 @@
                               <div class="for double">
                                 <div
                                     *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyTuesday(course) && verifyOnePM(course) ">
+                                    <div class="event if" onclick="showDetail1PTu()" *ngIf="verifyTuesday(course) && verifyOnePM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
 
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
+                                        <div id="detailView1PTu" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -729,14 +1375,32 @@
                               <div class="for double">
                                 <div
                                     *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyWednesday(course) && verifyOnePM(course) ">
+                                    <div class="event if" onclick="showDetail1PW()" *ngIf="verifyWednesday(course) && verifyOnePM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
 
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
+                                        <div id="detailView1PW" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -747,14 +1411,32 @@
                               <div class="for double">
                                 <div
                                     *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyThursday(course) && verifyOnePM(course) ">
+                                    <div class="event if" onclick="showDetail1PTh()" *ngIf="verifyThursday(course) && verifyOnePM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
 
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
+                                        <div id="detailView1PTh" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -764,14 +1446,32 @@
                               <div class="for double">
                                 <div
                                     *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyFriday(course) && verifyOnePM(course) ">
+                                    <div class="event if" onclick="showDetail1PF()" *ngIf="verifyFriday(course) && verifyOnePM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
 
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
+                                        <div id="detailView1PF" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -781,14 +1481,32 @@
                               <div class="for double">
                                 <div
                                     *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifySaturday(course) && verifyOnePM(course) ">
+                                    <div class="event if" onclick="showDetail1PS()" *ngIf="verifySaturday(course) && verifyOnePM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
 
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
+                                        <div id="detailView1PS" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -811,14 +1529,32 @@
                               <div class="for double">
                                 <div
                                     *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyMonday(course) && verifyTwoPM(course) ">
+                                    <div class="event if" onclick="showDetail2PM()" *ngIf="verifyMonday(course) && verifyTwoPM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
 
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
+                                        <div id="detailView2PM" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -830,48 +1566,32 @@
                               <div class="for double">
                                 <div
                                     *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyTuesday(course) && verifyTwoPM(course) ">
+                                    <div class="event if" onclick="showDetail2PT()" *ngIf="verifyTuesday(course) && verifyTwoPM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
 
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
-
-                                    </div>
-                                </div>
-                            </div>
-                            </td>
-                            <td>
-                              <div class="for double">
-                                <div
-                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyWednesday(course) && verifyTwoPM(course) ">
-
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
-
-                                    </div>
-                                </div>
-                            </div>
-                            </td>
-                            <td>
-                              <div class="for double">
-                                <div
-                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyThursday(course) && verifyTwoPM(course) ">
-
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
+                                        <div id="detailView2PTu" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -881,14 +1601,32 @@
                               <div class="for double">
                                 <div
                                     *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyFriday(course) && verifyTwoPM(course) ">
+                                    <div class="event if" onclick="showDetail2PW()" *ngIf="verifyWednesday(course) && verifyTwoPM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
 
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
+                                        <div id="detailView2PW" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -898,14 +1636,102 @@
                               <div class="for double">
                                 <div
                                     *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifySaturday(course) && verifyTwoPM(course) ">
+                                    <div class="event if" onclick="showDetail2PTh()" *ngIf="verifyThursday(course) && verifyTwoPM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
 
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
+                                        <div id="detailView2PTh" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" onclick="showDetail2PF()" *ngIf="verifyFriday(course) && verifyTwoPM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
+
+                                        <div id="detailView2PF" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" onclick="showDetail2PS()" *ngIf="verifySaturday(course) && verifyTwoPM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
+
+                                        <div id="detailView2PS" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -927,14 +1753,68 @@
                               <div class="for double">
                                 <div
                                     *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyMonday(course) && verifyThreePM(course) ">
+                                    <div class="event if" onclick="showDetail3PM()" *ngIf="verifyMonday(course) && verifyThreePM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
 
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
+                                <div id="detailView3PM" class="modal">
+                                    <div class="modal-content">
+                                        Name: {{ course.TITLE }}
+                                        <br>
+                                        Department: ***Department goes here***
+                                        <br>
+                                        Course Number: {{course.CRSENO}}
+                                        <br>
+                                        Section: {{course.SECTNO}}
+                                        <br>
+                                        Room: ({{ course.ROOM }})
+                                        <br>
                                         Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
+                                        <br>
+                                        Time: {{course.START}}-{{course.END}}
+                                        <br>
+                                        Credits: {{course.CRDTS}}
+                                        <br>
+                                        Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                    </div>
+                                </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" onclick="showDetail3PTu()" *ngIf="verifyTuesday(course) && verifyThreePM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
+
+                                        <div id="detailView3PTu" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -944,14 +1824,69 @@
                               <div class="for double">
                                 <div
                                     *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyTuesday(course) && verifyThreePM(course) ">
+                                    <div class="event if" onclick="showDetail3PW()" *ngIf="verifyWednesday(course) && verifyThreePM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
 
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
+                                        <div id="detailView3PW" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            </td>
+                            <td>
+
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" onclick="showDetail3PTh()" *ngIf="verifyThursday(course) && verifyThreePM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
+
+                                        <div id="detailView3PTh" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -961,50 +1896,32 @@
                               <div class="for double">
                                 <div
                                     *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyWednesday(course) && verifyThreePM(course) ">
+                                    <div class="event if" onclick="showDetail3PF()" *ngIf="verifyFriday(course) && verifyThreePM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
 
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            </td>
-                            <td>
-
-                              <div class="for double">
-                                <div
-                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyThursday(course) && verifyThreePM(course) ">
-
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
-
-                                    </div>
-                                </div>
-                            </div>
-                            </td>
-                            <td>
-                              <div class="for double">
-                                <div
-                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyFriday(course) && verifyThreePM(course) ">
-
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
+                                        <div id="detailView3PF" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -1015,14 +1932,32 @@
                               <div class="for double">
                                 <div
                                     *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifySaturday(course) && verifyThreePM(course) ">
+                                    <div class="event if" onclick="showDetail3PS()" *ngIf="verifySaturday(course) && verifyThreePM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
 
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
+                                        <div id="detailView3PS" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -1044,48 +1979,32 @@
                               <div class="for double">
                                 <div
                                     *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyMonday(course) && verifyFourPM(course) ">
+                                    <div class="event if" onclick="showDetail4PM()" *ngIf="verifyMonday(course) && verifyFourPM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
 
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
-
-                                    </div>
-                                </div>
-                            </div>
-                            </td>
-                            <td>
-                              <div class="for double">
-                                <div
-                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyTuesday(course) && verifyFourPM(course) ">
-
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
-
-                                    </div>
-                                </div>
-                            </div>
-                            </td>
-                            <td>
-                              <div class="for double">
-                                <div
-                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyWednesday(course) && verifyFourPM(course) ">
-
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
+                                        <div id="detailView4PM" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -1095,14 +2014,32 @@
                               <div class="for double">
                                 <div
                                     *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyThursday(course) && verifyFourPM(course) ">
+                                    <div class="event if" onclick="showDetail4PTu()" *ngIf="verifyTuesday(course) && verifyFourPM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
 
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
+                                        <div id="detailView4PTu" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -1112,14 +2049,32 @@
                               <div class="for double">
                                 <div
                                     *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyFriday(course) && verifyFourPM(course) ">
+                                    <div class="event if" onclick="showDetail4PW()" *ngIf="verifyWednesday(course) && verifyFourPM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
 
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
+                                        <div id="detailView4PW" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -1129,14 +2084,102 @@
                               <div class="for double">
                                 <div
                                     *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifySaturday(course) && verifyFourPM(course) ">
+                                    <div class="event if" onclick="showDetail4PTh()" *ngIf="verifyThursday(course) && verifyFourPM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
 
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
+                                        <div id="detailView4PTh" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" onclick="showDetail4PF()" *ngIf="verifyFriday(course) && verifyFourPM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
+
+                                        <div id="detailView4PF" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" onclick="showDetail4PS()" *ngIf="verifySaturday(course) && verifyFourPM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
+
+                                        <div id="detailView4PS" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -1176,48 +2219,32 @@
                               <div class="for double">
                                 <div
                                     *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyMonday(course) && verifySixPM(course) ">
+                                    <div class="event if" onclick="showDetail6PM()" *ngIf="verifyMonday(course) && verifySixPM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
 
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
-
-                                    </div>
-                                </div>
-                            </div>
-                            </td>
-                            <td>
-                              <div class="for double">
-                                <div
-                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyTuesday(course) && verifySixPM(course) ">
-
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
-
-                                    </div>
-                                </div>
-                            </div>
-                            </td>
-                            <td>
-                              <div class="for double">
-                                <div
-                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyWednesday(course) && verifySixPM(course) ">
-
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
+                                        <div id="detailView6PM" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -1227,14 +2254,32 @@
                               <div class="for double">
                                 <div
                                     *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyThursday(course) && verifySixPM(course) ">
+                                    <div class="event if" onclick="showDetail6PTu()" *ngIf="verifyTuesday(course) && verifySixPM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
 
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
+                                        <div id="detailView6PTu" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -1244,14 +2289,32 @@
                               <div class="for double">
                                 <div
                                     *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifyFriday(course) && verifySixPM(course) ">
+                                    <div class="event if" onclick="showDetail6PW()" *ngIf="verifyWednesday(course) && verifySixPM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
 
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
+                                        <div id="detailView6PW" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -1261,14 +2324,102 @@
                               <div class="for double">
                                 <div
                                     *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
-                                    <div class="event if" *ngIf="verifySaturday(course) && verifySixPM(course) ">
+                                    <div class="event if" onclick="showDetail6PTh()" *ngIf="verifyThursday(course) && verifySixPM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
 
-                                        - {{ course.TITLE }}
-                                        ROOM: ({{ course.ROOM }})
-                                        Day: {{course.DAYS}}
-                                        Time" {{course.START}}
-                                        <br />
-                                        <br />
+                                        <div id="detailView6PTh" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" onclick="showDetail6PF()" *ngIf="verifyFriday(course) && verifySixPM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
+
+                                        <div id="detailView6PF" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>
+                              <div class="for double">
+                                <div
+                                    *ngFor="let course of courseList| async |courseSections:courseNO; let index = index">
+                                    <div class="event if" onclick="showDetail6PS()" *ngIf="verifySaturday(course) && verifySixPM(course) ">
+                                        {{course.TITLE}} 
+                                        {{course.CRSENO}}-
+                                        {{course.SECTNO}}
+
+                                        <div id="detailView6PS" class="modal">
+                                            <div class="modal-content">
+                                                Name: {{ course.TITLE }}
+                                                <br>
+                                                Department: ***Department goes here***
+                                                <br>
+                                                Course Number: {{course.CRSENO}}
+                                                <br>
+                                                Section: {{course.SECTNO}}
+                                                <br>
+                                                Room: ({{ course.ROOM }})
+                                                <br>
+                                                Day: {{course.DAYS}}
+                                                <br>
+                                                Time: {{course.START}}-{{course.END}}
+                                                <br>
+                                                Credits: {{course.CRDTS}}
+                                                <br>
+                                                Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -1362,3 +2513,99 @@
         </div>
     </div>
 </div>
+
+<!-- html code for modal
+    <div id="detailView" class="modal">
+    <div class="modal-content">
+        Name: {{ course.TITLE }}
+        <br>
+        Department: ***Department goes here***
+        <br>
+        Section: {{course.SECTNO}}
+        <br>
+        Room: ({{ course.ROOM }})
+        <br>
+        Day: {{course.DAYS}}
+        <br>
+        Time: {{course.START}}-{{course.END}}
+        <br>
+        Credits: {{course.CRDTS}}
+        <br>
+        Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}}
+    </div>
+</div>
+-->
+
+<!-- TODO This modal has yet to be implemented for all courses. Above modals are used for each course. Takes too long
+to modify data with the currently implemented method above -->
+<div id="detailViewAll" class="modal">
+    <div class="modal-content">
+        This is an example
+        <!-- This is an example
+        Name: {{ course.TITLE }}
+        <br>
+        Department: ***Department goes here***
+        <br>
+        Section: {{course.SECTNO}}
+        <br>
+        Room: ({{ course.ROOM }})
+        <br>
+        Day: {{course.DAYS}}
+        <br>
+        Time: {{course.START}}-{{course.END}}
+        <br>
+        Credits: {{course.CRDTS}}
+        <br>
+        Professor: {{course.LASTNAME}}, {{course.FIRSTNAME}} -->
+    </div>
+</div>
+<!-- 
+<script>
+    var modal = document.getElementById("detailViewAll");
+    var exit = document.getElementsByClassName("close");
+
+    if(detailAll){
+      detailAll.addEventListener("click", showDetailAll);
+    }
+    
+    function showDetailAll(title, sectno, room, days, start, end, crdts, lastname, firstname){
+      modal = document.getElementById("detailViewAll");
+      
+      //modal.outerHTML += "<div class='detailView' class='modal'>" +
+        modal.outerHTML += "<div id='detailViewAll' class='modal'>" +
+    "<div class='modal-content'>" +
+        "!!!THIS IS AN EXAMPLE!!!" + 
+        "<br>" +
+        //"Name: " + course.TITLE +
+        "Name: " + title
+        "<br>" +
+        "Department: Department goes here" +
+        "<br>" +
+        //"Section: " + course.SECTNO +
+        "Section: " + sectno +
+        "<br>" +
+        //"Room: " + course.ROOM +
+        "Room: " + room +
+        "<br>" +
+        //"Day: " + course.DAYS +
+        "Day: " + days +
+        "<br>" +
+        //"Time: " + course.START + "-" + course.END +
+        "Time: " + start + "-" + end +
+        "<br>" +
+        //"Credits: " + course.CRDTS +
+        "Credits: " + crdts +
+        "<br>" +
+        //"Professor: " + course.LASTNAME + ", " + course.FIRSTNAME +
+        "Professor: " + lastname + ", " + firstname +
+    "</div>" +
+"</div>";
+      modal.style.display = "block";
+    }
+
+    window.onclick = function(event) {
+      if(event.target == modal){
+        modal.style.display = "none";
+      }
+    }
+</script> -->

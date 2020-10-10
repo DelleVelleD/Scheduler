@@ -310,8 +310,11 @@ float:right;
     }
 
     .event.if {
+      font-size: small;
       height: 200%;
       display: block;
+      padding-left: 5px;
+
       }
     
     .event ul li { 
@@ -329,10 +332,11 @@ float:right;
       display: block;
       cursor: pointer;
       float:left;
+      font-size: small;
         list-style: none;
          text-align: left;
          list-style-position: inside;
-         padding-left: 0;
+         padding-left: 5;
     }
 
     .store{

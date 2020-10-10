@@ -127,14 +127,69 @@
             <table class="offset">
               <tbody>
                 <tr>
+                  <!-- TODO Implement a true calendar for faculty that gets data from the .JSON. The current calendar
+                  is hard coded -->
+                  <!-- TODO Change onclick="showConflict()" to a better name/function. showConflict is currently a stand in
+                  until a better function is created for the above TODO reasons -->
                   <td class="headcol">8:00 AM</td>
                   <td>
-                    <div class="event triple" style="background-color: red"><input id="check" type="checkbox" class="checkbox" /><label
-                    for="check"></label>Mobile Application Development CRN: 21719 CRSE #: 4550 Room: C1130</div>
+                    <!--Old div for this calendar block. Was too long
+                      <div class="event triple" style="background-color: red"><input id="check" type="checkbox" class="checkbox" /><label
+                    for="check"></label>Mobile Application Development CRN: 21719 CRSE #: 4550 Room: C1130</div> -->
+                    <div class="event triple" onclick="showConflict()" style="background-color: red"><input id="check" type="checkbox" class="checkbox"/><label
+                      for="check"></label>ITEC 4550-03
+                      <div id="exampleConflict" class="modal">
+                        <div class="modal-content">
+                            Name: Mobile Application Development
+                            <br>
+                            Department: ITEC
+                            <br>
+                            Course Number: 4550
+                            <br>
+                            Section: 03
+                            <br>
+                            Room: C1130
+                            <br>
+                            Day: MW
+                            <br>
+                            Time: 08:00-09:15
+                            <br>
+                            Credits: ***INSERT CREDITS***
+                            <br>
+                            Professor: Doloc-Mihy, Anca
+                        </div>
+                    </div>
+                    </div>
                   </td>
                   <td></td>
-                  <td><div class="event triple" style="background-color: red"><input id="check" type="checkbox" class="checkbox" /><label
-                    for="check"></label>Mobile Application Development CRN: 21719 CRSE #: 4550 Room: C1130</div></td>
+                  <td>
+                    <!-- <div class="event triple" style="background-color: red"><input id="check" type="checkbox" class="checkbox" /><label
+                    for="check"></label>Mobile Application Development CRN: 21719 CRSE #: 4550 Room: C1130</div> -->
+                    <div class="event triple" onclick="showConflict()" style="background-color: red"><input id="check" type="checkbox" class="checkbox"/><label
+                      for="check"></label>ITEC 4550-03
+                      <div id="exampleConflict" class="modal">
+                        <div class="modal-content">
+                            Name: Mobile Application Development
+                            <br>
+                            Department: ITEC
+                            <br>
+                            Course Number: 4550
+                            <br>
+                            Section: 03
+                            <br>
+                            Room: C1130
+                            <br>
+                            Day: MW
+                            <br>
+                            Time: 08:00-09:15
+                            <br>
+                            Credits: ***INSERT CREDITS***
+                            <br>
+                            Professor: Doloc-Mihy, Anca
+                        </div>
+                    </div>
+                    </div>
+                  </td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -181,10 +236,36 @@
                   <td></td>
                   <td></td>
                   <td>
-                    <div class="event double"><input id="check" type="checkbox" class="checkbox" /><label
+                    <!-- <div class="event double"><input id="check" type="checkbox" class="checkbox" /><label
                         for="check"></label>Intermediate Programming
                       CRN: 20858 CRSE #: 2150
-                      Room: C2130</div>
+                      Room: C2130</div> -->
+                      <!-- TODO change  onclick="showDetail10ATh()" to a better name/more functional function-->
+                      <div class="event double" onclick="showDetail10ATh()"><input id="check" type="checkbox" class="checkbox"/><label
+                        for="check"></label>ITEC 2150-01
+                        <!-- TODO change id="detailView10ATh" to a better name that matches the above onclick -->
+                        <div id="detailView10ATh" class="modal">
+                          <div class="modal-content">
+                              Name: Mobile Application Development
+                              <br>
+                              Department: ITEC
+                              <br>
+                              Course Number: 2130
+                              <br>
+                              Section: 01
+                              <br>
+                              Room: C1130
+                              <br>
+                              Day: R
+                              <br>
+                              Time: 10:30-11:15
+                              <br>
+                              Credits: ***INSERT CREDITS***
+                              <br>
+                              Professor: Doloc-Mihy, Anca
+                          </div>
+                      </div>
+                      </div>
                   </td>
                   <td></td>
                   <td></td>
@@ -215,10 +296,36 @@
                   <td></td>
                   <td></td>
                   <td>
-                    <div class="event double"><input id="check" type="checkbox" class="checkbox" /><label
+                    <!-- <div class="event double"><input id="check" type="checkbox" class="checkbox" /><label
                         for="check"></label>Advanced Programming
                       CRN: 21408 CRSE #: 3150
-                      Room: B2100</div>
+                      Room: B2100</div> -->
+                      <!-- TODO change  onclick="showDetail12PS()" to a better name/more functional function-->
+                      <div class="event double" onclick="showDetail12PS()"><input id="check" type="checkbox" class="checkbox"/><label
+                        for="check"></label>ITEC 3150-02
+                        <!-- TODO change id="detailView12PS" to a better name that matches the above onclick -->
+                        <div id="detailView12PS" class="modal">
+                          <div class="modal-content">
+                              Name: Mobile Application Development
+                              <br>
+                              Department: ITEC
+                              <br>
+                              Course Number: 3150
+                              <br>
+                              Section: 02
+                              <br>
+                              Room: B2100
+                              <br>
+                              Day: S
+                              <br>
+                              Time: 12:00-13:15
+                              <br>
+                              Credits: ***INSERT CREDITS***
+                              <br>
+                              Professor: Doloc-Mihy, Anca
+                          </div>
+                      </div>
+                      </div>
                   </td>
                 </tr>
                 <tr>
@@ -251,13 +358,63 @@
                 <tr>
                   <td class="headcol">2:00 PM</td>
                   <td>
-                    <div class="event triple"><input id="check" type="checkbox" class="checkbox" /><label
-                        for="check"></label>Mobile Application Development CRN: 21718 CRSE #: 4550 Room: C1130</div>
+                    <!-- <div class="event triple"><input id="check" type="checkbox" class="checkbox" /><label
+                        for="check"></label>Mobile Application Development CRN: 21718 CRSE #: 4550 Room: C1130</div> -->
+                        <!-- TODO change  onclick="showDetail2PM()" to a better name/more functional function-->
+                        <div class="event triple" onclick="showDetail2PM()"><input id="check" type="checkbox" class="checkbox" /><label
+                          for="check"></label>ITEC 4550-02
+                          <!-- TODO change id="detailView2PM" to a better name that matches the above onclick -->
+                          <div id="detailView2PM" class="modal">
+                            <div class="modal-content">
+                                Name: Mobile Application Development
+                                <br>
+                                Department: ITEC
+                                <br>
+                                Course Number: 4550
+                                <br>
+                                Section: 02
+                                <br>
+                                Room: C1130
+                                <br>
+                                Day: MW
+                                <br>
+                                Time: 14:00-15:15
+                                <br>
+                                Credits: ***INSERT CREDITS***
+                                <br>
+                                Professor: Doloc-Mihy, Anca
+                            </div>
+                        </div>
+                        </div>
                   </td>
                   <td></td>
                   <td>
-                    <div class="event triple"><input id="check" type="checkbox" class="checkbox" /><label
-                        for="check"></label>Mobile Application Development CRN: 21718 CRSE #: 4550 Room: C1130</div>
+                    <!-- TODO change  onclick="showDetail2PW()" to a better name/more functional function-->
+                    <div class="event triple" onclick="showDetail2PW()"><input id="check" type="checkbox" class="checkbox" /><label
+                        for="check"></label>ITEC 4550-02
+                        <!-- TODO change id="detailView2PW" to a better name that matches the above onclick -->
+                        <div id="detailView2PW" class="modal">
+                          <div class="modal-content">
+                              Name: Mobile Application Development
+                              <br>
+                              Department: ITEC
+                              <br>
+                              Course Number: 4550
+                              <br>
+                              Section: 02
+                              <br>
+                              Room: C1130
+                              <br>
+                              Day: MW
+                              <br>
+                              Time: 14:00-15:15
+                              <br>
+                              Credits: ***INSERT CREDITS***
+                              <br>
+                              Professor: Doloc-Mihy, Anca
+                          </div>
+                      </div>
+                      </div>
                   </td>
                   <td></td>
                   <td></td>

@@ -369,3 +369,20 @@ top: -2px;
 .icon:hover {
 color: red;
 }
+
+.modal{
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  z-index: 1;
+  background: white;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content{
+  color: black;
+  padding: 20px;
+  border: 1px solid #888;
+  margin: 0 auto;
+  width: 30%;
+}
