@@ -45,7 +45,8 @@ import { AvailableHoursComponent } from './components/available-hours/available-
 import { CoursesOfferedAdminComponent } from './components/courses-offered-admin/courses-offered-admin.component';
 import { CoursesUpcomingAdminComponent } from './components/courses-upcoming-admin/courses-upcoming-admin.component';
 
-
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 const routes: Routes = [
@@ -121,7 +122,9 @@ const routes: Routes = [
     CoursesOfferedAdminComponent,
     CoursesUpcomingAdminComponent,
     UploadSheetComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HeaderComponent,
+    FooterComponent
 
   ],
 
