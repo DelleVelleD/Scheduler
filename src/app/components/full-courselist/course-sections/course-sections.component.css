@@ -327,7 +327,7 @@ float:right;
     }
 
     .event.conflict {
-      background: rgba(255, 0, 0, 0.856);
+      background: rgb(255, 38, 38);
       height: 200%;
       display: block;
       cursor: pointer;
