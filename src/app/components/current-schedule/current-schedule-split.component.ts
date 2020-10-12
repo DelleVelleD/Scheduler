@@ -18,29 +18,26 @@ export class CurrentScheduleSplitComponent implements OnInit {
   ngOnInit() {
   }
 
-  //the course object
+  //the search criteria's course information
   course : {crn, department, number, title, days, startTime, endTime, bNewClasses} = 
             {crn: null, department: null, number:null, title: null, days: null,
               startTime: null, endTime: null, bNewClasses: true};
 
-  bShowResults = false;
-  bNoResults = false;
-  semester = null;
-  year = null;
-  user = null;
-  foundCourses = [];
-  selectedCourses = [];
+  bShowResults = false; //boolean To show search results card
+  bNoResults = false; //boolean To show no valid search results text
+  semester = null; //TODO get semester from courses list
+  year = null; //TODO get year from courses list
+  user = null; //TODO get user from logged in user
+  foundCourses = []; //JSON objects of the found courses in searchCourses
+  selectedCourses = []; //JSON objects of the selectedCourses from selectCourse
 
   //Searches the courses in the json file for a list of similar courses
   searchCourses(){
     this.bNoResults = false;
-    //log course info
-    console.log(this.course)
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onload = (event) => {
       var jsonData = JSON.parse(xmlhttp.responseText);
-      console.log(jsonData);
 
       //loop thru all courses to find matches, TODO update json headers, handle new classes
       for(var i in jsonData){
@@ -86,11 +83,40 @@ export class CurrentScheduleSplitComponent implements OnInit {
         return;
       }
     }
+    //TODO add professors to course, add course to professors
+    //add new professor to the course's professors
+    // var newProf = new Object();
+    // newProf["Username"] = user["Username"];
+    // newProf["Priority"] = "low";
+    // inCourse["Professors"].put(newProf);
+    // //add new course to professor's courses
+    // var newCourse = new Object();
+    // newCourse["CRN"] = inCourse["CRN"];
+    // newCourse["Priority"] = "low";
+    //add course to current list displayed, TODO list from professors courses rather than local list
     this.selectedCourses.push(inCourse);
   }
 
-  updateChanges(){
-    var priorityDropdown = document.getElementById("selectPriority"); //TODO remove courses with dropdown set to remove
+  //Updates any changes made in the priority dropdowns, TODO update the json files rather than selectedCourse
+  updateChanges(courseIndex: number){
+    let course = null;
+    let currentDropdown: HTMLSelectElement = null;
+    let currentDropdownValue = null;
+    var priorityDropdowns = document.getElementsByName("priorityDropdown");
+    for(var i=0; i<priorityDropdowns.length; i++){
+      currentDropdown = priorityDropdowns[i] as HTMLSelectElement;
+      course = this.selectedCourses[courseIndex];
+      currentDropdownValue = currentDropdown.options[currentDropdown.selectedIndex].value;
+      if(currentDropdownValue == "low"){
+        //course["Professors"][user["Username"]]["Priority"] = "low";
+      }else if(currentDropdownValue == "medium"){
+        //course["Professors"][user["Username"]]["Priority"] = "medium";
+      }else if(currentDropdownValue == "high"){
+        //course["Professors"][user["Username"]]["Priority"] = "high";
+      }else if(currentDropdownValue == "remove"){
+        this.selectedCourses.splice(courseIndex, 1);
+      }
+    }
   }
 
 }

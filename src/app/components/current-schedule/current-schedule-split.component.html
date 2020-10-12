@@ -77,46 +77,45 @@
     </div>
   </div>
 
-  <div id="courseList" class="card-deck" style="padding-top: 15px; padding-left: 15px; padding-right: 15px;">
-      <div class="card mw-40" style="background-color:#a5acb0;">
-        <h3>Current Assigned Course List for Dr. Anca Doloc Mihu</h3>
-        <!--<h3>{{semester}} {{year}} Course List for {{user}}</h3> TODO, update with variables-->
-        <p *ngIf="!(selectedCourses.length > 0)">You have not added any courses yet.</p>
-        <table id="courses" *ngIf="selectedCourses.length > 0" class="table">
-          <thead>
-            <tr>
-              <th>CRN</th>
-              <th>Title</th>
-              <th>Details</th>
-              <th>Time</th>
-              <th>Room</th>
-              <th>Max Students</th>
-              <th>Priority</th>
-            </tr>
-          </thead>
-          <tbody id="selectedCoursesList">
-            <tr *ngFor="let course of selectedCourses">
-              <td>{{course["CRN"]}}</td>
-              <td class="text-truncate">{{course["TITLE"]}}</td>
-              <td>ITEC {{course["CRSENO"]}}, {{course["SECTNO"]}}</td> <!--TODO variable department-->
-              <td>{{course["DAYS"]}} <br> {{course["START"]}} - {{course["END"]}}</td>
-              <td>{{course["ROOM"]}}</td>
-              <td>{{course["PER"]}}</td>
-              <td>
-                <select id="selectPriority"> <!--TODO, limit the amount of high etc-->
-                  <option value="low">Low</option>
-                  <option value="medium">Medium</option>
-                  <option value="high">High</option>
-                  <option value="remove">Remove</option>
-                </select>
-              </td>
-            </tr>
-          </tbody>
-          <input type="submit" value="Submit Changes" *ngIf="selectedCourses.length > 0" (click)="updateChanges()">
-        </table>
+  <div class="card-deck" style="padding-top: 15px; padding-left: 15px; padding-right: 15px;">
+    <!-- The selected course list bottom left card -->
+    <div class="card mw-40" style="background-color:#a5acb0;">
+      <h3>Current Assigned Course List for Dr. Anca Doloc Mihu</h3>
+      <!--<h3>{{semester}} {{year}} Course List for {{user}}</h3> TODO, update with variables-->
+      <p *ngIf="!(selectedCourses.length > 0)">You have not added any courses yet.</p>
+      <table id="courses" *ngIf="selectedCourses.length > 0" class="table">
+        <thead>
+          <tr>
+            <th>CRN</th>
+            <th>Title</th>
+            <th>Details</th>
+            <th>Time</th>
+            <th>Room</th>
+            <th>Max Students</th>
+            <th>Priority</th>
+          </tr>
+        </thead>
+        <tbody name="selectedCoursesList">
+          <tr *ngFor="let course of selectedCourses; let i = index">
+            <td>{{course["CRN"]}}</td>
+            <td class="text-truncate">{{course["TITLE"]}}</td>
+            <td>ITEC {{course["CRSENO"]}}, {{course["SECTNO"]}}</td> <!--TODO variable department-->
+            <td>{{course["DAYS"]}} <br> {{course["START"]}} - {{course["END"]}}</td>
+            <td>{{course["ROOM"]}}</td>
+            <td>{{course["PER"]}}</td>
+            <td>
+              <select name="priorityDropdown" (change)="updateChanges(i)"> <!--TODO, limit the amount of high etc-->
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+                <option value="remove">Remove</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-
-  <!-- <div class="column" style="overflow-y: auto;"> -->
+  <!-- The calendar bottom right card -->
   <div id="calendar" class="card mw-40" style="background-color:#a5acb0;">
     <div class="calendar">
 
