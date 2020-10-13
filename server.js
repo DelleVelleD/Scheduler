@@ -4,7 +4,7 @@ var http = require('http');
 var path = require('path');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var course = require('./routes/api/course')
+//var course = require('./routes/api/course');
 
 var app = express();
 var port = process.env.PORT || 5000;
@@ -19,8 +19,13 @@ var db = require('./config/keys').mongoURI;
 //connection message
 mongoose.connection.once('open', function(){
 	console.log('Successfully connected to database.');
+	db.collection('spring2019').find({}).toArray(function (err, result) 
+	{
+		console.log(result)
+	});
+}).on('error', function(error)
+{
 
-}).on('error', function(error){
 	console.log('[Database Connection Error]:' , error);
 });
 

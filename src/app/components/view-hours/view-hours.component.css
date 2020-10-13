@@ -1,23 +1,36 @@
+.card{
+    border: none;
+}
+
 table{
     font-family: arial, sans-serif;
-    font-size: 12px;
-    border-collapse: collapse;
+    font-size: 16px;
     width: 100%;
+    background-color: white;
 }
 
-td, th {
-    border: 3px solid #000000;
+td {
     text-align: left;
-    padding: 9px;
+    padding: 5px;
 }
 
-tr:nth-child(even) {
-    background-color: #00704a;
-    color:#ffffff;
+th{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 18px;
 }
 
-tr:nth-child(odd) {
-    background-color: #ffffff;
+tr.highlight-over{
+    color: forestgreen;
+    font-weight: bold;
+}
+
+tr.highlight-under{
+    color: crimson;
+    font-weight: bold;
 }
 
 button.secondary {
@@ -30,17 +43,19 @@ button.secondary {
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     font-weight: 500;
-    }
+}
     
-    button.secondary:hover {
+button.secondary:hover {
     background: #02754E;
     color: white;
-    }
-  button.secondary:active {
-  box-shadow: none;
-  }
-  button.secondary:focus {
-  outline: 0;
-  }
+}
+
+button.secondary:active {
+    box-shadow: none;
+}
+
+button.secondary:focus {
+    outline: 0;
+}
 
   
