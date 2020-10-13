@@ -1,23 +1,23 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CoursesOfferedAdminComponent } from './courses-offered-admin.component';
+import { LoginPageComponent } from './login-page.component';
 
 import { RouterTestingModule } from '@angular/router/testing';
 
-describe('CoursesOfferedAdminComponent', () => {
-  let component: CoursesOfferedAdminComponent;
-  let fixture: ComponentFixture<CoursesOfferedAdminComponent>;
+describe('LoginPageComponent', () => {
+  let component: LoginPageComponent;
+  let fixture: ComponentFixture<LoginPageComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [ RouterTestingModule ],
-      declarations: [ CoursesOfferedAdminComponent ]
+      declarations: [ LoginPageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CoursesOfferedAdminComponent);
+    fixture = TestBed.createComponent(LoginPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
