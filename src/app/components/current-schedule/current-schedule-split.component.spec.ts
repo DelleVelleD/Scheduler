@@ -1,23 +1,23 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CoursesOfferedAdminComponent } from './courses-offered-admin.component';
+import { CurrentScheduleSplitComponent } from './current-schedule-split.component';
 
 import { RouterTestingModule } from '@angular/router/testing';
 
-describe('CoursesOfferedAdminComponent', () => {
-  let component: CoursesOfferedAdminComponent;
-  let fixture: ComponentFixture<CoursesOfferedAdminComponent>;
+describe('CurrentScheduleSplitComponent', () => {
+  let component: CurrentScheduleSplitComponent;
+  let fixture: ComponentFixture<CurrentScheduleSplitComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [ RouterTestingModule ],
-      declarations: [ CoursesOfferedAdminComponent ]
+      declarations: [ CurrentScheduleSplitComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CoursesOfferedAdminComponent);
+    fixture = TestBed.createComponent(CurrentScheduleSplitComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
