@@ -10,8 +10,8 @@
     "ROOM": "B2100",
     "PER": 8,
     "CRDTS": 3,
-    "LAST NAME": "Doe",
-    "FIRST NAME": "John"
+    "LASTNAME": "Doe",
+    "FIRSTNAME": "John"
    },
  {
    "CRN": 22272,
@@ -24,8 +24,8 @@
    "ROOM": "B2100",
    "PER": 8,
    "CRDTS": 3,
-   "LAST NAME": "Gunay",
-   "FIRST NAME": "Cengiz"
+   "LASTNAME": "Gunay",
+   "FIRSTNAME": "Cengiz"
  },
  {
    "CRN": 22166,
@@ -38,8 +38,8 @@
    "ROOM": "A1520",
    "PER": 10,
    "CRDTS": 3,
-   "LAST NAME": "Shin",
-   "FIRST NAME": "Hyun"
+   "LASTNAME": "Shin",
+   "FIRSTNAME": "Hyun"
  },
  {
    "CRN": 20421,
@@ -52,8 +52,8 @@
    "ROOM": "A1710",
    "PER": 9,
    "CRDTS": 4,
-   "LAST NAME": "Kurkovsky",
-   "FIRST NAME": "Anatoly"
+   "LASTNAME": "Kurkovsky",
+   "FIRSTNAME": "Anatoly"
  },
  {
    "CRN": 20425,
@@ -66,8 +66,8 @@
    "ROOM": "B1100",
    "PER": 20,
    "CRDTS": 4,
-   "LAST NAME": "Tran",
-   "FIRST NAME": "Andy"
+   "LASTNAME": "Tran",
+   "FIRSTNAME": "Andy"
  },
  {
    "CRN": 20736,
@@ -80,8 +80,8 @@
    "ROOM": "C2130",
    "PER": 23,
    "CRDTS": 4,
-   "LAST NAME": "Tran",
-   "FIRST NAME": "Andy"
+   "LASTNAME": "Tran",
+   "FIRSTNAME": "Andy"
  },
  {
    "CRN": 20429,
@@ -94,8 +94,8 @@
    "ROOM": "C1125",
    "PER": 7,
    "CRDTS": 4,
-   "LAST NAME": "Tran",
-   "FIRST NAME": "Binh"
+   "LASTNAME": "Tran",
+   "FIRSTNAME": "Binh"
  },
  {
    "CRN": 20414,
@@ -108,8 +108,8 @@
    "ROOM": "B1200",
    "PER": 17,
    "CRDTS": 4,
-   "LAST NAME": "Tran",
-   "FIRST NAME": "Binh"
+   "LASTNAME": "Tran",
+   "FIRSTNAME": "Binh"
  },
  {
    "CRN": 20740,
@@ -122,8 +122,8 @@
    "ROOM": "A1930",
    "PER": 7,
    "CRDTS": 4,
-   "LAST NAME": "Soares",
-   "FIRST NAME": "Carlos"
+   "LASTNAME": "Soares",
+   "FIRSTNAME": "Carlos"
  },
  {
    "CRN": 21703,
@@ -136,8 +136,8 @@
    "ROOM": "C2125",
    "PER": 14,
    "CRDTS": 4,
-   "LAST NAME": "Richardson",
-   "FIRST NAME": "Carna"
+   "LASTNAME": "Richardson",
+   "FIRSTNAME": "Carna"
  },
  {
    "CRN": 21702,
@@ -150,8 +150,8 @@
    "ROOM": "C2125",
    "PER": 7,
    "CRDTS": 4,
-   "LAST NAME": "Long",
-   "FIRST NAME": "Cherie"
+   "LASTNAME": "Long",
+   "FIRSTNAME": "Cherie"
  },
  {
    "CRN": 22164,
@@ -164,8 +164,8 @@
    "ROOM": "A1910",
    "PER": 5,
    "CRDTS": 4,
-   "LAST NAME": "Robertson",
-   "FIRST NAME": "Cindy"
+   "LASTNAME": "Robertson",
+   "FIRSTNAME": "Cindy"
  },
  {
    "CRN": 20410,
@@ -178,8 +178,8 @@
    "ROOM": "C2125",
    "PER": 8,
    "CRDTS": 4,
-   "LAST NAME": "Hagler",
-   "FIRST NAME": "Dameon"
+   "LASTNAME": "Hagler",
+   "FIRSTNAME": "Dameon"
  },
  {
    "CRN": 20423,
@@ -192,8 +192,8 @@
    "ROOM": "A1930",
    "PER": 17,
    "CRDTS": 4,
-   "LAST NAME": "Knight",
-   "FIRST NAME": "David"
+   "LASTNAME": "Knight",
+   "FIRSTNAME": "David"
  },
  {
    "CRN": 20430,
@@ -206,8 +206,8 @@
    "ROOM": "C1125",
    "PER": 15,
    "CRDTS": 4,
-   "LAST NAME": "Knight",
-   "FIRST NAME": "David"
+   "LASTNAME": "Knight",
+   "FIRSTNAME": "David"
  },
  {
    "CRN": 20411,
@@ -220,8 +220,8 @@
    "ROOM": "B1200",
    "PER": 11,
    "CRDTS": 4,
-   "LAST NAME": "Oliver",
-   "FIRST NAME": "DeJarvis"
+   "LASTNAME": "Oliver",
+   "FIRSTNAME": "DeJarvis"
  },
  {
    "CRN": 20432,
@@ -234,8 +234,8 @@
    "ROOM": "C1125",
    "PER": 18,
    "CRDTS": 4,
-   "LAST NAME": "Brannock",
-   "FIRST NAME": "Evelyn"
+   "LASTNAME": "Brannock",
+   "FIRSTNAME": "Evelyn"
  },
  {
    "CRN": 20417,
@@ -248,8 +248,8 @@
    "ROOM": "A1910",
    "PER": 4,
    "CRDTS": 4,
-   "LAST NAME": "Choi",
-   "FIRST NAME": "Hongsik"
+   "LASTNAME": "Choi",
+   "FIRSTNAME": "Hongsik"
  },
  {
    "CRN": 20418,
@@ -262,8 +262,8 @@
    "ROOM": "C2100",
    "PER": 5,
    "CRDTS": 4,
-   "LAST NAME": "Choi",
-   "FIRST NAME": "Hongsik"
+   "LASTNAME": "Choi",
+   "FIRSTNAME": "Hongsik"
  },
  {
    "CRN": 20426,
@@ -276,8 +276,8 @@
    "ROOM": "C1125",
    "PER": 1,
    "CRDTS": 4,
-   "LAST NAME": "Hardy",
-   "FIRST NAME": "James"
+   "LASTNAME": "Hardy",
+   "FIRSTNAME": "James"
  },
  {
    "CRN": 20427,
@@ -290,8 +290,8 @@
    "ROOM": "C1125",
    "PER": 2,
    "CRDTS": 4,
-   "LAST NAME": "Hardy",
-   "FIRST NAME": "James"
+   "LASTNAME": "Hardy",
+   "FIRSTNAME": "James"
  },
  {
    "CRN": 20412,
@@ -304,8 +304,8 @@
    "ROOM": "B1200",
    "PER": 15,
    "CRDTS": 4,
-   "LAST NAME": "Kakish",
-   "FIRST NAME": "Kamal"
+   "LASTNAME": "Kakish",
+   "FIRSTNAME": "Kamal"
  },
  {
    "CRN": 20413,
@@ -318,8 +318,8 @@
    "ROOM": "B1200",
    "PER": 16,
    "CRDTS": 4,
-   "LAST NAME": "Kakish",
-   "FIRST NAME": "Kamal"
+   "LASTNAME": "Kakish",
+   "FIRSTNAME": "Kamal"
  },
  {
    "CRN": 20433,
@@ -332,8 +332,8 @@
    "ROOM": "C1125",
    "PER": 19,
    "CRDTS": 4,
-   "LAST NAME": "Kakish",
-   "FIRST NAME": "Kamal"
+   "LASTNAME": "Kakish",
+   "FIRSTNAME": "Kamal"
  },
  {
    "CRN": 20733,
@@ -346,8 +346,8 @@
    "ROOM": "B1200",
    "PER": 20,
    "CRDTS": 4,
-   "LAST NAME": "Benson",
-   "FIRST NAME": "Karen"
+   "LASTNAME": "Benson",
+   "FIRSTNAME": "Karen"
  },
  {
    "CRN": 20734,
@@ -360,8 +360,8 @@
    "ROOM": "C1125",
    "PER": 10,
    "CRDTS": 4,
-   "LAST NAME": "Benson",
-   "FIRST NAME": "Karen"
+   "LASTNAME": "Benson",
+   "FIRSTNAME": "Karen"
  },
  {
    "CRN": 20406,
@@ -374,8 +374,8 @@
    "ROOM": "B1200",
    "PER": 1,
    "CRDTS": 4,
-   "LAST NAME": "Andrews",
-   "FIRST NAME": "Kauvon"
+   "LASTNAME": "Andrews",
+   "FIRSTNAME": "Kauvon"
  },
  {
    "CRN": 20422,
@@ -388,8 +388,8 @@
    "ROOM": "C1125",
    "PER": 14,
    "CRDTS": 4,
-   "LAST NAME": "Andrews",
-   "FIRST NAME": "Kauvon"
+   "LASTNAME": "Andrews",
+   "FIRSTNAME": "Kauvon"
  },
  {
    "CRN": 21178,
@@ -402,8 +402,8 @@
    "ROOM": "A1710",
    "PER": 4,
    "CRDTS": 4,
-   "LAST NAME": "Wiggins",
-   "FIRST NAME": "Kimberly"
+   "LASTNAME": "Wiggins",
+   "FIRSTNAME": "Kimberly"
  },
  {
    "CRN": 21179,
@@ -416,8 +416,8 @@
    "ROOM": "A1930",
    "PER": 5,
    "CRDTS": 4,
-   "LAST NAME": "Wiggins",
-   "FIRST NAME": "Kimberly"
+   "LASTNAME": "Wiggins",
+   "FIRSTNAME": "Kimberly"
  },
  {
    "CRN": 20419,
@@ -430,8 +430,8 @@
    "ROOM": "C1125",
    "PER": 12,
    "CRDTS": 4,
-   "LAST NAME": "Bonsu",
-   "FIRST NAME": "Kwadwo"
+   "LASTNAME": "Bonsu",
+   "FIRSTNAME": "Kwadwo"
  },
  {
    "CRN": 22165,
@@ -444,8 +444,8 @@
    "ROOM": "C2125",
    "PER": 18,
    "CRDTS": 4,
-   "LAST NAME": "Jonassen",
-   "FIRST NAME": "Lorraine"
+   "LASTNAME": "Jonassen",
+   "FIRSTNAME": "Lorraine"
  },
  {
    "CRN": 21177,
@@ -458,8 +458,8 @@
    "ROOM": "B1100",
    "PER": 15,
    "CRDTS": 4,
-   "LAST NAME": "Banerjee",
-   "FIRST NAME": "Madhushri"
+   "LASTNAME": "Banerjee",
+   "FIRSTNAME": "Madhushri"
  },
  {
    "CRN": 21174,
@@ -472,8 +472,8 @@
    "ROOM": "C2125",
    "PER": 1,
    "CRDTS": 4,
-   "LAST NAME": "Nasir",
-   "FIRST NAME": "Manal"
+   "LASTNAME": "Nasir",
+   "FIRSTNAME": "Manal"
  },
  {
    "CRN": 21701,
@@ -486,8 +486,8 @@
    "ROOM": "C2125",
    "PER": 2,
    "CRDTS": 4,
-   "LAST NAME": "Nasir",
-   "FIRST NAME": "Manal"
+   "LASTNAME": "Nasir",
+   "FIRSTNAME": "Manal"
  },
  {
    "CRN": 21399,
@@ -500,8 +500,8 @@
    "ROOM": "C2130",
    "PER": 11,
    "CRDTS": 4,
-   "LAST NAME": "Fryling",
-   "FIRST NAME": "Margo"
+   "LASTNAME": "Fryling",
+   "FIRSTNAME": "Margo"
  },
  {
    "CRN": 20735,
@@ -514,8 +514,8 @@
    "ROOM": "A1910",
    "PER": 12,
    "CRDTS": 4,
-   "LAST NAME": "Fryling",
-   "FIRST NAME": "Margo"
+   "LASTNAME": "Fryling",
+   "FIRSTNAME": "Margo"
  },
  {
    "CRN": 20741,
@@ -528,8 +528,8 @@
    "ROOM": "A1910",
    "PER": 17,
    "CRDTS": 4,
-   "LAST NAME": "Abu Halwaeh",
-   "FIRST NAME": "Nael"
+   "LASTNAME": "Abu Halwaeh",
+   "FIRSTNAME": "Nael"
  },
  {
    "CRN": 20739,
@@ -542,8 +542,8 @@
    "ROOM": "A1710",
    "PER": 5,
    "CRDTS": 4,
-   "LAST NAME": "Abu-Halaweh",
-   "FIRST NAME": "Nael"
+   "LASTNAME": "Abu-Halaweh",
+   "FIRSTNAME": "Nael"
  },
  {
    "CRN": 20415,
@@ -556,8 +556,8 @@
    "ROOM": "A1710",
    "PER": 8,
    "CRDTS": 4,
-   "LAST NAME": "Nicklas",
-   "FIRST NAME": "Richard"
+   "LASTNAME": "Nicklas",
+   "FIRSTNAME": "Richard"
  },
  {
    "CRN": 20409,
@@ -570,8 +570,8 @@
    "ROOM": "A1910",
    "PER": 7,
    "CRDTS": 4,
-   "LAST NAME": "Kopinski",
-   "FIRST NAME": "Sean"
+   "LASTNAME": "Kopinski",
+   "FIRSTNAME": "Sean"
  },
  {
    "CRN": 20420,
@@ -584,8 +584,8 @@
    "ROOM": "C1125",
    "PER": 8,
    "CRDTS": 4,
-   "LAST NAME": "Kopinski",
-   "FIRST NAME": "Sean"
+   "LASTNAME": "Kopinski",
+   "FIRSTNAME": "Sean"
  },
  {
    "CRN": 21116,
@@ -598,8 +598,8 @@
    "ROOM": "B1200",
    "PER": 18,
    "CRDTS": 4,
-   "LAST NAME": "Smith",
-   "FIRST NAME": "Stella"
+   "LASTNAME": "Smith",
+   "FIRSTNAME": "Stella"
  },
  {
    "CRN": 21704,
@@ -612,8 +612,8 @@
    "ROOM": "C2125",
    "PER": 16,
    "CRDTS": 4,
-   "LAST NAME": "Smith",
-   "FIRST NAME": "Stella"
+   "LASTNAME": "Smith",
+   "FIRSTNAME": "Stella"
  },
  {
    "CRN": 21176,
@@ -626,8 +626,8 @@
    "ROOM": "C2100",
    "PER": 8,
    "CRDTS": 4,
-   "LAST NAME": "Smith",
-   "FIRST NAME": "Stella"
+   "LASTNAME": "Smith",
+   "FIRSTNAME": "Stella"
  },
  {
    "CRN": 20407,
@@ -640,8 +640,8 @@
    "ROOM": "B1200",
    "PER": 4,
    "CRDTS": 4,
-   "LAST NAME": "Ahmed",
-   "FIRST NAME": "Syed"
+   "LASTNAME": "Ahmed",
+   "FIRSTNAME": "Syed"
  },
  {
    "CRN": 20408,
@@ -654,8 +654,8 @@
    "ROOM": "B1200",
    "PER": 5,
    "CRDTS": 4,
-   "LAST NAME": "Ahmed",
-   "FIRST NAME": "Syed"
+   "LASTNAME": "Ahmed",
+   "FIRSTNAME": "Syed"
  },
  {
    "CRN": 20416,
@@ -668,8 +668,8 @@
    "ROOM": "A1930",
    "PER": 1,
    "CRDTS": 4,
-   "LAST NAME": "Khokhar",
-   "FIRST NAME": "Umar"
+   "LASTNAME": "Khokhar",
+   "FIRSTNAME": "Umar"
  },
  {
    "CRN": 21397,
@@ -682,8 +682,8 @@
    "ROOM": "C2130",
    "PER": 2,
    "CRDTS": 4,
-   "LAST NAME": "Khokhar",
-   "FIRST NAME": "Umar"
+   "LASTNAME": "Khokhar",
+   "FIRSTNAME": "Umar"
  },
  {
    "CRN": 20431,
@@ -696,8 +696,8 @@
    "ROOM": "C1125",
    "PER": 17,
    "CRDTS": 4,
-   "LAST NAME": "Liu",
-   "FIRST NAME": "Wei"
+   "LASTNAME": "Liu",
+   "FIRSTNAME": "Wei"
  },
  {
    "CRN": 20424,
@@ -710,8 +710,8 @@
    "ROOM": "A1910",
    "PER": 18,
    "CRDTS": 4,
-   "LAST NAME": "Liu",
-   "FIRST NAME": "Wei"
+   "LASTNAME": "Liu",
+   "FIRSTNAME": "Wei"
  },
  {
    "CRN": 20737,
@@ -724,8 +724,8 @@
    "ROOM": "A1930",
    "PER": 2,
    "CRDTS": 4,
-   "LAST NAME": "Xu",
-   "FIRST NAME": "Xin"
+   "LASTNAME": "Xu",
+   "FIRSTNAME": "Xin"
  },
  {
    "CRN": 20428,
@@ -738,8 +738,8 @@
    "ROOM": "C1125",
    "PER": 5,
    "CRDTS": 4,
-   "LAST NAME": "Ding",
-   "FIRST NAME": "Yan"
+   "LASTNAME": "Ding",
+   "FIRSTNAME": "Yan"
  },
  {
    "CRN": 21395,
@@ -752,8 +752,8 @@
    "ROOM": "B1100",
    "PER": 4,
    "CRDTS": 4,
-   "LAST NAME": "Ding",
-   "FIRST NAME": "Yan"
+   "LASTNAME": "Ding",
+   "FIRSTNAME": "Yan"
  },
  {
    "CRN": 21398,
@@ -766,8 +766,8 @@
    "ROOM": "C2130",
    "PER": 7,
    "CRDTS": 4,
-   "LAST NAME": "Ding",
-   "FIRST NAME": "Yan"
+   "LASTNAME": "Ding",
+   "FIRSTNAME": "Yan"
  },
  {
    "CRN": 20738,
@@ -780,8 +780,8 @@
    "ROOM": "C2100",
    "PER": 4,
    "CRDTS": 4,
-   "LAST NAME": "",
-   "FIRST NAME": ""
+   "LASTNAME": "",
+   "FIRSTNAME": ""
  },
  {
    "CRN": 20852,
@@ -794,8 +794,8 @@
    "ROOM": "C1125",
    "PER": 4,
    "CRDTS": 4,
-   "LAST NAME": "",
-   "FIRST NAME": ""
+   "LASTNAME": "",
+   "FIRSTNAME": ""
  },
  {
    "CRN": 20853,
@@ -808,8 +808,8 @@
    "ROOM": "B1100",
    "PER": 5,
    "CRDTS": 4,
-   "LAST NAME": "",
-   "FIRST NAME": ""
+   "LASTNAME": "",
+   "FIRSTNAME": ""
  },
  {
    "CRN": 21017,
@@ -822,8 +822,8 @@
    "ROOM": "A1710",
    "PER": 2,
    "CRDTS": 4,
-   "LAST NAME": "",
-   "FIRST NAME": ""
+   "LASTNAME": "",
+   "FIRSTNAME": ""
  },
  {
    "CRN": 21175,
@@ -836,8 +836,8 @@
    "ROOM": "C2130",
    "PER": 5,
    "CRDTS": 4,
-   "LAST NAME": "",
-   "FIRST NAME": ""
+   "LASTNAME": "",
+   "FIRSTNAME": ""
  },
  {
    "CRN": 21396,
@@ -850,8 +850,8 @@
    "ROOM": "C2130",
    "PER": 1,
    "CRDTS": 4,
-   "LAST NAME": "",
-   "FIRST NAME": ""
+   "LASTNAME": "",
+   "FIRSTNAME": ""
  },
  {
    "CRN": 20854,
@@ -864,8 +864,8 @@
    "ROOM": "B1750",
    "PER": 10,
    "CRDTS": 4,
-   "LAST NAME": "Heinz",
-   "FIRST NAME": "Adrian"
+   "LASTNAME": "Heinz",
+   "FIRSTNAME": "Adrian"
  },
  {
    "CRN": 20749,
@@ -878,8 +878,8 @@
    "ROOM": "B1750",
    "PER": 15,
    "CRDTS": 4,
-   "LAST NAME": "Shehab",
-   "FIRST NAME": "Amr"
+   "LASTNAME": "Shehab",
+   "FIRSTNAME": "Amr"
  },
  {
    "CRN": 20750,
@@ -892,8 +892,8 @@
    "ROOM": "B1750",
    "PER": 17,
    "CRDTS": 4,
-   "LAST NAME": "Shehab",
-   "FIRST NAME": "Amr"
+   "LASTNAME": "Shehab",
+   "FIRSTNAME": "Amr"
  },
  {
    "CRN": 21813,
@@ -906,8 +906,8 @@
    "ROOM": "A1450",
    "PER": 19,
    "CRDTS": 4,
-   "LAST NAME": "Kwon",
-   "FIRST NAME": "Bongkyoung"
+   "LASTNAME": "Kwon",
+   "FIRSTNAME": "Bongkyoung"
  },
  {
    "CRN": 20743,
@@ -920,8 +920,8 @@
    "ROOM": "B1750",
    "PER": 2,
    "CRDTS": 4,
-   "LAST NAME": "Long",
-   "FIRST NAME": "Cherie"
+   "LASTNAME": "Long",
+   "FIRSTNAME": "Cherie"
  },
  {
    "CRN": 20435,
@@ -934,8 +934,8 @@
    "ROOM": "A1450",
    "PER": 2,
    "CRDTS": 4,
-   "LAST NAME": "Robertson",
-   "FIRST NAME": "Cindy"
+   "LASTNAME": "Robertson",
+   "FIRSTNAME": "Cindy"
  },
  {
    "CRN": 20436,
@@ -948,8 +948,8 @@
    "ROOM": "A1450",
    "PER": 4,
    "CRDTS": 4,
-   "LAST NAME": "Robertson",
-   "FIRST NAME": "Cindy"
+   "LASTNAME": "Robertson",
+   "FIRSTNAME": "Cindy"
  },
  {
    "CRN": 20751,
@@ -962,8 +962,8 @@
    "ROOM": "B1750",
    "PER": 20,
    "CRDTS": 4,
-   "LAST NAME": "Jackson",
-   "FIRST NAME": "Jack"
+   "LASTNAME": "Jackson",
+   "FIRSTNAME": "Jack"
  },
  {
    "CRN": 21998,
@@ -976,8 +976,8 @@
    "ROOM": "B1750",
    "PER": 21,
    "CRDTS": 4,
-   "LAST NAME": "Jackson",
-   "FIRST NAME": "Jack"
+   "LASTNAME": "Jackson",
+   "FIRSTNAME": "Jack"
  },
  {
    "CRN": 20434,
@@ -990,8 +990,8 @@
    "ROOM": "A1450",
    "PER": 1,
    "CRDTS": 4,
-   "LAST NAME": "Streator",
-   "FIRST NAME": "Joycelyn"
+   "LASTNAME": "Streator",
+   "FIRSTNAME": "Joycelyn"
  },
  {
    "CRN": 20441,
@@ -1004,8 +1004,8 @@
    "ROOM": "A1450",
    "PER": 11,
    "CRDTS": 4,
-   "LAST NAME": "Zinn",
-   "FIRST NAME": "JP"
+   "LASTNAME": "Zinn",
+   "FIRSTNAME": "JP"
  },
  {
    "CRN": 20746,
@@ -1018,8 +1018,8 @@
    "ROOM": "B1750",
    "PER": 8,
    "CRDTS": 4,
-   "LAST NAME": "Chen",
-   "FIRST NAME": "Kairui"
+   "LASTNAME": "Chen",
+   "FIRSTNAME": "Kairui"
  },
  {
    "CRN": 21012,
@@ -1032,8 +1032,8 @@
    "ROOM": "B1750",
    "PER": 7,
    "CRDTS": 4,
-   "LAST NAME": "Chen",
-   "FIRST NAME": "Kairui"
+   "LASTNAME": "Chen",
+   "FIRSTNAME": "Kairui"
  },
  {
    "CRN": 20856,
@@ -1046,8 +1046,8 @@
    "ROOM": "B1750",
    "PER": 22,
    "CRDTS": 4,
-   "LAST NAME": "McGuffie",
-   "FIRST NAME": "Raymond"
+   "LASTNAME": "McGuffie",
+   "FIRSTNAME": "Raymond"
  },
  {
    "CRN": 21064,
@@ -1060,8 +1060,8 @@
    "ROOM": "A1450",
    "PER": 23,
    "CRDTS": 4,
-   "LAST NAME": "McGuffie",
-   "FIRST NAME": "Raymond"
+   "LASTNAME": "McGuffie",
+   "FIRSTNAME": "Raymond"
  },
  {
    "CRN": 20444,
@@ -1074,8 +1074,8 @@
    "ROOM": "A1450",
    "PER": 18,
    "CRDTS": 4,
-   "LAST NAME": "Lai",
-   "FIRST NAME": "Shuhua"
+   "LASTNAME": "Lai",
+   "FIRSTNAME": "Shuhua"
  },
  {
    "CRN": 20742,
@@ -1088,8 +1088,8 @@
    "ROOM": "A1450",
    "PER": 21,
    "CRDTS": 4,
-   "LAST NAME": "Dumas",
-   "FIRST NAME": "Tony"
+   "LASTNAME": "Dumas",
+   "FIRSTNAME": "Tony"
  },
  {
    "CRN": 20445,
@@ -1102,8 +1102,8 @@
    "ROOM": "A1450",
    "PER": 20,
    "CRDTS": 4,
-   "LAST NAME": "Biel",
-   "FIRST NAME": "Walter"
+   "LASTNAME": "Biel",
+   "FIRSTNAME": "Walter"
  },
  {
    "CRN": 20747,
@@ -1116,8 +1116,8 @@
    "ROOM": "B1750",
    "PER": 12,
    "CRDTS": 4,
-   "LAST NAME": "Biel",
-   "FIRST NAME": "Walter"
+   "LASTNAME": "Biel",
+   "FIRSTNAME": "Walter"
  },
  {
    "CRN": 20440,
@@ -1130,8 +1130,8 @@
    "ROOM": "A1450",
    "PER": 10,
    "CRDTS": 4,
-   "LAST NAME": "Mao",
-   "FIRST NAME": "Weidong"
+   "LASTNAME": "Mao",
+   "FIRSTNAME": "Weidong"
  },
  {
    "CRN": 20857,
@@ -1144,8 +1144,8 @@
    "ROOM": "B1750",
    "PER": 19,
    "CRDTS": 4,
-   "LAST NAME": "Mao",
-   "FIRST NAME": "Weidong"
+   "LASTNAME": "Mao",
+   "FIRSTNAME": "Weidong"
  },
  {
    "CRN": 20437,
@@ -1158,8 +1158,8 @@
    "ROOM": "A1450",
    "PER": 5,
    "CRDTS": 4,
-   "LAST NAME": "Xu",
-   "FIRST NAME": "Xin"
+   "LASTNAME": "Xu",
+   "FIRSTNAME": "Xin"
  },
  {
    "CRN": 20442,
@@ -1172,8 +1172,8 @@
    "ROOM": "A1450",
    "PER": 15,
    "CRDTS": 4,
-   "LAST NAME": "Xu",
-   "FIRST NAME": "Xin"
+   "LASTNAME": "Xu",
+   "FIRSTNAME": "Xin"
  },
  {
    "CRN": 20438,
@@ -1186,8 +1186,8 @@
    "ROOM": "A1450",
    "PER": 7,
    "CRDTS": 4,
-   "LAST NAME": "Xu",
-   "FIRST NAME": "Yaquan"
+   "LASTNAME": "Xu",
+   "FIRSTNAME": "Yaquan"
  },
  {
    "CRN": 20439,
@@ -1200,8 +1200,8 @@
    "ROOM": "A1450",
    "PER": 8,
    "CRDTS": 4,
-   "LAST NAME": "Xu",
-   "FIRST NAME": "Yaquan"
+   "LASTNAME": "Xu",
+   "FIRSTNAME": "Yaquan"
  },
  {
    "CRN": 20745,
@@ -1214,8 +1214,8 @@
    "ROOM": "B1750",
    "PER": 5,
    "CRDTS": 4,
-   "LAST NAME": "Ding",
-   "FIRST NAME": "Yi"
+   "LASTNAME": "Ding",
+   "FIRSTNAME": "Yi"
  },
  {
    "CRN": 20855,
@@ -1228,8 +1228,8 @@
    "ROOM": "B1750",
    "PER": 11,
    "CRDTS": 4,
-   "LAST NAME": "Lin",
-   "FIRST NAME": "Yu-Hsiu"
+   "LASTNAME": "Lin",
+   "FIRSTNAME": "Yu-Hsiu"
  },
  {
    "CRN": 21812,
@@ -1242,8 +1242,8 @@
    "ROOM": "A1450",
    "PER": 12,
    "CRDTS": 4,
-   "LAST NAME": "Lin",
-   "FIRST NAME": "Yu-Hsiu"
+   "LASTNAME": "Lin",
+   "FIRSTNAME": "Yu-Hsiu"
  },
  {
    "CRN": 20443,
@@ -1256,8 +1256,8 @@
    "ROOM": "A1450",
    "PER": 17,
    "CRDTS": 4,
-   "LAST NAME": "",
-   "FIRST NAME": ""
+   "LASTNAME": "",
+   "FIRSTNAME": ""
  },
  {
    "CRN": 20744,
@@ -1270,8 +1270,8 @@
    "ROOM": "B1750",
    "PER": 4,
    "CRDTS": 4,
-   "LAST NAME": "",
-   "FIRST NAME": ""
+   "LASTNAME": "",
+   "FIRSTNAME": ""
  },
  {
    "CRN": 20748,
@@ -1284,8 +1284,8 @@
    "ROOM": "B1750",
    "PER": 14,
    "CRDTS": 4,
-   "LAST NAME": "",
-   "FIRST NAME": ""
+   "LASTNAME": "",
+   "FIRSTNAME": ""
  },
  {
    "CRN": 21400,
@@ -1298,8 +1298,8 @@
    "ROOM": "B1750",
    "PER": 18,
    "CRDTS": 4,
-   "LAST NAME": "",
-   "FIRST NAME": ""
+   "LASTNAME": "",
+   "FIRSTNAME": ""
  },
  {
    "CRN": 22014,
@@ -1312,8 +1312,8 @@
    "ROOM": "C2100",
    "PER": 14,
    "CRDTS": 4,
-   "LAST NAME": "Abraham",
-   "FIRST NAME": "Sherly"
+   "LASTNAME": "Abraham",
+   "FIRSTNAME": "Sherly"
  },
  {
    "CRN": 22015,
@@ -1326,8 +1326,8 @@
    "ROOM": "C2100",
    "PER": 18,
    "CRDTS": 4,
-   "LAST NAME": "Abraham",
-   "FIRST NAME": "Sherly"
+   "LASTNAME": "Abraham",
+   "FIRSTNAME": "Sherly"
  },
  {
    "CRN": 20446,
@@ -1340,8 +1340,8 @@
    "ROOM": "B1100",
    "PER": 2,
    "CRDTS": 4,
-   "LAST NAME": "Soares",
-   "FIRST NAME": "Carlos"
+   "LASTNAME": "Soares",
+   "FIRSTNAME": "Carlos"
  },
  {
    "CRN": 21402,
@@ -1354,8 +1354,8 @@
    "ROOM": "C2130",
    "PER": 4,
    "CRDTS": 4,
-   "LAST NAME": "Soares",
-   "FIRST NAME": "Carlos"
+   "LASTNAME": "Soares",
+   "FIRSTNAME": "Carlos"
  },
  {
    "CRN": 22001,
@@ -1368,8 +1368,8 @@
    "ROOM": "C2100",
    "PER": 1,
    "CRDTS": 4,
-   "LAST NAME": "Soares",
-   "FIRST NAME": "Carlos"
+   "LASTNAME": "Soares",
+   "FIRSTNAME": "Carlos"
  },
  {
    "CRN": 21065,
@@ -1382,8 +1382,8 @@
    "ROOM": "A1910",
    "PER": 15,
    "CRDTS": 4,
-   "LAST NAME": "Iken",
-   "FIRST NAME": "Mark"
+   "LASTNAME": "Iken",
+   "FIRSTNAME": "Mark"
  },
  {
    "CRN": 21066,
@@ -1396,8 +1396,8 @@
    "ROOM": "A1910",
    "PER": 14,
    "CRDTS": 4,
-   "LAST NAME": "Iken",
-   "FIRST NAME": "Mark"
+   "LASTNAME": "Iken",
+   "FIRSTNAME": "Mark"
  },
  {
    "CRN": 21999,
@@ -1410,8 +1410,8 @@
    "ROOM": "C2130",
    "PER": 17,
    "CRDTS": 4,
-   "LAST NAME": "Iken",
-   "FIRST NAME": "Mark"
+   "LASTNAME": "Iken",
+   "FIRSTNAME": "Mark"
  },
  {
    "CRN": 20448,
@@ -1424,8 +1424,8 @@
    "ROOM": "B1100",
    "PER": 11,
    "CRDTS": 4,
-   "LAST NAME": "Siva",
-   "FIRST NAME": "Sebastien"
+   "LASTNAME": "Siva",
+   "FIRSTNAME": "Sebastien"
  },
  {
    "CRN": 20449,
@@ -1438,8 +1438,8 @@
    "ROOM": "A1910",
    "PER": 8,
    "CRDTS": 4,
-   "LAST NAME": "Siva",
-   "FIRST NAME": "Sebastien"
+   "LASTNAME": "Siva",
+   "FIRSTNAME": "Sebastien"
  },
  {
    "CRN": 21067,
@@ -1452,8 +1452,8 @@
    "ROOM": "B1100",
    "PER": 7,
    "CRDTS": 4,
-   "LAST NAME": "Siva",
-   "FIRST NAME": "Sebastien"
+   "LASTNAME": "Siva",
+   "FIRSTNAME": "Sebastien"
  },
  {
    "CRN": 21011,
@@ -1466,8 +1466,8 @@
    "ROOM": "A1930",
    "PER": 20,
    "CRDTS": 4,
-   "LAST NAME": "Kasay ",
-   "FIRST NAME": "Valerie"
+   "LASTNAME": "Kasay ",
+   "FIRSTNAME": "Valerie"
  },
  {
    "CRN": 21330,
@@ -1480,8 +1480,8 @@
    "ROOM": "C2130",
    "PER": 15,
    "CRDTS": 4,
-   "LAST NAME": "Kasay",
-   "FIRST NAME": "Valerie"
+   "LASTNAME": "Kasay",
+   "FIRSTNAME": "Valerie"
  },
  {
    "CRN": 22000,
@@ -1494,8 +1494,8 @@
    "ROOM": "B1100",
    "PER": 8,
    "CRDTS": 4,
-   "LAST NAME": "Kasay",
-   "FIRST NAME": "Valerie"
+   "LASTNAME": "Kasay",
+   "FIRSTNAME": "Valerie"
  },
  {
    "CRN": 20447,
@@ -1508,8 +1508,8 @@
    "ROOM": "A1930",
    "PER": 14,
    "CRDTS": 4,
-   "LAST NAME": "Liu",
-   "FIRST NAME": "Wei"
+   "LASTNAME": "Liu",
+   "FIRSTNAME": "Wei"
  },
  {
    "CRN": 21401,
@@ -1522,8 +1522,8 @@
    "ROOM": "C2130",
    "PER": 14,
    "CRDTS": 4,
-   "LAST NAME": "",
-   "FIRST NAME": ""
+   "LASTNAME": "",
+   "FIRSTNAME": ""
  },
  {
    "CRN": 20861,
@@ -1536,8 +1536,8 @@
    "ROOM": "C1125",
    "PER": 20,
    "CRDTS": 4,
-   "LAST NAME": "Zinn",
-   "FIRST NAME": "JP"
+   "LASTNAME": "Zinn",
+   "FIRSTNAME": "JP"
  },
  {
    "CRN": 20862,
@@ -1550,8 +1550,8 @@
    "ROOM": "A1910",
    "PER": 1,
    "CRDTS": 4,
-   "LAST NAME": "Murtaza",
-   "FIRST NAME": "Mirza"
+   "LASTNAME": "Murtaza",
+   "FIRSTNAME": "Mirza"
  },
  {
    "CRN": 20860,
@@ -1564,8 +1564,8 @@
    "ROOM": "B1200",
    "PER": 2,
    "CRDTS": 4,
-   "LAST NAME": "Xu",
-   "FIRST NAME": "Shuting"
+   "LASTNAME": "Xu",
+   "FIRSTNAME": "Shuting"
  },
  {
    "CRN": 20863,
@@ -1578,8 +1578,8 @@
    "ROOM": "A1930",
    "PER": 18,
    "CRDTS": 4,
-   "LAST NAME": "Xu",
-   "FIRST NAME": "Shuting"
+   "LASTNAME": "Xu",
+   "FIRSTNAME": "Shuting"
  },
  {
    "CRN": 21181,
@@ -1592,8 +1592,8 @@
    "ROOM": "A1750",
    "PER": 8,
    "CRDTS": 4,
-   "LAST NAME": "Johnson",
-   "FIRST NAME": "Cynthia"
+   "LASTNAME": "Johnson",
+   "FIRSTNAME": "Cynthia"
  },
  {
    "CRN": 22003,
@@ -1606,8 +1606,8 @@
    "ROOM": "C2125",
    "PER": 11,
    "CRDTS": 4,
-   "LAST NAME": "Johnson",
-   "FIRST NAME": "Cynthia"
+   "LASTNAME": "Johnson",
+   "FIRSTNAME": "Cynthia"
  },
  {
    "CRN": 21180,
@@ -1620,8 +1620,8 @@
    "ROOM": "A1750",
    "PER": 1,
    "CRDTS": 4,
-   "LAST NAME": "Park",
-   "FIRST NAME": "Hyesung"
+   "LASTNAME": "Park",
+   "FIRSTNAME": "Hyesung"
  },
  {
    "CRN": 21187,
@@ -1634,8 +1634,8 @@
    "ROOM": "A1750",
    "PER": 7,
    "CRDTS": 4,
-   "LAST NAME": "Park",
-   "FIRST NAME": "Hyesung"
+   "LASTNAME": "Park",
+   "FIRSTNAME": "Hyesung"
  },
  {
    "CRN": 21186,
@@ -1648,8 +1648,8 @@
    "ROOM": "A1750",
    "PER": 5,
    "CRDTS": 4,
-   "LAST NAME": "Murtaza",
-   "FIRST NAME": "Mirza"
+   "LASTNAME": "Murtaza",
+   "FIRSTNAME": "Mirza"
  },
  {
    "CRN": 22002,
@@ -1662,8 +1662,8 @@
    "ROOM": "C2100",
    "PER": 2,
    "CRDTS": 4,
-   "LAST NAME": "Murtaza",
-   "FIRST NAME": "Mirza"
+   "LASTNAME": "Murtaza",
+   "FIRSTNAME": "Mirza"
  },
  {
    "CRN": 21404,
@@ -1676,8 +1676,8 @@
    "ROOM": "C2130",
    "PER": 18,
    "CRDTS": 4,
-   "LAST NAME": "Abu-Halaweh",
-   "FIRST NAME": "Nael"
+   "LASTNAME": "Abu-Halaweh",
+   "FIRSTNAME": "Nael"
  },
  {
    "CRN": 21185,
@@ -1690,8 +1690,8 @@
    "ROOM": "A1710",
    "PER": 20,
    "CRDTS": 4,
-   "LAST NAME": "Abu Halwaeh",
-   "FIRST NAME": "Nael"
+   "LASTNAME": "Abu Halwaeh",
+   "FIRSTNAME": "Nael"
  },
  {
    "CRN": 21183,
@@ -1704,8 +1704,8 @@
    "ROOM": "A1750",
    "PER": 15,
    "CRDTS": 4,
-   "LAST NAME": "Dekhane",
-   "FIRST NAME": "Sonal"
+   "LASTNAME": "Dekhane",
+   "FIRSTNAME": "Sonal"
  },
  {
    "CRN": 21184,
@@ -1718,8 +1718,8 @@
    "ROOM": "A1750",
    "PER": 14,
    "CRDTS": 4,
-   "LAST NAME": "Dekhane",
-   "FIRST NAME": "Sonal"
+   "LASTNAME": "Dekhane",
+   "FIRSTNAME": "Sonal"
  },
  {
    "CRN": 21403,
@@ -1732,8 +1732,8 @@
    "ROOM": "B1100",
    "PER": 14,
    "CRDTS": 4,
-   "LAST NAME": "Jin",
-   "FIRST NAME": "Wei"
+   "LASTNAME": "Jin",
+   "FIRSTNAME": "Wei"
  },
  {
    "CRN": 21182,
@@ -1746,8 +1746,8 @@
    "ROOM": "A1710",
    "PER": 18,
    "CRDTS": 4,
-   "LAST NAME": "Jin",
-   "FIRST NAME": "Wei"
+   "LASTNAME": "Jin",
+   "FIRSTNAME": "Wei"
  },
  {
    "CRN": 20858,
@@ -1760,8 +1760,8 @@
    "ROOM": "C2130",
    "PER": 20,
    "CRDTS": 4,
-   "LAST NAME": "Heinz",
-   "FIRST NAME": "Adrian"
+   "LASTNAME": "Heinz",
+   "FIRSTNAME": "Adrian"
  },
  {
    "CRN": 21188,
@@ -1774,8 +1774,8 @@
    "ROOM": "A1750",
    "PER": 17,
    "CRDTS": 4,
-   "LAST NAME": "Heinz",
-   "FIRST NAME": "Adrian"
+   "LASTNAME": "Heinz",
+   "FIRSTNAME": "Adrian"
  },
  {
    "CRN": 20450,
@@ -1788,8 +1788,8 @@
    "ROOM": "B1100",
    "PER": 1,
    "CRDTS": 4,
-   "LAST NAME": "Pereira",
-   "FIRST NAME": "Anil"
+   "LASTNAME": "Pereira",
+   "FIRSTNAME": "Anil"
  },
  {
    "CRN": 21405,
@@ -1802,8 +1802,8 @@
    "ROOM": "A1750",
    "PER": 23,
    "CRDTS": 4,
-   "LAST NAME": "Kwon",
-   "FIRST NAME": "Bongkyoung"
+   "LASTNAME": "Kwon",
+   "FIRSTNAME": "Bongkyoung"
  },
  {
    "CRN": 20752,
@@ -1816,8 +1816,8 @@
    "ROOM": "A1930",
    "PER": 15,
    "CRDTS": 4,
-   "LAST NAME": "Park",
-   "FIRST NAME": "Hyesung"
+   "LASTNAME": "Park",
+   "FIRSTNAME": "Hyesung"
  },
  {
    "CRN": 20451,
@@ -1830,8 +1830,8 @@
    "ROOM": "A1750",
    "PER": 18,
    "CRDTS": 4,
-   "LAST NAME": "Price",
-   "FIRST NAME": "Richard"
+   "LASTNAME": "Price",
+   "FIRSTNAME": "Richard"
  },
  {
    "CRN": 21103,
@@ -1844,8 +1844,8 @@
    "ROOM": "A1930",
    "PER": 4,
    "CRDTS": 4,
-   "LAST NAME": "Im",
-   "FIRST NAME": "Tacksoo"
+   "LASTNAME": "Im",
+   "FIRSTNAME": "Tacksoo"
  },
  {
    "CRN": 21189,
@@ -1858,8 +1858,8 @@
    "ROOM": "A1910",
    "PER": 11,
    "CRDTS": 3,
-   "LAST NAME": "Skinner",
-   "FIRST NAME": "Calvin"
+   "LASTNAME": "Skinner",
+   "FIRSTNAME": "Calvin"
  },
  {
    "CRN": 20753,
@@ -1872,8 +1872,8 @@
    "ROOM": "C2100",
    "PER": 19,
    "CRDTS": 3,
-   "LAST NAME": "Banerjee",
-   "FIRST NAME": "Madhushri"
+   "LASTNAME": "Banerjee",
+   "FIRSTNAME": "Madhushri"
  },
  {
    "CRN": 20754,
@@ -1886,8 +1886,8 @@
    "ROOM": "B1100",
    "PER": 17,
    "CRDTS": 3,
-   "LAST NAME": "Baerjee",
-   "FIRST NAME": "Madhushri"
+   "LASTNAME": "Baerjee",
+   "FIRSTNAME": "Madhushri"
  },
  {
    "CRN": 20864,
@@ -1900,8 +1900,8 @@
    "ROOM": "B1100",
    "PER": 18,
    "CRDTS": 3,
-   "LAST NAME": "Banerjee",
-   "FIRST NAME": "Madhushri"
+   "LASTNAME": "Banerjee",
+   "FIRSTNAME": "Madhushri"
  },
  {
    "CRN": 20859,
@@ -1914,8 +1914,8 @@
    "ROOM": "B1200",
    "PER": 7,
    "CRDTS": 3,
-   "LAST NAME": "Kasay",
-   "FIRST NAME": "Valerie"
+   "LASTNAME": "Kasay",
+   "FIRSTNAME": "Valerie"
  },
  {
    "CRN": 21106,
@@ -1928,8 +1928,8 @@
    "ROOM": "C2130",
    "PER": 10,
    "CRDTS": 3,
-   "LAST NAME": "Ding",
-   "FIRST NAME": "Yi"
+   "LASTNAME": "Ding",
+   "FIRSTNAME": "Yi"
  },
  {
    "CRN": 21705,
@@ -1942,8 +1942,8 @@
    "ROOM": "B1200",
    "PER": 8,
    "CRDTS": 3,
-   "LAST NAME": "Ding",
-   "FIRST NAME": "YI"
+   "LASTNAME": "Ding",
+   "FIRSTNAME": "YI"
  },
  {
    "CRN": 21019,
@@ -1956,8 +1956,8 @@
    "ROOM": "A1140",
    "PER": 0,
    "CRDTS": 1,
-   "LAST NAME": "",
-   "FIRST NAME": ""
+   "LASTNAME": "",
+   "FIRSTNAME": ""
  },
  {
    "CRN": 22007,
@@ -1970,8 +1970,8 @@
    "ROOM": "B1950",
    "PER": 14,
    "CRDTS": 3,
-   "LAST NAME": "Pereira",
-   "FIRST NAME": "Anil"
+   "LASTNAME": "Pereira",
+   "FIRSTNAME": "Anil"
  },
  {
    "CRN": 20755,
@@ -1984,8 +1984,8 @@
    "ROOM": "B1950",
    "PER": 3,
    "CRDTS": 3,
-   "LAST NAME": "Pereira",
-   "FIRST NAME": "Anil"
+   "LASTNAME": "Pereira",
+   "FIRSTNAME": "Anil"
  },
  {
    "CRN": 20865,
@@ -1998,8 +1998,8 @@
    "ROOM": "B2100",
    "PER": 18,
    "CRDTS": 3,
-   "LAST NAME": "Tran",
-   "FIRST NAME": "Binh"
+   "LASTNAME": "Tran",
+   "FIRSTNAME": "Binh"
  },
  {
    "CRN": 21406,
@@ -2012,8 +2012,8 @@
    "ROOM": "B1950",
    "PER": 9,
    "CRDTS": 3,
-   "LAST NAME": "Tran",
-   "FIRST NAME": "Binh"
+   "LASTNAME": "Tran",
+   "FIRSTNAME": "Binh"
  },
  {
    "CRN": 20452,
@@ -2026,8 +2026,8 @@
    "ROOM": "B1950",
    "PER": 21,
    "CRDTS": 3,
-   "LAST NAME": "Osunkoya",
-   "FIRST NAME": "Ola"
+   "LASTNAME": "Osunkoya",
+   "FIRSTNAME": "Ola"
  },
  {
    "CRN": 21407,
@@ -2040,8 +2040,8 @@
    "ROOM": "W1104",
    "PER": 22,
    "CRDTS": 3,
-   "LAST NAME": "Osunkoya",
-   "FIRST NAME": "Ola"
+   "LASTNAME": "Osunkoya",
+   "FIRSTNAME": "Ola"
  },
  {
    "CRN": 21408,
@@ -2054,8 +2054,8 @@
    "ROOM": "B2100",
    "PER": 1,
    "CRDTS": 3,
-   "LAST NAME": "Doloc-Mihy",
-   "FIRST NAME": "Anca"
+   "LASTNAME": "Doloc-Mihy",
+   "FIRSTNAME": "Anca"
  },
  {
    "CRN": 20454,
@@ -2068,8 +2068,8 @@
    "ROOM": "B1950",
    "PER": 16,
    "CRDTS": 3,
-   "LAST NAME": "Brannock",
-   "FIRST NAME": "Evelyn"
+   "LASTNAME": "Brannock",
+   "FIRSTNAME": "Evelyn"
  },
  {
    "CRN": 20756,
@@ -2082,8 +2082,8 @@
    "ROOM": "B1950",
    "PER": 20,
    "CRDTS": 3,
-   "LAST NAME": "Jin",
-   "FIRST NAME": "Wei"
+   "LASTNAME": "Jin",
+   "FIRSTNAME": "Wei"
  },
  {
    "CRN": 22004,
@@ -2096,8 +2096,8 @@
    "ROOM": "A1120",
    "PER": 2,
    "CRDTS": 3,
-   "LAST NAME": "Wang",
-   "FIRST NAME": "Cuilan"
+   "LASTNAME": "Wang",
+   "FIRSTNAME": "Cuilan"
  },
  {
    "CRN": 20453,
@@ -2110,8 +2110,8 @@
    "ROOM": "C2220",
    "PER": 8,
    "CRDTS": 3,
-   "LAST NAME": "Choi",
-   "FIRST NAME": "Hongsik"
+   "LASTNAME": "Choi",
+   "FIRSTNAME": "Hongsik"
  },
  {
    "CRN": 20866,
@@ -2124,8 +2124,8 @@
    "ROOM": "W3201",
    "PER": 9,
    "CRDTS": 3,
-   "LAST NAME": "Pollacia",
-   "FIRST NAME": "Lissa"
+   "LASTNAME": "Pollacia",
+   "FIRSTNAME": "Lissa"
  },
  {
    "CRN": 21410,
@@ -2138,8 +2138,8 @@
    "ROOM": "B2100",
    "PER": 11,
    "CRDTS": 3,
-   "LAST NAME": "Hughes",
-   "FIRST NAME": "Norris"
+   "LASTNAME": "Hughes",
+   "FIRSTNAME": "Norris"
  },
  {
    "CRN": 20757,
@@ -2152,8 +2152,8 @@
    "ROOM": "H2205",
    "PER": 14,
    "CRDTS": 3,
-   "LAST NAME": "Lawson",
-   "FIRST NAME": "Victor"
+   "LASTNAME": "Lawson",
+   "FIRSTNAME": "Victor"
  },
  {
    "CRN": 21409,
@@ -2166,8 +2166,8 @@
    "ROOM": "B2200",
    "PER": 18,
    "CRDTS": 3,
-   "LAST NAME": "Lawson",
-   "FIRST NAME": "Victor"
+   "LASTNAME": "Lawson",
+   "FIRSTNAME": "Victor"
  },
  {
    "CRN": 20455,
@@ -2180,8 +2180,8 @@
    "ROOM": "W3147",
    "PER": 9,
    "CRDTS": 3,
-   "LAST NAME": "Xu",
-   "FIRST NAME": "Shuting"
+   "LASTNAME": "Xu",
+   "FIRSTNAME": "Shuting"
  },
  {
    "CRN": 21797,
@@ -2194,8 +2194,8 @@
    "ROOM": "B2200",
    "PER": 7,
    "CRDTS": 3,
-   "LAST NAME": "Khokhar",
-   "FIRST NAME": "Umar"
+   "LASTNAME": "Khokhar",
+   "FIRSTNAME": "Umar"
  },
  {
    "CRN": 21411,
@@ -2208,8 +2208,8 @@
    "ROOM": "B2200",
    "PER": 14,
    "CRDTS": 3,
-   "LAST NAME": "Khokhar",
-   "FIRST NAME": "Umar"
+   "LASTNAME": "Khokhar",
+   "FIRSTNAME": "Umar"
  },
  {
    "CRN": 20456,
@@ -2222,8 +2222,8 @@
    "ROOM": "B1950",
    "PER": 17,
    "CRDTS": 3,
-   "LAST NAME": "Jonassen",
-   "FIRST NAME": "Lorraine"
+   "LASTNAME": "Jonassen",
+   "FIRSTNAME": "Lorraine"
  },
  {
    "CRN": 21412,
@@ -2236,8 +2236,8 @@
    "ROOM": "H2205",
    "PER": 8,
    "CRDTS": 3,
-   "LAST NAME": "Mao",
-   "FIRST NAME": "Weidong"
+   "LASTNAME": "Mao",
+   "FIRSTNAME": "Weidong"
  },
  {
    "CRN": 22005,
@@ -2250,8 +2250,8 @@
    "ROOM": "W3201",
    "PER": 12,
    "CRDTS": 3,
-   "LAST NAME": "Mao",
-   "FIRST NAME": "Weidong"
+   "LASTNAME": "Mao",
+   "FIRSTNAME": "Weidong"
  },
  {
    "CRN": 21413,
@@ -2264,8 +2264,8 @@
    "ROOM": "B2200",
    "PER": 17,
    "CRDTS": 3,
-   "LAST NAME": "Wang",
-   "FIRST NAME": "Cuilan"
+   "LASTNAME": "Wang",
+   "FIRSTNAME": "Cuilan"
  },
  {
    "CRN": 21706,
@@ -2278,8 +2278,8 @@
    "ROOM": "B2200",
    "PER": 16,
    "CRDTS": 3,
-   "LAST NAME": "Wang ",
-   "FIRST NAME": "Cuilan"
+   "LASTNAME": "Wang ",
+   "FIRSTNAME": "Cuilan"
  },
  {
    "CRN": 20758,
@@ -2292,8 +2292,8 @@
    "ROOM": "W3201",
    "PER": 1,
    "CRDTS": 3,
-   "LAST NAME": "Kurkovsky",
-   "FIRST NAME": "Anatoly"
+   "LASTNAME": "Kurkovsky",
+   "FIRSTNAME": "Anatoly"
  },
  {
    "CRN": 21707,
@@ -2306,8 +2306,8 @@
    "ROOM": "B2200",
    "PER": 20,
    "CRDTS": 3,
-   "LAST NAME": "Kurkovsky",
-   "FIRST NAME": "Anatoly"
+   "LASTNAME": "Kurkovsky",
+   "FIRSTNAME": "Anatoly"
  },
  {
    "CRN": 20867,
@@ -2320,8 +2320,8 @@
    "ROOM": "B1950",
    "PER": 7,
    "CRDTS": 3,
-   "LAST NAME": "Johnson",
-   "FIRST NAME": "Cynthia"
+   "LASTNAME": "Johnson",
+   "FIRSTNAME": "Cynthia"
  },
  {
    "CRN": 20457,
@@ -2334,8 +2334,8 @@
    "ROOM": "B2100",
    "PER": 16,
    "CRDTS": 3,
-   "LAST NAME": "Shin",
-   "FIRST NAME": "Hyun"
+   "LASTNAME": "Shin",
+   "FIRSTNAME": "Hyun"
  },
  {
    "CRN": 21414,
@@ -2348,8 +2348,8 @@
    "ROOM": "B2100",
    "PER": 19,
    "CRDTS": 3,
-   "LAST NAME": "Shin",
-   "FIRST NAME": "Hyun"
+   "LASTNAME": "Shin",
+   "FIRSTNAME": "Hyun"
  },
  {
    "CRN": 21540,
@@ -2362,8 +2362,8 @@
    "ROOM": "B1950",
    "PER": 11,
    "CRDTS": 3,
-   "LAST NAME": "Nicklas",
-   "FIRST NAME": "Richard"
+   "LASTNAME": "Nicklas",
+   "FIRSTNAME": "Richard"
  },
  {
    "CRN": 20458,
@@ -2376,8 +2376,8 @@
    "ROOM": "A1520",
    "PER": 8,
    "CRDTS": 4,
-   "LAST NAME": "Doloc Mihu",
-   "FIRST NAME": "Anca"
+   "LASTNAME": "Doloc Mihu",
+   "FIRSTNAME": "Anca"
  },
  {
    "CRN": 21708,
@@ -2390,8 +2390,8 @@
    "ROOM": "B2100",
    "PER": 20,
    "CRDTS": 4,
-   "LAST NAME": "Doloc Mihu",
-   "FIRST NAME": "Anca"
+   "LASTNAME": "Doloc Mihu",
+   "FIRSTNAME": "Anca"
  },
  {
    "CRN": 20459,
@@ -2404,8 +2404,8 @@
    "ROOM": "B2200",
    "PER": 11,
    "CRDTS": 4,
-   "LAST NAME": "Gunay",
-   "FIRST NAME": "Cengiz"
+   "LASTNAME": "Gunay",
+   "FIRSTNAME": "Cengiz"
  },
  {
    "CRN": 21709,
@@ -2418,8 +2418,8 @@
    "ROOM": "B1950",
    "PER": 4,
    "CRDTS": 4,
-   "LAST NAME": "Gunay",
-   "FIRST NAME": "Cengiz"
+   "LASTNAME": "Gunay",
+   "FIRSTNAME": "Cengiz"
  },
  {
    "CRN": 20460,
@@ -2432,8 +2432,8 @@
    "ROOM": "B2100",
    "PER": 4,
    "CRDTS": 3,
-   "LAST NAME": "Streator",
-   "FIRST NAME": "Joycelyn"
+   "LASTNAME": "Streator",
+   "FIRSTNAME": "Joycelyn"
  },
  {
    "CRN": 20868,
@@ -2446,8 +2446,8 @@
    "ROOM": "B2100",
    "PER": 6,
    "CRDTS": 3,
-   "LAST NAME": "Streator",
-   "FIRST NAME": "Joycelyn"
+   "LASTNAME": "Streator",
+   "FIRSTNAME": "Joycelyn"
  },
  {
    "CRN": 20759,
@@ -2460,8 +2460,8 @@
    "ROOM": "C1220",
    "PER": 15,
    "CRDTS": 3,
-   "LAST NAME": "Jonassen",
-   "FIRST NAME": "Lorraine"
+   "LASTNAME": "Jonassen",
+   "FIRSTNAME": "Lorraine"
  },
  {
    "CRN": 21415,
@@ -2474,8 +2474,8 @@
    "ROOM": "B1950",
    "PER": 23,
    "CRDTS": 3,
-   "LAST NAME": "Nicklas",
-   "FIRST NAME": "Richard"
+   "LASTNAME": "Nicklas",
+   "FIRSTNAME": "Richard"
  },
  {
    "CRN": 21710,
@@ -2488,8 +2488,8 @@
    "ROOM": "B1950",
    "PER": 22,
    "CRDTS": 3,
-   "LAST NAME": "Pereira",
-   "FIRST NAME": "Anil"
+   "LASTNAME": "Pereira",
+   "FIRSTNAME": "Anil"
  },
  {
    "CRN": 21711,
@@ -2502,8 +2502,8 @@
    "ROOM": "C1110",
    "PER": 11,
    "CRDTS": 4,
-   "LAST NAME": "Long",
-   "FIRST NAME": "Cherie"
+   "LASTNAME": "Long",
+   "FIRSTNAME": "Cherie"
  },
  {
    "CRN": 22020,
@@ -2516,8 +2516,8 @@
    "ROOM": "A1520",
    "PER": 12,
    "CRDTS": 3,
-   "LAST NAME": "Chen",
-   "FIRST NAME": "Kairui"
+   "LASTNAME": "Chen",
+   "FIRSTNAME": "Kairui"
  },
  {
    "CRN": 21416,
@@ -2530,8 +2530,8 @@
    "ROOM": "A1520",
    "PER": 21,
    "CRDTS": 4,
-   "LAST NAME": "Ding",
-   "FIRST NAME": "Yi"
+   "LASTNAME": "Ding",
+   "FIRSTNAME": "Yi"
  },
  {
    "CRN": 20461,
@@ -2544,8 +2544,8 @@
    "ROOM": "B1950",
    "PER": 8,
    "CRDTS": 4,
-   "LAST NAME": "Pollacia",
-   "FIRST NAME": "Lissa"
+   "LASTNAME": "Pollacia",
+   "FIRSTNAME": "Lissa"
  },
  {
    "CRN": 21712,
@@ -2558,8 +2558,8 @@
    "ROOM": "B2100",
    "PER": 23,
    "CRDTS": 4,
-   "LAST NAME": "Lawson",
-   "FIRST NAME": "Victor"
+   "LASTNAME": "Lawson",
+   "FIRSTNAME": "Victor"
  },
  {
    "CRN": 21190,
@@ -2572,8 +2572,8 @@
    "ROOM": "A1750",
    "PER": 20,
    "CRDTS": 3,
-   "LAST NAME": "Brannock",
-   "FIRST NAME": "Evelyn"
+   "LASTNAME": "Brannock",
+   "FIRSTNAME": "Evelyn"
  },
  {
    "CRN": 21713,
@@ -2586,8 +2586,8 @@
    "ROOM": "B2200",
    "PER": 12,
    "CRDTS": 3,
-   "LAST NAME": "Shin",
-   "FIRST NAME": "Hyun"
+   "LASTNAME": "Shin",
+   "FIRSTNAME": "Hyun"
  },
  {
    "CRN": 20818,
@@ -2600,8 +2600,8 @@
    "ROOM": "B2200",
    "PER": 8,
    "CRDTS": 3,
-   "LAST NAME": "Im",
-   "FIRST NAME": "Tacksoo"
+   "LASTNAME": "Im",
+   "FIRSTNAME": "Tacksoo"
  },
  {
    "CRN": 21714,
@@ -2614,8 +2614,8 @@
    "ROOM": "A1125",
    "PER": 12,
    "CRDTS": 3,
-   "LAST NAME": "Ding",
-   "FIRST NAME": "Yan"
+   "LASTNAME": "Ding",
+   "FIRSTNAME": "Yan"
  },
  {
    "CRN": 21558,
@@ -2628,8 +2628,8 @@
    "ROOM": "W3201",
    "PER": 4,
    "CRDTS": 4,
-   "LAST NAME": "Yang",
-   "FIRST NAME": "Sean"
+   "LASTNAME": "Yang",
+   "FIRSTNAME": "Sean"
  },
  {
    "CRN": 21715,
@@ -2642,8 +2642,8 @@
    "ROOM": "A1900",
    "PER": 21,
    "CRDTS": 4,
-   "LAST NAME": "Yang",
-   "FIRST NAME": "Sean"
+   "LASTNAME": "Yang",
+   "FIRSTNAME": "Sean"
  },
  {
    "CRN": 21825,
@@ -2656,8 +2656,8 @@
    "ROOM": "A1320",
    "PER": 10,
    "CRDTS": 4,
-   "LAST NAME": "Lawson",
-   "FIRST NAME": "Victor"
+   "LASTNAME": "Lawson",
+   "FIRSTNAME": "Victor"
  },
  {
    "CRN": 21349,
@@ -2670,8 +2670,8 @@
    "ROOM": "H1102",
    "PER": 8,
    "CRDTS": 1,
-   "LAST NAME": "",
-   "FIRST NAME": ""
+   "LASTNAME": "",
+   "FIRSTNAME": ""
  },
  {
    "CRN": 21821,
@@ -2684,8 +2684,8 @@
    "ROOM": "A1520",
    "PER": 0,
    "CRDTS": 1,
-   "LAST NAME": "",
-   "FIRST NAME": ""
+   "LASTNAME": "",
+   "FIRSTNAME": ""
  },
  {
    "CRN": 22044,
@@ -2698,8 +2698,8 @@
    "ROOM": "B1950",
    "PER": 0,
    "CRDTS": 1,
-   "LAST NAME": "",
-   "FIRST NAME": ""
+   "LASTNAME": "",
+   "FIRSTNAME": ""
  },
  {
    "CRN": 22045,
@@ -2712,8 +2712,8 @@
    "ROOM": "B1950",
    "PER": 0,
    "CRDTS": 1,
-   "LAST NAME": "",
-   "FIRST NAME": ""
+   "LASTNAME": "",
+   "FIRSTNAME": ""
  },
  {
    "CRN": 21716,
@@ -2726,8 +2726,8 @@
    "ROOM": "B2100",
    "PER": 2,
    "CRDTS": 4,
-   "LAST NAME": "Lai",
-   "FIRST NAME": "Shuhua"
+   "LASTNAME": "Lai",
+   "FIRSTNAME": "Shuhua"
  },
  {
    "CRN": 21717,
@@ -2740,8 +2740,8 @@
    "ROOM": "W1104",
    "PER": 20,
    "CRDTS": 4,
-   "LAST NAME": "Lai",
-   "FIRST NAME": "Shuhua"
+   "LASTNAME": "Lai",
+   "FIRSTNAME": "Shuhua"
  },
  {
    "CRN": 20518,
@@ -2754,8 +2754,8 @@
    "ROOM": "A1150",
    "PER": 0,
    "CRDTS": 3,
-   "LAST NAME": "",
-   "FIRST NAME": ""
+   "LASTNAME": "",
+   "FIRSTNAME": ""
  },
  {
    "CRN": 21718,
@@ -2768,8 +2768,8 @@
    "ROOM": "C1130",
    "PER": 7,
    "CRDTS": 3,
-   "LAST NAME": "Doloc Mihu",
-   "FIRST NAME": "Anca"
+   "LASTNAME": "Doloc Mihu",
+   "FIRSTNAME": "Anca"
  },
  {
    "CRN": 21327,
@@ -2782,8 +2782,8 @@
    "ROOM": "W3201",
    "PER": 19,
    "CRDTS": 3,
-   "LAST NAME": "Lutz",
-   "FIRST NAME": "Robert"
+   "LASTNAME": "Lutz",
+   "FIRSTNAME": "Robert"
  },
  {
    "CRN": 20993,
@@ -2796,8 +2796,8 @@
    "ROOM": "B2200",
    "PER": 10,
    "CRDTS": 3,
-   "LAST NAME": "Siva",
-   "FIRST NAME": "Sebastien"
+   "LASTNAME": "Siva",
+   "FIRSTNAME": "Sebastien"
  },
  {
    "CRN": 21870,
@@ -2810,8 +2810,8 @@
    "ROOM": "B1950",
    "PER": 15,
    "CRDTS": 3,
-   "LAST NAME": "Lutz",
-   "FIRST NAME": "Robert"
+   "LASTNAME": "Lutz",
+   "FIRSTNAME": "Robert"
  },
  {
    "CRN": 21088,
@@ -2824,8 +2824,8 @@
    "ROOM": "W1104",
    "PER": 19,
    "CRDTS": 4,
-   "LAST NAME": "Xu",
-   "FIRST NAME": "Yaquan"
+   "LASTNAME": "Xu",
+   "FIRSTNAME": "Yaquan"
  },
  {
    "CRN": 21784,
@@ -2838,8 +2838,8 @@
    "ROOM": "H1102",
    "PER": 17,
    "CRDTS": 3,
-   "LAST NAME": "Jin/Xu",
-   "FIRST NAME": "Wei/Xin"
+   "LASTNAME": "Jin/Xu",
+   "FIRSTNAME": "Wei/Xin"
  },
  {
    "CRN": 21555,
@@ -2852,8 +2852,8 @@
    "ROOM": "B1275",
    "PER": 17,
    "CRDTS": 3,
-   "LAST NAME": "",
-   "FIRST NAME": ""
+   "LASTNAME": "",
+   "FIRSTNAME": ""
  },
  {
    "CRN": 21779,
@@ -2866,8 +2866,8 @@
    "ROOM": "H1102",
    "PER": 5,
    "CRDTS": 3,
-   "LAST NAME": "",
-   "FIRST NAME": ""
+   "LASTNAME": "",
+   "FIRSTNAME": ""
  },
  {
    "CRN": 21810,
@@ -2880,8 +2880,8 @@
    "ROOM": "H2202",
    "PER": 16,
    "CRDTS": 3,
-   "LAST NAME": "",
-   "FIRST NAME": ""
+   "LASTNAME": "",
+   "FIRSTNAME": ""
  },
  {
    "CRN": 20760,
@@ -2894,8 +2894,8 @@
    "ROOM": "B2100",
    "PER": 10,
    "CRDTS": 3,
-   "LAST NAME": "Xu",
-   "FIRST NAME": "Shuting"
+   "LASTNAME": "Xu",
+   "FIRSTNAME": "Shuting"
  },
  {
    "CRN": 21778,
@@ -2908,8 +2908,8 @@
    "ROOM": "A1900",
    "PER": 20,
    "CRDTS": 3,
-   "LAST NAME": "Price",
-   "FIRST NAME": "Richard"
+   "LASTNAME": "Price",
+   "FIRSTNAME": "Richard"
  },
  {
    "CRN": 22022,
@@ -2922,8 +2922,8 @@
    "ROOM": "A1400",
    "PER": 21,
    "CRDTS": 3,
-   "LAST NAME": "Price",
-   "FIRST NAME": "Richard"
+   "LASTNAME": "Price",
+   "FIRSTNAME": "Richard"
  },
  {
    "CRN": 20462,
@@ -2936,8 +2936,8 @@
    "ROOM": "B2100",
    "PER": 9,
    "CRDTS": 3,
-   "LAST NAME": "Im",
-   "FIRST NAME": "Tacksoo"
+   "LASTNAME": "Im",
+   "FIRSTNAME": "Tacksoo"
  },
  {
    "CRN": 20463,
@@ -2950,7 +2950,7 @@
    "ROOM": "H1102",
    "PER": 1,
    "CRDTS": 3,
-   "LAST NAME": "Pollacia",
-   "FIRST NAME": "Lissa"
+   "LASTNAME": "Pollacia",
+   "FIRSTNAME": "Lissa"
  }
 ]
