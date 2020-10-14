@@ -2,37 +2,30 @@
   <form action="/homepage-faculty" method="get" name="login-faculty" id="login">
     ID:      <input type="text" name="id" size=20><br/>
     Password:<input type="text" name="pw" size= 20><br/><br/>
-    <a routerLink='/homepage-faculty' oninit >Login</a>
+    <button (click)="onLogin()">Login</button>
   </form>
   
+  <div *ngIf="bInvalidLogin" class="invalid_login">Incorrect ID or password<br/></div>
+
 </div>
 
 <div class="searchbar">
   Test purpose area<br/>
-  <a routerLink='/faculty'>Faculty view</a>
-    <a routerLink='/admin'>Administrator view</a>
+  <a routerLink='/faculty' (click)="toggleNavbar()">Faculty view</a>
+    <a routerLink='/admin' (click)="toggleNavbar()">Administrator view</a>
 </div>
 
 <script>
-  //Get rid of form "selector" once other changes are done
-  //Script is supposed to hide Log Out navbar, but the script does not seem to work
-function hideLogout() {
-  var logout = document.getElementById("logout");
-  logout.style.display = "none";
-}
 //Script is for changing between semesters. Need to press submit
 //button to change to the page/semester that was selected.
 function changeSemester() {
   var element = document.getElementById("selector");
   var selected = element.options[element.selectedIndex].value;
   if(selected == "spring2019"){
-    //window.location = 
-    //this.router.navigate([])
     routerLink="/courses-offered";
   }
   else if(selected == "fall2019"){
     routerLink="/courses-upcoming";
   }
 }
-hideLogout();
 </script>
