@@ -65,7 +65,9 @@ const routes: Routes = [
   { path: "available-hours", component: AvailableHoursComponent },
   { path: "courses-upcoming-admin", component: CoursesUpcomingAdminComponent },
   { path: "courses-offered-admin", component: CoursesOfferedAdminComponent },
-  { path: '', redirectTo: 'login-page', pathMatch: 'full' }
+  { path: '', redirectTo: 'login-page', pathMatch: 'full' },
+  //{ path: '#', redirectTo: 'homepage-faculty', pathMatch: 'full' },
+  { path: "**", component: PageNotFoundComponent }
 ];
 
 @NgModule({
