@@ -1,4 +1,6 @@
-[
+[{
+    "Year": 2020,
+    "Professors": [
     {
         "FirstName": "Anca",
         "LastName": "Doloc-Mihu",
@@ -7,7 +9,11 @@
         "SpringHours": 12,
         "TotalHours": 8,
         "RequiredHours": 4,
-        "Admin": false
+        "Admin": false,
+        "Courses": [
+            {"81504": {"Priority": "high"}},
+            {"81124": {"Priority": "low"}}
+        ]
     },
     {
         "FirstName": "Jane",
@@ -17,7 +23,11 @@
         "SpringHours": 12,
         "TotalHours": 0,
         "RequiredHours": 4,
-        "Admin": false
+        "Admin": false,
+        "Courses": [
+            {"81504": {"Priority": "high"}},
+            {"81124": {"Priority": "low"}}
+        ]
     },
     {
         "FirstName": "John",
@@ -27,7 +37,11 @@
         "SpringHours": 10,
         "TotalHours": 0,
         "RequiredHours": 16,
-        "Admin": false
+        "Admin": false,
+        "Courses": [
+            {"81504": {"Priority": "high"}},
+            {"81124": {"Priority": "low"}}
+        ]
     },
     {
         "FirstName": "Richard",
@@ -37,7 +51,11 @@
         "SpringHours": 12,
         "TotalHours": 9,
         "RequiredHours": 3,
-        "Admin": false
+        "Admin": false,
+        "Courses": [
+            {"81504": {"Priority": "high"}},
+            {"81124": {"Priority": "low"}}
+        ]
     },
     {
         "FirstName": "Robert",
@@ -47,7 +65,11 @@
         "SpringHours": 0,
         "TotalHours": 8,
         "RequiredHours": 4,
-        "Admin": false
+        "Admin": false,
+        "Courses": [
+            {"81504": {"Priority": "high"}},
+            {"81124": {"Priority": "low"}}
+        ]
     },
     {
         "FirstName": "Tacksoo",
@@ -57,7 +79,11 @@
         "SpringHours": 12,
         "TotalHours": 0,
         "RequiredHours": 12,
-        "Admin": false
+        "Admin": false,
+        "Courses": [
+            {"81504": {"Priority": "high"}},
+            {"81124": {"Priority": "low"}}
+        ]
     },
     {
         "FirstName": "Cengiz",
@@ -67,7 +93,11 @@
         "SpringHours": 12,
         "TotalHours": 4,
         "RequiredHours": 8,
-        "Admin": false
+        "Admin": false,
+        "Courses": [
+            {"81504": {"Priority": "high"}},
+            {"81124": {"Priority": "low"}}
+        ]
     },
     {
         "FirstName": "Rahaf",
@@ -77,7 +107,11 @@
         "SpringHours": 12,
         "TotalHours": 6,
         "RequiredHours": 12,
-        "Admin": false
+        "Admin": false,
+        "Courses": [
+            {"81504": {"Priority": "high"}},
+            {"81124": {"Priority": "low"}}
+        ]
     },
     {
         "FirstName": "Sonal",
@@ -87,7 +121,8 @@
         "SpringHours": 6,
         "TotalHours": 0,
         "RequiredHours": 6,
-        "Admin": true
+        "Admin": true,
+        "Courses": []
     },
     {
         "FirstName": "Evelyn",
@@ -97,6 +132,8 @@
         "SpringHours": 6,
         "TotalHours": 3,
         "RequiredHours": 3,
-        "Admin": true
-    }
+        "Admin": true,
+        "Courses": []
+    }]
+}
 ]
