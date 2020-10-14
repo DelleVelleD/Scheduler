@@ -12,4 +12,13 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  toggleLogout() {
+    var logout = document.getElementById("topNavbar");
+    if(logout.style.display == "none"){
+      logout.style.display = "block";
+    }else{
+      logout.style.display = "none";
+    }
+  }
+
 }

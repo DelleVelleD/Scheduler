@@ -15,30 +15,6 @@ export class UploadSheetComponent implements OnInit {
 
   constructor(private http:HttpClient){}
 
-/* Original code
-  onFileChange(ev) {
-    let workBook = null;
-    let jsonData = null;
-    const reader = new FileReader();
-    const file = ev.target.files[0];
-    reader.onload = (event) => {
-      const data = reader.result;
-      workBook = XLSX.read(data, { type: 'binary' });
-
-      jsonData = workBook.SheetNames.reduce((initial, name) => {
-        const sheet = workBook.Sheets[name];
-        initial[name] = XLSX.utils.sheet_to_json(sheet);
-        return initial[name];
-      }, {});
-
-      const dataString = JSON.stringify(jsonData);
-      document.getElementById('output').innerHTML = dataString.slice(0, 300).concat("...");
-      //this.setDownload("", dataString);
-    }
-    reader.readAsBinaryString(file);
-  }
-  */
-
 //////////////////
 //Upload
 
@@ -134,20 +110,20 @@ export class UploadSheetComponent implements OnInit {
     var workBook = XLSX.utils.book_new();
     var filename = "";
 
-    //TODO update this to the right json file
-    this.http.get('../assets/spring2019.json').subscribe(data => { 
+    //TODO update this to new courses file
+    this.http.get('../assets/courses.json').subscribe(data => { 
       jsonData = data;
 
-      workSheet = XLSX.utils.json_to_sheet(jsonData);
-      XLSX.utils.book_append_sheet(workBook, workSheet, "Courses");
+      for(var i in jsonData){
+        workSheet = XLSX.utils.json_to_sheet(jsonData[i]["Courses"]);
+        XLSX.utils.book_append_sheet(workBook, workSheet, jsonData[i]["Semester"] + jsonData[i]["Year"]);
+      }
 
       //filename += semester;
       //filename += year;
       filename += "Courses.xlsx";
       XLSX.writeFile(workBook, filename);
     });
-
-    //TODO add download feedback
   }
 
   //Converts the local professors json file to excel and downloads it
@@ -157,8 +133,8 @@ export class UploadSheetComponent implements OnInit {
     var workBook = XLSX.utils.book_new();
     var filename = "";
 
-    //TODO update this to the right json file
-    this.http.get('../assets/spring2019.json').subscribe(data => { 
+    //TODO update this to new professors file
+    this.http.get('../assets/professors.json').subscribe(data => { 
       jsonData = data;
 
       workSheet = XLSX.utils.json_to_sheet(jsonData);
@@ -169,8 +145,6 @@ export class UploadSheetComponent implements OnInit {
       filename += "Professors.xlsx";
       XLSX.writeFile(workBook, filename);
     });
-
-    //TODO add download feedback
   }
 
 }

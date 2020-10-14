@@ -47,7 +47,7 @@
         "Room": "W3210",
         "Credits": 3,
         "MaxStudents": 1,
-        "Professorss": [
+        "Professors": [
             {
                 "FirstName": "Jane", "LastName": "Doe"
             },
