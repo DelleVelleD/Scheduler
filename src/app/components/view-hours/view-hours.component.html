@@ -1,24 +1,47 @@
-<div class="topnav" style="background-color: #a5acb0">
-    <button routerLink="/admin" class="secondary">Homepage</button>
-</div>
-
-<div class = row>
-        <table>
-            <tr>
+<div id="pageContents" class="card-deck w-90" style="padding-top: 5px; padding-left: 15px; padding-right: 15px; max-height: 100%;">
+    <!--Search Professors-->
+    <div id="professorSearch" style="padding-bottom: 10px; padding-top: 40px;">
+        <form>
+            <div class="col-sm">
+                <div class="form-group" style="padding-bottom: 10px;">
+                    <label for="searchName">Professor Name:</label>
+                    <input name="searchName" [(ngModel)]="search.name" (ngModelChange)="onSearchName($event)" type="text" class="form-control">
+                </div>
+                <div class="form-check" style="padding-left: 20px; padding-bottom: 10px;">
+                    <input name="searchUnder" [(ngModel)]="search.bHighlightUnder" (ngModelChange)="onHighlightUnder($event)" type="checkbox" class="form-check-input">
+                    <label class="form-check-label" for="searchUnder">Highlight professors<br> under required hours</label>
+                </div>
+                <div class="form-check" style="padding-left: 20px; padding-bottom: 10px;">
+                    <input name="searchOver" [(ngModel)]="search.bHighlightOver" (ngModelChange)="onHighlightOver($event)" type="checkbox" class="form-check-input">
+                    <label class="form-check-label" for="searchOver">Highlight professors<br> with overtime</label>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--Professors List-->
+    <div id="professorList" class="card" style="background: #a5acb0; max-height: 700px;">
+        <h3 class="text-center"><strong>2020 Professors</strong></h3>
+        <div style=" overflow-y: auto"> <!--places the scroll bar next to the table-->
+        <table class="table-striped table-bordered">
+            <thead>
                 <th>Name</th>
-                <th>Hours</th>
-            </tr>
-            <tr>
-                <td>John Doe</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td>Jane Doe</td>
-                <td>15</td>
-            </tr>
-            <tr>
-                <td>Adam Nimus</td>
-                <td>7</td>
-            </tr>
+                <th>Email</th>
+                <th>Fall Hours</th>
+                <th>Spring Hours</th>
+                <th>Total Hours</th>
+                <th>Required Hours</th>
+            </thead>
+            <tbody name="filteredProfessorsList">
+                <tr *ngFor="let professor of filteredProfessors" [ngClass]="highlightClass(professor.highlight)">
+                    <td>{{professor.lastName}}, {{professor.firstName}}</td>
+                    <td>{{professor.email}}</td>
+                    <td>{{professor.fallHours}}</td>
+                    <td>{{professor.springHours}}</td>
+                    <td>{{professor.totalHours}}</td>
+                    <td>{{professor.requiredHours}}</td>
+                </tr>
+            </tbody>
         </table>
+        </div>
+    </div>
 </div>

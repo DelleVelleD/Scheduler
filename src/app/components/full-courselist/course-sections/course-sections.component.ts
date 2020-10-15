@@ -12,7 +12,7 @@ export class CourseSectionsComponent implements OnInit {
 
   courseList;
   courseNO: number;
-days: string;
+  days: string;
   displaySection = true;
   constructor(
 
@@ -167,7 +167,7 @@ conflict(course){
   //if(course.FIRSTNAME=="Doe") {
     if(course.CRN==10100){
     return true;
-  }
+    }
   return false;
-}
+  }
 }

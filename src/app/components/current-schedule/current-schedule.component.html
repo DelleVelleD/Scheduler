@@ -1,140 +1,121 @@
-<body style="background-color:#ffff;">
+<body style="background-color:#a5acb0; height: 100%; width: 100%;">
 
-<div class="topnav" style="background-color: white;">
-  <button routerLink="/faculty" class="secondary">Homepage</button>
-  <form id="selector" action="" method="" style="display: inline-block;">
-    <label style=" padding-left: 15px;">Select Semester: </label>
-    <select style=" margin-left: 15px;">
-      <option value="spring2019">Spring2019</option>
-      <option value="fall2019">Fall2019</option>
-    </select>
-    <input type="submit" value="Submit" onclick="changeSemester()" style=" margin-left: 15px;">
-  </form>
-</div>
-
-<!--
-<div class="row">
-  <button (click)="navigate()">Home Page</button>
-  <form id="selector" action="" method="">
-    <label>Select Semester </label>
-    <select>
-      <option value="spring2019">Spring2019</option>
-      <option value="fall2019">Fall2019</option>
-    </select>
-    <input type="submit" value="Submit" onclick="changeSemester()">
-  </form>
-</div>
--->
-
-<div class="row" style="height:250px; overflow-y: scroll; overflow-x:scroll">
-    <table>
-        <tr>
-            <th>CRN</th>
-                  <th>DEPT</th>
-                  <th>Course #</th>
-                  <th>Title</th>
-                  <th>Section #</th>
-                  <th>Days and Time</th>
-                  <th>Classroom</th>
-                  <th>Priority</th>
-        </tr>
-        <tr>
-            <td>20658</td>
-            <td>ITEC</td>
-            <td>3870</td>
-            <td>Software Development II</td>
-            <td>01</td>
-            <td>MW<br>1530 - 1715</td>
-            <td>W3210</td>
-            <td><select>
-                <option>None</option>
-                <option>Low</option>
-                <option>Medium</option>
-                <option>High</option>
-            </select></td>
-        </tr>
-        <tr>
-            <td>20123</td>
-            <td>ITEC</td>
-            <td>4260</td>
-            <td>Software QA & Testing</td>
-            <td>01</td>
-            <td>MW<br>1230 - 1315</td>
-            <td>W2201</td>
-            <td><select>
-                <option>None</option>
-                <option>Low</option>
-                <option>Medium</option>
-                <option>High</option>
-            </select></td>
-        </tr>
-    </table>
-</div>
-<div class ="row">
-  <div class="column">
-      <h3 id = "tablename">Current Assigned Course List for Dr. Anca Doloc Mihu</h3>
-      <div style="height:500px; overflow-y: scroll; overflow-x:scroll">
-          <table>
-              <tr>
-                  <th>CRN</th>
-                  <th>DEPT</th>
-                  <th>Course #</th>
-                  <th>Title</th>
-                  <th>Section #</th>
-                  <th>Days and Time</th>
-                  <th>Classroom</th>
-              </tr>
-              <tr>
-                  <td>20458</td>
-                  <td>ITEC</td>
-                  <td>3860</td>
-                  <td>Software Development I</td>
-                  <td>01</td>
-                  <td>MW<br>1530 - 1715</td>
-                  <td>A1520</td>
-              </tr>
-              <tr>
-                  <td>21708</td>
-                  <td>ITEC</td>
-                  <td>3860</td>
-                  <td>Software Development I</td>
-                  <td>02</td>
-                  <td>TR<br>1830 - 2015</td>
-                  <td>B2100</td>
-              </tr>
-              <tr>
-                  <td>21718</td>
-                  <td>ITEC</td>
-                  <td>4550</td>
-                  <td>Mobile Application Development</td>
-                  <td>02</td>
-                  <td>MW<br>1400 - 1515</td>
-                  <td>C1130</td>
-              </tr>
-          </table>
-      </div>
+  <div class="topnav" style="background-color:#a5acb0;">
+    <form id="selector" action="" method="" style=" display: inline-block;">
+      <label style=" padding-left: 15px;">Select Semester: </label>
+      <select style=" margin-left: 15px;">
+        <option value="spring2019">Spring2019</option>
+        <option value="fall2019">Fall2019</option>
+      </select>
+      <input type="submit" value="Submit" onclick="changeSemester()" style=" margin-left: 15px;">
+    </form>
   </div>
 
-  <!--<div id="buttons">
-      <p></p>
-      <p></p>
-      <p></p>
-      <h1> </h1>
-      <h1> </h1>
-      <h1> </h1>
-      <button (click)="navigate2()">Calendar View</button>
-      <button onclick="myFunction()">Request Schedule Change</button>
-      <button (click)="navigate()">Home Page</button>
-      <h2 id = "heady">Request Schedule Change Form</h2>
-      <form id = "subby">
-          <p>Please enter the courses you would like to drop and/or add and the reasoning behind your suggestions.</p>
-          <br>
-          <textarea rows = "15" cols = "100" name = "description">
-          </textarea><br>
-          <input type="submit" value="Submit" onclick="myFunction2()">
+  <!--The upper box containing the course search form and the results from that search-->
+  <div id="upperBox" class="card-deck w-90" style="padding-top: 5px; padding-left: 15px; padding-right: 15px; overflow-y: auto; max-height: 300px;">
+    <!--The course search form-->
+    <div id="searchCourses" *ngIf="!bShowResults" class="card" style="background-color:#a5acb0;">
+      <form>
+        <div class="form-row">
+          <div class="form-group" style="padding-left: 10px;">
+            <label for="searchCRN">CRN:</label>
+            <input id="searchCRN" [(ngModel)]="course.crn" name="searchCRN" type="text" class="form-control">
+          </div>
+          <div class="form-group" style="padding-left: 10px;">
+            <label for="searchDepartment">Department:</label>
+            <input id="searchDepartment" [(ngModel)]="course.department" name="searchDepartment" type="text" class="form-control">
+          </div>
+          <div class="form-group" style="padding-left: 10px;">
+            <label for="searchNumber">Course Number:</label>
+            <input id="searchNumber" [(ngModel)]="course.number" name="searchNumber" type="text" class="form-control">
+          </div>
+          <div class="form-group" style="padding-left: 10px;">
+            <label for="searchTitle">Title:</label>
+            <input id="searchTitle" [(ngModel)]="course.title" name="searchTitle" type="text" class="form-control">
+          </div>
+          <div class="form-group" style="padding-left: 10px;">
+            <label for="searchTime">Available Time:</label><br>
+            <input type="time" [(ngModel)]="course.startTime" name="startTime"> to <input type="time" [(ngModel)]="course.endTime" name="endTime">
+          </div>
+          <div class="form-check" style="padding-left: 30px;">
+            <input id="searchNewClasses" [(ngModel)]="course.bNewClasses" name="bNewClasses" type="checkbox" class="form-check-input" checked>
+            <label class="form-check-label" for="searchNewClasses">Include new classes in search</label>
+          </div>
+        </div>
+        <input type="submit" value="Search" (click)="searchCourses()">
+        <p *ngIf="bNoResults" style="color: crimson;">There were no classes that match your search description.</p>
       </form>
-  </div> -->
-  <div class="column" style="overflow-y: auto;">
+    </div>
+    <!--The results of the course search-->
+    <div id="courseSearchResults" *ngIf="bShowResults" class="card w-90" style="background-color:#a5acb0;">
+      <input type="submit" value="Clear Search Results" (click)="clearSearch()">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>CRN</th>
+            <th>Title</th>
+            <th>Details</th>
+            <th>Time</th>
+            <th>Room</th>
+            <th>Max Students</th>
+            <th>Add To Course List</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let course of foundCourses">
+            <td>{{course["CRN"]}}</td>
+            <td>{{course["TITLE"]}}</td>
+            <td>ITEC {{course["CRSENO"]}}, {{course["SECTNO"]}}</td> <!--TODO variable department-->
+            <td>{{course["DAYS"]}} <br> {{course["START"]}} - {{course["END"]}}</td>
+            <td>{{course["ROOM"]}}</td>
+            <td>{{course["PER"]}}</td>
+            <td><button class="btn" (click)="selectCourse(course)">Add Course</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card-deck" style="padding-top: 15px; padding-left: 15px; padding-right: 15px;">
+    <!-- The selected course list bottom left card -->
+    <div class="card mw-40" style="background-color:#a5acb0;">
+      <h3>Current Assigned Course List for Dr. Anca Doloc Mihu</h3>
+      <!--<h3>{{semester}} {{year}} Course List for {{user}}</h3> TODO, update with variables-->
+      <p *ngIf="!(selectedCourses.length > 0)">You have not added any courses yet.</p>
+      <table id="courses" *ngIf="selectedCourses.length > 0" class="table">
+        <thead>
+          <tr>
+            <th>CRN</th>
+            <th>Title</th>
+            <th>Details</th>
+            <th>Time</th>
+            <th>Room</th>
+            <th>Max Students</th>
+            <th>Priority</th>
+          </tr>
+        </thead>
+        <tbody name="selectedCoursesList">
+          <tr *ngFor="let course of selectedCourses; let i = index">
+            <td>{{course["CRN"]}}</td>
+            <td class="text-truncate">{{course["TITLE"]}}</td>
+            <td>ITEC {{course["CRSENO"]}}, {{course["SECTNO"]}}</td> <!--TODO variable department-->
+            <td>{{course["DAYS"]}} <br> {{course["START"]}} - {{course["END"]}}</td>
+            <td>{{course["ROOM"]}}</td>
+            <td>{{course["PER"]}}</td>
+            <td>
+              <select name="priorityDropdown" (change)="updateChanges(i)"> <!--TODO, limit the amount of high etc-->
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+                <option value="remove">Remove</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  <!-- The calendar bottom right card -->
+  <div id="calendar" class="card mw-40" style="background-color:#a5acb0;">
     <div class="calendar">
 
         <h1 id="welcome" style="padding-left: 5px;"><b>Calendar</b></h1>
@@ -147,7 +128,7 @@
                 <th>Time</th>
                 <th>Monday</th>
                 <th>Tuesday</th>
-                <th>Wednesday</th>
+                <th style="font-size: 13px;">Wednesday</th>
                 <th>Thursday</th>
                 <th>Friday</th>
                 <th>Saturday</th>
@@ -159,14 +140,69 @@
             <table class="offset">
               <tbody>
                 <tr>
+                  <!-- TODO Implement a true calendar for faculty that gets data from the .JSON. The current calendar
+                  is hard coded -->
+                  <!-- TODO Change onclick="showConflict()" to a better name/function. showConflict is currently a stand in
+                  until a better function is created for the above TODO reasons -->
                   <td class="headcol">8:00 AM</td>
                   <td>
-                    <div class="event triple" style="background-color: red"><input id="check" type="checkbox" class="checkbox" /><label
-                    for="check"></label>Mobile Application Development CRN: 21719 CRSE #: 4550 Room: C1130</div>
+                    <!--Old div for this calendar block. Was too long
+                      <div class="event triple" style="background-color: red"><input id="check" type="checkbox" class="checkbox" /><label
+                    for="check"></label>Mobile Application Development CRN: 21719 CRSE #: 4550 Room: C1130</div> -->
+                    <div class="event triple" onclick="showConflict()" style="background-color: rgb(255, 38, 38)"><input id="check" type="checkbox" class="checkbox"/><label
+                      for="check"></label>ITEC 4550-03
+                      <div id="exampleConflict" class="modal">
+                        <div class="modal-content">
+                            Name: Mobile Application Development
+                            <br>
+                            Department: ITEC
+                            <br>
+                            Course Number: 4550
+                            <br>
+                            Section: 03
+                            <br>
+                            Room: C1130
+                            <br>
+                            Day: MW
+                            <br>
+                            Time: 08:00-09:15
+                            <br>
+                            Credits: ***INSERT CREDITS***
+                            <br>
+                            Professor: Doloc-Mihy, Anca
+                        </div>
+                    </div>
+                    </div>
                   </td>
                   <td></td>
-                  <td><div class="event triple" style="background-color: red"><input id="check" type="checkbox" class="checkbox" /><label
-                    for="check"></label>Mobile Application Development CRN: 21719 CRSE #: 4550 Room: C1130</div></td>
+                  <td>
+                    <!-- <div class="event triple" style="background-color: red"><input id="check" type="checkbox" class="checkbox" /><label
+                    for="check"></label>Mobile Application Development CRN: 21719 CRSE #: 4550 Room: C1130</div> -->
+                    <div class="event triple" onclick="showConflict()" style="background-color: rgb(255, 38, 38)"><input id="check" type="checkbox" class="checkbox"/><label
+                      for="check"></label>ITEC 4550-03
+                      <div id="exampleConflict" class="modal">
+                        <div class="modal-content">
+                            Name: Mobile Application Development
+                            <br>
+                            Department: ITEC
+                            <br>
+                            Course Number: 4550
+                            <br>
+                            Section: 03
+                            <br>
+                            Room: C1130
+                            <br>
+                            Day: MW
+                            <br>
+                            Time: 08:00-09:15
+                            <br>
+                            Credits: ***INSERT CREDITS***
+                            <br>
+                            Professor: Doloc-Mihy, Anca
+                        </div>
+                    </div>
+                    </div>
+                  </td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -213,10 +249,36 @@
                   <td></td>
                   <td></td>
                   <td>
-                    <div class="event double"><input id="check" type="checkbox" class="checkbox" /><label
+                    <!-- <div class="event double"><input id="check" type="checkbox" class="checkbox" /><label
                         for="check"></label>Intermediate Programming
                       CRN: 20858 CRSE #: 2150
-                      Room: C2130</div>
+                      Room: C2130</div> -->
+                      <!-- TODO change  onclick="showDetail10ATh()" to a better name/more functional function-->
+                      <div class="event double" onclick="showDetail10ATh()"><input id="check" type="checkbox" class="checkbox"/><label
+                        for="check"></label>ITEC 2150-01
+                        <!-- TODO change id="detailView10ATh" to a better name that matches the above onclick -->
+                        <div id="detailView10ATh" class="modal">
+                          <div class="modal-content">
+                              Name: Mobile Application Development
+                              <br>
+                              Department: ITEC
+                              <br>
+                              Course Number: 2130
+                              <br>
+                              Section: 01
+                              <br>
+                              Room: C1130
+                              <br>
+                              Day: R
+                              <br>
+                              Time: 10:30-11:15
+                              <br>
+                              Credits: ***INSERT CREDITS***
+                              <br>
+                              Professor: Doloc-Mihy, Anca
+                          </div>
+                      </div>
+                      </div>
                   </td>
                   <td></td>
                   <td></td>
@@ -247,10 +309,36 @@
                   <td></td>
                   <td></td>
                   <td>
-                    <div class="event double"><input id="check" type="checkbox" class="checkbox" /><label
+                    <!-- <div class="event double"><input id="check" type="checkbox" class="checkbox" /><label
                         for="check"></label>Advanced Programming
                       CRN: 21408 CRSE #: 3150
-                      Room: B2100</div>
+                      Room: B2100</div> -->
+                      <!-- TODO change  onclick="showDetail12PS()" to a better name/more functional function-->
+                      <div class="event double" onclick="showDetail12PS()"><input id="check" type="checkbox" class="checkbox"/><label
+                        for="check"></label>ITEC 3150-02
+                        <!-- TODO change id="detailView12PS" to a better name that matches the above onclick -->
+                        <div id="detailView12PS" class="modal">
+                          <div class="modal-content">
+                              Name: Mobile Application Development
+                              <br>
+                              Department: ITEC
+                              <br>
+                              Course Number: 3150
+                              <br>
+                              Section: 02
+                              <br>
+                              Room: B2100
+                              <br>
+                              Day: S
+                              <br>
+                              Time: 12:00-13:15
+                              <br>
+                              Credits: ***INSERT CREDITS***
+                              <br>
+                              Professor: Doloc-Mihy, Anca
+                          </div>
+                      </div>
+                      </div>
                   </td>
                 </tr>
                 <tr>
@@ -283,13 +371,63 @@
                 <tr>
                   <td class="headcol">2:00 PM</td>
                   <td>
-                    <div class="event triple"><input id="check" type="checkbox" class="checkbox" /><label
-                        for="check"></label>Mobile Application Development CRN: 21718 CRSE #: 4550 Room: C1130</div>
+                    <!-- <div class="event triple"><input id="check" type="checkbox" class="checkbox" /><label
+                        for="check"></label>Mobile Application Development CRN: 21718 CRSE #: 4550 Room: C1130</div> -->
+                        <!-- TODO change  onclick="showDetail2PM()" to a better name/more functional function-->
+                        <div class="event triple" onclick="showDetail2PM()"><input id="check" type="checkbox" class="checkbox" /><label
+                          for="check"></label>ITEC 4550-02
+                          <!-- TODO change id="detailView2PM" to a better name that matches the above onclick -->
+                          <div id="detailView2PM" class="modal">
+                            <div class="modal-content">
+                                Name: Mobile Application Development
+                                <br>
+                                Department: ITEC
+                                <br>
+                                Course Number: 4550
+                                <br>
+                                Section: 02
+                                <br>
+                                Room: C1130
+                                <br>
+                                Day: MW
+                                <br>
+                                Time: 14:00-15:15
+                                <br>
+                                Credits: ***INSERT CREDITS***
+                                <br>
+                                Professor: Doloc-Mihy, Anca
+                            </div>
+                        </div>
+                        </div>
                   </td>
                   <td></td>
                   <td>
-                    <div class="event triple"><input id="check" type="checkbox" class="checkbox" /><label
-                        for="check"></label>Mobile Application Development CRN: 21718 CRSE #: 4550 Room: C1130</div>
+                    <!-- TODO change  onclick="showDetail2PW()" to a better name/more functional function-->
+                    <div class="event triple" onclick="showDetail2PW()"><input id="check" type="checkbox" class="checkbox" /><label
+                        for="check"></label>ITEC 4550-02
+                        <!-- TODO change id="detailView2PW" to a better name that matches the above onclick -->
+                        <div id="detailView2PW" class="modal">
+                          <div class="modal-content">
+                              Name: Mobile Application Development
+                              <br>
+                              Department: ITEC
+                              <br>
+                              Course Number: 4550
+                              <br>
+                              Section: 02
+                              <br>
+                              Room: C1130
+                              <br>
+                              Day: MW
+                              <br>
+                              Time: 14:00-15:15
+                              <br>
+                              Credits: ***INSERT CREDITS***
+                              <br>
+                              Professor: Doloc-Mihy, Anca
+                          </div>
+                      </div>
+                      </div>
                   </td>
                   <td></td>
                   <td></td>
