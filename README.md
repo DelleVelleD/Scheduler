@@ -27,17 +27,24 @@ Other Communication Tools
 
 Discord
 
-Team Roles
+Fall2019 Team Roles
 ----------
 
 1.  **Victor akinla** - Lead Programmer & Data Modeler\ :fist:
 2.  **Terrance Perry** - Documentation Lead & Client Liaison
 3.  **Sebastian Perez** - Testing Lead & Project Manager :cyclone:	
 
+Fall2020 Team Apple Roles:
+----------
+1.  **Caj Jones** - Lead Programmer & Project Manager
+2.  _**Taisann Kham**_ - UI/UX Design & Documentation Lead :page_facing_up:
+3. **Taylor Williams** - Testing Lead & Client Liason :woman_technologist:
+4. **Dustin Cofer** - Data Modeler & Testing :floppy_disk:
+
 Technologies
 ------------
 
-* Angular 
+* Angular 10
 * Node
 * Express
 * MongoDB
