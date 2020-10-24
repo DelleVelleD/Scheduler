@@ -1,0 +1,55 @@
+<div id="pageContents" class="card-group" style="padding: 15px;">
+    <!-- courses list -->
+    <div id="coursesOffered" *ngIf="selectedCourseSections.length == 0" class="card">
+        <h3 class="text-center">Courses Offered This Semester</h3>
+        <!-- course search box -->
+        <form style="padding-bottom: 10px;">
+            <input name="courseSearch" class="form-control" [(ngModel)]="courseSearch" (ngModelChange)="onSearchCourse($event)" type="text" placeholder="Enter course's name or number">
+        </form>
+        <!-- courses table header -->
+        <div class="shipping-item">
+            <span><b>Course Number</b></span>
+            <span><b>Title</b></span>
+        </div>
+        <!-- courses table -->
+        <div style="overflow-y: auto;">
+            <div class="shipping-item" *ngFor="let courseNum of uniqueCourseNums; index as i" (click)="selectCourse(courseNum)">
+                <span>{{ courseNum }}</span>
+                <span>{{ uniqueCourseTitles[i] }}</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- sections list -->
+    <div id="courseSections" *ngIf="selectedCourseSections.length != 0" class="card">
+        <h3 class="text-center">Courses {{ selectedCourseSections[0]["CourseNum"] }} Sections</h3>
+        <h4 class="text-center">{{ selectedCourseSections[0]["Title"] }}</h4>
+        <!-- sections table header -->
+        <div class="shipping-item">
+            <span><b>Section</b></span>
+            <span><b>Days</b></span>
+            <span><b>Start</b></span>
+            <span><b>End</b></span>
+        </div>
+        <!-- sections table -->
+        <div style="overflow-y: auto;">
+            <div class="shipping-item" *ngFor="let section of selectedCourseSections" (click)="selectSection(section, $event)">
+                <span>{{ section["SectionNum"] }}</span>
+                <span>{{ section["Days"] }}</span>
+                <span>{{ section["Start"] }}</span>
+                <span>{{ section["End"] }}</span>
+            </div>
+        </div>
+        <button class="btn" (click)="clearSelectedCourse()" style="background-color: #EEEEEE; margin-top: 5px;">Back</button>
+        <!-- add new course section -->
+        <div *ngIf="selectedSection != null">
+            <button class="btn btn-light" type="button">Add New Section</button>
+            <button class="btn btn-light" type="button">Remove Selected Section</button>
+            <button class="btn btn-light" type="button">Copy Selected Section</button>
+        </div>
+    </div>
+
+
+    <!-- calendar -->
+    
+</div>

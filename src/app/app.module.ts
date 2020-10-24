@@ -21,16 +21,10 @@ import { CurrentScheduleComponent } from './components/current-schedule/current-
 import { HomepageAdminComponent } from './components/admin/homepage-admin.component';
 import { FacultyComponent } from './components/faculty/faculty.component';
 
-import { CourselistService } from './components/full-courselist/courselist.service';
-import { CoursesPipe } from './components/full-courselist/courses/courses.pipe';
-import { CourseSectionsPipe } from './components/full-courselist/course-sections/course-sections.pipe';
-
-import { CoursesComponent } from './components/full-courselist/courses/courses.component';
-import { CourseSectionsComponent } from './components/full-courselist/course-sections/course-sections.component';
-
+import { CourseService } from './course.service';
+import { CourselistComponent } from './components/courselist/courselist.component';
 
 import { AppRoutingModule } from './app-routing.module';
-import { CoursesModule } from './components/full-courselist/courses.module';
 import { UploadSheetComponent } from './components/upload-sheet/upload-sheet.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ViewHoursComponent } from './components/view-hours/view-hours.component';
@@ -44,17 +38,9 @@ import { FooterComponent } from './footer/footer.component';
 
 
 const routes: Routes = [
-  {
-    path: 'main-page', component: MainPageComponent,
-    children: [
-      { path: 'full-courselist/course-sections/:CRSENO', component: CourseSectionsComponent },
-      { path: 'full-courselist/course-sections/:DAYS', component: CourseSectionsComponent },
-    ]
-  },
+  { path: 'courselist', component: CourselistComponent},
   { path: 'schedule-conflicts', component: ScheduleConflictsComponent },
   { path: "upload-sheet", component: UploadSheetComponent },
-  { path: 'full-courselist/course-sections', component: CourseSectionsComponent },
-  { path: 'full-courselist/courses', component: CoursesComponent },
   { path: 'admin', component: HomepageAdminComponent },
   { path: 'faculty', component: FacultyComponent },
   { path: 'login-page', component: LoginPageComponent },
@@ -76,7 +62,6 @@ const routes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    CoursesModule,
     HttpClientModule,
     RouterModule,
     RouterModule.forRoot(routes)
@@ -86,16 +71,13 @@ const routes: Routes = [
     AppComponent,
     MainPageComponent,
     ScheduleConflictsComponent,
-    CoursesComponent,
-    CourseSectionsComponent,
+    CourselistComponent,
     LoginPageComponent,
     CoursesOfferedComponent,
     CoursesUpcomingComponent,
     CurrentScheduleComponent,
     HomepageAdminComponent,
     FacultyComponent,
-    CoursesPipe,
-    CourseSectionsPipe,
     ViewHoursComponent,
     AvailableHoursComponent,
     CoursesOfferedAdminComponent,
@@ -103,11 +85,10 @@ const routes: Routes = [
     UploadSheetComponent,
     PageNotFoundComponent,
     HeaderComponent,
-    FooterComponent
-
+    FooterComponent,
   ],
 
-  providers: [CourselistService],
+  providers: [CourseService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

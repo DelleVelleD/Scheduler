@@ -1,0 +1,70 @@
+/* General css */
+
+.card{
+    background-color: transparent;
+    border: none;
+}
+
+#coursesOffered{
+    max-height: 80vh;
+}
+
+#courseSections{
+    max-height: 80vh;
+}
+
+.shipping-item span{
+    max-width: 80%;
+    text-align: right;
+}
+
+#courseSections .shipping-item span{
+    width: 25%;
+    text-align: center;
+}
+
+.shipping-item.selected{
+    background-color: cornflowerblue;
+}
+
+/* Small width mobile */
+
+.shipping-item {
+    min-width: 0%;
+    max-width: 100%;
+    display: flex;
+    
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 16px;
+    margin-bottom: 8px;
+    background-color: #EEEEEE;
+}
+
+#coursesOffered h3{
+    font-size: 6vw;
+}
+
+#courseSections h3{
+    font-size: 8vw;
+}
+
+#courseSections h4{
+    font-size: 6vw;
+}
+
+.calendar{
+    visibility: hidden;
+}
+
+/* Desktop or tablet or landscape mobile */
+
+@media only screen and (min-width: 768px){
+    h3{
+        font-size: 3vw;
+    }
+
+    .calendar{
+        visibility: visible;
+    }
+}
