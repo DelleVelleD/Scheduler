@@ -1,3 +1,44 @@
+<!-- create course modal -->
+<div id="createSectionModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <!-- create course form -->
+            <div class="modal-body">
+                <form>
+                    <div class="col">
+                        <!-- room -->
+                        <div class="form-group row">
+                            <label style="padding-top: 8px;" for="sectionRoom">Room: </label>
+                            <div class="col">
+                                <input name="sectionRoom" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <!-- days -->
+                        <div class="form-group row">
+                            <label style="padding-top: 8px;">Days: </label>
+                            <div class="col">
+                                <div class="btn-toolbar" role="toolbar">
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">M</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">T</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">W</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">R</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">F</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">S</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- time -->
+                        <!-- credits -->
+                        <!-- max students -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="pageContents" class="card-group" style="padding: 15px;">
     <!-- courses list -->
     <div id="coursesOffered" *ngIf="selectedCourseSections.length == 0" class="card">
@@ -40,15 +81,18 @@
                 <span>{{ section["End"] }}</span>
             </div>
         </div>
-        <button class="btn" (click)="clearSelectedCourse()" style="background-color: #EEEEEE; margin-top: 5px;">Back</button>
+        <div class="d-flex justify-content-between">
+            <button class="btn" data-toggle="modal" data-target="#createSectionModal">Create Section</button>
+            <button class="btn" (click)="clearSelectedCourse()">Back</button>
+        </div>
         <!-- add new course section -->
         <div *ngIf="selectedSection != null">
-            <button class="btn btn-light" type="button">Add New Section</button>
-            <button class="btn btn-light" type="button">Remove Selected Section</button>
-            <button class="btn btn-light" type="button">Copy Selected Section</button>
+            <div class="d-flex justify-content-between">
+                <button class="btn" (click)="removeSelectedSection()">Remove Section</button>
+                <button class="btn" data-toggle="modal" data-target="#createSectionModal" (click)="copySelectedSection()">Copy Section</button>
+            </div>
         </div>
     </div>
-
 
     <!-- calendar -->
     

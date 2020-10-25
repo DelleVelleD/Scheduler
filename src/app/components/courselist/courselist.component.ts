@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { $ } from 'protractor';
 import { CourseService } from '../../course.service';
+import { SemesterCourseSchema } from '../../course.service';
 
 @Component({
   selector: 'app-courselist',
@@ -9,6 +10,7 @@ import { CourseService } from '../../course.service';
 })
 export class CourselistComponent implements OnInit {
 
+  courseSearch = null;
   courseList = [];
   uniqueCourseNums = [];
   uniqueCourseTitles = [];
@@ -18,7 +20,9 @@ export class CourselistComponent implements OnInit {
   selectedCourseSections = [];
 
   selectedSection = null;
-  courseSearch = null;
+  selectedSectionElement : HTMLElement = null;
+
+  newCourse : {"Days": []}
 
   constructor(private courseService:CourseService) { }
 
@@ -30,9 +34,9 @@ export class CourselistComponent implements OnInit {
         this.uniqueCourseTitles.push(course["Title"]);
       }
     }
-    //this.selectedCourse = this.courseList[0]
   }
 
+  //Selects the clicked course and adds its sections to the selectedCourseSections
   selectCourse(_courseNum){
     for(let section of this.courseList){
       if(section["CourseNum"] == _courseNum){
@@ -41,17 +45,42 @@ export class CourselistComponent implements OnInit {
     }
   }
 
+  //Clears the selected course and section
   clearSelectedCourse(){
     this.selectedCourseSections = [];
+    this.clearSelectedSection();
   }
 
-  //TODO highlight selected section
-  selectSection(_section){
+  //Selects the clicked section and adds the 'selected' class to its shipping-item
+  selectSection(_section, el){
     this.selectedSection = _section;
+    if(this.selectedSectionElement == null){
+      this.selectedSectionElement = (el.target as HTMLElement).parentElement;
+      this.selectedSectionElement.classList.add("selected");
+    }else{
+      this.selectedSectionElement.classList.remove("selected");
+      this.selectedSectionElement = (el.target as HTMLElement).parentElement;
+      this.selectedSectionElement.classList.add("selected");
+    }
   }
 
+  //Clears the selected section and removes the 'selected' class from its shipping-item
   clearSelectedSection(){
     this.selectedSection = null;
+    this.selectedSectionElement.classList.remove("selected");
+    this.selectedSectionElement = null;
+  }
+
+  createSection(){
+
+  }
+
+  copySelectedSection(){
+
+  }
+
+  removeSelectedSection(){
+
   }
 
 }
