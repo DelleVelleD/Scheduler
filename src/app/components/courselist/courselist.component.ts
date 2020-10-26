@@ -22,7 +22,9 @@ export class CourselistComponent implements OnInit {
   selectedSection = null;
   selectedSectionElement : HTMLElement = null;
 
-  newCourse : {"Days": []}
+  coursesStartTime;
+  coursesEndTime;
+  newSection : {"Room":string, "Days": [], "Start":string, "End":string, "Credits":number, "MaxStudents":number}
 
   constructor(private courseService:CourseService) { }
 
@@ -34,6 +36,8 @@ export class CourselistComponent implements OnInit {
         this.uniqueCourseTitles.push(course["Title"]);
       }
     }
+    this.coursesStartTime = this.courseService.getCoursesStartTime();
+    this.coursesStartTime = this.courseService.getCoursesEndTime();
   }
 
   //Selects the clicked course and adds its sections to the selectedCourseSections
@@ -71,6 +75,7 @@ export class CourselistComponent implements OnInit {
     this.selectedSectionElement = null;
   }
 
+  //TODO get data from form and create the new section
   createSection(){
 
   }

@@ -8,37 +8,67 @@
                     <div class="col">
                         <!-- room -->
                         <div class="form-group row">
-                            <label style="padding-top: 8px;" for="sectionRoom">Room: </label>
+                            <label for="createSectionRoom">Room: </label>
                             <div class="col">
-                                <input name="sectionRoom" type="text" class="form-control">
+                                <input name="createSectionRoom" type="text" class="form-control">
                             </div>
                         </div>
                         <!-- days -->
                         <div class="form-group row">
-                            <label style="padding-top: 8px;">Days: </label>
+                            <label>Days: </label>
                             <div class="col">
                                 <div class="btn-toolbar" role="toolbar">
                                     <div class="btn-group" role="group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">M</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">T</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">W</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">R</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">F</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">S</button>
+                                        <button name="createSectionDayM" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">M</button>
+                                        <button name="createSectionDayT" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">T</button>
+                                        <button name="createSectionDayW" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">W</button>
+                                        <button name="createSectionDayR" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">R</button>
+                                        <button name="createSectionDayF" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">F</button>
+                                        <button name="createSectionDayS" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">S</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- time -->
+                        <div class="form-group row">
+                            <label for="createSectionStart">Start: </label>
+                            <div class="col">
+                                <input name="createSectionStart" type="time" min="{{coursesStartTime}}" max="{{coursesEndTime}}" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="createSectionEnd">End: </label>
+                            <div class="col">
+                                <input name="createSectionEnd" type="time"  min="{{coursesStartTime}}" max="{{coursesEndTime}}" class="form-control">
+                            </div>
+                        </div>
                         <!-- credits -->
+                        <div class="form-group row">
+                            <label for="createSectionCredits">Credits: </label>
+                            <div class="col">
+                                <input name="createSectionCredits" type="number" class="form-control">
+                            </div>
+                        </div>
                         <!-- max students -->
+                        <div class="form-group row">
+                            <label for="createSectionMaxStudents">Max Students: </label>
+                            <div class="col">
+                                <input name="createSectionMaxStudents" type="number" class="form-control">
+                            </div>
+                        </div>
                     </div>
                 </form>
+            </div>
+            <!-- footer buttons -->
+            <div class="modal-footer">
+                <button class="btn" (click)="createSection()" data-dismiss="modal">Create</button>
+                <button class="btn" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
 </div>
 
+<!-- actual page -->
 <div id="pageContents" class="card-group" style="padding: 15px;">
     <!-- courses list -->
     <div id="coursesOffered" *ngIf="selectedCourseSections.length == 0" class="card">

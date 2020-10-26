@@ -15,6 +15,9 @@ export interface SemesterCourseProfessorSchema {"Email":string; "Priority":strin
 })
 export class CourseService {
 
+  coursesStartTime = "08:00";
+  coursesEndTime = "22:00"
+
   currentSemester : {semester:string, year:number} = {semester:"Fall", year:2020};
   semesters = [];
 
@@ -102,5 +105,23 @@ export class CourseService {
   //TODO fix this once mongo is setup
   getCurrentSemesterCoursesMongo() {
     return this.http.get('http://localhost:4200/api/getUser/').map((response: Response) => response.json());
+  }
+
+////OTHERS////
+
+  getCoursesStartTime(){
+    return this.coursesStartTime;
+  }
+  setCoursesStartTime(_time:string){
+    this.coursesStartTime = _time;
+    return this.coursesStartTime;
+  }
+
+  getCoursesEndTime(){
+    return this.coursesEndTime;
+  }
+  setCoursesEndTime(_time:string){
+    this.coursesEndTime = _time;
+    return this.coursesEndTime;
   }
 }
