@@ -1,70 +1,85 @@
 <!-- create course modal -->
 <div id="createSectionModal" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <!-- create course form -->
-            <div class="modal-body">
-                <form>
-                    <div class="col">
-                        <!-- room -->
-                        <div class="form-group row">
-                            <label for="createSectionRoom">Room: </label>
-                            <div class="col">
-                                <input name="createSectionRoom" type="text" class="form-control">
-                            </div>
-                        </div>
-                        <!-- days -->
-                        <div class="form-group row">
-                            <label>Days: </label>
-                            <div class="col">
-                                <div class="btn-toolbar" role="toolbar">
-                                    <div class="btn-group" role="group">
-                                        <button name="createSectionDayM" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">M</button>
-                                        <button name="createSectionDayT" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">T</button>
-                                        <button name="createSectionDayW" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">W</button>
-                                        <button name="createSectionDayR" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">R</button>
-                                        <button name="createSectionDayF" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">F</button>
-                                        <button name="createSectionDayS" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">S</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- time -->
-                        <div class="form-group row">
-                            <label for="createSectionStart">Start: </label>
-                            <div class="col">
-                                <input name="createSectionStart" type="time" min="{{coursesStartTime}}" max="{{coursesEndTime}}" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="createSectionEnd">End: </label>
-                            <div class="col">
-                                <input name="createSectionEnd" type="time"  min="{{coursesStartTime}}" max="{{coursesEndTime}}" class="form-control">
-                            </div>
-                        </div>
-                        <!-- credits -->
-                        <div class="form-group row">
-                            <label for="createSectionCredits">Credits: </label>
-                            <div class="col">
-                                <input name="createSectionCredits" type="number" class="form-control">
-                            </div>
-                        </div>
-                        <!-- max students -->
-                        <div class="form-group row">
-                            <label for="createSectionMaxStudents">Max Students: </label>
-                            <div class="col">
-                                <input name="createSectionMaxStudents" type="number" class="form-control">
-                            </div>
+    <div class="modal-content">
+        <!-- create course form -->
+        <div class="modal-body">
+        <form>
+        <div class="col">
+            <!-- room -->
+            <div class="form-group row">
+                <label for="createSectionRoom">Room: </label>
+                <div class="col">
+                    <input name="createSectionRoom" type="text" class="form-control">
+                </div>
+            </div>
+            <!-- days -->
+            <div class="form-group row">
+                <label>Days: </label>
+                <div class="col">
+                    <div class="btn-toolbar" role="toolbar">
+                        <div class="btn-group" role="group">
+                            <button name="createSectionDayM" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">M</button>
+                            <button name="createSectionDayT" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">T</button>
+                            <button name="createSectionDayW" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">W</button>
+                            <button name="createSectionDayR" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">R</button>
+                            <button name="createSectionDayF" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">F</button>
+                            <button name="createSectionDayS" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">S</button>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
-            <!-- footer buttons -->
-            <div class="modal-footer">
-                <button class="btn" (click)="createSection()" data-dismiss="modal">Create</button>
-                <button class="btn" data-dismiss="modal">Close</button>
+            <!-- time -->
+            <div class="form-group row">
+                <label for="createSectionStart">Start: </label>
+                <div class="col">
+                    <input name="createSectionStart" type="time" min="{{coursesStartTime}}" max="{{coursesEndTime}}" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="createSectionEnd">End: </label>
+                <div class="col">
+                    <input name="createSectionEnd" type="time"  min="{{coursesStartTime}}" max="{{coursesEndTime}}" class="form-control">
+                </div>
+            </div>
+            <!-- credits -->
+            <div class="form-group row">
+                <label for="createSectionCredits">Credits: </label>
+                <div class="col">
+                    <input name="createSectionCredits" type="number" class="form-control">
+                </div>
+            </div>
+            <!-- max students -->
+            <div class="form-group row">
+                <label for="createSectionMaxStudents">Max Students: </label>
+                <div class="col">
+                    <input name="createSectionMaxStudents" type="number" class="form-control">
+                </div>
             </div>
         </div>
+        </form>
+        </div>
+        <!-- footer buttons -->
+        <div class="modal-footer">
+            <button class="btn" (click)="createSection()" data-dismiss="modal">Create</button>
+            <button class="btn" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- calendar event modal -->
+<div id="calendarEventModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div id="eventSection" *ngFor="let section of selectedEventSections">
+            <label id="eventSectionName">Title: {{section["Title"]}} <br> </label>
+            <label id="eventSectionName">Subject: {{section["Subject"]}} <br> </label>
+            <label id="eventSectionName">Title: {{section["Title"]}} <br> </label>
+            <label id="eventSectionName">Title: {{section["Title"]}} <br> </label>
+            <label id="eventSectionName">Title: {{section["Title"]}} <br> </label>
+        </div>
+    </div>
     </div>
 </div>
 
@@ -75,7 +90,7 @@
         <h3 class="text-center">Courses Offered This Semester</h3>
         <!-- course search box -->
         <form style="padding-bottom: 10px;">
-            <input name="courseSearch" class="form-control" [(ngModel)]="courseSearch" (ngModelChange)="onSearchCourse($event)" type="text" placeholder="Enter course's name or number">
+            <input id="courseSearch" name="courseSearch" class="form-control" [(ngModel)]="courseSearch" (ngModelChange)="onSearchCourse($event)" type="text" placeholder="Enter course's name or number">
         </form>
         <!-- courses table header -->
         <div class="shipping-item">
@@ -84,9 +99,9 @@
         </div>
         <!-- courses table -->
         <div style="overflow-y: auto;">
-            <div class="shipping-item" *ngFor="let courseNum of uniqueCourseNums; index as i" (click)="selectCourse(courseNum)">
-                <span>{{ courseNum }}</span>
-                <span>{{ uniqueCourseTitles[i] }}</span>
+            <div class="shipping-item" *ngFor="let course of filteredCourses" (click)="selectCourse(course)">
+                <span>{{ course["CourseNum"] }}</span>
+                <span>{{ course["Title"] }}</span>
             </div>
         </div>
     </div>
@@ -125,5 +140,39 @@
     </div>
 
     <!-- calendar -->
-    
+    <div id="calendar" class="card">
+        <table class="table bordered">
+            <thead>
+                <tr class="text-center">
+                    <th id="calendarTimeColumn"></th>
+                    <th>Sunday</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let time of coursesTimes">
+                    <td>{{ time }}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="calendarEvents" style="z-index: 2;">
+            <div class="calendarEvent text-center" *ngFor="let section of selectedCourseSections" data-toggle="modal" data-target="#calendarEventModal" (click)="selectSection(section)">
+                <!-- TODO: update to better time in json-->
+                <p>{{section["Subject"]}} {{section["CourseNum"]}}, {{section["SectionNum"]}}</p>
+            </div>
+        </div>
+    </div>
+
 </div>
