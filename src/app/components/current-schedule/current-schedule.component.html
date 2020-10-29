@@ -78,11 +78,11 @@
 
   <div class="card-deck" style="padding-top: 15px; padding-left: 15px; padding-right: 15px;">
     <!-- The selected course list bottom left card -->
-    <div class="card mw-40" style="background-color:#a5acb0;">
+    <div class="card mw-40" style="background: #a5acb0; max-height: 700px;">
       <h3>Current Assigned Course List for Dr. Anca Doloc Mihu</h3>
       <!--<h3>{{semester}} {{year}} Course List for {{user}}</h3> TODO, update with variables-->
       <p *ngIf="!(selectedCourses.length > 0)">You have not added any courses yet.</p>
-      <table id="courses" *ngIf="selectedCourses.length > 0" class="table">
+      <table id="courses" *ngIf="selectedCourses.length > 0" class="table-striped table-bordered">
         <thead>
           <tr>
             <th>CRN</th>

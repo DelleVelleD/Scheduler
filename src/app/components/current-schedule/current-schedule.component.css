@@ -3,7 +3,8 @@
 #courses{
   width: 100%;
   height: 0;
-  background-color: #a5acb0;;
+  /* border-color: black; */
+  /* background-color: #a5acb0; */
 }
 
 #courses th {
@@ -15,6 +16,7 @@
   height: 20px;
 }
 
+/*
 #courses tr:nth-child(even) {
   background-color: #00704a;
   color: #ffffff;
@@ -24,7 +26,7 @@
 #courses tr:nth-child(odd) {
   background-color: #ffffff;
 }
-
+*/
 #courses tr.conflict{
   background-color: rgb(255, 38, 38);
   color: white;
@@ -207,7 +209,8 @@ position: relative;
 top: 100px;
 }
 table {
-background: #fff;
+/* background: #fff; */
+background-color: white;
 width: 100%;
 height: 100%;
 border-collapse: collapse;
