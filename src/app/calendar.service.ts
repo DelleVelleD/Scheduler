@@ -15,11 +15,6 @@ export class CalendarService {
 
   ngOnInit(){}
 
-  //On clicking a calendar event, display the sections of that time in the modal
-  clickCalendarEvent(_section){
-    
-  }
-
   //Clears the calendar events from given document
   clearCalendarEvents(_document:Document){
     var calEventsDiv = _document.getElementById("calendarEvents");
@@ -28,9 +23,8 @@ export class CalendarService {
     }
   }
 
-
   //Clears current calendar events, creates new calendar events from given list, and places the calendar events into given document
-  handleCalendarEvents(_document:Document, _sectionList:any[]){ //TODO replace time json gets with nums
+  handleCalendarEvents(_document:Document, _sectionList:any[], _eventSections:any[]){ //TODO replace time json gets with nums
     this.clearCalendarEvents(_document);
     var calEventsDiv = _document.getElementById("calendarEvents");
     for(let section of _sectionList){
@@ -43,7 +37,8 @@ export class CalendarService {
         calEventText.style.textAlign = "center";
         calEvent.appendChild(calEventText);
 
-        //adding the calendarEvent class doesnt do anything, so i manually change the styles, TODO fix this
+        //adding the calendarEvent class doesnt do anything, so i manually change the styles
+        //TODO fix this ^
         calEvent.classList.add("calendarEvent", "text-centered");
         calEvent.setAttribute("name", "calendarEvent");
         calEvent.style.position = "absolute";
@@ -53,9 +48,16 @@ export class CalendarService {
         calEvent.style.backgroundColor = section.Professors.length>1 ? "crimson" : "#00B4FC";
         calEvent.style.cursor = "pointer";
 
+        //add info to modal and open modal on click
         calEvent.addEventListener('click', (e) =>{
-          //clickCalendarEvent(section);
-          this.clickCalendarEvent(section);
+          _eventSections.length = 0;
+          for(let sec of _sectionList){
+            if(sec.Start == section.Start){
+              if(!_eventSections.includes(sec)){
+                _eventSections.push(sec);
+              }
+            }
+          }
         });
         calEvent.setAttribute("data-toggle", "modal");
         calEvent.setAttribute("data-target", "#calendarEventModal");
@@ -65,7 +67,6 @@ export class CalendarService {
         var bodyRowHeight:number = _document.getElementById("calendarBodyRow").getBoundingClientRect().height;
         var startHour:number = parseInt(section.Start.replace(':', '').substring(0, section.Start.length-3));
         var startMinute:number = parseInt(section.Start.replace(':', '').substring(section.Start.length-1, section.Start.length-3));
-        console.log(theadHeight, bodyRowHeight, startHour, startMinute)
         calEvent.style.top = (theadHeight + (bodyRowHeight*2 * startHour) + (bodyRowHeight * startMinute/30)).toString() + "px";
 
         var endHour:number = parseInt(section.End.replace(':', '').substring(0, section.End.length-3));
@@ -107,7 +108,6 @@ export class CalendarService {
             calEvent.style.left = (timeColWidth+sunColWidth+monColWidth+tueColWidth+wedColWidth+thuColWidth+friColWidth).toString() + "px";
             break;
         }
-        console.log(calEvent.style.top, calEvent.style.height, calEvent.style.left, calEvent.style.width);
         calEventsDiv.appendChild(calEvent);
       }
     }

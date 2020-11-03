@@ -139,19 +139,40 @@
 <div id="calendarEventModal" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-        <div class="modal-body">
-            <div id="eventSection" *ngFor="let section of selectedEventSections">
-                <label id="eventSectionCRN">CRN: {{section["CRN"]}} <br> </label>
-                <label id="eventSectionName">Title: {{section["Title"]}} <br> </label>
-                <label id="eventSectionName">Course: {{section["Subject"]}} {{section["CourseNum"]}}<br> </label>
-                <label id="eventSectionName">Section: {{section["SectionNum"]}} <br> </label>
-                <label id="eventSectionName">Days: {{section["Days"]}} <br> </label>
-                <label id="eventSectionName">Time: {{section["Start"]}} - {{section["End"]}}<br> </label>
-                <label id="eventSectionName">Room: {{section["Room"]}} <br> </label>
-                <label id="eventSectionName">Credits: {{section["Credits"]}} <br> </label>
-                <label id="eventSectionName">Max Students: {{section["MaxStudents"]}} <br> </label>
+    <div class="modal-body" style="overflow-y: auto; max-height: 80vh;">
+        <div id="eventSection" *ngFor="let section of selectedEventSections" class="container border" style="margin-bottom: 10px;">
+        <div class="row">
+            <div class="col-3">
+                <span><b>CRN:</b> <br> </span>
+                <span><b>Title:</b>  <br> </span>
+                <span><b>Course:</b> <br> </span>
+                <span><b>Section:</b>  <br> </span>
+                <span><b>Days:</b> <br> </span>
+                <span><b>Time:</b> <br> </span>
+                <span><b>Room:</b>  <br> </span>
+                <span><b>Credits:</b> <br> </span>
+                <span><b>Students:</b> <br> </span>
+                <span><b>Professors:</b></span>
+            </div>
+            <div class="col">
+                <span> {{section["CRN"]}} <br> </span>
+                <span> {{section["Title"]}} <br> </span>
+                <span> {{section["Subject"]}} {{section["CourseNum"]}}<br> </span>
+                <span> {{section["SectionNum"]}} <br> </span>
+                <span> {{section["Days"]}} <br> </span>
+                <span> {{section["Start"]}} - {{section["End"]}}<br> </span>
+                <span> {{section["Room"]}} <br> </span>
+                <span> {{section["Credits"]}} <br> </span>
+                <span> {{section["MaxStudents"]}} <br> </span>
+                <!-- TODO update professor grab to new format -->
+                <span *ngFor="let professor of section.Professors"> 
+                    {{professor["FirstName"]}} {{professor["LastName"]}}<br>
+                </span>
+                <span *ngIf="section.Professors.length == 0" style="color: crimson;"> None </span>
             </div>
         </div>
+        </div>
+    </div>
     </div>
     </div>
 </div>

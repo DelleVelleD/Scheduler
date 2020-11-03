@@ -23,6 +23,7 @@ export class CourselistComponent implements OnInit {
   //selected section infos
   selectedSection = null;
   selectedSectionElement : HTMLElement = null;
+  selectedEventSections = [];
 
   //display times for calendar and max/min for time inputs
   coursesStartTime;
@@ -81,12 +82,13 @@ export class CourselistComponent implements OnInit {
         this.selectedCourseSections.push(section);
       }
     }
-    this.calendarService.handleCalendarEvents(document, this.selectedCourseSections);
+    this.calendarService.handleCalendarEvents(document, this.selectedCourseSections, this.selectedEventSections);
   }
 
   //Clears the selected course and section
   clearSelectedCourse(){
     this.selectedCourseSections = [];
+    this.selectedEventSections = [];
     this.clearSelectedSection();
     this.calendarService.clearCalendarEvents(document);
   }

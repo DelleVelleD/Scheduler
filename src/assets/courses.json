@@ -21,6 +21,24 @@
             }
         ]
     },
+	{
+        "CRN": 815026,
+        "Subject": "ITEC",
+        "CourseNum": 3870,
+        "Title": "Software Development II",
+        "SectionNum": "10",
+        "Days": "TR",
+        "Start": "15:30",
+        "End": "17:15",
+        "Room": "W2210",
+        "Credits": 4,
+        "MaxStudents": 20,
+        "Professors": [
+            {
+                "FirstName": "Anca", "LastName": "Doloc-Mihu"
+            }
+        ]
+    },
     {
         "CRN": 81124,
         "Subject": "ITEC",
