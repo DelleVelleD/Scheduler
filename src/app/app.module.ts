@@ -22,6 +22,7 @@ import { HomepageAdminComponent } from './components/admin/homepage-admin.compon
 import { FacultyComponent } from './components/faculty/faculty.component';
 
 import { CourseService } from './course.service';
+import { FacultyCourselistComponent } from './components/faculty-courselist/faculty-courselist.component';
 import { CourselistComponent } from './components/courselist/courselist.component';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -35,10 +36,12 @@ import { CoursesUpcomingAdminComponent } from './components/courses-upcoming-adm
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { CalendarService } from './calendar.service';
 
 
 const routes: Routes = [
   { path: 'courselist', component: CourselistComponent},
+  { path: 'faculty-courselist', component: FacultyCourselistComponent},
   { path: 'schedule-conflicts', component: ScheduleConflictsComponent },
   { path: "upload-sheet", component: UploadSheetComponent },
   { path: 'admin', component: HomepageAdminComponent },
@@ -72,6 +75,7 @@ const routes: Routes = [
     MainPageComponent,
     ScheduleConflictsComponent,
     CourselistComponent,
+    FacultyCourselistComponent,
     LoginPageComponent,
     CoursesOfferedComponent,
     CoursesUpcomingComponent,
@@ -88,7 +92,7 @@ const routes: Routes = [
     FooterComponent,
   ],
 
-  providers: [CourseService],
+  providers: [CourseService, CalendarService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -1,0 +1,209 @@
+/* General css */
+
+.card{
+    background-color: transparent;
+    border: none;
+}
+
+#coursesOffered{
+    max-height: 80vh;
+}
+
+#courseSections{
+    max-height: 80vh;
+}
+
+.shipping-item span{
+    max-width: 80%;
+    text-align: right;
+}
+
+#courseSections .shipping-item span{
+    width: 25%;
+    text-align: center;
+}
+
+.shipping-item.selected{
+    background-color: cornflowerblue;
+}
+
+.btn{
+    background-color: #EEEEEE;
+    margin-top: 5px;
+}
+
+form label{
+    padding-top: 8px;
+}
+
+/* calendar */
+
+#calendar{
+    background-color: white; 
+    margin-left: 3vw; 
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    max-height: 80vh;
+    overflow: auto;
+}
+
+.table thead th{
+    width: 10vw;
+    border-top: none;
+    border-left: 2px solid #dee2e6;
+}
+
+#calendarTimeColumn{
+    width: 6vw; 
+    border-left: none;
+}
+
+.table td{
+    height: 25px;
+    padding: 2px;
+    font-size: 12px;
+    border-left: 2px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.calendarEvent{
+    border-radius: 2px;
+    color: white;
+    font-size: 1vw;
+    position: absolute;
+    background-color: #00B4FC;
+    cursor: pointer;
+}
+
+.calenderEvent:hover{
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    background: #00B4FC;
+}
+
+.calendarEvent.conflict{
+    background: crimson;
+}
+
+/* Small width mobile */
+
+.shipping-item {
+    min-width: 0%;
+    max-width: 100%;
+    display: flex;
+    
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 16px;
+    margin-bottom: 8px;
+    background-color: #EEEEEE;
+}
+
+#coursesOffered h3{
+    font-size: 6vw;
+}
+
+#courseSections h3{
+    font-size: 8vw;
+}
+
+#courseSections h4{
+    font-size: 6vw;
+}
+
+#calendar{
+    display: none;
+}
+
+/* tablet */
+
+@media only screen and (min-width: 768px){
+    h3{
+        font-size: 3vw;
+    }
+
+    .shipping-item {
+        font-size: 3vw;
+    }
+    
+    #courseSections{
+        max-height: 50vh;
+    }
+
+    #courseSearch{
+        font-size: 3vw;
+        padding: 8px 16px;
+        margin-bottom: 8px;
+    }
+
+    .btn{
+        margin-top: 5px;
+        font-size: 3vw;
+    }
+
+    label{
+        font-size: 3vw;
+    }
+
+    input{
+        font-size: 3vw;
+    }
+}
+
+/* landscape or desktop */
+
+@media only screen and (min-width: 1024px) and (orientation:landscape){
+    #calendar{
+        display: inline;
+    }
+
+    .shipping-item {
+    min-width: 0%;
+    max-width: 100%;
+    display: flex;
+    font-size: 1.2vw;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 16px;
+    margin-bottom: 8px;
+    background-color: #EEEEEE;
+    }
+
+    #coursesOffered h3{
+        font-size: 2vw;
+    }
+
+    #courseSections h3{
+        font-size: 2vw;
+    }
+
+    #courseSections h4{
+        font-size: 2vw;
+    }
+
+    #courseSearch{
+        font-size: 1.2vw;
+    }
+
+    #coursesOffered{
+        max-width: 30vw;
+    }
+
+    #courseSections{
+        max-width: 30vw;
+    }
+
+    .btn{
+        margin-top: 5px;
+        font-size: 1vw;
+    }
+
+    label{
+        font-size: 1vw;
+    }
+
+    input{
+        font-size: 1vw;
+    }
+}
