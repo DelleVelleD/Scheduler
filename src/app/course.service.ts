@@ -47,7 +47,7 @@ export class CourseService {
 
 ////SEMESTERS////
 
-  //Returns the semester matchig given params, null otherwise
+  //Returns the semester matching given params, null otherwise
   getSemester(_semester:string, _year:number){
     for(let semester of this.semesters){
       if(semester["Semester"].toUpperCase() === _semester.toUpperCase() && semester["Year"] == _year){
@@ -70,22 +70,38 @@ export class CourseService {
   }
 
 ////COURSES////
+//TODO update to use database for all methods
 
   //Adds the provided course to the provided semester
   addCourseToSemester(_course: SemesterCourseSchema, _semester:string, _year:number) {
     this.getSemester(_semester, _year)["Courses"].push(_course);
   }
-
   //Adds the provided course to the current semester
   addCourseToCurrentSemester(_course: SemesterCourseSchema){
     this.getCurrentSemester()["Courses"].push(_course);
+  }
+
+  //Removes a course from the provided semester that matches the provided crn
+  removeCourseFromSemester(_courseCRN:number, _semester:string, _year:number){
+    for(var i in this.getSemester(_semester, _year)["Courses"]){
+      if(this.getSemester(_semester, _year)["Courses"][i]["CRN"] == _courseCRN){
+        this.getSemester(_semester, _year)["Courses"].splice(i, 1);
+      }
+    }
+  }
+  //Removes a course from the current semester that matches the provided crn
+  removeCourseFromCurrentSemester(_courseCRN:number){
+    for(var i in this.getCurrentSemester()["Courses"]){
+      if(this.getCurrentSemester()["Courses"][i]["CRN"] == _courseCRN){
+        this.getCurrentSemester()["Courses"].splice(i, 1);
+      }
+    }
   }
 
   //Returns an array of courses from the semester that matches the provided params
   getSemesterCourses(_semester:string, _year:number) {
     return this.getSemester(_semester, _year)["Courses"];
   }
-
   //Returns an array of courses from the current semester
   getCurrentSemesterCourses(){
     return this.getCurrentSemester()["Courses"];
@@ -95,7 +111,6 @@ export class CourseService {
   clearSemesterCourses(_semester:string, _year:number) {
     this.getSemester(_semester, _year)["Courses"] = [];
   }
-
   //Clears the courses from the current semester
   clearCurrentSemesterCourses(_semester:string, _year:number) {
     this.getCurrentSemester()["Courses"] = [];
@@ -115,6 +130,17 @@ export class CourseService {
   setCoursesStartTime(_time:string){
     this.coursesStartTime = _time;
     return this.coursesStartTime;
+  }
+
+  //Loops thru all the courses and finds the highest crn and returns one higher than it
+  generateNextCRN(){
+    var maxCRN = -1;
+    for(let course of this.getCurrentSemester()["Courses"]){
+      if(course["CRN"] > maxCRN){
+        maxCRN = course["CRN"];
+      }
+    }
+    return maxCRN + 1;
   }
 
   getCoursesEndTime(){

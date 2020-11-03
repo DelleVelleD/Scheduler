@@ -6,11 +6,27 @@
         <div class="modal-body">
         <form>
         <div class="col">
+            <small class="form-text text-muted" style="padding-bottom: 10px;">Please leave any irrelevant inputs empty</small>
             <!-- room -->
             <div class="form-group row">
                 <label for="createSectionRoom">Room: </label>
                 <div class="col">
-                    <input name="createSectionRoom" type="text" class="form-control">
+                    <input name="createSectionRoom" [(ngModel)]="newSection.Room" type="text" class="form-control">
+                </div>
+            </div>
+            <!-- section number -->
+            <div class="form-group row">
+                <label for="createSectionNumber">Section: </label>
+                <div class="col">
+                    <input name="createSectionNumber" [(ngModel)]="newSection.SectionNum" type="number" class="form-control">
+                </div>
+                <small class="form-text text-muted">Check for existing section numbers first</small>
+            </div>
+            <!-- online code -->
+            <div class="form-group row">
+                <label for="createSectionOnlineCode">Online Code: </label>
+                <div class="col">
+                    <input name="createSectionOnlineCode" [(ngModel)]="newSection.OnlineCode" type="text" class="form-control">
                 </div>
             </div>
             <!-- days -->
@@ -19,12 +35,12 @@
                 <div class="col">
                     <div class="btn-toolbar" role="toolbar">
                         <div class="btn-group" role="group">
-                            <button name="createSectionDayM" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">M</button>
-                            <button name="createSectionDayT" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">T</button>
-                            <button name="createSectionDayW" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">W</button>
-                            <button name="createSectionDayR" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">R</button>
-                            <button name="createSectionDayF" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">F</button>
-                            <button name="createSectionDayS" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">S</button>
+                            <button name="createSectionDayM" (click)="toggleDay('M', false)" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">M</button>
+                            <button name="createSectionDayT" (click)="toggleDay('T', false)" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">T</button>
+                            <button name="createSectionDayW" (click)="toggleDay('W', false)" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">W</button>
+                            <button name="createSectionDayR" (click)="toggleDay('R', false)" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">R</button>
+                            <button name="createSectionDayF" (click)="toggleDay('F', false)" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">F</button>
+                            <button name="createSectionDayS" (click)="toggleDay('S', false)" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">S</button>
                         </div>
                     </div>
                 </div>
@@ -33,27 +49,78 @@
             <div class="form-group row">
                 <label for="createSectionStart">Start: </label>
                 <div class="col">
-                    <input name="createSectionStart" type="time" min="{{coursesStartTime}}" max="{{coursesEndTime}}" class="form-control">
+                    <input name="createSectionStart" [(ngModel)]="newSection.Start" type="time" min="{{coursesStartTime}}" max="{{coursesEndTime}}" class="form-control">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="createSectionEnd">End: </label>
                 <div class="col">
-                    <input name="createSectionEnd" type="time"  min="{{coursesStartTime}}" max="{{coursesEndTime}}" class="form-control">
+                    <input name="createSectionEnd" [(ngModel)]="newSection.End" type="time"  min="{{coursesStartTime}}" max="{{coursesEndTime}}" class="form-control">
                 </div>
             </div>
             <!-- credits -->
             <div class="form-group row">
                 <label for="createSectionCredits">Credits: </label>
                 <div class="col">
-                    <input name="createSectionCredits" type="number" class="form-control">
+                    <input name="createSectionCredits" [(ngModel)]="newSection.Credits" type="number" class="form-control">
                 </div>
             </div>
             <!-- max students -->
             <div class="form-group row">
                 <label for="createSectionMaxStudents">Max Students: </label>
                 <div class="col">
-                    <input name="createSectionMaxStudents" type="number" class="form-control">
+                    <input name="createSectionMaxStudents" [(ngModel)]="newSection.MaxStudents" type="number" class="form-control">
+                </div>
+            </div>
+            <!-- per -->
+            <!-- TODO figure out what per is -->
+            <div class="form-group row">
+                <label for="createSectionPer">Per: </label>
+                <div class="col">
+                    <input name="createSectionPer" [(ngModel)]="newSection.Per" type="number" class="form-control">
+                </div>
+            </div>
+            <!-- fulltime -->
+            <div class="form-group row">
+                <label for="createSectionFullTime">Full or Part Time: </label>
+                <div class="col">
+                    <button name="createSectionFullTime" (click)="toggleFullTime()" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">Part Time</button>
+                </div>
+            </div>
+            <!-- lab room -->
+            <div class="form-group row">
+                <label for="createSectionLabRoom">Lab Room: </label>
+                <div class="col">
+                    <input name="createSectionLabRoom" [(ngModel)]="newSection.LabRoom" type="text" class="form-control">
+                </div>
+            </div>
+            <!-- lab days -->
+            <div class="form-group row">
+                <label>Lab Days: </label>
+                <div class="col">
+                    <div class="btn-toolbar" role="toolbar">
+                        <div class="btn-group" role="group">
+                            <button name="createSectionDayML" (click)="toggleDay('M', true)" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">M</button>
+                            <button name="createSectionDayTL" (click)="toggleDay('T', true)" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">T</button>
+                            <button name="createSectionDayWL" (click)="toggleDay('W', true)" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">W</button>
+                            <button name="createSectionDayRL" (click)="toggleDay('R', true)" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">R</button>
+                            <button name="createSectionDayFL" (click)="toggleDay('F', true)" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">F</button>
+                            <button name="createSectionDaySL" (click)="toggleDay('S', true)" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="button">S</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- lab time -->
+            <div class="form-group row">
+                <label for="createSectionLabStart">Lab Start: </label>
+                <div class="col">
+                    <input name="createSectionLabStart" [(ngModel)]="newSection.LabStart" type="time" min="{{coursesStartTime}}" max="{{coursesEndTime}}" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="createSectionLabEnd">Lab End: </label>
+                <div class="col">
+                    <input name="createSectionLabEnd" [(ngModel)]="newSection.LabEnd" type="time"  min="{{coursesStartTime}}" max="{{coursesEndTime}}" class="form-control">
                 </div>
             </div>
         </div>
@@ -72,12 +139,18 @@
 <div id="calendarEventModal" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-        <div id="eventSection" *ngFor="let section of selectedEventSections">
-            <label id="eventSectionName">Title: {{section["Title"]}} <br> </label>
-            <label id="eventSectionName">Subject: {{section["Subject"]}} <br> </label>
-            <label id="eventSectionName">Title: {{section["Title"]}} <br> </label>
-            <label id="eventSectionName">Title: {{section["Title"]}} <br> </label>
-            <label id="eventSectionName">Title: {{section["Title"]}} <br> </label>
+        <div class="modal-body">
+            <div id="eventSection" *ngFor="let section of selectedEventSections">
+                <label id="eventSectionCRN">CRN: {{section["CRN"]}} <br> </label>
+                <label id="eventSectionName">Title: {{section["Title"]}} <br> </label>
+                <label id="eventSectionName">Course: {{section["Subject"]}} {{section["CourseNum"]}}<br> </label>
+                <label id="eventSectionName">Section: {{section["SectionNum"]}} <br> </label>
+                <label id="eventSectionName">Days: {{section["Days"]}} <br> </label>
+                <label id="eventSectionName">Time: {{section["Start"]}} - {{section["End"]}}<br> </label>
+                <label id="eventSectionName">Room: {{section["Room"]}} <br> </label>
+                <label id="eventSectionName">Credits: {{section["Credits"]}} <br> </label>
+                <label id="eventSectionName">Max Students: {{section["MaxStudents"]}} <br> </label>
+            </div>
         </div>
     </div>
     </div>
@@ -117,7 +190,7 @@
             <span><b>Start</b></span>
             <span><b>End</b></span>
         </div>
-        <!-- sections table -->
+        <!-- sections list -->
         <div style="overflow-y: auto;">
             <div class="shipping-item" *ngFor="let section of selectedCourseSections" (click)="selectSection(section, $event)">
                 <span>{{ section["SectionNum"] }}</span>
@@ -126,15 +199,17 @@
                 <span>{{ section["End"] }}</span>
             </div>
         </div>
+        <!-- create section and back buttons -->
         <div class="d-flex justify-content-between">
             <button class="btn" data-toggle="modal" data-target="#createSectionModal">Create Section</button>
             <button class="btn" (click)="clearSelectedCourse()">Back</button>
         </div>
-        <!-- add new course section -->
+        <!-- remove section and copy section buttons -->
         <div *ngIf="selectedSection != null">
             <div class="d-flex justify-content-between">
                 <button class="btn" (click)="removeSelectedSection()">Remove Section</button>
-                <button class="btn" data-toggle="modal" data-target="#createSectionModal" (click)="copySelectedSection()">Copy Section</button>
+                <!-- <button class="btn" data-toggle="modal" data-target="#createSectionModal" (click)="copySelectedSection()">Copy Section</button> TODO add copy functionality-->
+                <button class="btn" disabled>Copy Section</button>
             </div>
         </div>
     </div>
@@ -142,20 +217,20 @@
     <!-- calendar -->
     <div id="calendar" class="card">
         <table class="table bordered">
-            <thead>
+            <thead id="calendarTHead">
                 <tr class="text-center">
-                    <th id="calendarTimeColumn"></th>
-                    <th>Sunday</th>
-                    <th>Monday</th>
-                    <th>Tuesday</th>
-                    <th>Wednesday</th>
-                    <th>Thursday</th>
-                    <th>Friday</th>
-                    <th>Saturday</th>
+                    <th id="calendarTimeCol"></th>
+                    <th id="calendarSundayCol">Sunday</th>
+                    <th id="calendarMondayCol">Monday</th>
+                    <th id="calendarTuesdayCol">Tuesday</th>
+                    <th id="calendarWednesdayCol">Wednesday</th>
+                    <th id="calendarThursdayCol">Thursday</th>
+                    <th id="calendarFridayCol">Friday</th>
+                    <th id="calendarSaturdayCol">Saturday</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let time of coursesTimes">
+                <tr id="calendarBodyRow" *ngFor="let time of coursesTimes">
                     <td>{{ time }}</td>
                     <td></td>
                     <td></td>
@@ -167,12 +242,7 @@
                 </tr>
             </tbody>
         </table>
-        <div id="calendarEvents" style="z-index: 2;">
-            <div class="calendarEvent text-center" *ngFor="let section of selectedCourseSections" data-toggle="modal" data-target="#calendarEventModal" (click)="selectSection(section)">
-                <!-- TODO: update to better time in json-->
-                <p>{{section["Subject"]}} {{section["CourseNum"]}}, {{section["SectionNum"]}}</p>
-            </div>
-        </div>
+        <div id="calendarEvents" style="z-index: 2;"></div>
     </div>
 
 </div>
