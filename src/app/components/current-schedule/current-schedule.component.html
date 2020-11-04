@@ -42,7 +42,7 @@
             <label class="form-check-label" for="searchNewClasses">Include new classes in search</label>
           </div>
         </div>
-        <input type="submit" value="Search" (click)="searchCourses()">
+        <input type="submit" value="Search" (click)="searchCourses()" style="margin-left: 5px; margin-bottom: 5px;">
         <p *ngIf="bNoResults" style="color: crimson;">There were no classes that match your search description.</p>
       </form>
     </div>
