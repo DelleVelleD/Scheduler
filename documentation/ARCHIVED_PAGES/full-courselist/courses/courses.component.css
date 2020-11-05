@@ -1,34 +1,61 @@
 table{
-    font-size: 12px;
+    font-family: arial, sans-serif;
+    font-size: 18px;
     border-collapse: collapse;
-    width: 98%;
-    margin-right: 15px;
-    margin-left: 15px;
+    width: 100%;
 }
 
 td, th {
-    border: 3px solid #858181;
+    border: 3px solid #000000;
     text-align: left;
-    padding: 9px;
+    padding: 18px;
 }
 
+tr:nth-child(even) {
+    background-color: #00704a;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Style the top navigation bar */
 .topnav{
-    margin-left: 15px;
-    background-color: blue;
+  margin-left: 15px;
     overflow:hidden;
+    background-color: #000000;
   }
   
   /* Style the topnav links */
   .topnav a {
-    background: none;
-  float: right;
-  display: block;
-  color: #00704a;
-  text-align: center;
-  padding: 28px 16px;
-  text-decoration: none;
-  font-size: 26px;
-  font-family: "Lucida Console", Monaco, monospace;
+    float: right;
+    display: block;
+    color: #00704a;
+    text-align: center;
+    padding: 28px 16px;
+    text-decoration: none;
+    font-size: 26px;
+    font-family: "Lucida Console", Monaco, monospace;
+  }
+  
+  .topnav h1 {
+    float: left;
+    display: block;
+    color: #00704a;
+    text-align: center;
+    padding: 0px 8px;
+    text-decoration: none;
+    font-family: "Lucida Console", Monaco, monospace;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #00704a;
+    color: black;
+  }
+
+  #tablename {
+    font-family: "Lucida Console", Monaco, monospace;
   }
 
   button.secondary {
