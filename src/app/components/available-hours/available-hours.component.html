@@ -1,9 +1,22 @@
-<div class="topnav" style="background-color: #a5acb0;">
-    <button routerLink="/faculty" class="secondary">Homepage</button>
-</div>
-
-<h3>Available Times</h3>
-<table>
+<nav id="topNavbar" class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/faculty">Homepage</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login-page">Log Out</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+<h3 style="padding-left: 15px;">Available Times</h3>
+<table  class="center">
     <tr>
         <th>Day</th>
         <th>In</th>
@@ -13,50 +26,54 @@
     </tr>
     <tr>
         <td>Sunday</td>
-        <td><input></td>
-        <td><input></td>
+        <td><input type="time" name="startTime"></td>
+        <td><input type="time" name="endTime"></td>
         <td><button>&#43;</button></td>
         <td><button>&#8722;</button></td>
     <tr>
         <td>Monday</td>
-        <td><input></td>
-        <td><input></td>
+        <td><input type="time" name="startTime"></td>
+        <td><input type="time" name="endTime"></td>
         <td><button>&#43;</button></td>
         <td><button>&#8722;</button></td>
     </tr>
     <tr>
         <td>Tuesday</td>
-        <td><input></td>
-        <td><input></td>
+        <td><input type="time" name="startTime"></td>
+        <td><input type="time" name="endTime"></td>
         <td><button>&#43;</button></td>
         <td><button>&#8722;</button></td>
     </tr>
     <tr>
         <td>Wednesday</td>
-        <td><input></td>
-        <td><input></td>
+        <td><input type="time" name="startTime"></td>
+        <td><input type="time" name="endTime"></td>
         <td><button>&#43;</button></td>
         <td><button>&#8722;</button></td>
     </tr>
     <tr>
         <td>Thursday</td>
-        <td><input></td>
-        <td><input></td>
+        <td><input type="time" name="startTime"></td>
+        <td><input type="time" name="endTime"></td>
         <td><button>&#43;</button></td>
         <td><button>&#8722;</button></td>
     </tr>
     <tr>
         <td>Friday</td>
-        <td><input></td>
-        <td><input></td>
+        <td><input type="time" name="startTime"></td>
+        <td><input type="time" name="endTime"></td>
         <td><button>&#43;</button></td>
         <td><button>&#8722;</button></td>
     </tr>
     <tr>
         <td>Saturday</td>
-        <td><input></td>
-        <td><input></td>
+        <td><input type="time" name="startTime"></td>
+        <td><input type="time" name="endTime"></td>
         <td><button>&#43;</button></td>
         <td><button>&#8722;</button></td>
     </tr>
 </table>
+<div style="padding-top: 5px; padding-left: 15px;">
+<input type="checkbox">
+<label>&nbsp;Are you willing to teach new classes?</label>
+</div>

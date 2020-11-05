@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { bindNodeCallback } from 'rxjs';
 
 @Component({
   selector: 'app-login-page',
@@ -10,10 +11,13 @@ export class LoginPageComponent implements OnInit {
 
   //Get rid of the "private router : Router" once the other pages are ready for modification
   //constructor() {}
-  constructor(private router : Router) { }
+  constructor(private router : Router) {
+   }
+
+  bInvalidLogin = false;
 
   ngOnInit() {
-
+    this.toggleNavbar()
   }
   //Put these routers/navigate into their respective Admin and Faculty Calendar pages when ready
   navigate(){
@@ -24,5 +28,17 @@ export class LoginPageComponent implements OnInit {
     this.router.navigate(["courses-upcoming"])
   }
 
+  onLogin(){
+    this.bInvalidLogin = true;
+  }
+
+  toggleNavbar() {
+    var logout = document.getElementById("topNavbar");
+    if(logout.style.display == "none"){
+      logout.style.display = "block";
+    }else{
+      logout.style.display = "none";
+    }
+  }
 
 }

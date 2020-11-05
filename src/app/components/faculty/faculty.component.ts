@@ -10,8 +10,8 @@ export class FacultyComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  navigate1() {
-    this.router.navigate([""])
+  navigate() {
+    this.router.navigate(["current-schedule"])
   }
 
   navigate2() {

@@ -1,24 +1,35 @@
-button.secondary {
-    margin-bottom: 15px;
-    margin-left: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background: #EEEEEE;
-    padding: 0.5rem 0.75rem;
-    font-size: 14px;
-    border-radius: 2px;
+.nav-item{
+    padding:2px;
+    margin-left: 7px;
+    /* background-color:#a5acb0; */
+}
+
+.navbar {
+	float:right;
+  padding: 5px 5px;
+  border-radius: 2px;
+  background-color: #a5acb0;
+  
+}
+
+.navbar a {
     color: #02754E;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    font-weight: 500;
-    }
-    
-    button.secondary:hover {
-    background: #02754E;
+    text-align: center;
+    padding: 5px 5px;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    border-style: solid;
+    border-color: #a5acb0;
+		border-radius: 2px;
+  }
+	/* Change color on hover */
+.navbar a:hover {
+    background-color: #02754E;
     color: white;
-    }
-  button.secondary:active {
-  box-shadow: none;
-  }
-  button.secondary:focus {
-  outline: 0;
-  }
+ }
+
+ .navbar a:focus {
+    color: #02754E;
+    background-color: #EEEEEE;
+    border-color: #a5acb0;
+ }

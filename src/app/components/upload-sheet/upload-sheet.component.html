@@ -1,13 +1,59 @@
-<div class="topnav" style="background-color: #a5acb0">
-    <button routerLink="/admin" class="secondary">Homepage</button>
+<!--top navigation bar-->
+<nav id="topNavbar" class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin">Homepage</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login-page">Log Out</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!--page contents-->
+<div class="card-deck" style="padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px;">
+  
+  <!--left column-->
+  <div class="card">
+    <div id="leftColumnCardBody" class="card-body">
+      <h1 class="card-title text-center">Upload</h1><br/><br/>
+      <!--upload courses excel sheet-->
+      <p class="card-text">
+        Upload courses spreadsheet: 
+        <input id="inputCourses" type="file" accept=".xlsx" (change)="onUploadCourses($event)"/>
+      </p><br/>
+      <!--upload professors excel sheet-->
+      <p class="card-text">
+        Upload professors  spreadsheet: 
+        <input id="inputProfessors" type="file" accept=".xlsx" (change)="onUploadProfessors($event)"/>
+      </p><br/>
+      <small class="text-muted">Note: Uploading overwrites any existing courses or professors.</small>
+      <p id="uploadFeedback" class="card-text"></p>
+    </div>
   </div>
 
-<input type="file" (change)="onFileChange($event)" />
-
-<div id="output"></div>
-<br>
-<div *ngIf="willDownload">
-	<a id="download"> Download JSON File </a>
-
+  <!--right column-->
+  <div class="card">
+    <div id="rightColumnCardBody" class="card-body"> 
+      <h1 class="card-title text-center">Download</h1><br/><br/>
+      <!--download courses excel sheet-->
+      <p class="card-text">
+        Course Schedule: 
+        <button type="button" class="btn btn-link" (click)="onDownloadCourses()"> Download </button> 
+      </p><br/>
+      <!--download professors excel sheet-->
+      <p class="card-text">
+        Professors Information: 
+        <button type="button" class="btn btn-link" (click)="onDownloadProfessors()"> Download </button> 
+      </p><br/>
+      <p id="downloadFeedback" class="card-text"></p>
+    </div>
+  </div>
 
 </div>

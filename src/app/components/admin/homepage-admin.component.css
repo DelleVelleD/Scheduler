@@ -1,7 +1,3 @@
-body {
-	border: 1px solid #00704a;
-}
-
 img {
   width: 100%;
 }
@@ -47,4 +43,40 @@ img {
 
 #welcome {
   font-family: "Lucida Console", Monaco, monospace;
+}
+
+.nav-item{
+  padding:2px;
+  margin-left: 7px;
+  /* background-color:#a5acb0; */
+}
+
+.navbar {
+float:right;
+padding: 5px 5px;
+border-radius: 2px;
+background-color: #a5acb0;
+
+}
+
+.navbar a {
+  color: #02754E;
+  text-align: center;
+  padding: 5px 5px;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  border-style: solid;
+  border-color: #a5acb0;
+  border-radius: 2px;
+}
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #02754E;
+  color: white;
+}
+
+.navbar a:focus {
+  color: #02754E;
+  background-color: #EEEEEE;
+  border-color: #a5acb0;
 }

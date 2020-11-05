@@ -1,10 +1,23 @@
-<div class="topnav" style="background-color: #a5acb0;">
-  <button routerLink="/admin" class="secondary">Homepage</button>
-</div>
+<nav id="topNavbar" class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin">Homepage</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login-page">Log Out</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
 <h2 id="tablename" style="padding-left: 10px">Scheduling Conflicts</h2>
 
-<p>View Details:</p>
+<p style="padding-left: 20px;">View Details:</p>
    <div class="acc-section"  style="width:50%; height:380px; overflow-y: scroll; padding-left: 10px">
 
 
