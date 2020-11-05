@@ -27,7 +27,7 @@ export class HomepageAdminComponent implements OnInit {
   }
 
   navigate5() {
-    this.router.navigate(["courses-upcoming-admin"])
+    this.router.navigate(["courses-offered-admin"])
   }
 
   ngOnInit() {
