@@ -37,16 +37,9 @@
                     <th>Course #</th>
                     <th>Title</th>
                     <th>Section #</th>
-                    <th>Online Code</th>
                     <th>Days and Time</th>
                     <th>Classroom</th>
-                    <th>Per</th>
-                    <th>Lab Days and Time</th>
-                    <th>Lab Room</th>
-                    <th>Credits</th>
-                    <th>Max Students</th>
-                    <th>Full Time</th>
-                    <th>Professor Email and Priority</th>
+                    <!-- <th>Course Instructor</th> -->
                 </tr>
                 <tr *ngFor='let course of selectedSemester'>
                     <td>{{course.courses["crn"]}}</td>
@@ -54,16 +47,9 @@
                     <td>{{course.courses["courseNum"]}}</td>
                     <td>{{course.courses["title"]}}</td>
                     <td>{{course.courses["sectionNum"]}}</td>
-                    <td>{{course.courses["onlineCode"]}}</td>
                     <td>{{course.courses["days"]}} {{course.courses["start"]}} - {{course.courses["end"]}}</td>
                     <td>{{course.courses["room"]}}</td>
-                    <td>{{course.courses["per"]}}</td>
-                    <td>{{course.courses["labDays"]}} {{course.courses["labStart"]}} - {{course.courses["labEnd"]}}</td>
-                    <td>{{course.courses["labRoom"]}}</td>
-                    <td>{{course.courses["credits"]}}</td>
-                    <td>{{course.courses["maxStudents"]}}</td>
-                    <td>{{course.courses["fullTime"]}}</td>
-                    <td>{{course.courses["professors"]["info"]}}</td>
+                    <!-- <td>{{course.courses["professors"]["name"]}}</td> -->
                 </tr>
             </tbody>
         </table>

@@ -75,8 +75,8 @@ export class CoursesOfferedComponent implements OnInit {
   courses: Array<Array<Courses>> = []
   selectedSemester = []
 
-  course : {semester, crn, subject, courseNum, title, sectionNum, days, start, end, room, credits, maxStudents, profName} = 
-           {semester: null, crn: null, subject: null, courseNum: null, title: null, sectionNum: null, days: null, start: null, end: null, room: null, credits: null, maxStudents: null, profName: null};
+  course : {semester, crn, subject, courseNum, title, sectionNum, days, start, end, room, credits, maxStudents, profInfo} = 
+           {semester: null, crn: null, subject: null, courseNum: null, title: null, sectionNum: null, days: null, start: null, end: null, room: null, credits: null, maxStudents: null, profInfo: null};
 
   selectSemester()
   {
