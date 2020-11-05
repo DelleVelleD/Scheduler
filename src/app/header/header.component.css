@@ -7,7 +7,7 @@
 .navbar {
 	float:right;
   padding: 5px 5px;
-  border-radius: 2px;
+  border-radius: 0px;
   background-color: #a5acb0;
   
 }
@@ -20,7 +20,7 @@
     background-color: #EEEEEE;
     border-style: solid;
     border-color: #a5acb0;
-		border-radius: 2px;
+		border-radius: 0px;
   }
 	/* Change color on hover */
 .navbar a:hover {
