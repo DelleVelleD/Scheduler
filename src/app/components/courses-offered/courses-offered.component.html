@@ -28,28 +28,30 @@
 
     <input type="text" id="myInput" onkeyup="myFunction3()" placeholder="Search for course title.." title="Type in a course title">
 
-    <div style="height:500px; overflow-y: scroll; overflow-x:scroll">
-        <table id ="myTable" *ngIf='courses && courses.length'>
-            <tr>
-                <th>CRN</th>
-                <th>DEPT</th>
-                <th>Course #</th>
-                <th>Title</th>
-                <th>Section #</th>
-                <th>Days and Time</th>
-                <th>Classroom</th>
-                <th>Course Instructor</th>
-            </tr>
-            <tr *ngFor='let course of courses'>
-                <td>{{course.CRN}}</td>
-                <td>ITEC</td>
-                <td>{{course.CRSE}}</td>
-                <td>{{course.TITLE}}</td>
-                <td>{{course.SECT}}</td>
-                <td>{{course.DAYS}} {{course.START}} - {{course.END}}</td>
-                <td>{{course.CLASSROOM}}</td>
-                <td>{{course.FIRSTNAME}} {{course.LASTNAME}}</td>
-            </tr>
+    <div style="height:500px; overflow-y: scroll; overflow-x:scroll; background: #a5acb0; max-height: 700px;">
+        <table id ="myTable" class="table table-striped" *ngIf='courses && courses.length'>
+            <tbody>
+                <tr>
+                    <th>CRN</th>
+                    <th>DEPT</th>
+                    <th>Course #</th>
+                    <th>Title</th>
+                    <th>Section #</th>
+                    <th>Days and Time</th>
+                    <th>Classroom</th>
+                    <th>Course Instructor</th>
+                </tr>
+                <tr *ngFor='let course of courses'>
+                    <td>{{course.CRN}}</td>
+                    <td>ITEC</td>
+                    <td>{{course.CRSE}}</td>
+                    <td>{{course.TITLE}}</td>
+                    <td>{{course.SECT}}</td>
+                    <td>{{course.DAYS}} {{course.START}} - {{course.END}}</td>
+                    <td>{{course.CLASSROOM}}</td>
+                    <td>{{course.FIRSTNAME}} {{course.LASTNAME}}</td>
+                </tr>
+            </tbody>
         </table>
     </div>
 

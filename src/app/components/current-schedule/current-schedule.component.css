@@ -3,7 +3,8 @@
 #courses{
   width: 100%;
   height: 0;
-  background-color: #a5acb0;;
+  /* border-color: black; */
+  /* background-color: #a5acb0; */
 }
 
 #courses th {
@@ -15,6 +16,7 @@
   height: 20px;
 }
 
+/*
 #courses tr:nth-child(even) {
   background-color: #00704a;
   color: #ffffff;
@@ -24,7 +26,7 @@
 #courses tr:nth-child(odd) {
   background-color: #ffffff;
 }
-
+*/
 #courses tr.conflict{
   background-color: rgb(255, 38, 38);
   color: white;
@@ -207,7 +209,8 @@ position: relative;
 top: 100px;
 }
 table {
-background: #fff;
+/* background: #fff; */
+background-color: white;
 width: 100%;
 height: 100%;
 border-collapse: collapse;
@@ -391,4 +394,40 @@ color: red;
   border: 1px solid #888;
   margin: 0 auto;
   width: 30%;
+}
+
+.nav-item{
+  padding:2px;
+  margin-left: 7px;
+  /* background-color:#a5acb0; */
+}
+
+.navbar {
+float:right;
+padding: 5px 5px;
+border-radius: 2px;
+background-color: #a5acb0;
+
+}
+
+.navbar a {
+  color: #02754E;
+  text-align: center;
+  padding: 5px 5px;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  border-style: solid;
+  border-color: #a5acb0;
+  border-radius: 2px;
+}
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #02754E;
+  color: white;
+}
+
+.navbar a:focus {
+  color: #02754E;
+  background-color: #EEEEEE;
+  border-color: #a5acb0;
 }
