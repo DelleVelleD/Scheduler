@@ -15,8 +15,49 @@
   </div>
 </nav>
 
-<body style="background-color:#a5acb0; height: 100%; width: 100%;">
+<!-- calendar event modal -->
+<div id="calendarEventModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+  <div class="modal-body" style="overflow-y: auto; max-height: 80vh;">
+      <div id="eventSection" *ngFor="let section of selectedEventSections" class="container border" style="margin-bottom: 10px;">
+      <div class="row">
+          <div class="col-3">
+              <span><b>CRN:</b> <br> </span>
+              <span><b>Title:</b>  <br> </span>
+              <span><b>Course:</b> <br> </span>
+              <span><b>Section:</b>  <br> </span>
+              <span><b>Days:</b> <br> </span>
+              <span><b>Time:</b> <br> </span>
+              <span><b>Room:</b>  <br> </span>
+              <span><b>Credits:</b> <br> </span>
+              <span><b>Students:</b> <br> </span>
+              <span><b>Professors:</b></span>
+          </div>
+          <div class="col">
+              <span> {{section["CRN"]}} <br> </span>
+              <span> {{section["Title"]}} <br> </span>
+              <span> {{section["Subject"]}} {{section["CourseNum"]}}<br> </span>
+              <span> {{section["SectionNum"]}} <br> </span>
+              <span> {{section["Days"]}} <br> </span>
+              <span> {{section["Start"]}} - {{section["End"]}}<br> </span>
+              <span> {{section["Room"]}} <br> </span>
+              <span> {{section["Credits"]}} <br> </span>
+              <span> {{section["MaxStudents"]}} <br> </span>
+              <span *ngFor="let professor of section.Professors"> 
+                  {{professor["Email"]}}, Priority: {{professor["Priority"]}}<br>
+              </span>
+              <span *ngIf="section.Professors.length == 0" style="color: crimson;"> None </span>
+          </div>
+      </div>
+      </div>
+  </div>
+  </div>
+  </div>
+</div>
 
+<div id="pageContents" style="padding: 15px; background-color:#a5acb0;">
+  <!-- semester dropdown -->
   <div class="topnav" style="background-color:#a5acb0;">
     <form id="selector" action="" method="" style=" display: inline-block;">
       <label style=" padding-left: 15px;">Select Semester: </label>
@@ -29,9 +70,9 @@
   </div>
 
   <!--The upper box containing the course search form and the results from that search-->
-  <div id="upperBox" class="card-deck w-90" style="padding-top: 5px; padding-left: 15px; padding-right: 15px; overflow-y: auto; max-height: 300px;">
+  <div id="upperBox" class="card-group w-90" style="padding: 5px 15px 0px 15px; overflow-y: auto; max-height: 23vh;">
     <!--The course search form-->
-    <div id="searchCourses" *ngIf="!bShowResults" class="card" style="background-color:#a5acb0;">
+    <div id="searchCourses" *ngIf="!bShowResults" class="card">
       <form>
         <div class="form-row">
           <div class="form-group" style="padding-left: 10px;">
@@ -39,8 +80,8 @@
             <input id="searchCRN" [(ngModel)]="course.crn" name="searchCRN" type="text" class="form-control">
           </div>
           <div class="form-group" style="padding-left: 10px;">
-            <label for="searchDepartment">Department:</label>
-            <input id="searchDepartment" [(ngModel)]="course.department" name="searchDepartment" type="text" class="form-control">
+            <label for="searchSubject">Subject:</label>
+            <input id="searchSubject" [(ngModel)]="course.subject" name="searchSubject" type="text" class="form-control">
           </div>
           <div class="form-group" style="padding-left: 10px;">
             <label for="searchNumber">Course Number:</label>
@@ -63,62 +104,62 @@
         <p *ngIf="bNoResults" style="color: crimson;">There were no classes that match your search description.</p>
       </form>
     </div>
+
     <!--The results of the course search-->
-    <div id="courseSearchResults" *ngIf="bShowResults" class="card w-90" style="background-color:#a5acb0;">
+    <div id="courseSearchResults" *ngIf="bShowResults" class="card">
       <input type="submit" value="Clear Search Results" (click)="clearSearch()">
-      <table class="table">
+      <table class="table-striped table-bordered text-center">
         <thead>
           <tr>
             <th>CRN</th>
             <th>Title</th>
             <th>Details</th>
             <th>Time</th>
-            <th>Room</th>
-            <th>Max Students</th>
+            <th>Credits</th>
+            <th>Students</th>
             <th>Add To Course List</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let course of foundCourses">
-            <td>{{course["CRN"]}}</td>
-            <td>{{course["TITLE"]}}</td>
-            <td>ITEC {{course["CRSENO"]}}, {{course["SECTNO"]}}</td> <!--TODO variable department-->
-            <td>{{course["DAYS"]}} <br> {{course["START"]}} - {{course["END"]}}</td>
-            <td>{{course["ROOM"]}}</td>
-            <td>{{course["PER"]}}</td>
-            <td><button class="btn" (click)="selectCourse(course)">Add Course</button></td>
+            <td>{{course.CRN}}</td>
+            <td class="text-truncate">{{course.Title}}</td>
+            <td>{{course.Subject}} {{course.CourseNum}}<br>Section: {{course.SectionNum}}</td>
+            <td>{{course.Days}} <br> {{course.Start}} - {{course.End}}</td>
+            <td>{{course.Credits}}</td>
+            <td>{{course.MaxStudents}}</td>
+            <td><button class="btn btn-outline-dark" (click)="selectCourse(course)">Add Course</button></td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
 
-  <div class="card-deck" style="padding-top: 15px; padding-left: 15px; padding-right: 15px;">
+  <div class="card-group" style="padding: 15px;">
     <!-- The selected course list bottom left card -->
-    <div class="card mw-40" style="background: #a5acb0; max-height: 700px;">
-      <h3>Current Assigned Course List for Dr. Anca Doloc Mihu</h3>
-      <!--<h3>{{semester}} {{year}} Course List for {{user}}</h3> TODO, update with variables-->
+    <div class="card mw-40" style="max-height: 50vh;">
+      <h3>{{currentSemester.Semester}} {{currentSemester.Year}} Course List for Dr. Anca Doloc Mihu</h3> <!-- TODO, update with user variable -->
       <p *ngIf="!(selectedCourses.length > 0)">You have not added any courses yet.</p>
-      <table id="courses" *ngIf="selectedCourses.length > 0" class="table-striped table-bordered">
+      <table id="courses" *ngIf="selectedCourses.length > 0" class="table-striped table-bordered text-center">
         <thead>
           <tr>
             <th>CRN</th>
             <th>Title</th>
             <th>Details</th>
             <th>Time</th>
-            <th>Room</th>
-            <th>Max Students</th>
+            <th>Credits</th>
+            <th>Students</th>
             <th>Priority</th>
           </tr>
         </thead>
         <tbody name="selectedCoursesList">
           <tr *ngFor="let course of selectedCourses; let i = index">
-            <td>{{course["CRN"]}}</td>
-            <td class="text-truncate">{{course["TITLE"]}}</td>
-            <td>ITEC {{course["CRSENO"]}}, {{course["SECTNO"]}}</td> <!--TODO variable department-->
-            <td>{{course["DAYS"]}} <br> {{course["START"]}} - {{course["END"]}}</td>
-            <td>{{course["ROOM"]}}</td>
-            <td>{{course["PER"]}}</td>
+            <td>{{course.CRN}}</td>
+            <td class="text-truncate">{{course.Title}}</td>
+            <td>{{course.Subject}} {{course.CourseNum}}<br>Section: {{course.SectionNum}}</td>
+            <td>{{course.Days}} <br> {{course.Start}} - {{course.End}}</td>
+            <td>{{course.Credits}}</td>
+            <td>{{course.MaxStudents}}</td>
             <td>
               <select name="priorityDropdown" (change)="updateChanges(i)"> <!--TODO, limit the amount of high etc-->
                 <option value="low">Low</option>
@@ -131,483 +172,30 @@
         </tbody>
       </table>
     </div>
-  <!-- The calendar bottom right card -->
-  <div id="calendar" class="card mw-40" style="background-color:#a5acb0;">
-    <div class="calendar">
 
-        <h1 id="welcome" style="padding-left: 5px;"><b>Calendar</b></h1>
-      
-        <div class="outer">
-      
-          <table>
-            <thead>
-              <tr>
-                <th>Time</th>
-                <th>Monday</th>
-                <th>Tuesday</th>
-                <th style="font-size: 13px;">Wednesday</th>
-                <th>Thursday</th>
-                <th>Friday</th>
-                <th>Saturday</th>
+    <!-- calendar -->
+    <div id="calendar" class="card">
+      <table class="table bordered">
+          <thead id="calendarTHead">
+              <tr class="text-center">
+                  <th id="calendarTimeCol"></th>
+                  <th id="calendarSundayCol">Sunday</th>
+                  <th id="calendarMondayCol">Monday</th>
+                  <th id="calendarTuesdayCol">Tuesday</th>
+                  <th id="calendarWednesdayCol">Wednesday</th>
+                  <th id="calendarThursdayCol">Thursday</th>
+                  <th id="calendarFridayCol">Friday</th>
+                  <th id="calendarSaturdayCol">Saturday</th>
               </tr>
-            </thead>
-          </table>
-      
-          <div class="wrap">
-            <table class="offset">
-              <tbody>
-                <tr>
-                  <!-- TODO Implement a true calendar for faculty that gets data from the .JSON. The current calendar
-                  is hard coded -->
-                  <!-- TODO Change onclick="showConflict()" to a better name/function. showConflict is currently a stand in
-                  until a better function is created for the above TODO reasons -->
-                  <td class="headcol">8:00 AM</td>
-                  <td>
-                    <!--Old div for this calendar block. Was too long
-                      <div class="event triple" style="background-color: red"><input id="check" type="checkbox" class="checkbox" /><label
-                    for="check"></label>Mobile Application Development CRN: 21719 CRSE #: 4550 Room: C1130</div> -->
-                    <div class="event triple" onclick="showConflict()" style="background-color: rgb(255, 38, 38)"><input id="check" type="checkbox" class="checkbox"/><label
-                      for="check"></label>ITEC 4550-03
-                      <div id="exampleConflict" class="modal">
-                        <div class="modal-content">
-                            Name: Mobile Application Development
-                            <br>
-                            Department: ITEC
-                            <br>
-                            Course Number: 4550
-                            <br>
-                            Section: 03
-                            <br>
-                            Room: C1130
-                            <br>
-                            Day: MW
-                            <br>
-                            Time: 08:00-09:15
-                            <br>
-                            Credits: ***INSERT CREDITS***
-                            <br>
-                            Professor: Doloc-Mihy, Anca
-                        </div>
-                    </div>
-                    </div>
-                  </td>
-                  <td></td>
-                  <td>
-                    <!-- <div class="event triple" style="background-color: red"><input id="check" type="checkbox" class="checkbox" /><label
-                    for="check"></label>Mobile Application Development CRN: 21719 CRSE #: 4550 Room: C1130</div> -->
-                    <div class="event triple" onclick="showConflict()" style="background-color: rgb(255, 38, 38)"><input id="check" type="checkbox" class="checkbox"/><label
-                      for="check"></label>ITEC 4550-03
-                      <div id="exampleConflict" class="modal">
-                        <div class="modal-content">
-                            Name: Mobile Application Development
-                            <br>
-                            Department: ITEC
-                            <br>
-                            Course Number: 4550
-                            <br>
-                            Section: 03
-                            <br>
-                            Room: C1130
-                            <br>
-                            Day: MW
-                            <br>
-                            Time: 08:00-09:15
-                            <br>
-                            Credits: ***INSERT CREDITS***
-                            <br>
-                            Professor: Doloc-Mihy, Anca
-                        </div>
-                    </div>
-                    </div>
-                  </td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol"></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol">9:00 AM</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol"></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol">10:00 AM</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol"></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>
-                    <!-- <div class="event double"><input id="check" type="checkbox" class="checkbox" /><label
-                        for="check"></label>Intermediate Programming
-                      CRN: 20858 CRSE #: 2150
-                      Room: C2130</div> -->
-                      <!-- TODO change  onclick="showDetail10ATh()" to a better name/more functional function-->
-                      <div class="event double" onclick="showDetail10ATh()"><input id="check" type="checkbox" class="checkbox"/><label
-                        for="check"></label>ITEC 2150-01
-                        <!-- TODO change id="detailView10ATh" to a better name that matches the above onclick -->
-                        <div id="detailView10ATh" class="modal">
-                          <div class="modal-content">
-                              Name: Mobile Application Development
-                              <br>
-                              Department: ITEC
-                              <br>
-                              Course Number: 2130
-                              <br>
-                              Section: 01
-                              <br>
-                              Room: C1130
-                              <br>
-                              Day: R
-                              <br>
-                              Time: 10:30-11:15
-                              <br>
-                              Credits: ***INSERT CREDITS***
-                              <br>
-                              Professor: Doloc-Mihy, Anca
-                          </div>
-                      </div>
-                      </div>
-                  </td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol">11:00 AM</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol"></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol">12:00 PM</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>
-                    <!-- <div class="event double"><input id="check" type="checkbox" class="checkbox" /><label
-                        for="check"></label>Advanced Programming
-                      CRN: 21408 CRSE #: 3150
-                      Room: B2100</div> -->
-                      <!-- TODO change  onclick="showDetail12PS()" to a better name/more functional function-->
-                      <div class="event double" onclick="showDetail12PS()"><input id="check" type="checkbox" class="checkbox"/><label
-                        for="check"></label>ITEC 3150-02
-                        <!-- TODO change id="detailView12PS" to a better name that matches the above onclick -->
-                        <div id="detailView12PS" class="modal">
-                          <div class="modal-content">
-                              Name: Mobile Application Development
-                              <br>
-                              Department: ITEC
-                              <br>
-                              Course Number: 3150
-                              <br>
-                              Section: 02
-                              <br>
-                              Room: B2100
-                              <br>
-                              Day: S
-                              <br>
-                              Time: 12:00-13:15
-                              <br>
-                              Credits: ***INSERT CREDITS***
-                              <br>
-                              Professor: Doloc-Mihy, Anca
-                          </div>
-                      </div>
-                      </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="headcol"></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol">1:00 PM</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol"></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol">2:00 PM</td>
-                  <td>
-                    <!-- <div class="event triple"><input id="check" type="checkbox" class="checkbox" /><label
-                        for="check"></label>Mobile Application Development CRN: 21718 CRSE #: 4550 Room: C1130</div> -->
-                        <!-- TODO change  onclick="showDetail2PM()" to a better name/more functional function-->
-                        <div class="event triple" onclick="showDetail2PM()"><input id="check" type="checkbox" class="checkbox" /><label
-                          for="check"></label>ITEC 4550-02
-                          <!-- TODO change id="detailView2PM" to a better name that matches the above onclick -->
-                          <div id="detailView2PM" class="modal">
-                            <div class="modal-content">
-                                Name: Mobile Application Development
-                                <br>
-                                Department: ITEC
-                                <br>
-                                Course Number: 4550
-                                <br>
-                                Section: 02
-                                <br>
-                                Room: C1130
-                                <br>
-                                Day: MW
-                                <br>
-                                Time: 14:00-15:15
-                                <br>
-                                Credits: ***INSERT CREDITS***
-                                <br>
-                                Professor: Doloc-Mihy, Anca
-                            </div>
-                        </div>
-                        </div>
-                  </td>
-                  <td></td>
-                  <td>
-                    <!-- TODO change  onclick="showDetail2PW()" to a better name/more functional function-->
-                    <div class="event triple" onclick="showDetail2PW()"><input id="check" type="checkbox" class="checkbox" /><label
-                        for="check"></label>ITEC 4550-02
-                        <!-- TODO change id="detailView2PW" to a better name that matches the above onclick -->
-                        <div id="detailView2PW" class="modal">
-                          <div class="modal-content">
-                              Name: Mobile Application Development
-                              <br>
-                              Department: ITEC
-                              <br>
-                              Course Number: 4550
-                              <br>
-                              Section: 02
-                              <br>
-                              Room: C1130
-                              <br>
-                              Day: MW
-                              <br>
-                              Time: 14:00-15:15
-                              <br>
-                              Credits: ***INSERT CREDITS***
-                              <br>
-                              Professor: Doloc-Mihy, Anca
-                          </div>
-                      </div>
-                      </div>
-                  </td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol"></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol">3:00 PM</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol"></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol">4:00 PM</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol"></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol">5:00 PM</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol"></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol">6:00 PM</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol"></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol">7:00 PM</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol"></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol">8:00 PM</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol"></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol">9:00 PM</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol"></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol">10:00 PM</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="headcol"></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
+          </thead>
+          <tbody>
+              <tr id="calendarBodyRow" *ngFor="let time of coursesTimes">
+                  <td>{{ time }}</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+              </tr>
+          </tbody>
+      </table>
+      <div id="calendarEvents" style="z-index: 2;"></div>
+    </div>
   </div>
+
 </div>
-</body>
