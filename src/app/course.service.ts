@@ -18,7 +18,7 @@ export class CourseService {
   coursesStartTime = "08:00";
   coursesEndTime = "22:00"
 
-  currentSemester : {semester:string, year:number} = {semester:"Fall", year:2020};
+  currentSemester : {Semester:string, Year:number} = {Semester:"Fall", Year:2020};
   semesters = [];
 
   //non-asynchronous data grab from assets/courses.json
@@ -60,13 +60,13 @@ export class CourseService {
 
   //Returns the current semester
   getCurrentSemester(){
-    return this.getSemester(this.currentSemester.semester, this.currentSemester.year);
+    return this.getSemester(this.currentSemester.Semester, this.currentSemester.Year);
   }
 
   //Sets the current semester to given params
   setCurrentSemester(_semester:string, _year:number){
-    this.currentSemester.semester = _semester;
-    this.currentSemester.year = _year;
+    this.currentSemester.Semester = _semester;
+    this.currentSemester.Year = _year;
   }
 
 ////COURSES////

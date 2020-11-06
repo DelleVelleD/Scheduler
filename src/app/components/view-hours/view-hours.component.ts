@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CourseService } from '../../course.service';
 
 @Component({
   selector: 'app-view-hours',
@@ -7,37 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewHoursComponent implements OnInit {
 
-  constructor(){
-    //load all professors on construction
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onload = (event) => {
-      var jsonData = JSON.parse(xmlhttp.responseText);
-
-      for(var i in jsonData){
-        var jsonProfessor = jsonData[i];
-
-        var newProf = new Object();
-        newProf["firstName"] = jsonProfessor["FirstName"];
-        newProf["lastName"] = jsonProfessor["LastName"];
-        newProf["email"] = jsonProfessor["Email"];
-        newProf["fallHours"] = jsonProfessor["FallHours"];
-        newProf["springHours"] = jsonProfessor["SpringHours"];
-        newProf["totalHours"] = jsonProfessor["TotalHours"];
-        newProf["requiredHours"] = jsonProfessor["RequiredHours"];
-
-        this.professors.push(newProf);
-      }
-
-      this.filteredProfessors = this.professors;
-    }
-    xmlhttp.open("GET", "../assets/professors.json", true);
-    xmlhttp.send();
-  }
-
-  ngOnInit(){}
-  
   bNoMatches = false;
-  OVERTIME_HOURS = 40;
+  currentSemester;
 
   professors = []
   filteredProfessors = []
@@ -49,6 +21,32 @@ export class ViewHoursComponent implements OnInit {
               {firstName: null, lastName: null, email: null, fallHours: null, springHours: null, 
               totalHours: null, requiredHours: null, highlight: null};
 
+  constructor(private courseService:CourseService){
+    this.currentSemester = courseService.getCurrentSemester();
+
+    //load all professors on construction
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onload = (event) => {
+      var jsonData = JSON.parse(xmlhttp.responseText);
+
+      for(let semester of jsonData){
+        if(semester.Year != this.currentSemester.Year) continue;
+        for(let prof of semester.Professors){
+          var newProf = { firstName: prof.FirstName, lastName: prof.LastName, email: prof.Email, fallHours: prof.FallHours,
+            springHours: prof.SpringHours, totalHours: prof.FallHours + prof.SpringHours, requiredHours: prof.RequiredHours,
+            courses: prof.Courses}
+          this.professors.push(newProf);
+        }
+      }
+
+      this.filteredProfessors = this.professors;
+    }
+    xmlhttp.open("GET", "../assets/professors.json", true);
+    xmlhttp.send();
+  }
+
+  ngOnInit(){}
+
   //Filters the professors for the desired search criteria
   filterProfessors(){
     this.filteredProfessors = []
@@ -59,8 +57,8 @@ export class ViewHoursComponent implements OnInit {
     for(var i in this.professors){
       var professor = this.professors[i];
       
-      if(filter.test(professor["lastName"] + " " + professor["firstName"])){
-        bIsOver = professor["totalHours"] > this.OVERTIME_HOURS;
+      if(filter.test(professor["lastName"] + professor["firstName"])){
+        bIsOver = professor["totalHours"] > professor["requiredHours"];
         professor["highlight"] = this.search.bHighlightOver && bIsOver ? "over" : "none";
         bIsUnder = professor["totalHours"] < professor["requiredHours"];
         professor["highlight"] = this.search.bHighlightUnder && bIsUnder ? "under" : professor["highlight"];
