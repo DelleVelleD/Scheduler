@@ -19,7 +19,7 @@ export class FacultyComponent implements OnInit {
   }
 
   navigate3() {
-    this.router.navigate(["current-schedule"])
+    this.router.navigate(["faculty-courselist"])
   }
 
   ngOnInit() {
