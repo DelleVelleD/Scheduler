@@ -24,7 +24,7 @@ export class CalendarService {
   }
 
   //Clears current calendar events, creates new calendar events from given list, and places the calendar events into given document
-  handleCalendarEvents(_document:Document, _sectionList:any[], _eventSections:any[]){ //TODO replace time json gets with nums
+  handleCalendarEvents(_document:Document, _sectionList:any[], _eventSections:any[]){
     this.clearCalendarEvents(_document);
     var calEventsDiv = _document.getElementById("calendarEvents");
     for(let section of _sectionList){
@@ -45,10 +45,10 @@ export class CalendarService {
         calEvent.style.borderRadius = "2px";
         calEvent.style.color = "white";
         calEvent.style.fontSize = "1vw";
-        calEvent.style.backgroundColor = section.Professors.length>1 ? "crimson" : "#00B4FC";
+        calEvent.style.backgroundColor = section.Professors.length>1 ? "crimson" : "#00B4FC"; //TODO check if profs have same priority
         calEvent.style.cursor = "pointer";
 
-        //add info to modal and open modal on click
+        //add info to modal and open modal on click, add all sections with same time
         calEvent.addEventListener('click', (e) =>{
           _eventSections.length = 0;
           for(let sec of _sectionList){
@@ -65,12 +65,22 @@ export class CalendarService {
         //calculate event offsets/sizes in calendar
         var theadHeight:number = _document.getElementById("calendarTHead").getBoundingClientRect().height;
         var bodyRowHeight:number = _document.getElementById("calendarBodyRow").getBoundingClientRect().height;
-        var startHour:number = parseInt(section.Start.replace(':', '').substring(0, section.Start.length-3));
-        var startMinute:number = parseInt(section.Start.replace(':', '').substring(section.Start.length-1, section.Start.length-3));
+        if(section.Start.includes(":")){
+          var startHour:number = parseInt(section.Start.replace(':', '').substring(0, section.Start.length-3));
+          var startMinute:number = parseInt(section.Start.replace(':', '').substring(section.Start.length-1, section.Start.length-3));
+        }else{
+          var startHour:number = parseInt(section.Start.substring(0, section.Start.length-2));
+          var startMinute:number = parseInt(section.Start.substring(section.Start.length-2, section.Start.length));
+        }
         calEvent.style.top = (theadHeight + (bodyRowHeight*2 * startHour) + (bodyRowHeight * startMinute/30)).toString() + "px";
 
-        var endHour:number = parseInt(section.End.replace(':', '').substring(0, section.End.length-3));
-        var endMinute:number = parseInt(section.End.replace(':', '').substring(section.End.length-1, section.End.length-3));
+        if(section.Start.includes(":")){
+          var endHour:number = parseInt(section.End.replace(':', '').substring(0, section.End.length-3));
+          var endMinute:number = parseInt(section.End.replace(':', '').substring(section.End.length-1, section.End.length-3));
+        }else{
+          var endHour:number = parseInt(section.End.substring(0, section.End.length-2));
+          var endMinute:number = parseInt(section.End.substring(section.End.length-2, section.End.length));
+        }
         calEvent.style.height = ((endHour - startHour)*bodyRowHeight*2 + (endMinute - startMinute)/30 * bodyRowHeight).toString() + "px";
 
         var timeColWidth:number = _document.getElementById("calendarTimeCol").getBoundingClientRect().width;

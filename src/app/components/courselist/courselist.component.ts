@@ -94,14 +94,14 @@ export class CourselistComponent implements OnInit {
   }
 
   //Selects the clicked section and adds the 'selected' class to its shipping-item
-  selectSection(_section, el){
+  selectSection(_section, _el){
     this.selectedSection = _section;
     if(this.selectedSectionElement == null){
-      this.selectedSectionElement = (el.target as HTMLElement).parentElement;
+      this.selectedSectionElement = (_el.target as HTMLElement).parentElement;
       this.selectedSectionElement.classList.add("selected");
     }else{
       this.selectedSectionElement.classList.remove("selected");
-      this.selectedSectionElement = (el.target as HTMLElement).parentElement;
+      this.selectedSectionElement = (_el.target as HTMLElement).parentElement;
       this.selectedSectionElement.classList.add("selected");
     }
   }
@@ -162,7 +162,7 @@ export class CourselistComponent implements OnInit {
     };
     this.courseService.addCourseToCurrentSemester(newCourse);
 
-    //refresh the sections list
+    //refresh the sections list, TODO calendar is not getting refreshed
     this.clearSelectedCourse();
     var temp = new Object();
     temp["CourseNum"] = this.selectedCourseNum;

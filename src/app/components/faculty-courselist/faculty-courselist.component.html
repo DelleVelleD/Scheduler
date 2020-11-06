@@ -1,3 +1,21 @@
+<!-- navbar -->
+<nav id="topNavbar" class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/faculty">Homepage</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login-page">Log Out</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+
 <!-- calendar event modal -->
 <div id="calendarEventModal" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -27,9 +45,8 @@
                 <span> {{section["Room"]}} <br> </span>
                 <span> {{section["Credits"]}} <br> </span>
                 <span> {{section["MaxStudents"]}} <br> </span>
-                <!-- TODO update professor grab to new format -->
                 <span *ngFor="let professor of section.Professors"> 
-                    {{professor["FirstName"]}} {{professor["LastName"]}}<br>
+                    {{professor["Email"]}}, Priority: {{professor["Priority"]}}<br>
                 </span>
                 <span *ngIf="section.Professors.length == 0" style="color: crimson;"> None </span>
             </div>
@@ -41,83 +58,98 @@
 </div>
 
 <!-- actual page -->
-<div id="pageContents" class="card-group" style="padding: 15px;">
-    <!-- courses list -->
-    <div id="coursesOffered" *ngIf="selectedCourseSections.length == 0" class="card">
-        <h3 class="text-center">Courses Offered This Semester</h3>
-        <!-- course search box -->
-        <form style="padding-bottom: 10px;">
-            <input id="courseSearch" name="courseSearch" class="form-control" [(ngModel)]="courseSearch" (ngModelChange)="onSearchCourse($event)" type="text" placeholder="Enter course's name or number">
+<div id="pageContents" style="padding: 15px;">
+    <!-- semester dropdown -->
+    <div class="topnav" style="background-color:#a5acb0;">
+        <form id="selector" action="" method="" style=" display: inline-block;">
+        <label style=" padding-left: 15px;">Select Semester: </label>
+        <select style=" margin-left: 15px;">
+            <option value="spring2019">Spring2019</option>
+            <option value="fall2019">Fall2019</option>
+        </select>
+        <input type="submit" value="Submit" onclick="changeSemester()" style=" margin-left: 15px;">
         </form>
-        <!-- courses table header -->
-        <div class="shipping-item">
-            <span><b>Course Number</b></span>
-            <span><b>Title</b></span>
-        </div>
-        <!-- courses table -->
-        <div style="overflow-y: auto;">
-            <div class="shipping-item" *ngFor="let course of filteredCourses" (click)="selectCourse(course)">
-                <span>{{ course["CourseNum"] }}</span>
-                <span>{{ course["Title"] }}</span>
-            </div>
-        </div>
     </div>
 
-    <!-- sections list -->
-    <div id="courseSections" *ngIf="selectedCourseSections.length != 0" class="card">
-        <h3 class="text-center">Courses {{ selectedCourseSections[0]["CourseNum"] }} Sections</h3>
-        <h4 class="text-center">{{ selectedCourseSections[0]["Title"] }}</h4>
-        <!-- sections table header -->
-        <div class="shipping-item">
-            <span><b>Section</b></span>
-            <span><b>Days</b></span>
-            <span><b>Start</b></span>
-            <span><b>End</b></span>
+    <!-- table and calendar -->
+    <div class="card-group">
+        <!-- courses list -->
+        <div id="coursesOffered" *ngIf="selectedCourseSections.length == 0" class="card">
+            <h3 id="coursesOfferedHeader" class="text-center">Courses Offered This Semester</h3>
+            <!-- course search box -->
+            <form style="padding-bottom: 10px; padding-left: 15px;">
+                <input id="courseSearch" name="courseSearch" class="form-control" [(ngModel)]="courseSearch" (ngModelChange)="onSearchCourse($event)" type="text" placeholder="Enter course's name or number">
+            </form>
+            <!-- courses table header -->
+            <div class="shipping-item">
+                <span><b>Course Number</b></span>
+                <span><b>Title</b></span>
+            </div>
+            <!-- courses table -->
+            <div style="overflow-y: auto;">
+                <div class="shipping-item" *ngFor="let course of filteredCourses" (click)="selectCourse(course)">
+                    <span>{{ course["CourseNum"] }}</span>
+                    <span>{{ course["Title"] }}</span>
+                </div>
+            </div>
         </div>
+
         <!-- sections list -->
-        <div style="overflow-y: auto;">
-            <div class="shipping-item" *ngFor="let section of selectedCourseSections">
-                <span>{{ section["SectionNum"] }}</span>
-                <span>{{ section["Days"] }}</span>
-                <span>{{ section["Start"] }}</span>
-                <span>{{ section["End"] }}</span>
+        <div id="courseSections" *ngIf="selectedCourseSections.length != 0" class="card">
+            <h3 class="text-center">Courses {{ selectedCourseSections[0]["CourseNum"] }} Sections</h3>
+            <h4 class="text-center">{{ selectedCourseSections[0]["Title"] }}</h4>
+            <!-- sections table header -->
+            <div class="shipping-item">
+                <span><b>Section</b></span>
+                <span><b>Days</b></span>
+                <span><b>Start</b></span>
+                <span><b>End</b></span>
+            </div>
+            <!-- sections list -->
+            <div style="overflow-y: auto;">
+                <div class="shipping-item" *ngFor="let section of selectedCourseSections">
+                    <span>{{ section["SectionNum"] }}</span>
+                    <span>{{ section["Days"] }}</span>
+                    <span>{{ section["Start"] }}</span>
+                    <span>{{ section["End"] }}</span>
+                </div>
+            </div>
+            <!-- back button -->
+            <div class="d-flex justify-content-right">
+                <button class="btn" (click)="clearSelectedCourse()">Back</button>
             </div>
         </div>
-        <!-- back button -->
-        <div class="d-flex justify-content-right">
-            <button class="btn" (click)="clearSelectedCourse()">Back</button>
-        </div>
-    </div>
 
-    <!-- calendar -->
-    <div id="calendar" class="card">
-        <table class="table bordered">
-            <thead id="calendarTHead">
-                <tr class="text-center">
-                    <th id="calendarTimeCol"></th>
-                    <th id="calendarSundayCol">Sunday</th>
-                    <th id="calendarMondayCol">Monday</th>
-                    <th id="calendarTuesdayCol">Tuesday</th>
-                    <th id="calendarWednesdayCol">Wednesday</th>
-                    <th id="calendarThursdayCol">Thursday</th>
-                    <th id="calendarFridayCol">Friday</th>
-                    <th id="calendarSaturdayCol">Saturday</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr id="calendarBodyRow" *ngFor="let time of coursesTimes">
-                    <td>{{ time }}</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-        <div id="calendarEvents" style="z-index: 2;"></div>
+        <!-- calendar -->
+        <div id="calendar" class="card">
+            <table class="table bordered">
+                <thead id="calendarTHead">
+                    <tr class="text-center">
+                        <th id="calendarTimeCol"></th>
+                        <th id="calendarSundayCol">Sunday</th>
+                        <th id="calendarMondayCol">Monday</th>
+                        <th id="calendarTuesdayCol">Tuesday</th>
+                        <th id="calendarWednesdayCol">Wednesday</th>
+                        <th id="calendarThursdayCol">Thursday</th>
+                        <th id="calendarFridayCol">Friday</th>
+                        <th id="calendarSaturdayCol">Saturday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="calendarBodyRow" *ngFor="let time of coursesTimes">
+                        <td>{{ time }}</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="calendarEvents" style="z-index: 2;"></div>
+        </div>
     </div>
 
 </div>

@@ -11,17 +11,6 @@ export class CurrentScheduleComponent implements OnInit {
 
   constructor(private router: Router, private http: HttpClient) { }
 
-  navigate() {
-    this.router.navigate(["faculty"]);
-  }
-
-  navigate2() {
-    this.router.navigate(["calendar"]);
-  }
-  navigate3() {
-    this.router.navigate(["calendar"]);
-  }
-
   ngOnInit() {
   }
 

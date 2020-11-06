@@ -117,7 +117,7 @@ export class CourseService {
   }
 
   //Returns an array of courses from the current semester from the MongoDB database
-  //TODO fix this once mongo is setup
+  // fix this once mongo is setup
   getCurrentSemesterCoursesMongo() {
     return this.http.get('http://localhost:4200/api/getUser/').map((response: Response) => response.json());
   }
