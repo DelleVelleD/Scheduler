@@ -26,6 +26,10 @@ export class HomepageAdminComponent implements OnInit {
     this.router.navigate(['view-hours'])
   }
 
+  navigate5() {
+    this.router.navigate(["current-schedule"])
+  }
+
   ngOnInit() {
   }
 

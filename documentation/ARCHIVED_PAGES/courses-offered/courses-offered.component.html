@@ -15,13 +15,14 @@
 
 
     <span>
-        <form id="selector" class="inline" action="" method="">
-            <label>Select Semester: </label>
-            <select class="inline">
-                <option value="spring2019">Spring2019</option>
-                <option value="fall2019">Fall2019</option>
+        <button routerLink="/faculty" class="inline" >Homepage</button>
+        <form id="selector" (ngSubmit)="selectSemester()" class="inline" action="" method="">
+            <label for="selectSemester">Select Semester: </label>
+            <select [(ngModel)]="course.semester" name="selectSemester" required>
+                <option>Select Semester</option>
+                <option *ngFor="let course of courses">{{course[0].semester}}</option>
             </select>
-            <input type="submit" value="Submit" class="inline" onclick="changeSemester()">
+            <button type="submit">Select</button>
         </form>
         <h3 id = "tablename">Courses Offered This Semester (Spring 2019)</h3>
     </span>
@@ -39,17 +40,17 @@
                     <th>Section #</th>
                     <th>Days and Time</th>
                     <th>Classroom</th>
-                    <th>Course Instructor</th>
+                    <!-- <th>Course Instructor</th> -->
                 </tr>
-                <tr *ngFor='let course of courses'>
-                    <td>{{course.CRN}}</td>
-                    <td>ITEC</td>
-                    <td>{{course.CRSE}}</td>
-                    <td>{{course.TITLE}}</td>
-                    <td>{{course.SECT}}</td>
-                    <td>{{course.DAYS}} {{course.START}} - {{course.END}}</td>
-                    <td>{{course.CLASSROOM}}</td>
-                    <td>{{course.FIRSTNAME}} {{course.LASTNAME}}</td>
+                <tr *ngFor='let course of selectedSemester'>
+                    <td>{{course.courses["crn"]}}</td>
+                    <td>{{course.courses["subject"]}}</td>
+                    <td>{{course.courses["courseNum"]}}</td>
+                    <td>{{course.courses["title"]}}</td>
+                    <td>{{course.courses["sectionNum"]}}</td>
+                    <td>{{course.courses["days"]}} {{course.courses["start"]}} - {{course.courses["end"]}}</td>
+                    <td>{{course.courses["room"]}}</td>
+                    <!-- <td>{{course.courses["professors"]["name"]}}</td> -->
                 </tr>
             </tbody>
         </table>
