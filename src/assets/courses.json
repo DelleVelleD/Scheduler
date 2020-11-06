@@ -23,7 +23,8 @@
         "MaxStudents": 1,
         "FullTime": "",
         "Professors": [
-            {"Email":"adolocmihu@ggc.edu", "Priority": "high"}
+            {"Email":"adolocmihu@ggc.edu", "Priority": "high"},
+            {"Email": "cgunay@ggc.edu", "Priority": "low"}
         ]
     },
     {

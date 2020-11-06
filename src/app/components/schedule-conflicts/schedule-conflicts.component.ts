@@ -47,6 +47,11 @@ for (i = 0; i < acc.length; i++) {
     }
   }
 
+  refreshConflicts(): void {
+    this.courseConflicts = [];
+    this.getConflicts();
+  }
+
 }
 
 
