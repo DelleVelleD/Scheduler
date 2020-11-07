@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CourseService } from '../../course.service';
 
 @Component({
   selector: 'app-schedule-conflicts',
@@ -8,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScheduleConflictsComponent implements OnInit {
 
-  constructor() { }
+  courseConflicts = [];
+  courses = [];
+
+  constructor(private courseService: CourseService) { }
 
   ngOnInit() {
+    
+this.getCourses();
+this.getConflicts();
+
 var acc = document.getElementsByClassName("accordion");
 var i;
 
@@ -26,6 +33,23 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
+  }
+
+  getCourses(): void {
+    this.courses = this.courseService.getCurrentSemesterCourses();
+  }
+
+  getConflicts(): void {
+    for (let course of this.courses) {
+      if (course["Professors"].length > 1) {
+        this.courseConflicts.push(course);
+      }
+    }
+  }
+
+  refreshConflicts(): void {
+    this.courseConflicts = [];
+    this.getConflicts();
   }
 
 }

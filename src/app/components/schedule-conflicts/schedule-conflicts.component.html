@@ -16,12 +16,30 @@
 </nav>
 
 <h2 id="tablename" style="padding-left: 10px">Scheduling Conflicts</h2>
-
+<button (click)="refreshConflicts()">Refresh</button>
+<!--
+<li *ngFor="let course of courseConflicts">
+  <span>{{course["Title"]}}: </span>
+  <span>{{course["Professors"].length}} signed up</span>
+</li>
+-->
 <p style="padding-left: 20px;">View Details:</p>
-   <div class="acc-section"  style="width:50%; height:380px; overflow-y: scroll; padding-left: 10px">
+   <ul *ngFor="let course of courseConflicts" class="acc-section"  style="width:50%; padding-left: 10px">
+
+    <button class="accordion">{{course["Title"]}}</button>
+      <div class="content">
+        <ul>
+          <li>CRN: {{course["CRN"]}}</li>
+          <ul *ngFor="let professor of course[&quot;Professors&quot;]">
+            <p>Email: {{professor["Email"]}}</p>
+            <p>Priority: {{professor["Priority"]}}</p>
+          </ul>
+        </ul>
+      </div>
 
 
-     <!-- Kyle had the Conflicts part, if there's a different name for this first one it can be changed -->
+    <!-- Kyle had the Conflicts part, if there's a different name for this first one it can be changed -->
+    <!--
      <button class="accordion">Advanced Programming</button>
 
        <div class="content" >
@@ -87,7 +105,8 @@
    <p>Faculty Member: Margret Johnson</p>
          </ul>
        </div>
-   </div>
+      </ul> -->
+    </ul>
  <!-- <button class="reportbtn" (click)="showPopup()">Send Conflict Report to Scheduler</button>
  <button type=button class="btn btn-primary"  (click)="clickMethod('name')">Delete me</button> -->
 
