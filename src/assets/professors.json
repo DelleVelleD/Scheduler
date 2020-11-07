@@ -19,6 +19,538 @@
         "FirstName": "Jane",
         "LastName": "Doe",
         "Email": "jdoe@ggc.edu",
+        "FallHours": 3,
+        "SpringHours": 6,
+        "TotalHours": 22,
+        "RequiredHours": 12,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "John",
+        "LastName": "Doe",
+        "Email": "jdoe1@ggc.edu",
+        "FallHours": 12,
+        "SpringHours": 10,
+        "TotalHours": 22,
+        "RequiredHours": 16,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Richard",
+        "LastName": "Price",
+        "Email": "rprice@ggc.edu",
+        "FallHours": 6,
+        "SpringHours": 12,
+        "TotalHours": 18,
+        "RequiredHours": 3,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Robert",
+        "LastName": "Lutz",
+        "Email": "rlutz@ggc.edu",
+        "FallHours": 12,
+        "SpringHours": 0,
+        "TotalHours": 12,
+        "RequiredHours": 4,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Tacksoo",
+        "LastName": "Im",
+        "Email": "tim@ggc.edu",
+        "FallHours": 12,
+        "SpringHours": 12,
+        "TotalHours": 24,
+        "RequiredHours": 12,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Cengiz",
+        "LastName": "Gunay",
+        "Email": "cgunay@ggc.edu",
+        "FallHours": 12,
+        "SpringHours": 12,
+        "TotalHours": 24,
+        "RequiredHours": 8,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Rahaf",
+        "LastName": "Barakat",
+        "Email": "rbarakat@ggc.edu",
+        "FallHours": 6,
+        "SpringHours": 12,
+        "TotalHours": 18,
+        "RequiredHours": 12,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Sonal",
+        "LastName": "Dekhane",
+        "Email": "sdekhane@ggc.edu",
+        "FallHours": 6,
+        "SpringHours": 6,
+        "TotalHours": 12,
+        "RequiredHours": 6,
+        "Admin": true,
+        "Courses": []
+    },
+    {
+        "FirstName": "Evelyn",
+        "LastName": "Brannock",
+        "Email": "ebrannoc@ggc.edu",
+        "FallHours": 6,
+        "SpringHours": 6,
+        "TotalHours": 12,
+        "RequiredHours": 3,
+        "Admin": true,
+        "Courses": []
+    },{
+        "FirstName": "Anca",
+        "LastName": "Doloc-Mihu",
+        "Email": "adolocmihu@ggc.edu",
+        "FallHours": 12,
+        "SpringHours": 12,
+        "TotalHours": 24,
+        "RequiredHours": 4,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Jane",
+        "LastName": "Doe",
+        "Email": "jdoe@ggc.edu",
+        "FallHours": 10,
+        "SpringHours": 12,
+        "TotalHours": 22,
+        "RequiredHours": 4,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "John",
+        "LastName": "Doe",
+        "Email": "jdoe1@ggc.edu",
+        "FallHours": 12,
+        "SpringHours": 10,
+        "TotalHours": 22,
+        "RequiredHours": 16,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Richard",
+        "LastName": "Price",
+        "Email": "rprice@ggc.edu",
+        "FallHours": 6,
+        "SpringHours": 12,
+        "TotalHours": 18,
+        "RequiredHours": 3,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Robert",
+        "LastName": "Lutz",
+        "Email": "rlutz@ggc.edu",
+        "FallHours": 12,
+        "SpringHours": 0,
+        "TotalHours": 12,
+        "RequiredHours": 4,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Tacksoo",
+        "LastName": "Im",
+        "Email": "tim@ggc.edu",
+        "FallHours": 12,
+        "SpringHours": 12,
+        "TotalHours": 24,
+        "RequiredHours": 12,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Cengiz",
+        "LastName": "Gunay",
+        "Email": "cgunay@ggc.edu",
+        "FallHours": 12,
+        "SpringHours": 12,
+        "TotalHours": 24,
+        "RequiredHours": 8,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Rahaf",
+        "LastName": "Barakat",
+        "Email": "rbarakat@ggc.edu",
+        "FallHours": 6,
+        "SpringHours": 12,
+        "TotalHours": 18,
+        "RequiredHours": 12,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Sonal",
+        "LastName": "Dekhane",
+        "Email": "sdekhane@ggc.edu",
+        "FallHours": 6,
+        "SpringHours": 6,
+        "TotalHours": 12,
+        "RequiredHours": 6,
+        "Admin": true,
+        "Courses": []
+    },
+    {
+        "FirstName": "Evelyn",
+        "LastName": "Brannock",
+        "Email": "ebrannoc@ggc.edu",
+        "FallHours": 6,
+        "SpringHours": 6,
+        "TotalHours": 12,
+        "RequiredHours": 3,
+        "Admin": true,
+        "Courses": []
+    },{
+        "FirstName": "Anca",
+        "LastName": "Doloc-Mihu",
+        "Email": "adolocmihu@ggc.edu",
+        "FallHours": 12,
+        "SpringHours": 12,
+        "TotalHours": 24,
+        "RequiredHours": 4,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Jane",
+        "LastName": "Doe",
+        "Email": "jdoe@ggc.edu",
+        "FallHours": 10,
+        "SpringHours": 12,
+        "TotalHours": 22,
+        "RequiredHours": 4,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "John",
+        "LastName": "Doe",
+        "Email": "jdoe1@ggc.edu",
+        "FallHours": 12,
+        "SpringHours": 10,
+        "TotalHours": 22,
+        "RequiredHours": 16,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Richard",
+        "LastName": "Price",
+        "Email": "rprice@ggc.edu",
+        "FallHours": 6,
+        "SpringHours": 12,
+        "TotalHours": 18,
+        "RequiredHours": 3,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Robert",
+        "LastName": "Lutz",
+        "Email": "rlutz@ggc.edu",
+        "FallHours": 12,
+        "SpringHours": 0,
+        "TotalHours": 12,
+        "RequiredHours": 4,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Tacksoo",
+        "LastName": "Im",
+        "Email": "tim@ggc.edu",
+        "FallHours": 12,
+        "SpringHours": 12,
+        "TotalHours": 24,
+        "RequiredHours": 12,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Cengiz",
+        "LastName": "Gunay",
+        "Email": "cgunay@ggc.edu",
+        "FallHours": 12,
+        "SpringHours": 12,
+        "TotalHours": 24,
+        "RequiredHours": 8,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Rahaf",
+        "LastName": "Barakat",
+        "Email": "rbarakat@ggc.edu",
+        "FallHours": 6,
+        "SpringHours": 12,
+        "TotalHours": 18,
+        "RequiredHours": 12,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Sonal",
+        "LastName": "Dekhane",
+        "Email": "sdekhane@ggc.edu",
+        "FallHours": 6,
+        "SpringHours": 6,
+        "TotalHours": 12,
+        "RequiredHours": 6,
+        "Admin": true,
+        "Courses": []
+    },
+    {
+        "FirstName": "Evelyn",
+        "LastName": "Brannock",
+        "Email": "ebrannoc@ggc.edu",
+        "FallHours": 6,
+        "SpringHours": 6,
+        "TotalHours": 12,
+        "RequiredHours": 3,
+        "Admin": true,
+        "Courses": []
+    },{
+        "FirstName": "Anca",
+        "LastName": "Doloc-Mihu",
+        "Email": "adolocmihu@ggc.edu",
+        "FallHours": 12,
+        "SpringHours": 12,
+        "TotalHours": 24,
+        "RequiredHours": 4,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Jane",
+        "LastName": "Doe",
+        "Email": "jdoe@ggc.edu",
+        "FallHours": 10,
+        "SpringHours": 12,
+        "TotalHours": 22,
+        "RequiredHours": 4,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "John",
+        "LastName": "Doe",
+        "Email": "jdoe1@ggc.edu",
+        "FallHours": 12,
+        "SpringHours": 10,
+        "TotalHours": 22,
+        "RequiredHours": 16,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Richard",
+        "LastName": "Price",
+        "Email": "rprice@ggc.edu",
+        "FallHours": 6,
+        "SpringHours": 12,
+        "TotalHours": 18,
+        "RequiredHours": 3,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Robert",
+        "LastName": "Lutz",
+        "Email": "rlutz@ggc.edu",
+        "FallHours": 12,
+        "SpringHours": 0,
+        "TotalHours": 12,
+        "RequiredHours": 4,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Tacksoo",
+        "LastName": "Im",
+        "Email": "tim@ggc.edu",
+        "FallHours": 12,
+        "SpringHours": 12,
+        "TotalHours": 24,
+        "RequiredHours": 12,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Cengiz",
+        "LastName": "Gunay",
+        "Email": "cgunay@ggc.edu",
+        "FallHours": 12,
+        "SpringHours": 12,
+        "TotalHours": 24,
+        "RequiredHours": 8,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Rahaf",
+        "LastName": "Barakat",
+        "Email": "rbarakat@ggc.edu",
+        "FallHours": 6,
+        "SpringHours": 12,
+        "TotalHours": 18,
+        "RequiredHours": 12,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Sonal",
+        "LastName": "Dekhane",
+        "Email": "sdekhane@ggc.edu",
+        "FallHours": 6,
+        "SpringHours": 6,
+        "TotalHours": 12,
+        "RequiredHours": 6,
+        "Admin": true,
+        "Courses": []
+    },
+    {
+        "FirstName": "Evelyn",
+        "LastName": "Brannock",
+        "Email": "ebrannoc@ggc.edu",
+        "FallHours": 6,
+        "SpringHours": 6,
+        "TotalHours": 12,
+        "RequiredHours": 3,
+        "Admin": true,
+        "Courses": []
+    },{
+        "FirstName": "Anca",
+        "LastName": "Doloc-Mihu",
+        "Email": "adolocmihu@ggc.edu",
+        "FallHours": 12,
+        "SpringHours": 12,
+        "TotalHours": 24,
+        "RequiredHours": 4,
+        "Admin": false,
+        "Courses": [
+            {"CRN": "81504", "Priority": "high"},
+            {"CRN": "81124", "Priority": "low"}
+        ]
+    },
+    {
+        "FirstName": "Jane",
+        "LastName": "Doe",
+        "Email": "jdoe@ggc.edu",
         "FallHours": 10,
         "SpringHours": 12,
         "TotalHours": 22,
