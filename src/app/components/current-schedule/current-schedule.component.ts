@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { HttpClient } from '@angular/common/http';
+import { CourseService } from '../../course.service';
+import { CalendarService } from '../../calendar.service';
 
 @Component({
   selector: 'app-current-schedule',
@@ -9,23 +11,28 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CurrentScheduleComponent implements OnInit {
 
-  constructor(private router: Router, private http: HttpClient) { }
-
-  ngOnInit() {
-  }
-
   //the search criteria's course information
-  course : {crn, department, number, title, days, startTime, endTime, bNewClasses} = 
-            {crn: null, department: null, number:null, title: null, days: null,
+  course : {crn, subject, number, title, days, startTime, endTime, bNewClasses} = 
+            {crn: null, subject: null, number:null, title: null, days: null,
               startTime: null, endTime: null, bNewClasses: true};
 
   bShowResults = false; //boolean To show search results card
   bNoResults = false; //boolean To show no valid search results text
-  semester = null; //TODO get semester from courses list
-  year = null; //TODO get year from courses list
+  currentSemester; //current semester from course service
   user = null; //TODO get user from logged in user
   foundCourses = []; //JSON objects of the found courses in searchCourses
   selectedCourses = []; //JSON objects of the selectedCourses from selectCourse
+
+  //calendar variables
+  coursesTimes;
+  selectedEventSections = [];
+
+  constructor(private http: HttpClient, private courseService:CourseService, private calendarService:CalendarService) { }
+
+  ngOnInit() {
+    this.currentSemester = this.courseService.getCurrentSemester();
+    this.coursesTimes = this.calendarService.courseTimes;
+  }
 
   //Searches the courses in the json file for a list of similar courses
   searchCourses(){
@@ -35,26 +42,26 @@ export class CurrentScheduleComponent implements OnInit {
     xmlhttp.onload = (event) => {
       var jsonData = JSON.parse(xmlhttp.responseText);
 
-      //loop thru all courses to find matches, TODO update json headers, handle new classes
-      for(var i in jsonData){
-        var jsonCourse = jsonData[i];
-        if(this.course.crn != null && jsonCourse["CRN"] == this.course.crn){
-          this.foundCourses.push(jsonCourse);
-        }else if(this.course.number != null && jsonCourse["CRSENO"] == this.course.number){
-          this.foundCourses.push(jsonCourse);
-        }else if(this.course.title != null && new RegExp(this.course.title, "ig").test(jsonCourse["TITLE"])){
-          this.foundCourses.push(jsonCourse);
-        //}else if(this.course.subject != null && jsonCourse["Department"] == this.course.subject){
-        //  this.foundCourses.push(jsonCourse);
-        //}else if(this.course.startTime != null && jsonCourse["Start"] == this.course.startTime){
-        //  this.foundCourses.push(jsonCourse);
-        //}else if(this.course.endTime != null && jsonCourse["End"] == this.course.endTime){
-        //  this.foundCourses.push(jsonCourse);
+      //loop thru all courses to find matches, TODO handle new classes that might not have all info
+      for(let semester of jsonData){
+        if(semester.Semester != this.currentSemester.Semester || semester.Year != this.currentSemester.Year) continue;
+        for(let jsonCourse of semester.Courses){
+          if(this.course.startTime != null && jsonCourse.Start < this.course.startTime.replace(":", "")) continue;
+          if(this.course.endTime != null && jsonCourse.End > this.course.endTime.replace(":", "")) continue;
+          if(this.course.crn != null && jsonCourse.CRN== this.course.crn){
+            this.foundCourses.push(jsonCourse);
+          }else if(this.course.number != null && jsonCourse.CourseNum == this.course.number){
+            this.foundCourses.push(jsonCourse);
+          }else if(this.course.title != null && new RegExp(this.course.title, "ig").test(jsonCourse.Title)){
+            this.foundCourses.push(jsonCourse);
+          }else if(this.course.subject != null && jsonCourse.Subject.toUpperCase() == this.course.subject.toUpperCase()){
+            this.foundCourses.push(jsonCourse);
+          }
         }
       }
       
       //reset course to default
-      this.course = {crn: null, department: null, number:null, title: null, days: null,
+      this.course = {crn: null, subject: null, number:null, title: null, days: null,
          startTime: null, endTime: null, bNewClasses: true};
 
       //hide search and show found classes
@@ -64,7 +71,7 @@ export class CurrentScheduleComponent implements OnInit {
         this.bNoResults = true;
       }
     }
-    xmlhttp.open("GET", "../assets/spring2019.json", true);
+    xmlhttp.open("GET", "../assets/courses.json", true);
     xmlhttp.send();
   }
 
@@ -90,7 +97,9 @@ export class CurrentScheduleComponent implements OnInit {
     // newCourse["CRN"] = inCourse["CRN"];
     // newCourse["Priority"] = "low";
     //add course to current list displayed, TODO list from professors courses rather than local list
+    
     this.selectedCourses.push(inCourse);
+    this.calendarService.handleCalendarEvents(document, this.selectedCourses, this.selectedEventSections);
   }
 
   //Updates any changes made in the priority dropdowns, TODO update the json files rather than selectedCourse
@@ -104,13 +113,15 @@ export class CurrentScheduleComponent implements OnInit {
       course = this.selectedCourses[courseIndex];
       currentDropdownValue = currentDropdown.options[currentDropdown.selectedIndex].value;
       if(currentDropdownValue == "low"){
-        //course["Professors"][user["Username"]]["Priority"] = "low";
+        //course["Professors"][user["Email"]]["Priority"] = "low";
       }else if(currentDropdownValue == "medium"){
-        //course["Professors"][user["Username"]]["Priority"] = "medium";
+        //course["Professors"][user["Email"]]["Priority"] = "medium";
       }else if(currentDropdownValue == "high"){
         //course["Professors"][user["Username"]]["Priority"] = "high";
       }else if(currentDropdownValue == "remove"){
         this.selectedCourses.splice(courseIndex, 1);
+        this.calendarService.clearCalendarEvents(document);
+        this.calendarService.handleCalendarEvents(document, this.selectedCourses, this.selectedEventSections);
       }
     }
   }
