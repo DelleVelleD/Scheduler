@@ -1,3 +1,20 @@
+<nav id="topNavbar" class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin">Homepage</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login-page">Log Out</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
 <div>
 <!-- <div class="card-deck"> -->
 <!-- <div class="container-md-3"> -->
@@ -12,7 +29,7 @@
 
 
 
-        <div class="shipping-item">
+        <div class="shipping-item" style="margin-left: 0px;">
             <span style="width: 180px"><b>Title</b></span>
             <span style="width: 90px "><b>Section</b></span>
             <span style="width: 70px "><b>Days</b></span>
@@ -20,7 +37,7 @@
 
         </div>
 
-        <div class="shipping-item" *ngFor="let course of courseList | async |courseSections:courseNO ">
+        <div class="shipping-item" style="margin-left: 0px;" *ngFor="let course of courseList | async |courseSections:courseNO ">
 
             <span style="width: 230px">{{ course.TITLE }}</span>
             <span style="width: 90px; text-align: center ">{{ course.SECTNO }}</span>

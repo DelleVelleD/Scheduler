@@ -1,0 +1,59 @@
+<style>
+  #myInput {
+    background-image: url("assets/searchicon.png");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+</style>
+
+<body style="background-color:#a5acb0;">
+
+
+    <span>
+        <button routerLink="/faculty" class="inline" >Homepage</button>
+        <form id="selector" (ngSubmit)="selectSemester()" class="inline" action="" method="">
+            <label for="selectSemester">Select Semester: </label>
+            <select [(ngModel)]="course.semester" name="selectSemester" required>
+                <option>Select Semester</option>
+                <option *ngFor="let course of courses">{{course[0].semester}}</option>
+            </select>
+            <button type="submit">Select</button>
+        </form>
+        <h3 id = "tablename">Courses Offered This Semester (Spring 2019)</h3>
+    </span>
+
+    <input type="text" id="myInput" onkeyup="myFunction3()" placeholder="Search for course title.." title="Type in a course title">
+
+    <div style="height:500px; overflow-y: scroll; overflow-x:scroll; background: #a5acb0; max-height: 700px;">
+        <table id ="myTable" class="table table-striped" *ngIf='courses && courses.length'>
+            <tbody>
+                <tr>
+                    <th>CRN</th>
+                    <th>DEPT</th>
+                    <th>Course #</th>
+                    <th>Title</th>
+                    <th>Section #</th>
+                    <th>Days and Time</th>
+                    <th>Classroom</th>
+                    <!-- <th>Course Instructor</th> -->
+                </tr>
+                <tr *ngFor='let course of selectedSemester'>
+                    <td>{{course.courses["crn"]}}</td>
+                    <td>{{course.courses["subject"]}}</td>
+                    <td>{{course.courses["courseNum"]}}</td>
+                    <td>{{course.courses["title"]}}</td>
+                    <td>{{course.courses["sectionNum"]}}</td>
+                    <td>{{course.courses["days"]}} {{course.courses["start"]}} - {{course.courses["end"]}}</td>
+                    <td>{{course.courses["room"]}}</td>
+                    <!-- <td>{{course.courses["professors"]["name"]}}</td> -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>

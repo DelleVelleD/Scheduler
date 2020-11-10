@@ -11,7 +11,7 @@ export class HomepageAdminComponent implements OnInit {
   constructor(private router: Router) { }
 
   navigate1() {
-    this.router.navigate(["full-courselist/course-sections"])
+    this.router.navigate(["courselist"])
   }
 
   navigate2() {
@@ -27,7 +27,7 @@ export class HomepageAdminComponent implements OnInit {
   }
 
   navigate5() {
-    this.router.navigate(["courses-upcoming-admin"])
+    this.router.navigate(["current-schedule"])
   }
 
   ngOnInit() {

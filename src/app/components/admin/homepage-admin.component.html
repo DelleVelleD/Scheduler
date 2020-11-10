@@ -1,3 +1,17 @@
+<nav id="topNavbar" class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login-page">Log Out</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 <head>
   <title>Admin Home Page</title>
 </head>
@@ -13,7 +27,7 @@
   <nav id="hello">
     <ul>
       <li style="list-style-image: url(../../../assets/manageicon.png);">
-        <button routerLink="/full-courselist/courses">Manage Course Sections</button>
+        <button (click)="navigate1()">Manage Course Sections</button>
         <br/>
         <h7>Click here to add, remove, or edit course sections.</h7>
       </li>
@@ -34,12 +48,6 @@
         <button (click)="navigate4()">View Professor Hours</button>
         <br/>
         <h7>Click here to view the total accumulated hours of each professor.</h7>
-      </li>
-      <br/>
-      <li style="list-style-image: url(../../../assets/uploadicon.png);">
-        <button (click)="navigate5()">View List of Courses Offered</button>
-        <br/>
-        <h7>Click here to view the list of offered courses for next semester.</h7>
       </li>
     </ul>
   </nav>
