@@ -41,7 +41,7 @@ CourseModel.find(function (err, result) {
 */
 
 /*
-Express server( name of my app=ggc-scheduler in dist folder )
+Express server( name of my app=sd1AngularSillyDemo in dist folder )
 
 */
 app.use(express.static(__dirname + '/dist/sd1AngularSillyDemo'));
@@ -50,7 +50,7 @@ app.get('/*', function(req, res) {
 	res.sendFile(path.join(__dirname+'/dist/sd1AngularSillyDemo/index.html'));
 });
 
-app.listen(port, ()=> console.log('Running'));
+app.listen(port, function(){ console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env)});
 /*
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
