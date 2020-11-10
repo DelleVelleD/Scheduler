@@ -44,10 +44,10 @@ CourseModel.find(function (err, result) {
 Express server( name of my app=ggc-scheduler in dist folder )
 
 */
-app.use(express.static(__dirname + '/dist/ggc-scheduler'));
+app.use(express.static(__dirname + '/dist/sd1AngularSillyDemo'));
 
 app.get('/*', function(req, res) {
-	res.sendFile(path.join(__dirname+'/dist/ggc-scheduler/index.html'));
+	res.sendFile(path.join(__dirname+'/dist/sd1AngularSillyDemo/index.html'));
 });
 
 app.listen(port, ()=> console.log('Running'));
