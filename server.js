@@ -7,7 +7,6 @@ var mongoose = require('mongoose');
 //var course = require('./routes/api/course');
 
 var app = express();
-var port = process.env.PORT || 8080;
 var db = require('./config/keys').mongoURI;
 
  //connection
@@ -50,7 +49,7 @@ app.get('/*', function(req, res) {
 	res.sendFile(path.join(__dirname+'/dist/sd1AngularSillyDemo/index.html'));
 });
 
-app.listen(port, function(){ console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env)});
+app.listen(process.env.PORT || 8080, function(){ console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env)});
 /*
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
